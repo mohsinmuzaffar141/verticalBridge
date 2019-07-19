@@ -1,0 +1,9 @@
+App-url: https://stagepartnerportal.verticalbridge.com
+  
+systemvalues:
+  casepath: \C$\Projects
+  exportpath: \C$\ExportDataPath
+  ftppath: \C$\DataTransferPath
+  installDirectory: C:\Program Files\AccessData\Forensic Tools\7.2\bin
+License:
+  license: 6tadLukdH1wwT8hLAlebiukX5Ysr8yfxMTS0x6ipourtcxpPaWxcx9cmozEHS5ZwnA7rk1GfBq33TY0Z75L+cTEUbyn2bEfwj6U/IUH7R6v8vdXax2ZMIG9KNU/DtohL

@@ -1,0 +1,88 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login to vertical bridge",
+    "line": 1,
+    "id": "login-to-vertical-bridge",
+    "tags": [],
+    "uri": "Test\\features\\login.feature",
+    "elements": [
+      {
+        "id": "login-to-vertical-bridge;login-to-vertical-bridge",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Login to vertical bridge",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9608000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23024000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9606000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "74.0.3729.169"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]
