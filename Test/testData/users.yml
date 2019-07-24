@@ -77,7 +77,7 @@ siteTabs:
   tabs: Maps,Contacts,Property,Leases,Images,Documents,Operations,FCC,RAD Centers,Leasing Activity
 
 siteMapData:
-  siteNumber: 'US-CA-1253'
+  siteNumber: 'US-GA-1045'
   mapData: BTA,MTA,MSA/RSA,BEA
 
 

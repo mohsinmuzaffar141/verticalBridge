@@ -63,6 +63,9 @@ var siteDetailPage = /** @class */ (function (_super) {
     function siteDetailPage() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.searchMap = protractor_1.element(protractor_1.by.xpath('//input[@id="SearchAddress"]'));
+        _this.resetTab = protractor_1.element(protractor_1.by.xpath('//span[text()="Reset Map"]'));
+        _this.autoView = protractor_1.element(protractor_1.by.xpath('//div[@class="mat-checkbox-inner-container"]//input[@type="checkbox"]'));
+        _this.autoV = protractor_1.element(protractor_1.by.xpath('//div[@class="mat-checkbox-inner-container"]'));
         return _this;
     }
     siteDetailPage.prototype.selectSite = function (value) {
@@ -354,7 +357,7 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.searchMapLocation = function (value) {
         return __awaiter(this, void 0, void 0, function () {
-            var searchValue;
+            var searchValue, loc;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.searchMap), 5000, 'Element taking too long to appear in the DOM')];
@@ -367,7 +370,155 @@ var siteDetailPage = /** @class */ (function (_super) {
                         return [4 /*yield*/, this.searchMap.sendKeys(searchValue)];
                     case 3:
                         _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 4:
+                        _a.sent();
+                        loc = protractor_1.element(protractor_1.by.xpath('//p[text()="' + searchValue + '"]'));
+                        return [4 /*yield*/, loc.click()];
+                    case 5:
+                        _a.sent();
+                        protractor_1.browser.actions().sendKeys(protractor_1.protractor.Key.ENTER).perform();
                         return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.clickResetTab = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.resetTab), 5000, 'Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.resetTab.click()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.clickAutoViewTab = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var beforeClick, afterClick;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.autoView), 5000, 'Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        beforeClick = this.autoView.getAttribute('aria-checked');
+                        if (!beforeClick) return [3 /*break*/, 4];
+                        console.log("1:Element is unchecked");
+                        return [4 /*yield*/, this.autoV.click()];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(2000)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        afterClick = this.autoView.getAttribute('aria-checked');
+                        if (!afterClick) return [3 /*break*/, 6];
+                        console.log("1:Element is checked");
+                        return [4 /*yield*/, this.autoV.click()];
+                    case 5:
+                        _a.sent();
+                        _a.label = 6;
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.selectTab = function (tabName) {
+        return __awaiter(this, void 0, void 0, function () {
+            var tab, tabClick;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        tab = maps[tabName]['tabName'];
+                        tabClick = protractor_1.element(protractor_1.by.xpath('//a[text()=" ' + tab + ' "]'));
+                        return [4 /*yield*/, tabClick.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyContactsLabel = function (contactLabel) {
+        return __awaiter(this, void 0, void 0, function () {
+            var contactLabels, i, label;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        contactLabels = contactLabel.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < contactLabels.length)) return [3 /*break*/, 5];
+                        label = protractor_1.element(protractor_1.by.xpath('//h2[text()="' + contactLabels[i] + '"]'));
+                        return [4 /*yield*/, label.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, expect(label.isDisplayed()).to.eventually.equal(true)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyContactGroupData = function (thData, tdData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var thdata, tddata, i, headerData, tableData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        thdata = thData.split(',');
+                        tddata = tdData.split(',');
+                        i = 1;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < tddata.length)) return [3 /*break*/, 6];
+                        headerData = protractor_1.element(protractor_1.by.xpath('//th[text()="' + thdata[i] + '"]'));
+                        return [4 /*yield*/, expect(headerData.isDisplayed()).to.eventually.equal(true)];
+                    case 2:
+                        _a.sent();
+                        tableData = protractor_1.element(protractor_1.by.xpath('//tr[@class="tableMainData ng-star-inserted"]//td[' + i + ']'));
+                        //tr[@class='tableMainData ng-star-inserted']//td[1]
+                        return [4 /*yield*/, tableData.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 3:
+                        //tr[@class='tableMainData ng-star-inserted']//td[1]
+                        _a.sent();
+                        return [4 /*yield*/, expect(tableData.isDisplayed()).to.eventually.equal(true)];
+                    case 4:
+                        _a.sent();
+                        _a.label = 5;
+                    case 5:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 6: return [2 /*return*/];
                 }
             });
         });

@@ -1,3 +1,8 @@
 mapSearch:
-  siteSearch: 124 Clairemont Ave, Decatur, Georgia 30030, United States
+  siteSearch: 124 Clairemont Ave
 
+contactTab:
+  tabName: Contacts
+  tabLabel: Site Contacts,Ground Right Contacts,Portfolio Contacts,Tenant Contacts
+  thContacts: Contact,Type,Phone(s),Address
+  tdcontacts: Business Manager, Casey Guittarr,Company, Two Newton Place

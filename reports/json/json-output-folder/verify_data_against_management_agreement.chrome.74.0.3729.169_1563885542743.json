@@ -8,14 +8,14 @@
     "uri": "Test\\features\\managemenetAgreement.feature",
     "elements": [
       {
-        "id": "verify-data-against-management-agreement;verify-that-owner-name-should-be-sorted-in-ascending-order",
+        "id": "verify-data-against-management-agreement;verify-data-against-management-agreement",
         "keyword": "Scenario",
-        "line": 34,
-        "name": "verify that owner name should be sorted in ascending order",
+        "line": 17,
+        "name": "verify data against management agreement",
         "tags": [
           {
-            "name": "@sortingOwnerName",
-            "line": 20
+            "name": "@managementData",
+            "line": 3
           }
         ],
         "type": "scenario",
@@ -23,105 +23,105 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 23,
+            "line": 6,
             "name": "I am on vertical bridge Page",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 7655000000
+              "duration": 7649000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 24,
+            "line": 7,
             "name": "Login to vertical bridge with \"admin\"",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 23290000000
+              "duration": 23826000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 25,
+            "line": 8,
             "name": "I click to the select partner view button",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 1009000000
+              "duration": 1039000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 26,
+            "line": 9,
             "name": "selects the \"relation\"",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 848000000
+              "duration": 826000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
+            "line": 10,
             "name": "click the select button",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 5174000000
+              "duration": 5131000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 28,
+            "line": 11,
             "name": "click on my sites button",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 5184000000
+              "duration": 5172000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 29,
-            "name": "verify owner name should be sorted in ascending order",
+            "line": 12,
+            "name": "verify managment agreement data \"relation\"",
             "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:38"
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 541000000
+              "duration": 8000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 30,
+            "line": 13,
             "name": "I log out",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:33"
             },
             "result": {
               "status": "passed",
-              "duration": 9667000000
+              "duration": 9635000000
             }
           },
           {
@@ -138,14 +138,14 @@
         ]
       },
       {
-        "id": "verify-data-against-management-agreement;verify-revenue-against-management-agreement",
+        "id": "verify-data-against-management-agreement;verify-that-owner-name-should-be-sorted-in-ascending-order",
         "keyword": "Scenario",
-        "line": 52,
-        "name": "verify revenue against management agreement",
+        "line": 35,
+        "name": "verify that owner name should be sorted in ascending order",
         "tags": [
           {
-            "name": "@verifyRevenue",
-            "line": 38
+            "name": "@sortingOwnerName",
+            "line": 21
           }
         ],
         "type": "scenario",
@@ -153,104 +153,105 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 41,
+            "line": 24,
             "name": "I am on vertical bridge Page",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 8422000000
+              "duration": 7663000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 42,
+            "line": 25,
             "name": "Login to vertical bridge with \"admin\"",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 22745000000
+              "duration": 22664000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 43,
+            "line": 26,
             "name": "I click to the select partner view button",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 1053000000
+              "duration": 1051000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 44,
+            "line": 27,
             "name": "selects the \"relation\"",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 834000000
+              "duration": 896000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 45,
+            "line": 28,
             "name": "click the select button",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 5136000000
+              "duration": 5117000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 46,
+            "line": 29,
             "name": "click on my sites button",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 5190000000
+              "duration": 5181000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 47,
-            "name": "verify revenue \"relation\"",
+            "line": 30,
+            "name": "verify owner name should be sorted in ascending order",
             "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:42"
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:38"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 542000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 48,
+            "line": 31,
             "name": "I log out",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:33"
             },
             "result": {
               "status": "passed",
-              "duration": 10008000000
+              "duration": 9448000000
             }
           },
           {
@@ -261,7 +262,137 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-data-against-management-agreement;verify-revenue-against-management-agreement",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "verify revenue against management agreement",
+        "tags": [
+          {
+            "name": "@verifyRevenue",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7608000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23807000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1003000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 863000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 46,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5175000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "verify revenue \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 49,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9976000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -269,12 +400,12 @@
       {
         "id": "verify-data-against-management-agreement;verify-filler-should-be-enable",
         "keyword": "Scenario",
-        "line": 85,
+        "line": 86,
         "name": "verify filler should be enable",
         "tags": [
           {
             "name": "@verifyFilterEnable",
-            "line": 69
+            "line": 70
           }
         ],
         "type": "scenario",
@@ -282,343 +413,72 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 72,
+            "line": 73,
             "name": "I am on vertical bridge Page",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 7654000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 73,
-            "name": "Login to vertical bridge with \"admin\"",
-            "match": {
-              "location": "Test\\steps\\LoginSteps.ts:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 22836000000
+              "duration": 8489000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 74,
-            "name": "I click to the select partner view button",
+            "name": "Login to vertical bridge with \"admin\"",
             "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+              "location": "Test\\steps\\LoginSteps.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 1139000000
+              "duration": 21664000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 75,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1020000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
             "name": "selects the \"relation\"",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 837000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 76,
-            "name": "click the select button",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5128000000
+              "duration": 825000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 77,
-            "name": "click on my sites button",
+            "name": "click the select button",
             "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 5222000000
+              "duration": 5115000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 78,
-            "name": "click on filter on/off tab",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5598000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 79,
-            "name": "verify filter is enabled",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:51"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 48000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 80,
-            "name": "I log out",
-            "match": {
-              "location": "Test\\steps\\LoginSteps.ts:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9391000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
-            },
-            "result": {
-              "status": "passed"
-            }
-          }
-        ]
-      },
-      {
-        "id": "verify-data-against-management-agreement;verify-sites-against-portfolio",
-        "keyword": "Scenario",
-        "line": 104,
-        "name": "verify sites against portfolio",
-        "tags": [
-          {
-            "name": "@verifySites",
-            "line": 89
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 92,
-            "name": "I am on vertical bridge Page",
-            "match": {
-              "location": "Test\\steps\\LoginSteps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7634000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 93,
-            "name": "Login to vertical bridge with \"admin\"",
-            "match": {
-              "location": "Test\\steps\\LoginSteps.ts:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 22399000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 94,
-            "name": "I click to the select partner view button",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 376000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 95,
-            "name": "selects the \"relation\"",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1521000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 96,
-            "name": "click the select button",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5128000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 97,
-            "name": "click on my sites button",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5190000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 98,
-            "name": "verify that sites should be displayed \"relation\"",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:54"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 78000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 99,
-            "name": "I log out",
-            "match": {
-              "location": "Test\\steps\\LoginSteps.ts:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9433000000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
-            },
-            "result": {
-              "status": "passed"
-            }
-          }
-        ]
-      },
-      {
-        "id": "verify-data-against-management-agreement;verify-search-against-management-agreement",
-        "keyword": "Scenario",
-        "line": 123,
-        "name": "verify search against management agreement",
-        "tags": [
-          {
-            "name": "@searchSite",
-            "line": 107
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 110,
-            "name": "I am on vertical bridge Page",
-            "match": {
-              "location": "Test\\steps\\LoginSteps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7667000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 111,
-            "name": "Login to vertical bridge with \"admin\"",
-            "match": {
-              "location": "Test\\steps\\LoginSteps.ts:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23818000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 112,
-            "name": "I click to the select partner view button",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 883000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 113,
-            "name": "selects the \"relation\"",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1094000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 114,
-            "name": "click the select button",
-            "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5123000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 115,
             "name": "click on my sites button",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
@@ -631,40 +491,313 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 116,
+            "line": 79,
             "name": "click on filter on/off tab",
             "match": {
               "location": "Test\\steps\\ManagemantAgreementSteps.ts:48"
             },
             "result": {
               "status": "passed",
-              "duration": 5592000000
+              "duration": 5569000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 117,
-            "name": "search the management agreement list \"filterSearch\"",
+            "line": 80,
+            "name": "verify filter is enabled",
             "match": {
-              "location": "Test\\steps\\ManagemantAgreementSteps.ts:57"
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:51"
             },
             "result": {
               "status": "passed",
-              "duration": 4892000000
+              "duration": 53000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 118,
+            "line": 81,
             "name": "I log out",
             "match": {
               "location": "Test\\steps\\LoginSteps.ts:33"
             },
             "result": {
               "status": "passed",
-              "duration": 9773000000
+              "duration": 9944000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-data-against-management-agreement;verify-sites-against-portfolio",
+        "keyword": "Scenario",
+        "line": 105,
+        "name": "verify sites against portfolio",
+        "tags": [
+          {
+            "name": "@verifySites",
+            "line": 90
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 93,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7638000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 94,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22935000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 95,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1052000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 96,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 871000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 97,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5134000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 98,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5188000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 99,
+            "name": "verify that sites should be displayed \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10063000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-data-against-management-agreement;verify-search-against-management-agreement",
+        "keyword": "Scenario",
+        "line": 124,
+        "name": "verify search against management agreement",
+        "tags": [
+          {
+            "name": "@searchSite",
+            "line": 108
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 111,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7655000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 112,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23609000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 113,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1014000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 114,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 833000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 115,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5114000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 116,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5174000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 117,
+            "name": "click on filter on/off tab",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5581000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "search the management agreement list \"filterSearch\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4746000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 119,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9367000000
             }
           },
           {

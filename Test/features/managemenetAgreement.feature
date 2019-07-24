@@ -10,6 +10,7 @@ Feature: verify data against management agreement
     Then  click the select button
     Then  click on my sites button
     Then  verify managment agreement data "<relationships>"
+    When  I log out
 
     Examples:
        | credentials  |  relationships |

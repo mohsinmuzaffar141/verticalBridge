@@ -42,6 +42,7 @@ var siteDetailPage_1 = require("../Pages/siteDetailPage");
 var yaml = require('js-yaml');
 var fs = require('fs');
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
+var map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var maps = new siteDetailPage_1.siteDetailPage();
@@ -78,4 +79,41 @@ cucumber_1.Then(/^click on auto view button$/, { timeout: 5 * 50000 }, function 
         }
     });
 }); });
-//# sourceMappingURL=mapSteps.js.map
+cucumber_1.Then(/^click "([^"]*)" on site detail page$/, { timeout: 5 * 50000 }, function (tab) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, maps.selectTab(tab)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify contact label are present "([^"]*)"$/, { timeout: 5 * 50000 }, function (contactLabel) { return __awaiter(_this, void 0, void 0, function () {
+    var labelContacts;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                labelContacts = map[contactLabel]['tabLabel'];
+                return [4 /*yield*/, maps.verifyContactsLabel(labelContacts)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify contact data are present "([^"]*)"$/, { timeout: 5 * 50000 }, function (contactsData) { return __awaiter(_this, void 0, void 0, function () {
+    var thData, tdData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                thData = map[contactsData]['thContacts'];
+                tdData = map[contactsData]['tdcontacts'];
+                return [4 /*yield*/, maps.verifyContactGroupData(thData, tdData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+//# sourceMappingURL=tabsSteps.js.map

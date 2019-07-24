@@ -1,0 +1,179 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "verify filter against my sites",
+    "line": 1,
+    "id": "verify-filter-against-my-sites",
+    "tags": [],
+    "uri": "Test\\features\\tabs.feature",
+    "elements": [
+      {
+        "id": "verify-filter-against-my-sites;verify-contact-contact-group-should-contain-data",
+        "keyword": "Scenario",
+        "line": 73,
+        "name": "verify contact contact group should contain data",
+        "tags": [
+          {
+            "name": "@verifyContactGroupData",
+            "line": 57
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 60,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9334000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 61,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21754000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 62,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 999000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 825000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 65,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5185000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "click on site link  \"siteMapData\"",
+            "match": {
+              "location": "Test\\steps\\siteDetailSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5525000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "click \"contactTab\" on site detail page",
+            "match": {
+              "location": "Test\\steps\\tabsSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5215000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "verify contact data are present \"contactTab\"",
+            "match": {
+              "location": "Test\\steps\\tabsSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 467000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 69,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9821000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "74.0.3729.169"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]
