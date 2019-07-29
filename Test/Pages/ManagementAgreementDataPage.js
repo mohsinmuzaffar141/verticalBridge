@@ -64,7 +64,6 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         _this.selectpartner = protractor_1.element(protractor_1.by.xpath("//span[@class='mat-button-wrapper' and text()='Select Partner View']"));
         _this.searchfield = protractor_1.element(protractor_1.by.xpath("(//div[@class='mat-form-field-infix']//input)[1]"));
         _this.selectbtn = protractor_1.element(protractor_1.by.xpath("//span[@class='mat-button-wrapper' and text()='Select']"));
-        _this.value = protractor_1.element(protractor_1.by.xpath("//span[text()=' RMR Group ']"));
         _this.mysite_btn = protractor_1.element(protractor_1.by.xpath('//span[@class="mat-button-wrapper" and text()="My Sites"]'));
         _this.filter_btn = protractor_1.element(protractor_1.by.xpath('//span[text()="Filter On/Off"]'));
         _this.filter_box = protractor_1.element(protractor_1.by.xpath('//input[@id="filter-siteNo"]'));
@@ -95,18 +94,21 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
     };
     ManagementAgreementDataPage.prototype.entersearchvalue = function (searchvalue) {
         return __awaiter(this, void 0, void 0, function () {
+            var data, value;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.searchfield.click()];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, this.searchfield.sendKeys(cred[searchvalue]['name'])];
+                        data = cred[searchvalue]['name'];
+                        return [4 /*yield*/, this.searchfield.sendKeys(data)];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.value), 5000, 'Element taking too long to appear in the DOM')];
+                        value = protractor_1.element(protractor_1.by.xpath('//span[text()=" ' + data + ' "]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(value), 5000, 'Element taking too long to appear in the DOM')];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, this.value.click()];
+                        return [4 /*yield*/, value.click()];
                     case 4:
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.selectbtn), 5000, 'Element taking too long to appear in the DOM')];

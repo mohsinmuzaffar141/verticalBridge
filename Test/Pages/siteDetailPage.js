@@ -419,7 +419,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                     case 4:
                         afterClick = this.autoView.getAttribute('aria-checked');
                         if (!afterClick) return [3 /*break*/, 6];
-                        console.log("1:Element is checked");
+                        console.log("2:Element is checked");
                         return [4 /*yield*/, this.autoV.click()];
                     case 5:
                         _a.sent();
@@ -482,19 +482,20 @@ var siteDetailPage = /** @class */ (function (_super) {
             });
         });
     };
-    siteDetailPage.prototype.verifyContactGroupData = function (thData, tdData) {
+    siteDetailPage.prototype.verifyContactGroupData = function (thData) {
         return __awaiter(this, void 0, void 0, function () {
-            var thdata, tddata, i, headerData, tableData;
+            var thdata, i, headerData, tableData;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         thdata = thData.split(',');
-                        tddata = tdData.split(',');
+                        //let tddata = tdData.split(',');
+                        console.log(thdata.length);
                         i = 1;
                         _a.label = 1;
                     case 1:
-                        if (!(i < tddata.length)) return [3 /*break*/, 6];
-                        headerData = protractor_1.element(protractor_1.by.xpath('//th[text()="' + thdata[i] + '"]'));
+                        if (!(i <= thdata.length)) return [3 /*break*/, 6];
+                        headerData = protractor_1.element(protractor_1.by.xpath('//tr[@class="tableMainHeader"]//th[' + i + ']'));
                         return [4 /*yield*/, expect(headerData.isDisplayed()).to.eventually.equal(true)];
                     case 2:
                         _a.sent();
@@ -519,6 +520,190 @@ var siteDetailPage = /** @class */ (function (_super) {
                         i++;
                         return [3 /*break*/, 1];
                     case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.contactDataNOtPresent = function (contctData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var data, contactData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        data = maps[contctData]['contactData'];
+                        contactData = protractor_1.element.all(protractor_1.by.xpath('//div[@class="ng-star-inserted" and text()="No records found"]'));
+                        return [4 /*yield*/, contactData.getText().then(function (txt) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var i;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                i = 0;
+                                                _a.label = 1;
+                                            case 1:
+                                                if (!(i < txt.length)) return [3 /*break*/, 4];
+                                                console.log(txt[i]);
+                                                return [4 /*yield*/, expect(data).to.equal(txt[i])];
+                                            case 2:
+                                                _a.sent();
+                                                _a.label = 3;
+                                            case 3:
+                                                i++;
+                                                return [3 /*break*/, 1];
+                                            case 4: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.contactDataDuplication = function (data) {
+        return __awaiter(this, void 0, void 0, function () {
+            var arr, dataDuplication, i, contactData, i, j;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        arr = [];
+                        dataDuplication = data.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < dataDuplication.length)) return [3 /*break*/, 4];
+                        contactData = protractor_1.element(protractor_1.by.xpath('//td[contains(text(),"' + dataDuplication[i] + '")]'));
+                        return [4 /*yield*/, contactData.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, arr.push(text)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4:
+                        for (i = 0; i < arr.length; i++) {
+                            for (j = i + 1; j < arr.length; j++) {
+                                if (arr[i] == arr[j]) {
+                                    console.log(arr[i]);
+                                }
+                            }
+                        }
+                        console.log("There is no duplication in values");
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyAttributeOnPropertTab = function (attributes, txt) {
+        return __awaiter(this, void 0, void 0, function () {
+            var attribute, _loop_1, i, data;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        attribute = attributes.split(',');
+                        _loop_1 = function (i) {
+                            var attributeData;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        attributeData = protractor_1.element(protractor_1.by.xpath('(//mat-card-title[@class="mat-card-title"])[' + i + ']'));
+                                        return [4 /*yield*/, attributeData.getText().then(function (text) {
+                                                return __awaiter(this, void 0, void 0, function () {
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0:
+                                                                console.log(text);
+                                                                return [4 /*yield*/, expect(text).to.equal(attribute[i - 1])];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [2 /*return*/];
+                                                        }
+                                                    });
+                                                });
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
+                        i = 1;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i <= attribute.length)) return [3 /*break*/, 4];
+                        return [5 /*yield**/, _loop_1(i)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4:
+                        data = protractor_1.element(protractor_1.by.xpath('//h2[contains(text(),"' + txt + '")]'));
+                        return [4 /*yield*/, data.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                console.log(text);
+                                                return [4 /*yield*/, expect(text).to.equal(txt)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyDataUnderPropertyInformation = function (attributeData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var attribute, i, attributeDatainfo;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        attribute = attributeData.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < attribute.length)) return [3 /*break*/, 5];
+                        attributeDatainfo = protractor_1.element(protractor_1.by.xpath('//div[contains(text(),"' + attribute[i] + '")]'));
+                        return [4 /*yield*/, attributeDatainfo.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, expect(attributeDatainfo.isDisplayed()).to.eventually.equal(true)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5: return [2 /*return*/];
                 }
             });
         });

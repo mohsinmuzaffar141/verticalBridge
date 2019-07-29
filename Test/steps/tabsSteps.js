@@ -109,7 +109,84 @@ cucumber_1.Then(/^verify contact data are present "([^"]*)"$/, { timeout: 5 * 50
             case 0:
                 thData = map[contactsData]['thContacts'];
                 tdData = map[contactsData]['tdcontacts'];
-                return [4 /*yield*/, maps.verifyContactGroupData(thData, tdData)];
+                return [4 /*yield*/, maps.verifyContactGroupData(thData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify contact data are not present "([^"]*)"$/, { timeout: 5 * 50000 }, function (contactsData) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, maps.contactDataNOtPresent(contactsData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify contact data should not be duplicated "([^"]*)"$/, { timeout: 5 * 50000 }, function (duplicateData) { return __awaiter(_this, void 0, void 0, function () {
+    var contctData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                contctData = map[duplicateData]['duplicateData'];
+                return [4 /*yield*/, maps.contactDataDuplication(contctData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify attributes should be present on property tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (attributeProperty) { return __awaiter(_this, void 0, void 0, function () {
+    var attributeData, txt;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                attributeData = map[attributeProperty]['attribues'];
+                txt = map[attributeProperty]['attributeData'];
+                return [4 /*yield*/, maps.verifyAttributeOnPropertTab(attributeData, txt)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data should be present under property information "([^"]*)"$/, { timeout: 5 * 50000 }, function (propertyData) { return __awaiter(_this, void 0, void 0, function () {
+    var data;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                data = map[propertyData]['propertyInformation'];
+                return [4 /*yield*/, maps.verifyDataUnderPropertyInformation(data)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify property data are present "([^"]*)"$/, { timeout: 5 * 50000 }, function (propertyData) { return __awaiter(_this, void 0, void 0, function () {
+    var thData, tdData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                thData = map[propertyData]['thProperty'];
+                tdData = map[propertyData]['tdProperty'];
+                return [4 /*yield*/, maps.verifyContactGroupData(thData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify property data is not present "([^"]*)"$/, { timeout: 5 * 50000 }, function (invaliddata) { return __awaiter(_this, void 0, void 0, function () {
+    var data;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                data = map[invaliddata]['propertyDataNotPresent'];
+                return [4 /*yield*/, maps.verifyLabelNotPreent(data)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

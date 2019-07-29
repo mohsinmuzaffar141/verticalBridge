@@ -54,6 +54,7 @@ exports.config = {
         "login": "../features/login.feature",
         "managementAgreement": "./Test/features/managemenetAgreement.feature",
         "site": "./Test/features/mySites.feature",
+        "tabs": "./Test/features/tabs.feature"
     },
     // };
     plugins: [{

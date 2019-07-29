@@ -1,11 +1,8 @@
 import {Then} from 'cucumber'
 
-Then(/^click on (.*) on site detail page$/, function () {
+Then(/^verifyproperty data are present "([^"]*)"$/, function () {
 
 });
-Then(/^verify contact label are present$/, function () {
-
-});
-Then(/^verify contact data are present "([^"]*)"$/, function () {
+Then(/^verify property data is not present "([^"]*)"$/, function () {
 
 });

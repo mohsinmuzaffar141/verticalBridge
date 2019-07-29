@@ -33,5 +33,30 @@ Then(/^verify contact label are present "([^"]*)"$/, {timeout: 5 * 50000}, async
 Then(/^verify contact data are present "([^"]*)"$/, {timeout: 5 * 50000}, async(contactsData)=> {
     let thData=map[contactsData]['thContacts'];
     let tdData=map[contactsData]['tdcontacts'];
-    await maps.verifyContactGroupData(thData,tdData);
+    await maps.verifyContactGroupData(thData);
+});
+Then(/^verify contact data are not present "([^"]*)"$/, {timeout: 5 * 50000}, async(contactsData)=> {
+    await maps.contactDataNOtPresent(contactsData);
+});
+Then(/^verify contact data should not be duplicated "([^"]*)"$/, {timeout: 5 * 50000}, async(duplicateData)=> {
+    let contctData=map[duplicateData]['duplicateData'];
+    await maps.contactDataDuplication(contctData);
+});
+Then(/^verify attributes should be present on property tab "([^"]*)"$/, {timeout: 5 * 50000}, async(attributeProperty)=> {
+    let attributeData=map[attributeProperty]['attribues'];
+    let txt=map[attributeProperty]['attributeData'];
+    await maps.verifyAttributeOnPropertTab(attributeData,txt);
+});
+Then(/^verify data should be present under property information "([^"]*)"$/, {timeout: 5 * 50000}, async(propertyData)=> {
+    let data=map[propertyData]['propertyInformation'];
+    await maps.verifyDataUnderPropertyInformation(data);
+});
+Then(/^verify property data are present "([^"]*)"$/, {timeout: 5 * 50000}, async(propertyData)=>  {
+    let thData=map[propertyData]['thProperty'];
+    let tdData=map[propertyData]['tdProperty'];
+    await maps.verifyContactGroupData(thData);
+});
+Then(/^verify property data is not present "([^"]*)"$/, {timeout: 5 * 50000}, async(invaliddata)=> {
+    let data=map[invaliddata]['propertyDataNotPresent'];
+    await maps.verifyLabelNotPreent(data);
 });

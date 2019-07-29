@@ -10,6 +10,10 @@ relation:
   revenue: $14,825.64
   sitesCount: '1113'
 
+contactData:
+  name:  Duesenberg Investment
+  siteNumber: 'US-CA-1364'
+
 filterSearch:
   siteNumber: US-GA-1045
   siteName: 1 Corporate Boulevard
@@ -62,7 +66,7 @@ siteDetailMohsin:
 siteContacts:
   siteNumber: 'US-CA-1253'
   contacts:  Regional Site Manager,Regional Leasing Manager,Leasing Specialist,Asset Manager,Legal
-  contactsData: Brian Bertrand - Regional Operations Manager,Tiffany McClurg - RLM,Pilar Lozano - RLS, - ,Dan Marinberg - SVP & General Counsel
+  contactsData: Brian Bertrand - Regional Operations Manager,Tiffany McClurg - RLM,Pilar Lozano - RLS, - ,Dan Marinberg - Senior Vice President and General Counsel
 
 siteDetailNotPresent:
   siteNumber: 'US-CA-1253'

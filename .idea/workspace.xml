@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" line="135" />
+    <bookmark url="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" line="140" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4ef5760-62a3-4076-bc98-958757d422f5" name="Default Changelist" comment="commit yesterday">
-      <change afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/maps.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/mapSteps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/mapSteps.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/mapSteps.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/map.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/map.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/login_to_vertical_bridge.chrome.74.0.3729.169_1563513010548.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_data_against_management_agreement.chrome.74.0.3729.169_1563513010548.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_filter_against_my_sites.chrome.74.0.3729.169_1563521660814.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/login_to_vertical_bridge.chrome.74.0.3729.169_1563885542738.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_data_against_management_agreement.chrome.74.0.3729.169_1563885542743.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_filter_against_my_sites.chrome.74.0.3729.169_1563886754091.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/features/tabs.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="25" />
+            <state relative-caret-position="-2614">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -54,17 +54,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/testData/users.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+            <state relative-caret-position="68">
+              <caret line="4" column="8" selection-start-line="4" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts">
+        <entry file="file://$PROJECT_DIR$/Test/features/mySites.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="208">
+              <caret line="220" column="10" selection-start-line="220" selection-start-column="10" selection-end-line="220" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/steps/tabsSteps.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state relative-caret-position="372">
+              <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -82,10 +82,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/steps/siteDetailSteps.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-283">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="40" />
               <folding>
                 <element signature="e#80#128#0" expanded="true" />
               </folding>
@@ -94,19 +103,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/testData/map.yml">
+        <entry file="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="163">
+              <caret line="113" column="10" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/testData/map.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="167" column="27" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
+            <state relative-caret-position="306">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -126,6 +135,9 @@
       <find>untill</find>
       <find>filterSearch</find>
       <find>verify tabs on site detail page</find>
+      <find>verify contact label are present</find>
+      <find>Then  verify site detail labels not present</find>
+      <find>verify site detail labels not presen</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,7 +157,6 @@
         <option value="$PROJECT_DIR$/Test/reporting/CucumberReportExtension.ts" />
         <option value="$PROJECT_DIR$/Test/features/managemenetAgreementData.feature" />
         <option value="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" />
-        <option value="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" />
         <option value="$PROJECT_DIR$/Test/features/siteDetail.feature" />
         <option value="$PROJECT_DIR$/Test/features/login.feature" />
         <option value="$PROJECT_DIR$/Test/steps/LoginSteps.ts" />
@@ -153,23 +164,24 @@
         <option value="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" />
         <option value="$PROJECT_DIR$/Test/features/mySites.feature" />
         <option value="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" />
-        <option value="$PROJECT_DIR$/config.ts" />
         <option value="$PROJECT_DIR$/Test/features/maps.feature" />
         <option value="$PROJECT_DIR$/Test/steps/mapSteps.ts" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" />
-        <option value="$PROJECT_DIR$/Test/features/tabs.feature" />
+        <option value="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" />
+        <option value="$PROJECT_DIR$/config.ts" />
         <option value="$PROJECT_DIR$/Test/testData/users.yml" />
-        <option value="$PROJECT_DIR$/Test/steps/tabsSteps.ts" />
-        <option value="$PROJECT_DIR$/Test/testData/map.yml" />
         <option value="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" />
+        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" />
+        <option value="$PROJECT_DIR$/Test/testData/map.yml" />
+        <option value="$PROJECT_DIR$/Test/steps/tabsSteps.ts" />
+        <option value="$PROJECT_DIR$/Test/features/tabs.feature" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="18" />
-    <option name="y" value="27" />
-    <option name="width" value="1874" />
-    <option name="height" value="1263" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="14" />
+    <option name="y" value="21" />
+    <option name="width" value="1500" />
+    <option name="height" value="1011" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -265,22 +277,25 @@
       <workItem from="1563541452083" duration="42000" />
       <workItem from="1563768562379" duration="11616000" />
       <workItem from="1563861470613" duration="18470000" />
+      <workItem from="1563942757010" duration="1309000" />
+      <workItem from="1564116176973" duration="19628000" />
+      <workItem from="1564374830640" duration="18136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223341000" />
+    <option name="totallyTimeSpent" value="262414000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="984" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="984" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1886196" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.15015806" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.21454546" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3272727" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32998884" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -441,20 +456,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/features/siteDetail.feature" />
-    <entry file="file://$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="84" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="67" column="18" lean-forward="true" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/steps/LoginSteps.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
@@ -486,16 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="155" column="67" lean-forward="true" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/Pages/LoginPage.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -516,16 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/protractor/built/element.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -533,65 +514,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/mySites.feature">
+    <entry file="file://$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="239" column="42" selection-start-line="239" selection-start-column="10" selection-end-line="239" selection-end-column="42" />
+        <state relative-caret-position="323">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="55" column="13" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/testData/users.yml">
+    <entry file="file://$PROJECT_DIR$/Test/features/mySites.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/tabsSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/testData/map.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        <state relative-caret-position="208">
+          <caret line="220" column="10" selection-start-line="220" selection-start-column="10" selection-end-line="220" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/steps/siteDetailSteps.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="40" />
           <folding>
             <element signature="e#80#128#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/tabs.feature">
+    <entry file="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="25" />
+        <state relative-caret-position="163">
+          <caret line="113" column="10" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts">
+    <entry file="file://$PROJECT_DIR$/Test/testData/map.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="167" column="27" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
+        <state relative-caret-position="306">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/testData/users.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/steps/tabsSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/features/tabs.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2614">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

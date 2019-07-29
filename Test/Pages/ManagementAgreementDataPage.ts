@@ -17,7 +17,6 @@ export class ManagementAgreementDataPage extends BasePage{
     selectpartner = element(by.xpath("//span[@class='mat-button-wrapper' and text()='Select Partner View']"));
     searchfield= element(by.xpath("(//div[@class='mat-form-field-infix']//input)[1]"));
     selectbtn = element(by.xpath("//span[@class='mat-button-wrapper' and text()='Select']"));
-    value = element(by.xpath("//span[text()=' RMR Group ']"));
     mysite_btn= element(by.xpath('//span[@class="mat-button-wrapper" and text()="My Sites"]'))
     filter_btn=element(by.xpath('//span[text()="Filter On/Off"]'))
     filter_box=element(by.xpath('//input[@id="filter-siteNo"]'))
@@ -36,9 +35,11 @@ export class ManagementAgreementDataPage extends BasePage{
     }
     async entersearchvalue(searchvalue: string){
         await this.searchfield.click();
-        await this.searchfield.sendKeys(cred[searchvalue]['name']);
-        await browser.wait(until.presenceOf(this.value), 5000, 'Element taking too long to appear in the DOM');
-        await this.value.click()
+        let data=cred[searchvalue]['name'];
+        await this.searchfield.sendKeys(data);
+        let value = element(by.xpath('//span[text()=" '+data+' "]'));
+        await browser.wait(until.presenceOf(value), 5000, 'Element taking too long to appear in the DOM');
+        await value.click();
         await browser.wait(until.presenceOf(this.selectbtn), 5000, 'Element taking too long to appear in the DOM');;
     }
     async clickselectbutton() {

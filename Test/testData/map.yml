@@ -4,5 +4,23 @@ mapSearch:
 contactTab:
   tabName: Contacts
   tabLabel: Site Contacts,Ground Right Contacts,Portfolio Contacts,Tenant Contacts
-  thContacts: Contact,Type,Phone(s),Address
-  tdcontacts: Business Manager, Casey Guittarr,Company, Two Newton Place
+  thContacts: Contact,Type,Phone(s),Address,Email
+  tdcontacts: Casey Guittarr,Business Manager,Company, Two Newton Place,CGuittarr@rmrgroup.com
+  contactData: No records found
+  duplicateData: Jack,Lisa,Mario,Maian,Ryan,Sherri,Default Contact
+
+
+propertyTab:
+  tabName: Property
+  siteNumber: 'US-CA-1253'
+  attribues: Property Information,Fiber Data
+  attributeData: All Sites on This Property
+  propertyInformation:  VB Property No,PROP-US-CA-09475,Property Name,500  Esplanadae,Site Property Size,Site Ground Interest,Managed,Number of Sites,Number of Units
+  propertyDataNotPresent: Acquisitions,Ground Rights
+
+propertyTab1:
+  tabName: Property
+  propertyInformation:  Is Fiber Available,Fiber Provider(s)
+  thProperty: Site No.,Site Name,Site Type
+  tdProperty: CA-1364,500  Esplanade,Office Building
+  propertyDataNotPresent: Dynamics ERP Vendor ID,Previous Owner Site ID,Market,Inactive Reason,Inactive Date,Inactive Reason Notes,Securitization,Securitization Notes
