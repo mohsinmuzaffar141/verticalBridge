@@ -146,8 +146,11 @@ cucumber_1.Then(/^verify attributes should be present on property tab "([^"]*)"$
             case 0:
                 attributeData = map[attributeProperty]['attribues'];
                 txt = map[attributeProperty]['attributeData'];
-                return [4 /*yield*/, maps.verifyAttributeOnPropertTab(attributeData, txt)];
+                return [4 /*yield*/, maps.verifyAttributeOnPropertTab(attributeData)];
             case 1:
+                _a.sent();
+                return [4 /*yield*/, maps.verifyAttributeOnLeasesTab(txt)];
+            case 2:
                 _a.sent();
                 return [2 /*return*/];
         }
@@ -187,6 +190,205 @@ cucumber_1.Then(/^verify property data is not present "([^"]*)"$/, { timeout: 5 
             case 0:
                 data = map[invaliddata]['propertyDataNotPresent'];
                 return [4 /*yield*/, maps.verifyLabelNotPreent(data)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify leases tab attribute should be present "([^"]*)"$/, { timeout: 5 * 50000 }, function (leasesAttribute) { return __awaiter(_this, void 0, void 0, function () {
+    var data;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                data = map[leasesAttribute]['attributeData'];
+                return [4 /*yield*/, maps.verifyAttributeOnLeasesTab(data)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data present on leases tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (leasesData) { return __awaiter(_this, void 0, void 0, function () {
+    var leaseData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                leaseData = map[leasesData]['tabData'];
+                return [4 /*yield*/, maps.verifyLeasesTabData(leaseData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify leases tab labels sholud be present on leases tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (leasesLabels) { return __awaiter(_this, void 0, void 0, function () {
+    var leaseData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                leaseData = map[leasesLabels]['thLeases'];
+                return [4 /*yield*/, maps.verifyLeasesLabel(leaseData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data should be present under ground rights "([^"]*)"$/, { timeout: 5 * 50000 }, function (dataGroundrights) { return __awaiter(_this, void 0, void 0, function () {
+    var leaseData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                leaseData = map[dataGroundrights]['thLeases'];
+                return [4 /*yield*/, maps.verifyGroundRightsData(leaseData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify leases tab data is not present "([^"]*)"$/, { timeout: 5 * 50000 }, function (dataNotPresent) { return __awaiter(_this, void 0, void 0, function () {
+    var leaseDataNotPresent;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                leaseDataNotPresent = map[dataNotPresent]['leaseDataNotPresent'];
+                return [4 /*yield*/, maps.verifyLabelNotPreent(leaseDataNotPresent)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels on operational tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (opreationLabels) { return __awaiter(_this, void 0, void 0, function () {
+    var label, label1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[opreationLabels]['attribues'];
+                label1 = map[opreationLabels]['attributeData'];
+                return [4 /*yield*/, maps.verifyAttributeOnPropertTab(label)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, maps.verifyAttributeOnLeasesTab(label1)];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels not present on operational tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (labelNotPresent) { return __awaiter(_this, void 0, void 0, function () {
+    var label;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[labelNotPresent]['operationDataNotPresent'];
+                return [4 /*yield*/, maps.verifyLabelNotPreent(label)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data under operational attribute "([^"]*)"$/, { timeout: 5 * 50000 }, function (operationAttribute) { return __awaiter(_this, void 0, void 0, function () {
+    var attribute;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                attribute = map[operationAttribute]['operationAttributeData'];
+                return [4 /*yield*/, maps.verifyDataUnderPropertyInformation(attribute)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data under site comments "([^"]*)"$/, { timeout: 5 * 50000 }, function (dataOperation) { return __awaiter(_this, void 0, void 0, function () {
+    var operationData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                operationData = map[dataOperation]['thOperation'];
+                return [4 /*yield*/, maps.verifyLeasesLabel(operationData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels under FCC tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (labelFCC) { return __awaiter(_this, void 0, void 0, function () {
+    var label;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[labelFCC]['attribues'];
+                return [4 /*yield*/, maps.verifyAttributeOnPropertTab(label)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels data under FCC tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (dataFCC) { return __awaiter(_this, void 0, void 0, function () {
+    var label;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[dataFCC]['fccAttributeData'];
+                return [4 /*yield*/, maps.verifyDataUnderPropertyInformation(label)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify display message under FCC tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (msgFCC) { return __awaiter(_this, void 0, void 0, function () {
+    var data;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                data = map[msgFCC]['fccMessage'];
+                return [4 /*yield*/, maps.verifyDisplayMessage(data)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify link under FCC tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (linkFCC) { return __awaiter(_this, void 0, void 0, function () {
+    var data;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                data = map[linkFCC]['fccLink'];
+                return [4 /*yield*/, maps.verifyLink(data)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify label under rad center tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (labelRadCenter) { return __awaiter(_this, void 0, void 0, function () {
+    var label;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[labelRadCenter]['attribues'];
+                return [4 /*yield*/, maps.verifyAttributeOnPropertTab(label)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify label data under rad center tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (dataRadCenter) { return __awaiter(_this, void 0, void 0, function () {
+    var label;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[dataRadCenter]['radAttributeData'];
+                return [4 /*yield*/, maps.verifyDataUnderPropertyInformation(label)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

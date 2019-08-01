@@ -227,7 +227,7 @@ Feature: verify filter against my sites
       |   admin      |     relation   | siteDetailNotPresentMohsin |
 
 
-  @verifyTabs
+  @verifyTabs @regression
   Scenario Outline: verify Tabs on detail page
 
     Given I am on vertical bridge Page

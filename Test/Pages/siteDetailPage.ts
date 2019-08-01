@@ -20,6 +20,7 @@ export class siteDetailPage extends BasePage {
     resetTab = element(by.xpath('//span[text()="Reset Map"]'))
     autoView = element(by.xpath('//div[@class="mat-checkbox-inner-container"]//input[@type="checkbox"]'));
     autoV = element(by.xpath('//div[@class="mat-checkbox-inner-container"]'))
+    linkTitle=element(by.xpath('//div[@class="header-title"]'))
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
@@ -174,7 +175,7 @@ export class siteDetailPage extends BasePage {
         //let tddata = tdData.split(',');
         console.log(thdata.length);
         for (let i = 1; i <= thdata.length; i++) {
-            let headerData = element(by.xpath('//tr[@class="tableMainHeader"]//th['+i+']'));
+            let headerData = element(by.xpath('//tr[@class="tableMainHeader"]//th[' + i + ']'));
             await expect(headerData.isDisplayed()).to.eventually.equal(true);
             //let tableData=element(by.xpath('//td[contains(text(),"'+tddata[i]+'")]'))
             let tableData = element(by.xpath('//tr[@class="tableMainData ng-star-inserted"]//td[' + i + ']'))
@@ -186,8 +187,8 @@ export class siteDetailPage extends BasePage {
         }
     }
 
-    async contactDataNOtPresent(contctData:string) {
-        let data=maps[contctData]['contactData'];
+    async contactDataNOtPresent(contctData: string) {
+        let data = maps[contctData]['contactData'];
         let contactData = element.all(by.xpath('//div[@class="ng-star-inserted" and text()="No records found"]'))
         await contactData.getText().then(async function (txt) {
             for (let i = 0; i < txt.length; i++) {
@@ -197,19 +198,18 @@ export class siteDetailPage extends BasePage {
         });
     }
 
-    async contactDataDuplication(data){
-        var arr=[];
+    async contactDataDuplication(data) {
+        var arr = [];
         let dataDuplication = data.split(',');
         for (let i = 0; i < dataDuplication.length; i++) {
-            let contactData = element(by.xpath('//td[contains(text(),"'+dataDuplication[i]+'")]'))
-            await contactData.getText().then(async function(text){
+            let contactData = element(by.xpath('//td[contains(text(),"' + dataDuplication[i] + '")]'))
+            await contactData.getText().then(async function (text) {
                 await arr.push(text)
             });
         }
         for (let i = 0; i < arr.length; i++) {
-            for(let j=i+1;j<arr.length;j++){
-                if(arr[i]==arr[j])
-                {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
                     console.log(arr[i]);
                 }
             }
@@ -217,32 +217,82 @@ export class siteDetailPage extends BasePage {
         console.log("There is no duplication in values");
     }
 
-    async verifyAttributeOnPropertTab(attributes:string,txt:string){
+    async verifyAttributeOnPropertTab(attributes: string) {
         let attribute = attributes.split(',');
-        for (let i = 1; i <= attribute.length; i++) {
-            let attributeData = element(by.xpath('(//mat-card-title[@class="mat-card-title"])['+i+']'));
+        for (let i = 0; i <attribute.length; i++) {
+            let attributeData = element(by.xpath('//mat-card-title[contains(text(), "'+attribute[i]+'")]'));
             await attributeData.getText().then(async function (text) {
                 console.log(text);
-                await expect(text).to.equal(attribute[i-1]);
+                await expect(text).to.equal(attribute[i]);
             });
         }
-        let data=element(by.xpath('//h2[contains(text(),"'+txt+'")]'))
-        await data.getText().then(async function (text) {
-            console.log(text);
-            await expect(text).to.equal(txt);
-        });
-
     }
 
-    async verifyDataUnderPropertyInformation(attributeData:string){
+    async verifyDataUnderPropertyInformation(attributeData: string) {
         let attribute = attributeData.split(',');
         for (let i = 0; i < attribute.length; i++) {
-            let attributeDatainfo = element(by.xpath('//div[contains(text(),"'+attribute[i]+'")]'));
+            let attributeDatainfo = element(by.xpath('//div[contains(text(),"' + attribute[i] + '")]'));
             await attributeDatainfo.getText().then(async function (text) {
                 console.log(text);
             });
-           await expect(attributeDatainfo.isDisplayed()).to.eventually.equal(true);
+            await expect(attributeDatainfo.isDisplayed()).to.eventually.equal(true);
         }
+    }
 
+    async verifyAttributeOnLeasesTab(txt: string) {
+        let attribute = txt.split(',');
+        for (let i = 0; i < attribute.length; i++) {
+            let data = element(by.xpath('//h2[contains(text(),"' + attribute[i] + '")]'));
+            await data.getText().then(async function (text) {
+                console.log(text);
+                await expect(text).to.equal(attribute[i]);
+            });
+        }
+    }
+
+    async verifyLeasesTabData(data: string) {
+        let leasesData = data.split(',');
+        for (let i = 0; i < leasesData.length; i++) {
+            let data = element(by.xpath('//div[contains(text(),"' + leasesData[i] + '")]'));
+            await data.getText().then(async function (text) {
+                console.log(text);
+            });
+            await expect(data.isDisplayed()).to.eventually.equal(true);
+        }
+    }
+
+    async verifyLeasesLabel(thData: string) {
+        let thdata = thData.split(',');
+        for (let i = 1; i <= thdata.length; i++) {
+            let headerData = element(by.xpath('//tr[@class="tableMainHeader"]//th[' + i + ']'));
+            await headerData.getText().then(async function (text) {
+                console.log(text);
+                await expect(text).to.equal(thdata[i - 1]);
+            });
+        }
+    }
+
+    async verifyGroundRightsData(thData: string) {
+        let thdata = thData.split(',');
+        for (let i = 1; i <= thdata.length; i++) {
+            let headerData = element(by.xpath('(//table)[2]//tr[@class="tableMainHeader"]//th[' + i + ']'));
+            await headerData.getText().then(async function (text) {
+                console.log(text);
+                await expect(text).to.equal(thdata[i - 1]);
+            });
+        }
+    }
+
+    async verifyDisplayMessage(message: string) {
+        let msg = element(by.xpath('//p[contains(text(),"' + message + '")]'))
+        await msg.getText().then(async function (text) {
+            console.log(text);
+        });
+        await expect(msg.isDisplayed()).to.eventually.equal(true);
+    }
+
+    async verifyLink(link: string) {
+        let msg = element(by.xpath('//a[contains(text(),"'+link+'")]'))
+        await expect(msg.isDisplayed()).to.eventually.equal(true);
     }
 }

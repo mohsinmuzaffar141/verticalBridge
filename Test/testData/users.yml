@@ -4,6 +4,7 @@ admin:
 
 relation:
   name: RMR Group
+  siteNumber: US-GA-1045
   managementData: FVE Portfolio
   owner_name: FVE Managers, Inc.
   numberOfSites: 287
@@ -13,6 +14,10 @@ relation:
 contactData:
   name:  Duesenberg Investment
   siteNumber: 'US-CA-1364'
+
+leasesData:
+  name: American Tower
+  siteNumber: 'US-ID-5021'
 
 filterSearch:
   siteNumber: US-GA-1045

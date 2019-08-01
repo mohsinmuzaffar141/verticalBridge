@@ -45,7 +45,8 @@ Then(/^verify contact data should not be duplicated "([^"]*)"$/, {timeout: 5 * 5
 Then(/^verify attributes should be present on property tab "([^"]*)"$/, {timeout: 5 * 50000}, async(attributeProperty)=> {
     let attributeData=map[attributeProperty]['attribues'];
     let txt=map[attributeProperty]['attributeData'];
-    await maps.verifyAttributeOnPropertTab(attributeData,txt);
+    await maps.verifyAttributeOnPropertTab(attributeData);
+    await maps.verifyAttributeOnLeasesTab(txt);
 });
 Then(/^verify data should be present under property information "([^"]*)"$/, {timeout: 5 * 50000}, async(propertyData)=> {
     let data=map[propertyData]['propertyInformation'];
@@ -59,4 +60,66 @@ Then(/^verify property data are present "([^"]*)"$/, {timeout: 5 * 50000}, async
 Then(/^verify property data is not present "([^"]*)"$/, {timeout: 5 * 50000}, async(invaliddata)=> {
     let data=map[invaliddata]['propertyDataNotPresent'];
     await maps.verifyLabelNotPreent(data);
+});
+Then(/^verify leases tab attribute should be present "([^"]*)"$/, {timeout: 5 * 50000}, async(leasesAttribute)=>{
+    let data=map[leasesAttribute]['attributeData'];
+    await maps.verifyAttributeOnLeasesTab(data);
+});
+Then(/^verify data present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, async(leasesData)=> {
+    let leaseData=map[leasesData]['tabData'];
+    await maps.verifyLeasesTabData(leaseData);
+});
+Then(/^verify leases tab labels sholud be present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, async(leasesLabels)=>  {
+    let leaseData=map[leasesLabels]['thLeases'];
+    await maps.verifyLeasesLabel(leaseData);
+});
+Then(/^verify data should be present under ground rights "([^"]*)"$/, {timeout: 5 * 50000}, async(dataGroundrights)=>{
+    let leaseData=map[dataGroundrights]['thLeases'];
+    await maps.verifyGroundRightsData(leaseData);
+});
+Then(/^verify leases tab data is not present "([^"]*)"$/, {timeout: 5 * 50000}, async(dataNotPresent)=> {
+    let leaseDataNotPresent=map[dataNotPresent]['leaseDataNotPresent'];
+    await maps.verifyLabelNotPreent(leaseDataNotPresent);
+});
+Then(/^verify labels on operational tab "([^"]*)"$/, {timeout: 5 * 50000}, async(opreationLabels)=> {
+    let label=map[opreationLabels]['attribues'];
+    let label1=map[opreationLabels]['attributeData'];
+    await maps.verifyAttributeOnPropertTab(label);
+    await maps.verifyAttributeOnLeasesTab(label1);
+});
+Then(/^verify labels not present on operational tab "([^"]*)"$/, {timeout: 5 * 50000}, async(labelNotPresent)=> {
+    let label=map[labelNotPresent]['operationDataNotPresent'];
+    await maps.verifyLabelNotPreent(label);
+});
+Then(/^verify data under operational attribute "([^"]*)"$/, {timeout: 5 * 50000}, async(operationAttribute)=> {
+    let attribute=map[operationAttribute]['operationAttributeData'];
+    await maps.verifyDataUnderPropertyInformation(attribute);
+});
+Then(/^verify data under site comments "([^"]*)"$/, {timeout: 5 * 50000}, async(dataOperation)=> {
+    let operationData=map[dataOperation]['thOperation'];
+    await maps.verifyLeasesLabel(operationData);
+});
+Then(/^verify labels under FCC tab "([^"]*)"$/, {timeout: 5 * 50000}, async (labelFCC)=> {
+    let label=map[labelFCC]['attribues'];
+    await maps.verifyAttributeOnPropertTab(label);
+});
+Then(/^verify labels data under FCC tab "([^"]*)"$/, {timeout: 5 * 50000}, async(dataFCC)=>  {
+    let label=map[dataFCC]['fccAttributeData'];
+    await maps.verifyDataUnderPropertyInformation(label);
+});
+Then(/^verify display message under FCC tab "([^"]*)"$/, {timeout: 5 * 50000}, async(msgFCC)=> {
+    let data=map[msgFCC]['fccMessage'];
+    await maps.verifyDisplayMessage(data);
+});
+Then(/^verify link under FCC tab "([^"]*)"$/, {timeout: 5 * 50000}, async(linkFCC)=> {
+    let data=map[linkFCC]['fccLink'];
+    await maps.verifyLink(data);
+});
+Then(/^verify label under rad center tab "([^"]*)"$/, {timeout: 5 * 50000}, async (labelRadCenter)=> {
+    let label=map[labelRadCenter]['attribues'];
+    await maps.verifyAttributeOnPropertTab(label);
+});
+Then(/^verify label data under rad center tab "([^"]*)"$/, {timeout: 5 * 50000}, async(dataRadCenter)=> {
+    let label=map[dataRadCenter]['radAttributeData'];
+    await maps.verifyDataUnderPropertyInformation(label);
 });
