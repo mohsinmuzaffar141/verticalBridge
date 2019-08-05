@@ -488,3 +488,115 @@ Feature: verify filter against my sites
       |   admin      |    leasesData   |  radCenter    |
       |   admin      |    leasesData   |  radCenter1   |
       |   admin      |    leasesData   |  radCenter2   |
+
+  @verifyIndicatorUnderRadCenter
+  Scenario Outline: verify indicator under rad center tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify indicator under rad center tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |     tab       |
+      |   admin      |    leasesData   |  radCenter    |
+
+  @verifyTabelHeaderUnderRadCenter
+  Scenario Outline: verify table header under rad center tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify table header under rad center tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |     tab       |
+      |   admin      |    leasesData   |   radCenter   |
+
+
+    #Leasing Activity Tab
+  @verifyTabelHeaderUnderLeasingActivity
+  Scenario Outline: verify table header under leasing activity tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify table header under leasing activity tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |         tab         |
+      |   admin      |    leasesData   |   leasingActivity   |
+
+  @verifyLabelNotPresentUnderLeasingActivity
+  Scenario Outline: verify label not present under leasing activity tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify label not present under leasing activity tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |         tab         |
+      |   admin      |    leasesData   |   leasingActivity   |
+
+  @verifyButtonNotPresent
+  Scenario Outline: verify label not present under leasing activity tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |         tab          |
+      |   admin      |    leasesData   |   leasingActivity1   |
+      |   admin      |    leasesData   |   leasingActivity2   |
+
+
+    #Document Tab
+  @verifyLabelsUnderDocumentTab
+  Scenario Outline: verify labels are present under document tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify labels under document tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |       tab       |
+      |   admin      |    leasesData   |   documentTab   |

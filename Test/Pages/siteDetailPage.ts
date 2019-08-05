@@ -1,6 +1,7 @@
-import { browser, element, by, protractor } from 'protractor'
+import {browser, element, by, protractor} from 'protractor'
 import { IdentificationType, BasePage } from './BasePage';
 import {location} from "@angular/platform-browser/src/facade/browser";
+
 const chai = require("chai").use(require("chai-as-promised"));
 
 //data variables
@@ -20,7 +21,7 @@ export class siteDetailPage extends BasePage {
     resetTab = element(by.xpath('//span[text()="Reset Map"]'))
     autoView = element(by.xpath('//div[@class="mat-checkbox-inner-container"]//input[@type="checkbox"]'));
     autoV = element(by.xpath('//div[@class="mat-checkbox-inner-container"]'))
-    linkTitle=element(by.xpath('//div[@class="header-title"]'))
+    linkTitle = element(by.xpath('//div[@class="header-title"]'))
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
@@ -155,9 +156,16 @@ export class siteDetailPage extends BasePage {
     async selectTab(tabName: string) {
         let tab = maps[tabName]['tabName'];
         let tabClick = element(by.xpath('//a[text()=" ' + tab + ' "]'))
-        await tabClick.click();
-        await browser.sleep(5000);
-    }
+        await tabClick.isPresent().then(async function (display) {
+                if (display) {
+                    await tabClick.click();
+                    await browser.sleep(5000);
+                } else
+                    console.log(tab + " is not present")
+            }
+        )
+    };
+
 
     async verifyContactsLabel(contactLabel: string) {
         let contactLabels = contactLabel.split(',');
@@ -176,7 +184,11 @@ export class siteDetailPage extends BasePage {
         console.log(thdata.length);
         for (let i = 1; i <= thdata.length; i++) {
             let headerData = element(by.xpath('//tr[@class="tableMainHeader"]//th[' + i + ']'));
-            await expect(headerData.isDisplayed()).to.eventually.equal(true);
+            await headerData.getText().then(async function (text) {
+                console.log(text);
+                await expect(text).to.equal(thdata[i - 1]);
+            });
+            // await expect(headerData.isDisplayed()).to.eventually.equal(true);
             //let tableData=element(by.xpath('//td[contains(text(),"'+tddata[i]+'")]'))
             let tableData = element(by.xpath('//tr[@class="tableMainData ng-star-inserted"]//td[' + i + ']'))
             //tr[@class='tableMainData ng-star-inserted']//td[1]
@@ -219,8 +231,8 @@ export class siteDetailPage extends BasePage {
 
     async verifyAttributeOnPropertTab(attributes: string) {
         let attribute = attributes.split(',');
-        for (let i = 0; i <attribute.length; i++) {
-            let attributeData = element(by.xpath('//mat-card-title[contains(text(), "'+attribute[i]+'")]'));
+        for (let i = 0; i < attribute.length; i++) {
+            let attributeData = element(by.xpath('//mat-card-title[contains(text(), "' + attribute[i] + '")]'));
             await attributeData.getText().then(async function (text) {
                 console.log(text);
                 await expect(text).to.equal(attribute[i]);
@@ -292,7 +304,33 @@ export class siteDetailPage extends BasePage {
     }
 
     async verifyLink(link: string) {
-        let msg = element(by.xpath('//a[contains(text(),"'+link+'")]'))
+        let msg = element(by.xpath('//a[contains(text(),"' + link + '")]'))
         await expect(msg.isDisplayed()).to.eventually.equal(true);
+    }
+
+    async verifyIndicatorColor(indicator: string) {
+        let indicators = indicator.split(',');
+        for (let i = 0; i < indicators.length; i++) {
+            let msg = element(by.xpath('//mat-card-content//div[@class="ng-star-inserted"]//div[contains(text(),"' + indicators[i] + '")]'));
+            await browser.wait(until.presenceOf(msg), 5000, 'Element taking too long to appear in the DOM');
+            await msg.getText().then(async function (text) {
+                console.log(text);
+            });
+            await expect(msg.isDisplayed()).to.eventually.equal(true);
+        }
+    }
+
+    async documentLabel(label: string) {
+        let labels = label.split(',');
+        for (let i = 0; i < labels.length; i++) {
+            let msg = element(by.xpath('//span[@data-text="' + labels[i] + '"]'));
+            await browser.executeScript("arguments[0].style.visibility = 'visible'; arguments[0].style.content = 'Construction/Regulatory Documents', msg.getWebElement()");
+            await browser.wait(until.presenceOf(msg), 15000, 'Element taking too long to appear in the DOM');
+            await msg.getText().then(async function (text) {
+                console.log(text);
+            });
+
+        }
+
     }
 }

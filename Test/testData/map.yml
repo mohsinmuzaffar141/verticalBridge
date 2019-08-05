@@ -104,6 +104,8 @@ radCenter:
   tabName:  RAD Centers
   attribues:  Property Information,Fiber Data,Operations Information
   radAttributeData:  Ground Right Property Size (sq ft),Ground Right Property Dimensions
+  colorIndicators: Available,Observed,Abstracted,Suspect
+  thRadCenter: Tenant Name,Observed RAD Center Height,Abstracted RAD Center Height,Technology Type
 
 radCenter1:
   tabName:  RAD Centers
@@ -112,3 +114,19 @@ radCenter1:
 radCenter2:
   tabName:  RAD Centers
   radAttributeData:  Do we own the building?,AM Tower,Generator Only Site?,VB Owns a Meter?,Date of Last Structural Analysis,VB Owns Generator?,Tower Structural Capacity in Use
+
+leasingActivity:
+  tabName:  Leasing Activity
+  thLeasingActivity: Site Info,Deal Number,Deal Status,Stage,Tenant Info,Proj. Monthly Rent,Inquiry Date,Executed Lease Date,Estimated Closing Date
+  leasingDataNotPresent: Create New Deal link
+
+leasingActivity1:
+  tabName:  Accounting
+
+leasingActivity2:
+  tabName:  Nearby Sites
+
+documentTab:
+  tabName:  Documents
+  documanetLabel: Construction/Regulatory Documents,Environmental Documents,Tenant Lease Documents,Ground Lease and Legal Documents
+  documanetLabel1: Blue,Green,Red,Yellow

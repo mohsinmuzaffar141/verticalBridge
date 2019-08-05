@@ -395,4 +395,69 @@ cucumber_1.Then(/^verify label data under rad center tab "([^"]*)"$/, { timeout:
         }
     });
 }); });
+cucumber_1.Then(/^verify indicator under rad center tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (indicator) { return __awaiter(_this, void 0, void 0, function () {
+    var indicators;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                indicators = map[indicator]['colorIndicators'];
+                return [4 /*yield*/, maps.verifyIndicatorColor(indicators)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify table header under rad center tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (tableHeaderRad) { return __awaiter(_this, void 0, void 0, function () {
+    var thData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                thData = map[tableHeaderRad]['thRadCenter'];
+                return [4 /*yield*/, maps.verifyContactGroupData(thData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify table header under leasing activity tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (tableHeaderLeasing) { return __awaiter(_this, void 0, void 0, function () {
+    var thData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                thData = map[tableHeaderLeasing]['thLeasingActivity'];
+                return [4 /*yield*/, maps.verifyContactGroupData(thData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify label not present under leasing activity tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (leasingData) { return __awaiter(_this, void 0, void 0, function () {
+    var label;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[leasingData]['leasingDataNotPresent'];
+                return [4 /*yield*/, maps.verifyLabelNotPreent(label)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels under document tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (labelDocument) { return __awaiter(_this, void 0, void 0, function () {
+    var label;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                label = map[labelDocument]['documanetLabel1'];
+                return [4 /*yield*/, maps.documentLabel(label)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=tabsSteps.js.map

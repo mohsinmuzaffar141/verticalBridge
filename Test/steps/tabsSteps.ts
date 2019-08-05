@@ -123,3 +123,23 @@ Then(/^verify label data under rad center tab "([^"]*)"$/, {timeout: 5 * 50000},
     let label=map[dataRadCenter]['radAttributeData'];
     await maps.verifyDataUnderPropertyInformation(label);
 });
+Then(/^verify indicator under rad center tab "([^"]*)"$/, {timeout: 5 * 50000}, async(indicator)=> {
+    let indicators=map[indicator]['colorIndicators'];
+    await maps.verifyIndicatorColor(indicators);
+});
+Then(/^verify table header under rad center tab "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeaderRad)=> {
+    let thData=map[tableHeaderRad]['thRadCenter'];
+    await maps.verifyContactGroupData(thData);
+});
+Then(/^verify table header under leasing activity tab "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeaderLeasing)=>  {
+    let thData=map[tableHeaderLeasing]['thLeasingActivity'];
+    await maps.verifyContactGroupData(thData);
+});
+Then(/^verify label not present under leasing activity tab "([^"]*)"$/, {timeout: 5 * 50000}, async(leasingData)=> {
+    let label=map[leasingData]['leasingDataNotPresent'];
+    await maps.verifyLabelNotPreent(label);
+});
+Then(/^verify labels under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(labelDocument)=> {
+    let label=map[labelDocument]['documanetLabel1'];
+    await maps.documentLabel(label);
+});

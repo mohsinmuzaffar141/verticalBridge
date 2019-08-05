@@ -438,17 +438,35 @@ var siteDetailPage = /** @class */ (function (_super) {
                     case 0:
                         tab = maps[tabName]['tabName'];
                         tabClick = protractor_1.element(protractor_1.by.xpath('//a[text()=" ' + tab + ' "]'));
-                        return [4 /*yield*/, tabClick.click()];
+                        return [4 /*yield*/, tabClick.isPresent().then(function (display) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                if (!display) return [3 /*break*/, 3];
+                                                return [4 /*yield*/, tabClick.click()];
+                                            case 1:
+                                                _a.sent();
+                                                return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                                            case 2:
+                                                _a.sent();
+                                                return [3 /*break*/, 4];
+                                            case 3:
+                                                console.log(tab + " is not present");
+                                                _a.label = 4;
+                                            case 4: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
                     case 1:
-                        _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
-                    case 2:
                         _a.sent();
                         return [2 /*return*/];
                 }
             });
         });
     };
+    ;
     siteDetailPage.prototype.verifyContactsLabel = function (contactLabel) {
         return __awaiter(this, void 0, void 0, function () {
             var contactLabels, i, label;
@@ -485,42 +503,67 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.verifyContactGroupData = function (thData) {
         return __awaiter(this, void 0, void 0, function () {
-            var thdata, i, headerData, tableData;
+            var thdata, _loop_1, i;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         thdata = thData.split(',');
                         //let tddata = tdData.split(',');
                         console.log(thdata.length);
+                        _loop_1 = function (i) {
+                            var headerData, tableData;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        headerData = protractor_1.element(protractor_1.by.xpath('//tr[@class="tableMainHeader"]//th[' + i + ']'));
+                                        return [4 /*yield*/, headerData.getText().then(function (text) {
+                                                return __awaiter(this, void 0, void 0, function () {
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0:
+                                                                console.log(text);
+                                                                return [4 /*yield*/, expect(text).to.equal(thdata[i - 1])];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [2 /*return*/];
+                                                        }
+                                                    });
+                                                });
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        tableData = protractor_1.element(protractor_1.by.xpath('//tr[@class="tableMainData ng-star-inserted"]//td[' + i + ']'));
+                                        //tr[@class='tableMainData ng-star-inserted']//td[1]
+                                        return [4 /*yield*/, tableData.getText().then(function (text) {
+                                                return __awaiter(this, void 0, void 0, function () {
+                                                    return __generator(this, function (_a) {
+                                                        console.log(text);
+                                                        return [2 /*return*/];
+                                                    });
+                                                });
+                                            })];
+                                    case 2:
+                                        //tr[@class='tableMainData ng-star-inserted']//td[1]
+                                        _a.sent();
+                                        return [4 /*yield*/, expect(tableData.isDisplayed()).to.eventually.equal(true)];
+                                    case 3:
+                                        _a.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
                         i = 1;
                         _a.label = 1;
                     case 1:
-                        if (!(i <= thdata.length)) return [3 /*break*/, 6];
-                        headerData = protractor_1.element(protractor_1.by.xpath('//tr[@class="tableMainHeader"]//th[' + i + ']'));
-                        return [4 /*yield*/, expect(headerData.isDisplayed()).to.eventually.equal(true)];
+                        if (!(i <= thdata.length)) return [3 /*break*/, 4];
+                        return [5 /*yield**/, _loop_1(i)];
                     case 2:
                         _a.sent();
-                        tableData = protractor_1.element(protractor_1.by.xpath('//tr[@class="tableMainData ng-star-inserted"]//td[' + i + ']'));
-                        //tr[@class='tableMainData ng-star-inserted']//td[1]
-                        return [4 /*yield*/, tableData.getText().then(function (text) {
-                                return __awaiter(this, void 0, void 0, function () {
-                                    return __generator(this, function (_a) {
-                                        console.log(text);
-                                        return [2 /*return*/];
-                                    });
-                                });
-                            })];
+                        _a.label = 3;
                     case 3:
-                        //tr[@class='tableMainData ng-star-inserted']//td[1]
-                        _a.sent();
-                        return [4 /*yield*/, expect(tableData.isDisplayed()).to.eventually.equal(true)];
-                    case 4:
-                        _a.sent();
-                        _a.label = 5;
-                    case 5:
                         i++;
                         return [3 /*break*/, 1];
-                    case 6: return [2 /*return*/];
+                    case 4: return [2 /*return*/];
                 }
             });
         });
@@ -610,12 +653,12 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.verifyAttributeOnPropertTab = function (attributes) {
         return __awaiter(this, void 0, void 0, function () {
-            var attribute, _loop_1, i;
+            var attribute, _loop_2, i;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         attribute = attributes.split(',');
-                        _loop_1 = function (i) {
+                        _loop_2 = function (i) {
                             var attributeData;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
@@ -645,7 +688,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         if (!(i < attribute.length)) return [3 /*break*/, 4];
-                        return [5 /*yield**/, _loop_1(i)];
+                        return [5 /*yield**/, _loop_2(i)];
                     case 2:
                         _a.sent();
                         _a.label = 3;
@@ -693,12 +736,12 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.verifyAttributeOnLeasesTab = function (txt) {
         return __awaiter(this, void 0, void 0, function () {
-            var attribute, _loop_2, i;
+            var attribute, _loop_3, i;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         attribute = txt.split(',');
-                        _loop_2 = function (i) {
+                        _loop_3 = function (i) {
                             var data;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
@@ -728,7 +771,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         if (!(i < attribute.length)) return [3 /*break*/, 4];
-                        return [5 /*yield**/, _loop_2(i)];
+                        return [5 /*yield**/, _loop_3(i)];
                     case 2:
                         _a.sent();
                         _a.label = 3;
@@ -776,12 +819,12 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.verifyLeasesLabel = function (thData) {
         return __awaiter(this, void 0, void 0, function () {
-            var thdata, _loop_3, i;
+            var thdata, _loop_4, i;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         thdata = thData.split(',');
-                        _loop_3 = function (i) {
+                        _loop_4 = function (i) {
                             var headerData;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
@@ -811,7 +854,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         if (!(i <= thdata.length)) return [3 /*break*/, 4];
-                        return [5 /*yield**/, _loop_3(i)];
+                        return [5 /*yield**/, _loop_4(i)];
                     case 2:
                         _a.sent();
                         _a.label = 3;
@@ -825,12 +868,12 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.verifyGroundRightsData = function (thData) {
         return __awaiter(this, void 0, void 0, function () {
-            var thdata, _loop_4, i;
+            var thdata, _loop_5, i;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         thdata = thData.split(',');
-                        _loop_4 = function (i) {
+                        _loop_5 = function (i) {
                             var headerData;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
@@ -860,7 +903,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         if (!(i <= thdata.length)) return [3 /*break*/, 4];
-                        return [5 /*yield**/, _loop_4(i)];
+                        return [5 /*yield**/, _loop_5(i)];
                     case 2:
                         _a.sent();
                         _a.label = 3;
@@ -908,6 +951,80 @@ var siteDetailPage = /** @class */ (function (_super) {
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyIndicatorColor = function (indicator) {
+        return __awaiter(this, void 0, void 0, function () {
+            var indicators, i, msg;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        indicators = indicator.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < indicators.length)) return [3 /*break*/, 6];
+                        msg = protractor_1.element(protractor_1.by.xpath('//mat-card-content//div[@class="ng-star-inserted"]//div[contains(text(),"' + indicators[i] + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(msg), 5000, 'Element taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, msg.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, expect(msg.isDisplayed()).to.eventually.equal(true)];
+                    case 4:
+                        _a.sent();
+                        _a.label = 5;
+                    case 5:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.documentLabel = function (label) {
+        return __awaiter(this, void 0, void 0, function () {
+            var labels, i, msg;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        labels = label.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < labels.length)) return [3 /*break*/, 6];
+                        msg = protractor_1.element(protractor_1.by.xpath('//span[@data-text="' + labels[i] + '"]'));
+                        return [4 /*yield*/, protractor_1.browser.executeScript("arguments[0].style.visibility = 'visible'; arguments[0].style.content = 'Construction/Regulatory Documents', msg.getWebElement()")];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(msg), 15000, 'Element taking too long to appear in the DOM')];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, msg.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 4:
+                        _a.sent();
+                        _a.label = 5;
+                    case 5:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 6: return [2 /*return*/];
                 }
             });
         });
