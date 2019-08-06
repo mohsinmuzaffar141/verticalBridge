@@ -53,18 +53,18 @@ Feature: verify data against management agreement
       |   admin      |     relation   |
 
 
-#  @verifyPortfolioList
-#  Scenario Outline: verify portfolio list
-#
-#    Given I am on vertical bridge Page
-#    When  Login to vertical bridge with "<credentials>"
-#    When  I click to the select partner view button
-#    When i click on relationship "<relationships>"
-#    When  I log out
-#
-#    Examples:
-#      | credentials  | relationships |
-#      |   admin      |   relation    |
+  @verifyPortfolioList
+  Scenario Outline: verify portfolio list
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  I click on relationship "<relationships>"
+    When  I log out
+
+    Examples:
+      | credentials  | relationships |
+      |   admin      |   relation    |
 
 
   @verifyFilterEnable

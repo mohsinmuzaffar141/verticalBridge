@@ -25,6 +25,8 @@ export class ManagementAgreementDataPage extends BasePage{
     searchIcon=element(by.xpath('//mat-icon[@id="SearchIcon"]'))
     verfySearch=element(by.xpath('(//tbody[@class="ui-table-tbody"])[2]'))
     removeFilter_btn=element(by.xpath('//span[@class="filterX hidden showX"]'))
+    text=element(by.xpath('//h2[text()="Select Partner View"]'))
+    cancel=element(by.xpath('//span[text()="Cancel"]'))
 
 
 
@@ -48,7 +50,6 @@ export class ManagementAgreementDataPage extends BasePage{
     }
     async validate() {
         let path = element(by.xpath("//h1[text()='RMR Group']")).getText();
-
         let title: string = "RMR Group";
         //await expect(path).to.equal(title);
         if (await expect(path).to.eventually.equal(title)) {
@@ -108,15 +109,14 @@ export class ManagementAgreementDataPage extends BasePage{
         await this.searchfield.click();
 
         let portfolioList=element.all(by.xpath('//span[@class="mat-option-text"]'))
-
-        await portfolioList.filter(async function(ele){
-            return ele.isDisplayed();
-
-        }).then(async function(filteredElement){
-            console.log("filteredElement");
-            console.log(filteredElement.length);
-            await expect(filteredElement.toString()).to.eventually.contain(ListData)
+        await portfolioList.getText().then(async function(ele){
+            for(let i=0; i<ele.length;i++) {
+                console.log(ele[i]);
+                await expect(ele).to.contain(ListData)
+            }
         });
+        await this.text.click();
+        await this.cancel.click();
     }
 
     async clickFilterBtn(){

@@ -42,7 +42,7 @@ Then(/^verify owner name should be sorted in ascending order$/, {timeout: 5 * 50
 Then(/^verify revenue "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
     await manageAgreepage.verifyRevenue(text);
 });
-When(/^i click on relationship "([^"]*)"$/, {timeout: 5 * 50000}, async(portfolioName) => {
+When(/^I click on relationship "([^"]*)"$/, {timeout: 5 * 50000}, async(portfolioName) => {
     await manageAgreepage.getPortfolioList(portfolioName);
 });
 Then(/^click on filter on\/off tab$/, {timeout: 5 * 50000}, async() => {

@@ -125,7 +125,7 @@ cucumber_1.Then(/^verify revenue "([^"]*)"$/, { timeout: 5 * 50000 }, function (
         }
     });
 }); });
-cucumber_1.When(/^i click on relationship "([^"]*)"$/, { timeout: 5 * 50000 }, function (portfolioName) { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.When(/^I click on relationship "([^"]*)"$/, { timeout: 5 * 50000 }, function (portfolioName) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, manageAgreepage.getPortfolioList(portfolioName)];

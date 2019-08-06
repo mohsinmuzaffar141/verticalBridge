@@ -22,6 +22,8 @@ export class siteDetailPage extends BasePage {
     autoView = element(by.xpath('//div[@class="mat-checkbox-inner-container"]//input[@type="checkbox"]'));
     autoV = element(by.xpath('//div[@class="mat-checkbox-inner-container"]'))
     linkTitle = element(by.xpath('//div[@class="header-title"]'))
+    saerchFile=element(by.id('SearchDocument'))
+    search_btn=element(by.id('DocSearchBtn'));
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
@@ -322,15 +324,33 @@ export class siteDetailPage extends BasePage {
 
     async documentLabel(label: string) {
         let labels = label.split(',');
-        for (let i = 0; i < labels.length; i++) {
-            let msg = element(by.xpath('//span[@data-text="' + labels[i] + '"]'));
-            await browser.executeScript("arguments[0].style.visibility = 'visible'; arguments[0].style.content = 'Construction/Regulatory Documents', msg.getWebElement()");
+        for (let i = 1; i < labels.length; i++) {
+            let msg = element(by.xpath('(//div[@class="node-content-wrapper"])['+i+']'));
             await browser.wait(until.presenceOf(msg), 15000, 'Element taking too long to appear in the DOM');
-            await msg.getText().then(async function (text) {
-                console.log(text);
-            });
-
+            await expect(msg).to.be.exist;
         }
+    }
 
+
+    async fileSearch(file: string){
+        let files=maps[file]['fileDocument'];
+        let doc=element(by.xpath('//span[text()="'+files+'"]'))
+        await this.saerchFile.click();
+        await this.saerchFile.sendKeys(files);
+        await this.search_btn.click();
+        await browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM')
+        await expect(files).to.be.exist;
+    }
+
+    async folderAndSubFolder(){
+        for(let i=1;i<=4;i++){
+            let folder=element(by.xpath('(//span[@class="toggle-children"])['+i+']'))
+            await folder.click();
+            await folder.click();
+        }
+        // for(let i=4;i>0;i--){
+        //     let folder=element(by.xpath('(//span[@class="toggle-children"])['+i+']'))
+        //     await folder.click();
+        // }
     }
 }

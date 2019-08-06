@@ -143,3 +143,9 @@ Then(/^verify labels under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async
     let label=map[labelDocument]['documanetLabel1'];
     await maps.documentLabel(label);
 });
+Then(/^verify files under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(filesDocument)=>{
+    await maps.fileSearch(filesDocument);
+});
+Then(/^click folder and sub folder under document tab$/, {timeout: 5 * 50000}, async()=>{
+    await maps.folderAndSubFolder()
+});

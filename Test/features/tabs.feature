@@ -600,3 +600,39 @@ Feature: verify filter against my sites
     Examples:
       | credentials  |  relationships  |       tab       |
       |   admin      |    leasesData   |   documentTab   |
+
+  @searchFilesUnderDocumentTab
+  Scenario Outline: verify files are present under document tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify files under document tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |       tab       |
+      |   admin      |    leasesData   |   documentTab   |
+
+  @clickFolderAndSubFolderUnderDocumentTab
+  Scenario Outline: click folder and sub folder under document tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  click folder and sub folder under document tab
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |       tab       |
+      |   admin      |    leasesData   |   documentTab   |

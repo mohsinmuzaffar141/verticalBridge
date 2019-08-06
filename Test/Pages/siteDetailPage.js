@@ -67,6 +67,8 @@ var siteDetailPage = /** @class */ (function (_super) {
         _this.autoView = protractor_1.element(protractor_1.by.xpath('//div[@class="mat-checkbox-inner-container"]//input[@type="checkbox"]'));
         _this.autoV = protractor_1.element(protractor_1.by.xpath('//div[@class="mat-checkbox-inner-container"]'));
         _this.linkTitle = protractor_1.element(protractor_1.by.xpath('//div[@class="header-title"]'));
+        _this.saerchFile = protractor_1.element(protractor_1.by.id('SearchDocument'));
+        _this.search_btn = protractor_1.element(protractor_1.by.id('DocSearchBtn'));
         return _this;
     }
     siteDetailPage.prototype.selectSite = function (value) {
@@ -999,32 +1001,76 @@ var siteDetailPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         labels = label.split(',');
-                        i = 0;
+                        i = 1;
                         _a.label = 1;
                     case 1:
-                        if (!(i < labels.length)) return [3 /*break*/, 6];
-                        msg = protractor_1.element(protractor_1.by.xpath('//span[@data-text="' + labels[i] + '"]'));
-                        return [4 /*yield*/, protractor_1.browser.executeScript("arguments[0].style.visibility = 'visible'; arguments[0].style.content = 'Construction/Regulatory Documents', msg.getWebElement()")];
+                        if (!(i < labels.length)) return [3 /*break*/, 5];
+                        msg = protractor_1.element(protractor_1.by.xpath('(//div[@class="node-content-wrapper"])[' + i + ']'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(msg), 15000, 'Element taking too long to appear in the DOM')];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(msg), 15000, 'Element taking too long to appear in the DOM')];
+                        return [4 /*yield*/, expect(msg).to.be.exist];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, msg.getText().then(function (text) {
-                                return __awaiter(this, void 0, void 0, function () {
-                                    return __generator(this, function (_a) {
-                                        console.log(text);
-                                        return [2 /*return*/];
-                                    });
-                                });
-                            })];
+                        _a.label = 4;
                     case 4:
-                        _a.sent();
-                        _a.label = 5;
-                    case 5:
                         i++;
                         return [3 /*break*/, 1];
-                    case 6: return [2 /*return*/];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.fileSearch = function (file) {
+        return __awaiter(this, void 0, void 0, function () {
+            var files, doc;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        files = maps[file]['fileDocument'];
+                        doc = protractor_1.element(protractor_1.by.xpath('//span[text()="' + files + '"]'));
+                        return [4 /*yield*/, this.saerchFile.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.saerchFile.sendKeys(files)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.search_btn.click()];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM')];
+                    case 4:
+                        _a.sent();
+                        return [4 /*yield*/, expect(files).to.be.exist];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.folderAndSubFolder = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var i, folder;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        i = 1;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i <= 4)) return [3 /*break*/, 5];
+                        folder = protractor_1.element(protractor_1.by.xpath('(//span[@class="toggle-children"])[' + i + ']'));
+                        return [4 /*yield*/, folder.click()];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, folder.click()];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5: return [2 /*return*/];
                 }
             });
         });

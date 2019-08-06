@@ -72,6 +72,8 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         _this.searchIcon = protractor_1.element(protractor_1.by.xpath('//mat-icon[@id="SearchIcon"]'));
         _this.verfySearch = protractor_1.element(protractor_1.by.xpath('(//tbody[@class="ui-table-tbody"])[2]'));
         _this.removeFilter_btn = protractor_1.element(protractor_1.by.xpath('//span[@class="filterX hidden showX"]'));
+        _this.text = protractor_1.element(protractor_1.by.xpath('//h2[text()="Select Partner View"]'));
+        _this.cancel = protractor_1.element(protractor_1.by.xpath('//span[text()="Cancel"]'));
         return _this;
     }
     ManagementAgreementDataPage.prototype.clickonsearchbutton = function () {
@@ -284,28 +286,36 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                     case 1:
                         _a.sent();
                         portfolioList = protractor_1.element.all(protractor_1.by.xpath('//span[@class="mat-option-text"]'));
-                        return [4 /*yield*/, portfolioList.filter(function (ele) {
+                        return [4 /*yield*/, portfolioList.getText().then(function (ele) {
                                 return __awaiter(this, void 0, void 0, function () {
-                                    return __generator(this, function (_a) {
-                                        return [2 /*return*/, ele.isDisplayed()];
-                                    });
-                                });
-                            }).then(function (filteredElement) {
-                                return __awaiter(this, void 0, void 0, function () {
+                                    var i;
                                     return __generator(this, function (_a) {
                                         switch (_a.label) {
                                             case 0:
-                                                console.log("filteredElement");
-                                                console.log(filteredElement.length);
-                                                return [4 /*yield*/, expect(filteredElement.toString()).to.eventually.contain(ListData)];
+                                                i = 0;
+                                                _a.label = 1;
                                             case 1:
+                                                if (!(i < ele.length)) return [3 /*break*/, 4];
+                                                console.log(ele[i]);
+                                                return [4 /*yield*/, expect(ele).to.contain(ListData)];
+                                            case 2:
                                                 _a.sent();
-                                                return [2 /*return*/];
+                                                _a.label = 3;
+                                            case 3:
+                                                i++;
+                                                return [3 /*break*/, 1];
+                                            case 4: return [2 /*return*/];
                                         }
                                     });
                                 });
                             })];
                     case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.text.click()];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.cancel.click()];
+                    case 4:
                         _a.sent();
                         return [2 /*return*/];
                 }

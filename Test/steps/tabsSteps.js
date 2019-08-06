@@ -460,4 +460,24 @@ cucumber_1.Then(/^verify labels under document tab "([^"]*)"$/, { timeout: 5 * 5
         }
     });
 }); });
+cucumber_1.Then(/^verify files under document tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (filesDocument) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, maps.fileSearch(filesDocument)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click folder and sub folder under document tab$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, maps.folderAndSubFolder()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=tabsSteps.js.map
