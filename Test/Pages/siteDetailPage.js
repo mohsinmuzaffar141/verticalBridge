@@ -71,6 +71,7 @@ var siteDetailPage = /** @class */ (function (_super) {
         _this.search_btn = protractor_1.element(protractor_1.by.id('DocSearchBtn'));
         _this.editFile = protractor_1.element(protractor_1.by.xpath('//i[@class="fa fa-pencil-square-o fa-2x"]'));
         _this.siteInspection = protractor_1.element(protractor_1.by.xpath('//i[@class="fa fa-file-text-o fa-2x"]'));
+        _this.managementAgreement = protractor_1.element(protractor_1.by.xpath('//div[text()="Management Agreement:"]'));
         return _this;
     }
     siteDetailPage.prototype.selectSite = function (value) {
@@ -549,8 +550,11 @@ var siteDetailPage = /** @class */ (function (_super) {
                                     case 2:
                                         //tr[@class='tableMainData ng-star-inserted']//td[1]
                                         _a.sent();
-                                        return [4 /*yield*/, expect(tableData.isDisplayed()).to.eventually.equal(true)];
+                                        return [4 /*yield*/, expect(tableData.getAttribute('href')).to.eventually.equal(null)];
                                     case 3:
+                                        _a.sent();
+                                        return [4 /*yield*/, expect(tableData.isDisplayed()).to.eventually.equal(true)];
+                                    case 4:
                                         _a.sent();
                                         return [2 /*return*/];
                                 }
@@ -797,7 +801,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                         i = 0;
                         _a.label = 1;
                     case 1:
-                        if (!(i < leasesData.length)) return [3 /*break*/, 5];
+                        if (!(i < leasesData.length)) return [3 /*break*/, 6];
                         data_1 = protractor_1.element(protractor_1.by.xpath('//div[contains(text(),"' + leasesData[i] + '")]'));
                         return [4 /*yield*/, data_1.getText().then(function (text) {
                                 return __awaiter(this, void 0, void 0, function () {
@@ -809,14 +813,17 @@ var siteDetailPage = /** @class */ (function (_super) {
                             })];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, expect(data_1.isDisplayed()).to.eventually.equal(true)];
+                        return [4 /*yield*/, expect(data_1.getAttribute('href')).to.eventually.equal(null)];
                     case 3:
                         _a.sent();
-                        _a.label = 4;
+                        return [4 /*yield*/, expect(data_1.isDisplayed()).to.eventually.equal(true)];
                     case 4:
+                        _a.sent();
+                        _a.label = 5;
+                    case 5:
                         i++;
                         return [3 /*break*/, 1];
-                    case 5: return [2 /*return*/];
+                    case 6: return [2 /*return*/];
                 }
             });
         });
@@ -1087,7 +1094,7 @@ var siteDetailPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, expect(this.editFile.isDisplayed()).to.eventually.equal(false)];
+                    case 0: return [4 /*yield*/, expect(this.editFile.isPresent()).to.eventually.equal(false)];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -1099,7 +1106,19 @@ var siteDetailPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, expect(this.siteInspection.isDisplayed()).to.eventually.equal(false)];
+                    case 0: return [4 /*yield*/, expect(this.siteInspection.isPresent()).to.eventually.equal(false)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.managementAgreementNotPresent = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, expect(this.managementAgreement.isPresent()).to.eventually.equal(false)];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];

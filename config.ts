@@ -25,6 +25,7 @@ export const config: Config = {
         "./Test/features/managemenetAgreement.feature",
         "./Test/features/mySites.feature",
         "./Test/features/tabs.feature",
+        "./Test/features/siteGeneral.feature",
     ],
 
     onPrepare: () => {

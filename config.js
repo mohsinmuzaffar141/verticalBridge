@@ -21,6 +21,7 @@ exports.config = {
         "./Test/features/managemenetAgreement.feature",
         "./Test/features/mySites.feature",
         "./Test/features/tabs.feature",
+        "./Test/features/siteGeneral.feature",
     ],
     onPrepare: function () {
         protractor_1.browser.ignoreSynchronization = true;

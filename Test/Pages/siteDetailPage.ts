@@ -26,6 +26,7 @@ export class siteDetailPage extends BasePage {
     search_btn=element(by.id('DocSearchBtn'));
     editFile=element(by.xpath('//i[@class="fa fa-pencil-square-o fa-2x"]'));
     siteInspection=element(by.xpath('//i[@class="fa fa-file-text-o fa-2x"]'));
+    managementAgreement=element(by.xpath('//div[text()="Management Agreement:"]'))
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
@@ -199,6 +200,7 @@ export class siteDetailPage extends BasePage {
             await tableData.getText().then(async function (text) {
                 console.log(text);
             });
+            await expect(tableData.getAttribute('href')).to.eventually.equal(null);
             await expect(tableData.isDisplayed()).to.eventually.equal(true);
         }
     }
@@ -273,6 +275,7 @@ export class siteDetailPage extends BasePage {
             await data.getText().then(async function (text) {
                 console.log(text);
             });
+            await expect(data.getAttribute('href')).to.eventually.equal(null);
             await expect(data.isDisplayed()).to.eventually.equal(true);
         }
     }
@@ -363,9 +366,12 @@ export class siteDetailPage extends BasePage {
 //     }
 
     async editSiteNOtPresent(){
-        await expect(this.editFile.isDisplayed()).to.eventually.equal(false);
+        await expect(this.editFile.isPresent()).to.eventually.equal(false);
     }
     async siteInspectionNOtPresent(){
-        await expect(this.siteInspection.isDisplayed()).to.eventually.equal(false);
+        await expect(this.siteInspection.isPresent()).to.eventually.equal(false);
+    }
+    async managementAgreementNotPresent(){
+        await expect(this.managementAgreement.isPresent()).to.eventually.equal(false);
     }
 }

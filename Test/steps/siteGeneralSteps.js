@@ -41,15 +41,41 @@ var siteDetailPage_1 = require("../Pages/siteDetailPage");
 //data variables
 var yaml = require('js-yaml');
 var fs = require('fs');
-var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
+var site = yaml.safeLoad(fs.readFileSync('./Test/testData/siteGeneral.yml', 'utf8'));
+var map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var sitedetail = new siteDetailPage_1.siteDetailPage();
-cucumber_1.Then(/^verify edit and site inspection icon are not present on site header$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^verify edit and site inspection icon are not present on site header "([^"]*)"$/, { timeout: 5 * 50000 }, function (clickable) { return __awaiter(_this, void 0, void 0, function () {
+    var data;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.editSiteNOtPresent()];
+            case 0:
+                data = site[clickable]['tabData'];
+                return [4 /*yield*/, sitedetail.editSiteNOtPresent()];
             case 1:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.siteInspectionNOtPresent()];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.verifyLeasesTabData(data)];
+            case 3:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify management agreement are not present on property tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (propertyData) { return __awaiter(_this, void 0, void 0, function () {
+    var thData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                thData = map[propertyData]['thProperty'];
+                return [4 /*yield*/, sitedetail.managementAgreementNotPresent()];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.verifyContactGroupData(thData)];
+            case 2:
                 _a.sent();
                 return [2 /*return*/];
         }
