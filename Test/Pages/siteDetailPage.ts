@@ -17,17 +17,19 @@ let until = protractor.ExpectedConditions;
 
 export class siteDetailPage extends BasePage {
 
-    searchMap = element(by.xpath('//input[@id="SearchAddress"]'))
-    resetTab = element(by.xpath('//span[text()="Reset Map"]'))
+    searchMap = element(by.xpath('//input[@id="SearchAddress"]'));
+    resetTab = element(by.xpath('//span[text()="Reset Map"]'));
     autoView = element(by.xpath('//div[@class="mat-checkbox-inner-container"]//input[@type="checkbox"]'));
-    autoV = element(by.xpath('//div[@class="mat-checkbox-inner-container"]'))
-    linkTitle = element(by.xpath('//div[@class="header-title"]'))
-    saerchFile=element(by.id('SearchDocument'))
+    autoV = element(by.xpath('//div[@class="mat-checkbox-inner-container"]'));
+    linkTitle = element(by.xpath('//div[@class="header-title"]'));
+    saerchFile=element(by.id('SearchDocument'));
     search_btn=element(by.id('DocSearchBtn'));
+    editFile=element(by.xpath('//i[@class="fa fa-pencil-square-o fa-2x"]'));
+    siteInspection=element(by.xpath('//i[@class="fa fa-file-text-o fa-2x"]'));
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
-        let site = element(by.xpath('//a[text()="' + siteNumber + '"]'))
+        let site = element(by.xpath('//a[text()="' + siteNumber + '"]'));
         await browser.wait(until.presenceOf(site), 5000, 'Element taking too long to appear in the DOM');
         await site.click();
         await browser.sleep(5000);
@@ -35,18 +37,18 @@ export class siteDetailPage extends BasePage {
 
     async verifySiteNumber(value: string) {
         let siteNumber = cred[value]['siteNumber'];
-        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + siteNumber + '")]'))
+        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + siteNumber + '")]'));
         await browser.wait(until.presenceOf(title), 5000, 'Element taking too long to appear in the DOM');
         await title.getText().then(async function (text) {
-            var sp = text.split(" ")
-            var req = sp[0]
+            var sp = text.split(" ");
+            var req = sp[0];
             await expect(siteNumber).to.equals(req);
         });
     }
 
     async verifyName(value: string) {
         let site = cred[value]['siteName'];
-        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + site + '")]'))
+        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + site + '")]'));
         await expect(title.getText()).to.eventually.contain(site);
     }
 
@@ -79,7 +81,7 @@ export class siteDetailPage extends BasePage {
         for (let i = 0; i < labels.length; i++) {
             let siteDetail = element(by.xpath('//mat-panel-title[text()=" ' + labels[i] + ' "]'));
             await siteDetail.click();
-            let contactsData = element(by.xpath('//div[@class="mat-expansion-panel-body"]//strong[text()="' + datas[i] + '"]'))
+            let contactsData = element(by.xpath('//div[@class="mat-expansion-panel-body"]//strong[text()="' + datas[i] + '"]'));
             await siteDetail.getText().then(async function (text) {
                 console.log(text);
             });
@@ -107,7 +109,7 @@ export class siteDetailPage extends BasePage {
     async verifyMapData(maplabel: string) {
         let mapLabel = maplabel.split(',');
         for (let i = 0; i < mapLabel.length; i++) {
-            let mapData = element(by.xpath('//strong[text()="' + mapLabel[i] + '"]'))
+            let mapData = element(by.xpath('//strong[text()="' + mapLabel[i] + '"]'));
             await mapData.getText().then(async function (text) {
                 console.log(text);
             });
@@ -128,7 +130,7 @@ export class siteDetailPage extends BasePage {
         await this.searchMap.click();
         await this.searchMap.sendKeys(searchValue);
         await browser.sleep(5000);
-        let loc = element(by.xpath('//p[text()="' + searchValue + '"]'))
+        let loc = element(by.xpath('//p[text()="' + searchValue + '"]'));
         await loc.click();
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
 
@@ -140,11 +142,11 @@ export class siteDetailPage extends BasePage {
     }
 
     async clickAutoViewTab() {
-        await browser.wait(until.presenceOf(this.autoView), 5000, 'Element taking too long to appear in the DOM')
+        await browser.wait(until.presenceOf(this.autoView), 5000, 'Element taking too long to appear in the DOM');
         let beforeClick = this.autoView.getAttribute('aria-checked');
         if (beforeClick) {
             console.log("1:Element is unchecked");
-            await this.autoV.click()
+            await this.autoV.click();
             await browser.sleep(2000);
             // await expect(afterClick).to.eventually.equals(false)
         }
@@ -157,7 +159,7 @@ export class siteDetailPage extends BasePage {
 
     async selectTab(tabName: string) {
         let tab = maps[tabName]['tabName'];
-        let tabClick = element(by.xpath('//a[text()=" ' + tab + ' "]'))
+        let tabClick = element(by.xpath('//a[text()=" ' + tab + ' "]'));
         await tabClick.isPresent().then(async function (display) {
                 if (display) {
                     await tabClick.click();
@@ -192,7 +194,7 @@ export class siteDetailPage extends BasePage {
             });
             // await expect(headerData.isDisplayed()).to.eventually.equal(true);
             //let tableData=element(by.xpath('//td[contains(text(),"'+tddata[i]+'")]'))
-            let tableData = element(by.xpath('//tr[@class="tableMainData ng-star-inserted"]//td[' + i + ']'))
+            let tableData = element(by.xpath('//tr[@class="tableMainData ng-star-inserted"]//td[' + i + ']'));
             //tr[@class='tableMainData ng-star-inserted']//td[1]
             await tableData.getText().then(async function (text) {
                 console.log(text);
@@ -203,7 +205,7 @@ export class siteDetailPage extends BasePage {
 
     async contactDataNOtPresent(contctData: string) {
         let data = maps[contctData]['contactData'];
-        let contactData = element.all(by.xpath('//div[@class="ng-star-inserted" and text()="No records found"]'))
+        let contactData = element.all(by.xpath('//div[@class="ng-star-inserted" and text()="No records found"]'));
         await contactData.getText().then(async function (txt) {
             for (let i = 0; i < txt.length; i++) {
                 console.log(txt[i]);
@@ -216,7 +218,7 @@ export class siteDetailPage extends BasePage {
         var arr = [];
         let dataDuplication = data.split(',');
         for (let i = 0; i < dataDuplication.length; i++) {
-            let contactData = element(by.xpath('//td[contains(text(),"' + dataDuplication[i] + '")]'))
+            let contactData = element(by.xpath('//td[contains(text(),"' + dataDuplication[i] + '")]'));
             await contactData.getText().then(async function (text) {
                 await arr.push(text)
             });
@@ -298,7 +300,7 @@ export class siteDetailPage extends BasePage {
     }
 
     async verifyDisplayMessage(message: string) {
-        let msg = element(by.xpath('//p[contains(text(),"' + message + '")]'))
+        let msg = element(by.xpath('//p[contains(text(),"' + message + '")]'));
         await msg.getText().then(async function (text) {
             console.log(text);
         });
@@ -306,7 +308,7 @@ export class siteDetailPage extends BasePage {
     }
 
     async verifyLink(link: string) {
-        let msg = element(by.xpath('//a[contains(text(),"' + link + '")]'))
+        let msg = element(by.xpath('//a[contains(text(),"' + link + '")]'));
         await expect(msg.isDisplayed()).to.eventually.equal(true);
     }
 
@@ -334,17 +336,17 @@ export class siteDetailPage extends BasePage {
 
     async fileSearch(file: string){
         let files=maps[file]['fileDocument'];
-        let doc=element(by.xpath('//span[text()="'+files+'"]'))
+        let doc=element(by.xpath('//span[text()="'+files+'"]'));
         await this.saerchFile.click();
         await this.saerchFile.sendKeys(files);
         await this.search_btn.click();
-        await browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM')
+        await browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM');
         await expect(files).to.be.exist;
     }
 
     async folderAndSubFolder(){
         for(let i=1;i<=4;i++){
-            let folder=element(by.xpath('(//span[@class="toggle-children"])['+i+']'))
+            let folder=element(by.xpath('(//span[@class="toggle-children"])['+i+']'));
             await folder.click();
             await folder.click();
         }
@@ -352,5 +354,18 @@ export class siteDetailPage extends BasePage {
         //     let folder=element(by.xpath('(//span[@class="toggle-children"])['+i+']'))
         //     await folder.click();
         // }
+    }
+//     async optionsNotPresent(){
+//         let rowToRightClick=element(by.xpath('//span[@data-text="Blue"]'))
+//         await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
+//        await expect.IsTrue(popup.Exists, "Write your own message here");
+//
+//     }
+
+    async editSiteNOtPresent(){
+        await expect(this.editFile.isDisplayed()).to.eventually.equal(false);
+    }
+    async siteInspectionNOtPresent(){
+        await expect(this.siteInspection.isDisplayed()).to.eventually.equal(false);
     }
 }

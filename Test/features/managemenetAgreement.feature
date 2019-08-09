@@ -27,7 +27,7 @@ Feature: verify data against management agreement
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  verify owner name should be sorted in ascending order
+    Then  verify owner name should be sorted in ascending order "<relationships>"
     When  I log out
 
     Examples:
@@ -124,16 +124,36 @@ Feature: verify data against management agreement
         |   admin      |     relation   |filterSearch  |
 
 
-#  @ascendingDescendingOrder
-#  Scenario Outline: verify search against management agreement
-#
-#    Given I am on vertical bridge Page
-#    When  Login to vertical bridge with "<credentials>"
-#    Then  click on my sites button
-#    Then  click on ascending and descending order tab "<order>"
-#
-#
-#
-#    Examples:
-#      | credentials  |  order    |
-#      |   admin      |  |
+  @ascendingDescendingOrder
+  Scenario Outline: verify ascending and descending order of management agreement
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on ascending and descending order tab "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  order    |  relationships |
+      |   admin      |  table    |   relation     |
+      |   admin      |  table1   |   relation     |
+
+  @verifyDownloadSiteToExcelFile
+  Scenario Outline: verify ascending and descending order of management agreement
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on export to excel button "<download>"
+    Then  verify the file should be downloaded
+    When  I log out
+
+    Examples:
+      | credentials  |      download      |  relationships |
+      |   admin      |   downloadButton   |   relation     |

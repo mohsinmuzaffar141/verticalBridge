@@ -84,24 +84,44 @@ export class ManagementAgreementDataPage extends BasePage{
         expect(revenueValue.isDisplayed()).to.eventually.equals(revenueData);
     }
 
-    async verifyOwnerOrder(){
-        let table=element.all(by.xpath('//tr[@class="ui-selectable-row ui-state-highlight ng-star-inserted"]'))
+    async verifyOwnerOrder(colName:string){
+        let columnName=cred[colName]['colName'];
+        let counter=cred[colName]['count'];
+        let NAMES=[];
+        let table=element.all(by.xpath('(//tbody[@class="ui-table-tbody"])['+counter+']//tr'));
         await table.then(async function (txt) {
-            var NAMES=[];
-            for (let i=1;i<=txt.length;i++) {
-                let ownerName = element(by.xpath('(//div[@class="col-ownerName ng-star-inserted"])['+i+']'))
-                await ownerName.getText().then(async function (text){
+            for (let i=1;i<=txt.length;i++){
+                let ownerName = element(by.xpath('(//div[@class="col-'+columnName+' ng-star-inserted"])[' + i + ']'));
+                await ownerName.getText().then(async function (text) {
                     await NAMES.push(text);
                 });
             }
-            //let copyArray = [...NAMES];
-            let arr=NAMES.sort((a,b)=>a-b);
-            if (NAMES===arr){
-                    console.log("Owner Name is in Ascending Order");
-                } else {
-                   console.log("Error Occurred");
+        });
+        console.log('Sorted Array s: '+NAMES);
+        let unsortedArr = [];
+        unsortedArr = NAMES.sort();
+        await expect(unsortedArr).to.be.equal(NAMES);
+        console.log('Sorted Array u: '+unsortedArr)
+    }
+    async verifyDescendingOwnerOrder(colName:string){
+        let columnName=cred[colName]['colName'];
+        let counter=cred[colName]['count'];
+        let NAMES=[];
+        let table=element.all(by.xpath('(//tbody[@class="ui-table-tbody"])['+counter+']//tr'));
+        await table.then(async function (txt) {
+            for (let i=1;i<=txt.length;i++){
+                let ownerName = element(by.xpath('(//div[@class="col-'+columnName+' ng-star-inserted"])[' + i + ']'));
+                await ownerName.getText().then(async function (text) {
+                    await NAMES.push(text);
+                });
             }
         });
+        console.log('Sorted Array s: '+NAMES);
+        let unsortedArr = [];
+        unsortedArr = NAMES.sort();
+        unsortedArr.reverse();
+        await expect(unsortedArr).to.be.equal(NAMES);
+        console.log('Sorted Array u: '+unsortedArr)
     }
 
     async getPortfolioList(portfolioName:string){
@@ -141,14 +161,14 @@ export class ManagementAgreementDataPage extends BasePage{
     }
 
     async searchbox(searchValue:string){
-            let filterData=cred[searchValue]['siteNumber'];
-            await this.search_txt.click();
-            await this.search_txt.sendKeys(filterData);
-            await this.searchIcon.click();
-            await browser.wait(until.presenceOf(this.verfySearch), 5000, 'Element taking too long to appear in the DOM')
-            await expect(this.verfySearch.getText()).to.eventually.contain(filterData)
+        let filterData=cred[searchValue]['siteNumber'];
+        await this.search_txt.click();
+        await this.search_txt.sendKeys(filterData);
+        await this.searchIcon.click();
+        await browser.wait(until.presenceOf(this.verfySearch), 5000, 'Element taking too long to appear in the DOM')
+        await expect(this.verfySearch.getText()).to.eventually.contain(filterData)
 
-        }
+    }
     async searchFilter(searchValue:string){
         let filterData=cred[searchValue]['siteNumber'];
         await this.filter_box.click();
@@ -177,7 +197,7 @@ export class ManagementAgreementDataPage extends BasePage{
         let data=cred[sitedata]['name'];
         let siteData=element(by.xpath('//td[@class="ng-star-inserted"]//div[text()=" '+data +' "]'))
         await siteData.getText().then(async function (text) {
-           await expect(text).to.equals(data);
+            await expect(text).to.equals(data);
         });
     }
 
@@ -201,11 +221,29 @@ export class ManagementAgreementDataPage extends BasePage{
             }
         });
     }
- async removeFilter(){
-     await this.removeFilter_btn.click();
-     await browser.sleep(5000);
- }
+    async removeFilter(){
+        await this.removeFilter_btn.click();
+        await browser.sleep(5000);
+    }
 
-
+    async clickAscendingAndDescendingOrder(column:string){
+        let colName=element(by.xpath('//div[text()=" '+column+' "]'));
+        await colName.click();
+        await browser.sleep(5000);
+    }
+    async clickEcportFile(exportFile:string){
+        let button=element(by.xpath('//span[text()=" '+exportFile+' "]'));
+        await button.click();
+        await browser.sleep(10000);
+    }
+    async verifyDownloadFile(){
+        let downloadsFolder = require('downloads-folder');
+        let filepath = downloadsFolder() + '\\My Sites-Export.xlsx';
+        await expect(fs.existsSync(filepath)).to.be.true;
+        if(fs.existsSync(filepath)) {
+            await fs.unlinkSync(filepath);
+            await browser.sleep(5000);
+        }
+    }
 
 }

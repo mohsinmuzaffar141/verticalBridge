@@ -636,3 +636,22 @@ Feature: verify filter against my sites
     Examples:
       | credentials  |  relationships  |       tab       |
       |   admin      |    leasesData   |   documentTab   |
+
+
+#  @verifyOptionsNotPresentUnderDocumentTab
+#  Scenario Outline: verify options are not present under document tab
+#
+#    Given I am on vertical bridge Page
+#    When  Login to vertical bridge with "<credentials>"
+#    When  I click to the select partner view button
+#    When  selects the "<relationships>"
+#    Then  click the select button
+#    Then  click on my sites button
+#    Then  click on site link  "<relationships>"
+#    Then  click "<tab>" on site detail page
+#    Then  verify options are not present under document tab "<tab>"
+#    When  I log out
+#
+#    Examples:
+#      | credentials  |  relationships  |       tab       |
+#      |   admin      |    leasesData   |   documentTab   |

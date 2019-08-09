@@ -168,4 +168,7 @@ cucumber_1.Then(/^verify that filter applied is removed "([^"]*)"$/, { timeout: 
         }
     });
 }); });
+// Then(/^verify options are not present under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
+//
+// });
 //# sourceMappingURL=mySitesSteps.js.map

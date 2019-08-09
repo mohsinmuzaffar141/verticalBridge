@@ -35,8 +35,8 @@ Then(/^verify managment agreement data "([^"]*)"$/, {timeout: 5 * 50000}, async(
     await manageAgreepage.verifyNoOfsites(text);
     await manageAgreepage.verifyRevenue(text);
 });
-Then(/^verify owner name should be sorted in ascending order$/, {timeout: 5 * 50000}, async() => {
-    await manageAgreepage.verifyOwnerOrder();
+Then(/^verify owner name should be sorted in ascending order "([^"]*)"$/, {timeout: 5 * 50000}, async(colName) => {
+    await manageAgreepage.verifyOwnerOrder(colName);
 });
 
 Then(/^verify revenue "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
@@ -57,6 +57,16 @@ Then(/^verify that sites should be displayed "([^"]*)"$/, {timeout: 5 * 50000}, 
 Then(/^search the management agreement list "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
     await manageAgreepage.searchbox(text);
 });
-Then(/^click on ascending and descending order tab "([^"]*)"$/, function () {
-
+Then(/^click on ascending and descending order tab "([^"]*)"$/, {timeout: 5 * 50000}, async(colName) => {
+    let col=cred[colName]['name'];
+    await manageAgreepage.verifyOwnerOrder(colName);
+    await manageAgreepage.clickAscendingAndDescendingOrder(col);
+    await manageAgreepage.verifyDescendingOwnerOrder(colName);
+});
+Then(/^click on export to excel button "([^"]*)"$/, {timeout: 5 * 50000}, async(exportExcel) => {
+    let exportfile=cred[exportExcel]['button'];
+    await manageAgreepage.clickEcportFile(exportfile);
+});
+Then(/^verify the file should be downloaded$/, {timeout: 5 * 50000}, async() =>  {
+    await manageAgreepage.verifyDownloadFile();
 });

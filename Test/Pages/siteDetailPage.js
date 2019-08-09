@@ -69,6 +69,8 @@ var siteDetailPage = /** @class */ (function (_super) {
         _this.linkTitle = protractor_1.element(protractor_1.by.xpath('//div[@class="header-title"]'));
         _this.saerchFile = protractor_1.element(protractor_1.by.id('SearchDocument'));
         _this.search_btn = protractor_1.element(protractor_1.by.id('DocSearchBtn'));
+        _this.editFile = protractor_1.element(protractor_1.by.xpath('//i[@class="fa fa-pencil-square-o fa-2x"]'));
+        _this.siteInspection = protractor_1.element(protractor_1.by.xpath('//i[@class="fa fa-file-text-o fa-2x"]'));
         return _this;
     }
     siteDetailPage.prototype.selectSite = function (value) {
@@ -1071,6 +1073,36 @@ var siteDetailPage = /** @class */ (function (_super) {
                         i++;
                         return [3 /*break*/, 1];
                     case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    //     async optionsNotPresent(){
+    //         let rowToRightClick=element(by.xpath('//span[@data-text="Blue"]'))
+    //         await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
+    //        await expect.IsTrue(popup.Exists, "Write your own message here");
+    //
+    //     }
+    siteDetailPage.prototype.editSiteNOtPresent = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, expect(this.editFile.isDisplayed()).to.eventually.equal(false)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.siteInspectionNOtPresent = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, expect(this.siteInspection.isDisplayed()).to.eventually.equal(false)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
                 }
             });
         });

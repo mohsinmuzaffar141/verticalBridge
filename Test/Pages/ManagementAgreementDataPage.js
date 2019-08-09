@@ -218,25 +218,27 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    ManagementAgreementDataPage.prototype.verifyOwnerOrder = function () {
+    ManagementAgreementDataPage.prototype.verifyOwnerOrder = function (colName) {
         return __awaiter(this, void 0, void 0, function () {
-            var table;
+            var columnName, counter, NAMES, table, unsortedArr;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        table = protractor_1.element.all(protractor_1.by.xpath('//tr[@class="ui-selectable-row ui-state-highlight ng-star-inserted"]'));
+                        columnName = cred[colName]['colName'];
+                        counter = cred[colName]['count'];
+                        NAMES = [];
+                        table = protractor_1.element.all(protractor_1.by.xpath('(//tbody[@class="ui-table-tbody"])[' + counter + ']//tr'));
                         return [4 /*yield*/, table.then(function (txt) {
                                 return __awaiter(this, void 0, void 0, function () {
-                                    var NAMES, i, ownerName, arr;
+                                    var i, ownerName;
                                     return __generator(this, function (_a) {
                                         switch (_a.label) {
                                             case 0:
-                                                NAMES = [];
                                                 i = 1;
                                                 _a.label = 1;
                                             case 1:
                                                 if (!(i <= txt.length)) return [3 /*break*/, 4];
-                                                ownerName = protractor_1.element(protractor_1.by.xpath('(//div[@class="col-ownerName ng-star-inserted"])[' + i + ']'));
+                                                ownerName = protractor_1.element(protractor_1.by.xpath('(//div[@class="col-' + columnName + ' ng-star-inserted"])[' + i + ']'));
                                                 return [4 /*yield*/, ownerName.getText().then(function (text) {
                                                         return __awaiter(this, void 0, void 0, function () {
                                                             return __generator(this, function (_a) {
@@ -255,21 +257,79 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                                             case 3:
                                                 i++;
                                                 return [3 /*break*/, 1];
-                                            case 4:
-                                                arr = NAMES.sort(function (a, b) { return a - b; });
-                                                if (NAMES === arr) {
-                                                    console.log("Owner Name is in Ascending Order");
-                                                }
-                                                else {
-                                                    console.log("Error Occurred");
-                                                }
-                                                return [2 /*return*/];
+                                            case 4: return [2 /*return*/];
                                         }
                                     });
                                 });
                             })];
                     case 1:
                         _a.sent();
+                        console.log('Sorted Array s: ' + NAMES);
+                        unsortedArr = [];
+                        unsortedArr = NAMES.sort();
+                        return [4 /*yield*/, expect(unsortedArr).to.be.equal(NAMES)];
+                    case 2:
+                        _a.sent();
+                        console.log('Sorted Array u: ' + unsortedArr);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.verifyDescendingOwnerOrder = function (colName) {
+        return __awaiter(this, void 0, void 0, function () {
+            var columnName, counter, NAMES, table, unsortedArr;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        columnName = cred[colName]['colName'];
+                        counter = cred[colName]['count'];
+                        NAMES = [];
+                        table = protractor_1.element.all(protractor_1.by.xpath('(//tbody[@class="ui-table-tbody"])[' + counter + ']//tr'));
+                        return [4 /*yield*/, table.then(function (txt) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var i, ownerName;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                i = 1;
+                                                _a.label = 1;
+                                            case 1:
+                                                if (!(i <= txt.length)) return [3 /*break*/, 4];
+                                                ownerName = protractor_1.element(protractor_1.by.xpath('(//div[@class="col-' + columnName + ' ng-star-inserted"])[' + i + ']'));
+                                                return [4 /*yield*/, ownerName.getText().then(function (text) {
+                                                        return __awaiter(this, void 0, void 0, function () {
+                                                            return __generator(this, function (_a) {
+                                                                switch (_a.label) {
+                                                                    case 0: return [4 /*yield*/, NAMES.push(text)];
+                                                                    case 1:
+                                                                        _a.sent();
+                                                                        return [2 /*return*/];
+                                                                }
+                                                            });
+                                                        });
+                                                    })];
+                                            case 2:
+                                                _a.sent();
+                                                _a.label = 3;
+                                            case 3:
+                                                i++;
+                                                return [3 /*break*/, 1];
+                                            case 4: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        console.log('Sorted Array s: ' + NAMES);
+                        unsortedArr = [];
+                        unsortedArr = NAMES.sort();
+                        unsortedArr.reverse();
+                        return [4 /*yield*/, expect(unsortedArr).to.be.equal(NAMES)];
+                    case 2:
+                        _a.sent();
+                        console.log('Sorted Array u: ' + unsortedArr);
                         return [2 /*return*/];
                 }
             });
@@ -574,6 +634,66 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                     case 2:
                         _a.sent();
                         return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.clickAscendingAndDescendingOrder = function (column) {
+        return __awaiter(this, void 0, void 0, function () {
+            var colName;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        colName = protractor_1.element(protractor_1.by.xpath('//div[text()=" ' + column + ' "]'));
+                        return [4 /*yield*/, colName.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.clickEcportFile = function (exportFile) {
+        return __awaiter(this, void 0, void 0, function () {
+            var button;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        button = protractor_1.element(protractor_1.by.xpath('//span[text()=" ' + exportFile + ' "]'));
+                        return [4 /*yield*/, button.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(10000)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.verifyDownloadFile = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var downloadsFolder, filepath;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        downloadsFolder = require('downloads-folder');
+                        filepath = downloadsFolder() + '\\My Sites-Export.xlsx';
+                        return [4 /*yield*/, expect(fs.existsSync(filepath)).to.be.true];
+                    case 1:
+                        _a.sent();
+                        if (!fs.existsSync(filepath)) return [3 /*break*/, 4];
+                        return [4 /*yield*/, fs.unlinkSync(filepath)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
                 }
             });
         });

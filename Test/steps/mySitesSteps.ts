@@ -51,3 +51,6 @@ Then(/^verify that filter applied is removed "([^"]*)"$/, {timeout: 5 * 50000}, 
     await manageAgreepage.removeFilter();
     await manageAgreepage.verifySites(text);
 });
+// Then(/^verify options are not present under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
+//
+// });

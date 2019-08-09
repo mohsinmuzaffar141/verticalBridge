@@ -105,10 +105,10 @@ cucumber_1.Then(/^verify managment agreement data "([^"]*)"$/, { timeout: 5 * 50
         }
     });
 }); });
-cucumber_1.Then(/^verify owner name should be sorted in ascending order$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^verify owner name should be sorted in ascending order "([^"]*)"$/, { timeout: 5 * 50000 }, function (colName) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, manageAgreepage.verifyOwnerOrder()];
+            case 0: return [4 /*yield*/, manageAgreepage.verifyOwnerOrder(colName)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -175,6 +175,46 @@ cucumber_1.Then(/^search the management agreement list "([^"]*)"$/, { timeout: 5
         }
     });
 }); });
-cucumber_1.Then(/^click on ascending and descending order tab "([^"]*)"$/, function () {
-});
+cucumber_1.Then(/^click on ascending and descending order tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (colName) { return __awaiter(_this, void 0, void 0, function () {
+    var col;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                col = cred[colName]['name'];
+                return [4 /*yield*/, manageAgreepage.verifyOwnerOrder(colName)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, manageAgreepage.clickAscendingAndDescendingOrder(col)];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, manageAgreepage.verifyDescendingOwnerOrder(colName)];
+            case 3:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click on export to excel button "([^"]*)"$/, { timeout: 5 * 50000 }, function (exportExcel) { return __awaiter(_this, void 0, void 0, function () {
+    var exportfile;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                exportfile = cred[exportExcel]['button'];
+                return [4 /*yield*/, manageAgreepage.clickEcportFile(exportfile)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify the file should be downloaded$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, manageAgreepage.verifyDownloadFile()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=ManagemantAgreementSteps.js.map
