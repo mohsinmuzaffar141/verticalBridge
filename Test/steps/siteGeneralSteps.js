@@ -81,4 +81,27 @@ cucumber_1.Then(/^verify management agreement are not present on property tab "(
         }
     });
 }); });
+cucumber_1.Then(/^verify links to linkedIn page and newsroom page "([^"]*)"$/, { timeout: 5 * 50000 }, function (links) { return __awaiter(_this, void 0, void 0, function () {
+    var link;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                link = site[links]['linkText'];
+                return [4 /*yield*/, sitedetail.verifyLink(link)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify click to call function under contact tab$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, sitedetail.clickOnLinks()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=siteGeneralSteps.js.map

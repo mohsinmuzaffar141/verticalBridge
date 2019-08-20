@@ -131,3 +131,32 @@ documentTab:
   documanetLabel: Construction/Regulatory Documents,Environmental Documents,Tenant Lease Documents,Ground Lease and Legal Documents
   documanetLabel1: Blue,Green,Red,Yellow
   fileDocument: US-ID-5021_1A2C_072615.pdf
+
+homePage:
+  tabName: About,Services,Contacts
+  header: About
+  content: Vertical Bridge (VB),VB leases,The founders and senior,Our sites
+
+servicesTab:
+  tab: Services
+  subTabName: Real Estate Owners,Utility Partners,Development Partners
+  header: Services
+  content: Building up the successes,Vertical Bridge has an unparalleled,At no obligation,Please email
+
+servicesTab1:
+  tab: Utility Partners
+  header: Services
+  content: Coming Soon
+
+servicesTab2:
+  tab: Development Partners
+  header: Services
+  content: Coming Soon
+
+contactHomePageTab:
+  tab: Contacts
+  label: Contacts for Real Estate and Property Owners,Contacts for Utility Partners,Contacts for Development Joint Venture Partners
+  labelData: Shanda Sanabria Garcia
+  listData:  Real Estate Director, Coming Soon
+  link: 561-406-4046
+  dataNotPresent: Leigh Anne Stitt Real Estate Administrator Vertical Bridge Holdings,LLC LStitt@verticalbridge.com 750 Park of Commerce Drive, Suite 200 Boca Raton, Florida 33487 561.348.5235

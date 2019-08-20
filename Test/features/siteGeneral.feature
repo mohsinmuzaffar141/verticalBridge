@@ -35,3 +35,36 @@ Feature: verify links are not present on site header
     Examples:
       | credentials  |  relationships |     site       |       tab      |       link       |
       |   admin      |     relation   |   siteMapData  |   propertyTab  |    propertyTab1  |
+
+  @verifyLinksOnHomePage
+  Scenario Outline: verify links to linkedIn page and newsroom page
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  verify links to linkedIn page and newsroom page "<link>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |      link       |
+      |   admin      |    leasesData   |   homePageLink  |
+
+  @verifyClickToCallFunction
+  Scenario Outline: verify click to call function under contact tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+#    When  I click to the select partner view button
+#    When  selects the "<relationships>"
+#    Then  click the select button
+    Then  click "<tab>" on home page
+    Then  verify click to call function under contact tab
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |           tab          |
+      |   admin      |    leasesData   |   contactHomePageTab   |
+
+

@@ -1,23 +1,23 @@
 Feature: verify filter against my sites
 
   #Maps Tabs
-  @clickMapResetTab
-  Scenario Outline: verify data above map
-
-    Given I am on vertical bridge Page
-    When  Login to vertical bridge with "<credentials>"
-    When  I click to the select partner view button
-    When  selects the "<relationships>"
-    Then  click the select button
-    Then  click on my sites button
-    Then  click on site link  "<site>"
-    Then  search the lotaion on the map "<location>"
-    Then  click on reset button "<site>"
-    When  I log out
-
-    Examples:
-      | credentials  |  relationships |  location   |     site       |
-      |   admin      |     relation   |   mapSearch |   siteMapData  |
+#  @clickMapResetTab
+#  Scenario Outline: verify data above map
+#
+#    Given I am on vertical bridge Page
+#    When  Login to vertical bridge with "<credentials>"
+#    When  I click to the select partner view button
+#    When  selects the "<relationships>"
+#    Then  click the select button
+#    Then  click on my sites button
+#    Then  click on site link  "<site>"
+#    Then  search the lotaion on the map "<location>"
+#    Then  click on reset button "<site>"
+#    When  I log out
+#
+#    Examples:
+#      | credentials  |  relationships |  location   |     site       |
+#      |   admin      |     relation   |   mapSearch |   siteMapData  |
 
   @clickAutoViewTab
   Scenario Outline: verify on and off the auto view tab
@@ -155,7 +155,7 @@ Feature: verify filter against my sites
       |   admin      |     contactData   |   propertyTab1 |
 
 
-  @verifyDataUnderAllSitesofProperties
+  @verifyDataUnderAllSiteOfProperties
   Scenario Outline: verify data should be present under sites on property
 
     Given I am on vertical bridge Page
@@ -507,7 +507,7 @@ Feature: verify filter against my sites
       | credentials  |  relationships  |     tab       |
       |   admin      |    leasesData   |  radCenter    |
 
-  @verifyTabelHeaderUnderRadCenter
+  @verifyTableHeaderUnderRadCenter
   Scenario Outline: verify table header under rad center tab
 
     Given I am on vertical bridge Page
@@ -527,7 +527,7 @@ Feature: verify filter against my sites
 
 
     #Leasing Activity Tab
-  @verifyTabelHeaderUnderLeasingActivity
+  @verifyTableHeaderUnderLeasingActivity
   Scenario Outline: verify table header under leasing activity tab
 
     Given I am on vertical bridge Page
@@ -636,6 +636,120 @@ Feature: verify filter against my sites
     Examples:
       | credentials  |  relationships  |       tab       |
       |   admin      |    leasesData   |   documentTab   |
+
+  @verifyTabsUnderHomePage
+  Scenario Outline: verify tabs under home page
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  verify tabs are present under home page "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |     tab      |
+      |   admin      |    leasesData   |   homePage   |
+
+  @verifyContentUnderAboutTab
+  Scenario Outline: verify content under about tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  verify content under about tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |     tab      |
+      |   admin      |    leasesData   |   homePage   |
+
+  @verifySubTabsUnderServicesTab
+  Scenario Outline: verify sub tabs under services tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click "<tab>" on home page
+    Then  verify sub tabs under services tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |        tab      |
+      |   admin      |    leasesData   |   servicesTab   |
+
+  @verifyContentUnderServicesTab
+  Scenario Outline: verify content under services tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click "<tab>" on home page
+    Then  verify content under services tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |       tab       |
+      |   admin      |    leasesData   |   servicesTab   |
+
+  @verifyContentUnderServicesSubTab
+  Scenario Outline: verify content under services sub tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click "<tab>" on home page
+    Then  click sub tab "<subTab>" under services tab
+    Then  verify content under services tab "<subTab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |       tab       |      subTab    |
+      |   admin      |    leasesData   |   servicesTab   |   servicesTab1 |
+      |   admin      |    leasesData   |   servicesTab   |   servicesTab2 |
+
+  @verifyContentUnderContactTab
+  Scenario Outline: verify content under contact tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click "<tab>" on home page
+    Then  verify content under contact tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |           tab          |
+      |   admin      |    leasesData   |   contactHomePageTab   |
+
+  @verifyContentDataUnderContactTab
+  Scenario Outline: verify content under contact tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click "<tab>" on home page
+    Then  verify content data under contact tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |           tab           |
+      |   admin      |    leasesData   |   contactHomePageTab    |
+
+
 
 
 #  @verifyOptionsNotPresentUnderDocumentTab

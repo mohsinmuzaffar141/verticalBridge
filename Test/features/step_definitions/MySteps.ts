@@ -1,2 +1,0 @@
-import {Then} from 'cucumber'
-

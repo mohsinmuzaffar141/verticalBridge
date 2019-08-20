@@ -167,9 +167,8 @@ export class siteDetailPage extends BasePage {
                     await browser.sleep(5000);
                 } else
                     console.log(tab + " is not present")
-            }
-        )
-    };
+            });
+    }
 
 
     async verifyContactsLabel(contactLabel: string) {
@@ -303,16 +302,25 @@ export class siteDetailPage extends BasePage {
     }
 
     async verifyDisplayMessage(message: string) {
-        let msg = element(by.xpath('//p[contains(text(),"' + message + '")]'));
-        await msg.getText().then(async function (text) {
-            console.log(text);
-        });
-        await expect(msg.isDisplayed()).to.eventually.equal(true);
+        let thdata = message.split(',');
+        for (let i = 0; i < thdata.length; i++) {
+            let msg = element(by.xpath('//p[contains(text(),"' + thdata[i] + '")]'));
+            await msg.getText().then(async function (text) {
+                console.log(text);
+            });
+            await expect(msg.isDisplayed()).to.eventually.equal(true);
+        }
     }
 
     async verifyLink(link: string) {
-        let msg = element(by.xpath('//a[contains(text(),"' + link + '")]'));
-        await expect(msg.isDisplayed()).to.eventually.equal(true);
+        let thdata = link.split(',');
+        for (let i = 0; i < thdata.length; i++) {
+            let msg = element(by.xpath('//a[contains(text(),"' + thdata[i] + '")]'));
+            await msg.getText().then(async function (text) {
+                console.log(text);
+            });
+            await expect(msg.isDisplayed()).to.eventually.equal(true);
+        }
     }
 
     async verifyIndicatorColor(indicator: string) {
@@ -374,4 +382,49 @@ export class siteDetailPage extends BasePage {
     async managementAgreementNotPresent(){
         await expect(this.managementAgreement.isPresent()).to.eventually.equal(false);
     }
+
+    async selectTabUnderHomePage(tabName: string) {
+        let tab = maps[tabName]['tab'];
+        let tabClick = element(by.xpath('//div[text()="' + tab + '"]'));
+        await tabClick.isPresent().then(async function (display) {
+            if (display) {
+                await tabClick.click();
+                await browser.sleep(5000);
+            } else
+                console.log(tab + " is not present")
+        });
+    }
+    async verifyContentUnderContactTab(txt: string) {
+        let attribute = txt.split(',');
+        for (let i = 0; i < attribute.length; i++) {
+            let data = element(by.xpath('//h3[contains(text(),"' + attribute[i] + '")]'));
+            await data.getText().then(async function (text) {
+                console.log(text);
+                await expect(text).to.equal(attribute[i]);
+            });
+        }
+    }
+
+    async verifyListContentUnderContactTab(contactLabel: string) {
+        let data=maps[contactLabel]['listData'];
+        let contactLabels = data.split(',');
+        for (let i = 0; i < contactLabels.length; i++) {
+            let label = element(by.xpath('//li[contains(text(),"' + contactLabels[i] + '")]'));
+            await label.getText().then(async function (text) {
+                console.log(text);
+            });
+            await expect(label.isDisplayed()).to.eventually.equal(true);
+        }
+    }
+    async clickOnLinks(){
+        let link=element(by.xpath('//a[contains(text(),"561-406-4046")]'));
+        await link.click();
+        await browser.sleep(5000);
+        await browser.switchTo().alert().then(async function(){
+            let pop = browser.switchTo().alert().getText();
+
+            console.log(pop);
+    });
+    }
+
 }

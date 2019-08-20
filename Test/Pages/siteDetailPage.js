@@ -471,7 +471,6 @@ var siteDetailPage = /** @class */ (function (_super) {
             });
         });
     };
-    ;
     siteDetailPage.prototype.verifyContactsLabel = function (contactLabel) {
         return __awaiter(this, void 0, void 0, function () {
             var contactLabels, i, label;
@@ -928,11 +927,16 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.verifyDisplayMessage = function (message) {
         return __awaiter(this, void 0, void 0, function () {
-            var msg;
+            var thdata, i, msg;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        msg = protractor_1.element(protractor_1.by.xpath('//p[contains(text(),"' + message + '")]'));
+                        thdata = message.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < thdata.length)) return [3 /*break*/, 5];
+                        msg = protractor_1.element(protractor_1.by.xpath('//p[contains(text(),"' + thdata[i] + '")]'));
                         return [4 /*yield*/, msg.getText().then(function (text) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     return __generator(this, function (_a) {
@@ -941,27 +945,50 @@ var siteDetailPage = /** @class */ (function (_super) {
                                     });
                                 });
                             })];
-                    case 1:
-                        _a.sent();
-                        return [4 /*yield*/, expect(msg.isDisplayed()).to.eventually.equal(true)];
                     case 2:
                         _a.sent();
-                        return [2 /*return*/];
+                        return [4 /*yield*/, expect(msg.isDisplayed()).to.eventually.equal(true)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5: return [2 /*return*/];
                 }
             });
         });
     };
     siteDetailPage.prototype.verifyLink = function (link) {
         return __awaiter(this, void 0, void 0, function () {
-            var msg;
+            var thdata, i, msg;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        msg = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"' + link + '")]'));
-                        return [4 /*yield*/, expect(msg.isDisplayed()).to.eventually.equal(true)];
+                        thdata = link.split(',');
+                        i = 0;
+                        _a.label = 1;
                     case 1:
+                        if (!(i < thdata.length)) return [3 /*break*/, 5];
+                        msg = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"' + thdata[i] + '")]'));
+                        return [4 /*yield*/, msg.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 2:
                         _a.sent();
-                        return [2 /*return*/];
+                        return [4 /*yield*/, expect(msg.isDisplayed()).to.eventually.equal(true)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5: return [2 /*return*/];
                 }
             });
         });
@@ -1120,6 +1147,156 @@ var siteDetailPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, expect(this.managementAgreement.isPresent()).to.eventually.equal(false)];
                     case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.selectTabUnderHomePage = function (tabName) {
+        return __awaiter(this, void 0, void 0, function () {
+            var tab, tabClick;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        tab = maps[tabName]['tab'];
+                        tabClick = protractor_1.element(protractor_1.by.xpath('//div[text()="' + tab + '"]'));
+                        return [4 /*yield*/, tabClick.isPresent().then(function (display) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                if (!display) return [3 /*break*/, 3];
+                                                return [4 /*yield*/, tabClick.click()];
+                                            case 1:
+                                                _a.sent();
+                                                return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                                            case 2:
+                                                _a.sent();
+                                                return [3 /*break*/, 4];
+                                            case 3:
+                                                console.log(tab + " is not present");
+                                                _a.label = 4;
+                                            case 4: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyContentUnderContactTab = function (txt) {
+        return __awaiter(this, void 0, void 0, function () {
+            var attribute, _loop_6, i;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        attribute = txt.split(',');
+                        _loop_6 = function (i) {
+                            var data;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        data = protractor_1.element(protractor_1.by.xpath('//h3[contains(text(),"' + attribute[i] + '")]'));
+                                        return [4 /*yield*/, data.getText().then(function (text) {
+                                                return __awaiter(this, void 0, void 0, function () {
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0:
+                                                                console.log(text);
+                                                                return [4 /*yield*/, expect(text).to.equal(attribute[i])];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [2 /*return*/];
+                                                        }
+                                                    });
+                                                });
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < attribute.length)) return [3 /*break*/, 4];
+                        return [5 /*yield**/, _loop_6(i)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyListContentUnderContactTab = function (contactLabel) {
+        return __awaiter(this, void 0, void 0, function () {
+            var data, contactLabels, i, label;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        data = maps[contactLabel]['listData'];
+                        contactLabels = data.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < contactLabels.length)) return [3 /*break*/, 5];
+                        label = protractor_1.element(protractor_1.by.xpath('//li[contains(text(),"' + contactLabels[i] + '")]'));
+                        return [4 /*yield*/, label.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, expect(label.isDisplayed()).to.eventually.equal(true)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.clickOnLinks = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var link;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        link = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"561-406-4046")]'));
+                        return [4 /*yield*/, link.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.switchTo().alert().then(function () {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var pop;
+                                    return __generator(this, function (_a) {
+                                        pop = protractor_1.browser.switchTo().alert().getText();
+                                        console.log(pop);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 3:
                         _a.sent();
                         return [2 /*return*/];
                 }

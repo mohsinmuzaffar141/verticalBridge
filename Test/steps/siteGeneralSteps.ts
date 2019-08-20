@@ -28,3 +28,10 @@ Then(/^verify management agreement are not present on property tab "([^"]*)"$/, 
     await sitedetail.managementAgreementNotPresent();
     await sitedetail.verifyContactGroupData(thData);
 });
+Then(/^verify links to linkedIn page and newsroom page "([^"]*)"$/, {timeout: 5 * 50000}, async(links)=> {
+    let link=site[links]['linkText'];
+    await sitedetail.verifyLink(link);
+});
+Then(/^verify click to call function under contact tab$/, {timeout: 5 * 50000}, async()=> {
+    await sitedetail.clickOnLinks();
+});

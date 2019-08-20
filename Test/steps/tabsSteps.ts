@@ -149,3 +149,40 @@ Then(/^verify files under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(
 Then(/^click folder and sub folder under document tab$/, {timeout: 5 * 50000}, async()=>{
     await maps.folderAndSubFolder()
 });
+Then(/^verify tabs are present under home page "([^"]*)"$/, {timeout: 5 * 50000}, async(homeTab)=>{
+    let homeTabs=map[homeTab]['tabName'];
+    await maps.verifyDataUnderPropertyInformation(homeTabs);
+});
+Then(/^verify content under about tab "([^"]*)"$/, {timeout: 5 * 50000}, async(aboutContent)=>{
+    let heading=map[aboutContent]['header'];
+    let content=map[aboutContent]['content'];
+    await maps.verifyAttributeOnLeasesTab(heading);
+    await maps.verifyDisplayMessage(content);
+});
+Then(/^click "([^"]*)" on home page$/, {timeout: 5 * 50000}, async(tab)=> {
+    await maps.selectTabUnderHomePage(tab);
+});
+Then(/^verify sub tabs under services tab "([^"]*)"$/, {timeout: 5 * 50000}, async(subTab)=> {
+    let subTabName=map[subTab]['subTabName'];
+    await maps.verifyDataUnderPropertyInformation(subTabName);
+});
+Then(/^verify content under services tab "([^"]*)"$/, {timeout: 5 * 50000}, async(servicesContent)=> {
+    let heading=map[servicesContent]['header'];
+    let content=map[servicesContent]['content'];
+    await maps.verifyAttributeOnLeasesTab(heading);
+    await maps.verifyDisplayMessage(content);
+});
+Then(/^click sub tab "([^"]*)" under services tab$/, {timeout: 5 * 50000}, async(subTab)=> {
+    await maps.selectTabUnderHomePage(subTab);
+});
+Then(/^verify content under contact tab "([^"]*)"$/, {timeout: 5 * 50000}, async(content)=> {
+    let contacts=map[content]['label'];
+    await maps.verifyContentUnderContactTab(contacts);
+});
+Then(/^verify content data under contact tab "([^"]*)"$/, {timeout: 5 * 50000}, async(content)=> {
+    let data=map[content]['labelData'];
+    let dataNotPresent=map[content]['dataNotPresent'];
+    await maps.verifyMapData(data);
+    await maps.verifyListContentUnderContactTab(content);
+    await maps.verifyLabelNotPreent(dataNotPresent);
+});

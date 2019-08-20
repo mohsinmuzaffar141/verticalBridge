@@ -480,4 +480,117 @@ cucumber_1.Then(/^click folder and sub folder under document tab$/, { timeout: 5
         }
     });
 }); });
+cucumber_1.Then(/^verify tabs are present under home page "([^"]*)"$/, { timeout: 5 * 50000 }, function (homeTab) { return __awaiter(_this, void 0, void 0, function () {
+    var homeTabs;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                homeTabs = map[homeTab]['tabName'];
+                return [4 /*yield*/, maps.verifyDataUnderPropertyInformation(homeTabs)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify content under about tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (aboutContent) { return __awaiter(_this, void 0, void 0, function () {
+    var heading, content;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                heading = map[aboutContent]['header'];
+                content = map[aboutContent]['content'];
+                return [4 /*yield*/, maps.verifyAttributeOnLeasesTab(heading)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, maps.verifyDisplayMessage(content)];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click "([^"]*)" on home page$/, { timeout: 5 * 50000 }, function (tab) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, maps.selectTabUnderHomePage(tab)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify sub tabs under services tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (subTab) { return __awaiter(_this, void 0, void 0, function () {
+    var subTabName;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                subTabName = map[subTab]['subTabName'];
+                return [4 /*yield*/, maps.verifyDataUnderPropertyInformation(subTabName)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify content under services tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (servicesContent) { return __awaiter(_this, void 0, void 0, function () {
+    var heading, content;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                heading = map[servicesContent]['header'];
+                content = map[servicesContent]['content'];
+                return [4 /*yield*/, maps.verifyAttributeOnLeasesTab(heading)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, maps.verifyDisplayMessage(content)];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click sub tab "([^"]*)" under services tab$/, { timeout: 5 * 50000 }, function (subTab) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, maps.selectTabUnderHomePage(subTab)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify content under contact tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (content) { return __awaiter(_this, void 0, void 0, function () {
+    var contacts;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                contacts = map[content]['label'];
+                return [4 /*yield*/, maps.verifyContentUnderContactTab(contacts)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify content data under contact tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (content) { return __awaiter(_this, void 0, void 0, function () {
+    var data, dataNotPresent;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                data = map[content]['labelData'];
+                dataNotPresent = map[content]['dataNotPresent'];
+                return [4 /*yield*/, maps.verifyMapData(data)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, maps.verifyListContentUnderContactTab(content)];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, maps.verifyLabelNotPreent(dataNotPresent)];
+            case 3:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=tabsSteps.js.map

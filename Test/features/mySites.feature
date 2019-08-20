@@ -118,8 +118,6 @@ Feature: verify filter against my sites
       | credentials  |  relationships |   site   |
       |   admin      |     relation   | siteList |
 
-
-
   @verifySite
   Scenario Outline: verify searchFilters against my sites
 
@@ -227,7 +225,7 @@ Feature: verify filter against my sites
       |   admin      |     relation   | siteDetailNotPresentMohsin |
 
 
-  @verifyTabs @regression
+  @verifyTabs
   Scenario Outline: verify Tabs on detail page
 
     Given I am on vertical bridge Page
