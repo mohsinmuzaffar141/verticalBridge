@@ -63,7 +63,8 @@ export const config: Config = {
         "login":"../features/login.feature",
         "managementAgreement": "./Test/features/managemenetAgreement.feature",
         "site": "./Test/features/mySites.feature",
-        "tabs": "./Test/features/tabs.feature"
+        "tabs": "./Test/features/tabs.feature",
+        "siteGeneral": "./Test/features/siteGeneral.feature"
     },
 // };
     plugins: [{

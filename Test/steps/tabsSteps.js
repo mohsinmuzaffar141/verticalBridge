@@ -41,7 +41,6 @@ var siteDetailPage_1 = require("../Pages/siteDetailPage");
 //data variables
 var yaml = require('js-yaml');
 var fs = require('fs');
-var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;

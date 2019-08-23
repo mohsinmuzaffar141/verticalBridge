@@ -115,7 +115,7 @@ Feature: verify filter against my sites
 
 
 
-#PropertyTab
+      #PropertyTab
   @verifyAttributesOnPropertyTab
   Scenario Outline: verify attributes on property site should be present
 

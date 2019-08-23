@@ -22,7 +22,7 @@ Given(/^I am on vertical bridge Page$/,{timeout:  5 * 50000}, async() => {
         console.log(e);
     }
 });
-When(/^Login to vertical bridge with "([^"]*)"$/, {timeout:  5 * 50000}, async(text) => {
+When(/^Login to vertical bridge with "([^"]*)"$/, {timeout:  5 * 500000}, async(text) => {
     await loginPage.giveUserName(text);
     await loginPage.enterPassword(text);
     await loginPage.clickLoginButton();

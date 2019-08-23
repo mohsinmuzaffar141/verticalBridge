@@ -56,6 +56,7 @@ var yaml = require('js-yaml');
 var fs = require('fs');
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var maps = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
+var site = yaml.safeLoad(fs.readFileSync('./Test/testData/siteGeneral.yml', 'utf8'));
 var expect = chai.expect;
 var until = protractor_1.protractor.ExpectedConditions;
 var siteDetailPage = /** @class */ (function (_super) {
@@ -72,6 +73,9 @@ var siteDetailPage = /** @class */ (function (_super) {
         _this.editFile = protractor_1.element(protractor_1.by.xpath('//i[@class="fa fa-pencil-square-o fa-2x"]'));
         _this.siteInspection = protractor_1.element(protractor_1.by.xpath('//i[@class="fa fa-file-text-o fa-2x"]'));
         _this.managementAgreement = protractor_1.element(protractor_1.by.xpath('//div[text()="Management Agreement:"]'));
+        _this.helpBtn = protractor_1.element(protractor_1.by.xpath('//span[text()="Help"]'));
+        _this.advanceSearch = protractor_1.element(protractor_1.by.xpath('//span[text()="Advanced Search"]'));
+        _this.mainMenuSearchField = protractor_1.element(protractor_1.by.xpath('//input[@id="SearchInput"]'));
         return _this;
     }
     siteDetailPage.prototype.selectSite = function (value) {
@@ -1297,6 +1301,119 @@ var siteDetailPage = /** @class */ (function (_super) {
                                 });
                             })];
                     case 3:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyHelpTab = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, expect(this.helpBtn.isDisplayed()).to.eventually.equal(true)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.mainMenuSearch = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var mainMenuSearchField;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        mainMenuSearchField = protractor_1.element(protractor_1.by.xpath('//input[@id="SearchInput"]'));
+                        return [4 /*yield*/, mainMenuSearchField.isPresent().then(function (display) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                if (!display) return [3 /*break*/, 4];
+                                                return [4 /*yield*/, mainMenuSearchField.click()];
+                                            case 1:
+                                                _a.sent();
+                                                return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                                            case 2:
+                                                _a.sent();
+                                                return [4 /*yield*/, expect(this.advanceSearch.isDisplayed()).to.equal(true)];
+                                            case 3:
+                                                _a.sent();
+                                                return [3 /*break*/, 5];
+                                            case 4:
+                                                console.log(mainMenuSearchField + " is not present");
+                                                _a.label = 5;
+                                            case 5: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifySearchSuggestion = function (text) {
+        return __awaiter(this, void 0, void 0, function () {
+            var txt, searchText;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        txt = site[text]['searchTxt'];
+                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text()," ' + txt + ' ")]'));
+                        return [4 /*yield*/, this.mainMenuSearchField.sendKeys(txt)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(searchText), 500000, 'Search Text Element taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, searchText.isPresent().then(function (display) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                if (!display) return [3 /*break*/, 3];
+                                                return [4 /*yield*/, searchText.click()];
+                                            case 1:
+                                                _a.sent();
+                                                return [4 /*yield*/, protractor_1.browser.sleep(2000)];
+                                            case 2:
+                                                _a.sent();
+                                                return [3 /*break*/, 4];
+                                            case 3:
+                                                console.log(searchText + " is not present");
+                                                _a.label = 4;
+                                            case 4: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.clickOnAdvanceSearch = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.mainMenuSearchField.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.advanceSearch), 500000, 'Advance Search taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.advanceSearch.click()];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(10000)];
+                    case 4:
                         _a.sent();
                         return [2 /*return*/];
                 }

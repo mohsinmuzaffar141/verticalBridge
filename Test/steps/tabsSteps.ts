@@ -5,7 +5,7 @@ import {siteDetailPage} from "../Pages/siteDetailPage";
 //data variables
 const yaml = require('js-yaml');
 const fs = require('fs');
-let cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
+
 let map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 
 const chai = require("chai").use(require("chai-as-promised"));
@@ -131,7 +131,7 @@ Then(/^verify table header under rad center tab "([^"]*)"$/, {timeout: 5 * 50000
     let thData=map[tableHeaderRad]['thRadCenter'];
     await maps.verifyContactGroupData(thData);
 });
-Then(/^verify table header under leasing activity tab "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeaderLeasing)=>  {
+Then(/^verify table header under leasing activity tab "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeaderLeasing)=>{
     let thData=map[tableHeaderLeasing]['thLeasingActivity'];
     await maps.verifyContactGroupData(thData);
 });

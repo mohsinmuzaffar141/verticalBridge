@@ -65,13 +65,13 @@ export class LoginPage extends BasePage{
 
 
     async giveUserName(na: string){
-        await browser.sleep(2000);
+        await browser.sleep(4000);
         await browser.wait(until.presenceOf(this.unField), 50000, 'Element taking too long to appear in the DOM');
         // let userName = 'username';
         await this.unField.sendKeys(cred[na]['username']);
         // await browser.wait(until.presenceOf(this.nexBtn), 50000, 'Element taking too long to appear in the DOM');
         await this.nexBtn.click();
-        await browser.sleep(7000);
+        await browser.sleep(4000);
     }
     async enterPassword(passwordText: string){
         // let pass = 'password';
@@ -82,7 +82,7 @@ export class LoginPage extends BasePage{
     async clickLoginButton(){
         await browser.wait(until.presenceOf(this.loginButton), 50000, 'Element taking too long to appear in the DOM');
         await this.loginButton.click();
-        await browser.sleep(7000);
+        await browser.sleep(3000);
     }
     async clickcheckbox(){
         if (this.checkbox.checked) {
@@ -90,15 +90,15 @@ export class LoginPage extends BasePage{
             await this.yesbtn.click();
         }
         else {
-            await browser.wait(until.presenceOf(this.checkbox), 50000, 'Element taking too long to appear in the DOM');
+            await browser.wait(until.presenceOf(this.checkbox), 500000, 'Element taking too long to appear in the DOM');
             await this.checkbox.click();
         }
     }
 
     async clickyesbutton(){
-        await browser.wait(until.presenceOf(this.yesbtn), 50000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(this.yesbtn), 500000, 'Element taking too long to appear in the DOM');
         await this.yesbtn.click();
-        await browser.sleep(7000);
+        await browser.sleep(3000);
 
     }
     async validate(){
@@ -108,10 +108,10 @@ export class LoginPage extends BasePage{
         await expect(path).to.eventually.equal(title);
     }
     async logout(){
-        await browser.wait(until.presenceOf(this.logout_btn),50000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(this.logout_btn),500000, 'Element taking too long to appear in the DOM');
         await this.logout_btn.click();
         await browser.sleep(7000);
         await browser.manage().deleteAllCookies();
-        await browser.sleep(4000);
+        await browser.sleep(7000);
     }
 }

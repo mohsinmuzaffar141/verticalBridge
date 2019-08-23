@@ -15,6 +15,7 @@ let map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 const chai = require("chai").use(require("chai-as-promised"));
 const expect = chai.expect;
 const sitedetail = new siteDetailPage();
+const maps = new siteDetailPage();
 
 Then(/^verify edit and site inspection icon are not present on site header "([^"]*)"$/, {timeout: 5 * 50000}, async(clickable)=>{
     let data=site[clickable]['tabData'];
@@ -34,4 +35,24 @@ Then(/^verify links to linkedIn page and newsroom page "([^"]*)"$/, {timeout: 5 
 });
 Then(/^verify click to call function under contact tab$/, {timeout: 5 * 50000}, async()=> {
     await sitedetail.clickOnLinks();
+});
+Then(/^verify footer on home page "([^"]*)"$/, {timeout: 5 * 50000}, async(footer)=> {
+    let footerText=site[footer]['footerText'];
+    await sitedetail.verifyDataUnderPropertyInformation(footerText);
+});
+Then(/^verify help tab on home page$/, {timeout: 5 * 50000}, async()=>{
+    await sitedetail.verifyHelpTab();
+});
+Then(/^verify search box on main menu$/, {timeout: 5 * 50000}, async()=> {
+    await sitedetail.mainMenuSearch();
+});
+Then(/^verify search box will display suggestions to match the text "([^"]*)"$/, {timeout: 5 * 50000}, async(text)=>{
+    await sitedetail.verifySearchSuggestion(text);
+});
+Then(/^verify table header of advance search "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeader)=>{
+    let thData=site[tableHeader]['thAdvanceSearch'];
+    await maps.verifyContactGroupData(thData);
+});
+Then(/^click on advance search$/, {timeout: 5 * 50000}, async()=> {
+    await sitedetail.clickOnAdvanceSearch();
 });

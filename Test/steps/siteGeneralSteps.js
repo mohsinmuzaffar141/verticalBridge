@@ -46,6 +46,7 @@ var map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var sitedetail = new siteDetailPage_1.siteDetailPage();
+var maps = new siteDetailPage_1.siteDetailPage();
 cucumber_1.Then(/^verify edit and site inspection icon are not present on site header "([^"]*)"$/, { timeout: 5 * 50000 }, function (clickable) { return __awaiter(_this, void 0, void 0, function () {
     var data;
     return __generator(this, function (_a) {
@@ -98,6 +99,72 @@ cucumber_1.Then(/^verify click to call function under contact tab$/, { timeout: 
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, sitedetail.clickOnLinks()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify footer on home page "([^"]*)"$/, { timeout: 5 * 50000 }, function (footer) { return __awaiter(_this, void 0, void 0, function () {
+    var footerText;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                footerText = site[footer]['footerText'];
+                return [4 /*yield*/, sitedetail.verifyDataUnderPropertyInformation(footerText)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify help tab on home page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, sitedetail.verifyHelpTab()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify search box on main menu$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, sitedetail.mainMenuSearch()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify search box will display suggestions to match the text "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, sitedetail.verifySearchSuggestion(text)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify table header of advance search "([^"]*)"$/, { timeout: 5 * 50000 }, function (tableHeader) { return __awaiter(_this, void 0, void 0, function () {
+    var thData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                thData = site[tableHeader]['thAdvanceSearch'];
+                return [4 /*yield*/, maps.verifyContactGroupData(thData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click on advance search$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, sitedetail.clickOnAdvanceSearch()];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

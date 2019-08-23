@@ -10,7 +10,7 @@ const fs = require('fs');
 
 let cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 let maps = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
-
+let site = yaml.safeLoad(fs.readFileSync('./Test/testData/siteGeneral.yml', 'utf8'));
 
 const expect = chai.expect;
 let until = protractor.ExpectedConditions;
@@ -26,7 +26,10 @@ export class siteDetailPage extends BasePage {
     search_btn=element(by.id('DocSearchBtn'));
     editFile=element(by.xpath('//i[@class="fa fa-pencil-square-o fa-2x"]'));
     siteInspection=element(by.xpath('//i[@class="fa fa-file-text-o fa-2x"]'));
-    managementAgreement=element(by.xpath('//div[text()="Management Agreement:"]'))
+    managementAgreement=element(by.xpath('//div[text()="Management Agreement:"]'));
+    helpBtn=element(by.xpath('//span[text()="Help"]'));
+    advanceSearch=element(by.xpath('//span[text()="Advanced Search"]'));
+    mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'))
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
@@ -162,12 +165,12 @@ export class siteDetailPage extends BasePage {
         let tab = maps[tabName]['tabName'];
         let tabClick = element(by.xpath('//a[text()=" ' + tab + ' "]'));
         await tabClick.isPresent().then(async function (display) {
-                if (display) {
-                    await tabClick.click();
-                    await browser.sleep(5000);
-                } else
-                    console.log(tab + " is not present")
-            });
+            if (display) {
+                await tabClick.click();
+                await browser.sleep(5000);
+            } else
+                console.log(tab + " is not present")
+        });
     }
 
 
@@ -422,9 +425,43 @@ export class siteDetailPage extends BasePage {
         await browser.sleep(5000);
         await browser.switchTo().alert().then(async function(){
             let pop = browser.switchTo().alert().getText();
-
             console.log(pop);
-    });
+        });
     }
 
+    async verifyHelpTab(){
+        await expect(this.helpBtn.isDisplayed()).to.eventually.equal(true);
+    }
+    async mainMenuSearch(){
+        let mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'))
+        await mainMenuSearchField.isPresent().then(async function (display) {
+            if (display) {
+                await mainMenuSearchField.click();
+                await browser.sleep(3000);
+                await expect(this.advanceSearch.isDisplayed()).to.equal(true);
+            } else
+                console.log(mainMenuSearchField + " is not present")
+        });
+    }
+
+    async verifySearchSuggestion(text:string){
+        let txt=site[text]['searchTxt'];
+        let searchText=element(by.xpath('//span[contains(text()," '+txt+' ")]'));
+        await this.mainMenuSearchField.sendKeys(txt);
+        await browser.wait(until.presenceOf(searchText), 500000, 'Search Text Element taking too long to appear in the DOM');
+        await searchText.isPresent().then(async function (display) {
+            if (display) {
+                await searchText.click();
+                await browser.sleep(2000);
+            } else
+                console.log(searchText + " is not present")
+        });
+    }
+
+    async clickOnAdvanceSearch(){
+        await this.mainMenuSearchField.click();
+        await browser.wait(until.presenceOf(this.advanceSearch), 500000, 'Advance Search taking too long to appear in the DOM')
+        await this.advanceSearch.click();
+        await browser.sleep(10000);
+    }
 }
