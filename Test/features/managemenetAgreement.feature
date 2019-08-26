@@ -142,7 +142,7 @@ Feature: verify data against management agreement
       |   admin      |  table1   |   relation     |
 
   @verifyDownloadSiteToExcelFile
-  Scenario Outline: verify ascending and descending order of management agreement
+  Scenario Outline: verify the file should be downloaded
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"

@@ -18,7 +18,7 @@ Feature: verify filter against my sites
 #    Examples:
 #      | credentials  |  relationships |  location   |     site       |
 #      |   admin      |     relation   |   mapSearch |   siteMapData  |
-
+#
   @clickAutoViewTab
   Scenario Outline: verify on and off the auto view tab
 
@@ -564,7 +564,7 @@ Feature: verify filter against my sites
       |   admin      |    leasesData   |   leasingActivity   |
 
   @verifyButtonNotPresent
-  Scenario Outline: verify label not present under leasing activity tab
+  Scenario Outline: verify buttons are not present on the portal
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"

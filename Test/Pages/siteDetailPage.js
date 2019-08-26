@@ -107,10 +107,9 @@ var siteDetailPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         siteNumber = cred[value]['siteNumber'];
+                        console.log(siteNumber);
                         title = protractor_1.element(protractor_1.by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + siteNumber + '")]'));
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(title), 5000, 'Element taking too long to appear in the DOM')];
-                    case 1:
-                        _a.sent();
+                        // await browser.wait(until.presenceOf(title), 15000, 'Element taking too long to appear in the DOM');
                         return [4 /*yield*/, title.getText().then(function (text) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     var sp, req;
@@ -119,6 +118,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                                             case 0:
                                                 sp = text.split(" ");
                                                 req = sp[0];
+                                                console.log(req);
                                                 return [4 /*yield*/, expect(siteNumber).to.equals(req)];
                                             case 1:
                                                 _a.sent();
@@ -127,7 +127,8 @@ var siteDetailPage = /** @class */ (function (_super) {
                                     });
                                 });
                             })];
-                    case 2:
+                    case 1:
+                        // await browser.wait(until.presenceOf(title), 15000, 'Element taking too long to appear in the DOM');
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -1321,10 +1322,11 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.mainMenuSearch = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var mainMenuSearchField;
+            var advanceSearch, mainMenuSearchField;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        advanceSearch = protractor_1.element(protractor_1.by.xpath('//span[text()="Advanced Search"]'));
                         mainMenuSearchField = protractor_1.element(protractor_1.by.xpath('//input[@id="SearchInput"]'));
                         return [4 /*yield*/, mainMenuSearchField.isPresent().then(function (display) {
                                 return __awaiter(this, void 0, void 0, function () {
@@ -1338,7 +1340,9 @@ var siteDetailPage = /** @class */ (function (_super) {
                                                 return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                                             case 2:
                                                 _a.sent();
-                                                return [4 /*yield*/, expect(this.advanceSearch.isDisplayed()).to.equal(true)];
+                                                return [4 /*yield*/, advanceSearch.isPresent().then(function (displ) {
+                                                        expect(displ).to.be.equal(true);
+                                                    })];
                                             case 3:
                                                 _a.sent();
                                                 return [3 /*break*/, 5];
@@ -1364,7 +1368,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         txt = site[text]['searchTxt'];
-                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text()," ' + txt + ' ")]'));
+                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + txt + '")]'));
                         return [4 /*yield*/, this.mainMenuSearchField.sendKeys(txt)];
                     case 1:
                         _a.sent();
@@ -1414,6 +1418,138 @@ var siteDetailPage = /** @class */ (function (_super) {
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(10000)];
                     case 4:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.advanceSearchTableHeader = function (thData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var thdata, _loop_7, i;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        thdata = thData.split(',');
+                        _loop_7 = function (i) {
+                            var headerData;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        headerData = protractor_1.element(protractor_1.by.xpath('//tr[@class="ng-star-inserted"]//th[' + i + ']'));
+                                        return [4 /*yield*/, headerData.getText().then(function (text) {
+                                                return __awaiter(this, void 0, void 0, function () {
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0:
+                                                                console.log(text);
+                                                                return [4 /*yield*/, expect(text).to.equal(thdata[i - 1])];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [2 /*return*/];
+                                                        }
+                                                    });
+                                                });
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
+                        i = 1;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i <= thdata.length)) return [3 /*break*/, 4];
+                        return [5 /*yield**/, _loop_7(i)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.verifyLabelsUderAdvanceSearch = function (text) {
+        return __awaiter(this, void 0, void 0, function () {
+            var txt, labels, _loop_8, i;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        txt = site[text]['advanceLabelHeader'];
+                        labels = txt.split(',');
+                        _loop_8 = function (i) {
+                            var searchText;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text()," ' + labels[i] + ' ")]'));
+                                        return [4 /*yield*/, searchText.isPresent().then(function (display) {
+                                                return __awaiter(this, void 0, void 0, function () {
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0:
+                                                                if (!display) return [3 /*break*/, 4];
+                                                                return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear')];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [4 /*yield*/, searchText.click()];
+                                                            case 2:
+                                                                _a.sent();
+                                                                return [4 /*yield*/, protractor_1.browser.sleep(2000)];
+                                                            case 3:
+                                                                _a.sent();
+                                                                return [3 /*break*/, 5];
+                                                            case 4:
+                                                                console.log(searchText + " is not present");
+                                                                _a.label = 5;
+                                                            case 5: return [2 /*return*/];
+                                                        }
+                                                    });
+                                                });
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < labels.length)) return [3 /*break*/, 4];
+                        return [5 /*yield**/, _loop_8(i)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    siteDetailPage.prototype.advanceSearchRefinementCriteria = function (text) {
+        return __awaiter(this, void 0, void 0, function () {
+            var txt, searchText;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        txt = site[text]['advanceLabelHeader'];
+                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text()," ' + txt + ' ")]'));
+                        return [4 /*yield*/, searchText.isPresent().then(function (display) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(display);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 1:
                         _a.sent();
                         return [2 /*return*/];
                 }

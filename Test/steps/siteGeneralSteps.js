@@ -154,7 +154,7 @@ cucumber_1.Then(/^verify table header of advance search "([^"]*)"$/, { timeout: 
         switch (_a.label) {
             case 0:
                 thData = site[tableHeader]['thAdvanceSearch'];
-                return [4 /*yield*/, maps.verifyContactGroupData(thData)];
+                return [4 /*yield*/, maps.advanceSearchTableHeader(thData)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -166,6 +166,38 @@ cucumber_1.Then(/^click on advance search$/, { timeout: 5 * 50000 }, function ()
         switch (_a.label) {
             case 0: return [4 /*yield*/, sitedetail.clickOnAdvanceSearch()];
             case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels of advance search "([^"]*)"$/, { timeout: 5 * 50000 }, function (label) { return __awaiter(_this, void 0, void 0, function () {
+    var txt1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                txt1 = site[label]['advanceLabel'];
+                return [4 /*yield*/, sitedetail.verifyLabelsUderAdvanceSearch(label)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.verifyDataUnderPropertyInformation(txt1)];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify advance search should have refinemenet criteria "([^"]*)"$/, { timeout: 5 * 50000 }, function (searchCriteria) { return __awaiter(_this, void 0, void 0, function () {
+    var txt1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                txt1 = site[searchCriteria]['advanceLabel'];
+                return [4 /*yield*/, sitedetail.advanceSearchRefinementCriteria(searchCriteria)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.verifyDataUnderPropertyInformation(txt1)];
+            case 2:
                 _a.sent();
                 return [2 /*return*/];
         }

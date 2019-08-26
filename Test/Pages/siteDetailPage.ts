@@ -29,7 +29,7 @@ export class siteDetailPage extends BasePage {
     managementAgreement=element(by.xpath('//div[text()="Management Agreement:"]'));
     helpBtn=element(by.xpath('//span[text()="Help"]'));
     advanceSearch=element(by.xpath('//span[text()="Advanced Search"]'));
-    mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'))
+    mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'));
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
@@ -41,11 +41,13 @@ export class siteDetailPage extends BasePage {
 
     async verifySiteNumber(value: string) {
         let siteNumber = cred[value]['siteNumber'];
+        console.log(siteNumber);
         let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + siteNumber + '")]'));
-        await browser.wait(until.presenceOf(title), 5000, 'Element taking too long to appear in the DOM');
+        // await browser.wait(until.presenceOf(title), 15000, 'Element taking too long to appear in the DOM');
         await title.getText().then(async function (text) {
             var sp = text.split(" ");
             var req = sp[0];
+            console.log(req);
             await expect(siteNumber).to.equals(req);
         });
     }
@@ -433,20 +435,24 @@ export class siteDetailPage extends BasePage {
         await expect(this.helpBtn.isDisplayed()).to.eventually.equal(true);
     }
     async mainMenuSearch(){
-        let mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'))
+        let advanceSearch=element(by.xpath('//span[text()="Advanced Search"]'));
+        let mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'));
         await mainMenuSearchField.isPresent().then(async function (display) {
             if (display) {
                 await mainMenuSearchField.click();
                 await browser.sleep(3000);
-                await expect(this.advanceSearch.isDisplayed()).to.equal(true);
+                await advanceSearch.isPresent().then(function (displ) {
+                    expect(displ).to.be.equal(true);
+                });
             } else
                 console.log(mainMenuSearchField + " is not present")
         });
+
     }
 
     async verifySearchSuggestion(text:string){
         let txt=site[text]['searchTxt'];
-        let searchText=element(by.xpath('//span[contains(text()," '+txt+' ")]'));
+        let searchText=element(by.xpath('//span[contains(text(),"'+txt+'")]'));
         await this.mainMenuSearchField.sendKeys(txt);
         await browser.wait(until.presenceOf(searchText), 500000, 'Search Text Element taking too long to appear in the DOM');
         await searchText.isPresent().then(async function (display) {
@@ -460,8 +466,42 @@ export class siteDetailPage extends BasePage {
 
     async clickOnAdvanceSearch(){
         await this.mainMenuSearchField.click();
-        await browser.wait(until.presenceOf(this.advanceSearch), 500000, 'Advance Search taking too long to appear in the DOM')
+        await browser.wait(until.presenceOf(this.advanceSearch), 500000, 'Advance Search taking too long to appear in the DOM');
         await this.advanceSearch.click();
         await browser.sleep(10000);
     }
+
+    async advanceSearchTableHeader(thData: string) {
+        let thdata = thData.split(',');
+        for (let i = 1; i <= thdata.length; i++) {
+            let headerData = element(by.xpath('//tr[@class="ng-star-inserted"]//th[' + i + ']'));
+            await headerData.getText().then(async function (text) {
+                console.log(text);
+                await expect(text).to.equal(thdata[i - 1]);
+            });
+        }
+    }
+
+    async verifyLabelsUderAdvanceSearch(text:string){
+        let txt=site[text]['advanceLabelHeader'];
+        let labels = txt.split(',');
+        for (let i = 0; i < labels.length; i++) {
+            let searchText=element(by.xpath('//span[contains(text()," ' +labels[i]+ ' ")]'));
+            await searchText.isPresent().then(async function (display) {
+                if (display) {
+                    await browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear')
+                    await searchText.click();
+                    await browser.sleep(2000);
+                } else
+                    console.log(searchText + " is not present")
+            });
+        }
+    }
+    async advanceSearchRefinementCriteria(text:string){
+        let txt=site[text]['advanceLabelHeader'];
+            let searchText=element(by.xpath('//span[contains(text()," ' +txt+ ' ")]'));
+            await searchText.isPresent().then(async function (display) {
+                console.log(display);
+            });
+        }
 }

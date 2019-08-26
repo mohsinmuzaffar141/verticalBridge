@@ -67,6 +67,9 @@ Feature: verify links are not present on site header
 #      | credentials  |  relationships  |           tab          |
 #      |   admin      |    leasesData   |   contactHomePageTab   |
 
+
+
+
   @verifyFooterOnHomePage
   Scenario Outline: verify footer on home page
 
@@ -91,7 +94,8 @@ Feature: verify links are not present on site header
       | credentials    |
       |   admin        |
 
-  @verifyMainMenuSearch #164&165
+  #164&165
+  @verifyMainMenuSearch
   Scenario Outline: verify search box on main menu
 
     Given I am on vertical bridge Page
@@ -103,18 +107,22 @@ Feature: verify links are not present on site header
       | credentials    |
       |   admin        |
 
-  @verifySearchBoxSuggestions #166&167&168&169
+    #166&167&168&169
+  @verifySearchBoxSuggestions
   Scenario Outline: verify search box will display suggestions to match the text
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
     Then  verify search box will display suggestions to match the text "<suggestion>"
-    Then  verify site number on detail page "<site>"
+    Then  verify site number on detail page "<relationships>"
     When  I log out
 
     Examples:
-      | credentials    | suggestion |   site   |
-      |   admin        |  siteName  | siteList |
+      | credentials    | suggestion     |  relationships |
+      |   admin        |  headerLabel   |   contactData  |
 
   @verifyTableHeaderOfAdvanceSearch
   Scenario Outline: verify table header of advance search
@@ -133,3 +141,51 @@ Feature: verify links are not present on site header
       |   admin        | headerLabel |  relation    |
 
 
+    #171&172
+  @verifyLabelOfAdvanceSearch
+  Scenario Outline: verify labels of advance search
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on advance search
+    Then  verify labels of advance search "<site>"
+    When  I log out
+
+    Examples:
+      | credentials    |     site    | relationships|
+      |   admin        | headerLabel |  relation    |
+
+  @verifyLabelOfAdvanceSearch
+  Scenario Outline: verify labels of advance search
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on advance search
+    Then  verify labels of advance search "<site>"
+    When  I log out
+
+    Examples:
+      | credentials    |     site    | relationships|
+      |   admin        | headerLabel |  relation    |
+
+  @verifyAdvanceSearchRefinement
+  Scenario Outline: verify advance search should have refinement option
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on advance search
+    Then  verify advance search should have refinemenet criteria "<site>"
+    When  I log out
+
+    Examples:
+      | credentials    |      site      | relationships|
+      |   admin        | headerLabelNew |  relation    |

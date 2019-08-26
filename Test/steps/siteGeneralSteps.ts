@@ -51,8 +51,18 @@ Then(/^verify search box will display suggestions to match the text "([^"]*)"$/,
 });
 Then(/^verify table header of advance search "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeader)=>{
     let thData=site[tableHeader]['thAdvanceSearch'];
-    await maps.verifyContactGroupData(thData);
+    await maps.advanceSearchTableHeader(thData);
 });
 Then(/^click on advance search$/, {timeout: 5 * 50000}, async()=> {
     await sitedetail.clickOnAdvanceSearch();
+});
+Then(/^verify labels of advance search "([^"]*)"$/, {timeout: 5 * 50000}, async(label)=>{
+    let txt1=site[label]['advanceLabel'];
+    await sitedetail.verifyLabelsUderAdvanceSearch(label);
+    await sitedetail.verifyDataUnderPropertyInformation(txt1);
+});
+Then(/^verify advance search should have refinemenet criteria "([^"]*)"$/, {timeout: 5 * 50000}, async(searchCriteria)=>{
+    let txt1=site[searchCriteria]['advanceLabel'];
+    await sitedetail.advanceSearchRefinementCriteria(searchCriteria);
+    await sitedetail.verifyDataUnderPropertyInformation(txt1);
 });
