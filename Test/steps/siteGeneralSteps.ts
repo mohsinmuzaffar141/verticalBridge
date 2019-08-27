@@ -15,7 +15,6 @@ let map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 const chai = require("chai").use(require("chai-as-promised"));
 const expect = chai.expect;
 const sitedetail = new siteDetailPage();
-const maps = new siteDetailPage();
 
 Then(/^verify edit and site inspection icon are not present on site header "([^"]*)"$/, {timeout: 5 * 50000}, async(clickable)=>{
     let data=site[clickable]['tabData'];
@@ -51,7 +50,7 @@ Then(/^verify search box will display suggestions to match the text "([^"]*)"$/,
 });
 Then(/^verify table header of advance search "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeader)=>{
     let thData=site[tableHeader]['thAdvanceSearch'];
-    await maps.advanceSearchTableHeader(thData);
+    await sitedetail.advanceSearchTableHeader(thData);
 });
 Then(/^click on advance search$/, {timeout: 5 * 50000}, async()=> {
     await sitedetail.clickOnAdvanceSearch();

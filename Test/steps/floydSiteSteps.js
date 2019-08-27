@@ -37,90 +37,74 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var cucumber_1 = require("cucumber");
-var LoginPage_1 = require("../Pages/LoginPage");
+var floydSitePage_1 = require("../Pages/floydSitePage");
+var siteDetailPage_1 = require("../Pages/siteDetailPage");
 //data variables
 var yaml = require('js-yaml');
 var fs = require('fs');
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
+var floyd = yaml.safeLoad(fs.readFileSync('./Test/testData/floydSite.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
-var loginPage = new LoginPage_1.LoginPage();
-cucumber_1.Given(/^I am on floyd Page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    var e_1;
+var floydSite = new floydSitePage_1.floydSitePage();
+var sitedetail = new siteDetailPage_1.siteDetailPage();
+cucumber_1.When(/^Click on additional features link "([^"]*)"$/, { timeout: 5 * 50000 }, function (link) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, sitedetail.selectSite(link)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.When(/^Click on add a portfolio "([^"]*)"$/, { timeout: 5 * 50000 }, function (addPortfolio) { return __awaiter(_this, void 0, void 0, function () {
+    var portfolio;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, loginPage.OpenBrowser()];
+                portfolio = cred[addPortfolio]['portfolio'];
+                return [4 /*yield*/, floydSite.clickHeading(portfolio)];
             case 1:
                 _a.sent();
-                return [3 /*break*/, 3];
-            case 2:
-                e_1 = _a.sent();
-                console.log(e_1);
-                return [3 /*break*/, 3];
-            case 3: return [2 /*return*/];
+                return [2 /*return*/];
         }
     });
 }); });
-cucumber_1.Given(/^I am on vertical bridge Page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    var e_2;
+cucumber_1.Then(/^Click on plus icon button$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, floydSite.clickPlusIcon()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^Click on portfolio type "([^"]*)"$/, { timeout: 5 * 50000 }, function (portfolioType) { return __awaiter(_this, void 0, void 0, function () {
+    var portfolio;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, loginPage.launchApp()];
-            case 1:
-                _a.sent();
-                return [3 /*break*/, 3];
-            case 2:
-                e_2 = _a.sent();
-                console.log(e_2);
-                return [3 /*break*/, 3];
-            case 3: return [2 /*return*/];
-        }
-    });
-}); });
-cucumber_1.When(/^Login to vertical bridge with "([^"]*)"$/, { timeout: 5 * 500000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, loginPage.giveUserName(text)];
-            case 1:
-                _a.sent();
-                return [4 /*yield*/, loginPage.enterPassword(text)];
-            case 2:
-                _a.sent();
-                return [4 /*yield*/, loginPage.clickLoginButton()];
-            case 3:
-                _a.sent();
-                return [2 /*return*/];
-        }
-    });
-}); });
-cucumber_1.When(/^Click checkbox button$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, loginPage.clickcheckbox()];
-            case 1:
-                _a.sent();
-                return [4 /*yield*/, loginPage.clickyesbutton()];
-            case 2:
-                _a.sent();
-                return [4 /*yield*/, loginPage.validate()];
-            case 3:
-                _a.sent();
-                return [2 /*return*/];
-        }
-    });
-}); });
-cucumber_1.When(/^I log out$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, loginPage.logout()];
+                portfolio = floyd[portfolioType]['portfolio'];
+                return [4 /*yield*/, floydSite.clickPortfolioType(portfolio)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
         }
     });
 }); });
-//# sourceMappingURL=LoginSteps.js.map
+cucumber_1.Then(/^Select portfolio name "([^"]*)"$/, { timeout: 5 * 50000 }, function (portfolioName) { return __awaiter(_this, void 0, void 0, function () {
+    var portfolio;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                portfolio = floyd[portfolioName]['portfolioName'];
+                return [4 /*yield*/, floydSite.portfolioName(portfolio)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+//# sourceMappingURL=floydSiteSteps.js.map

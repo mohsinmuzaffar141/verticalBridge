@@ -5,6 +5,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -24,6 +25,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -43,6 +45,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -69,6 +72,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -86,6 +90,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -106,6 +111,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -123,6 +129,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -141,6 +148,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -158,6 +166,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -176,6 +185,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -193,6 +203,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -211,6 +222,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -230,6 +242,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -247,6 +260,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -264,6 +278,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button

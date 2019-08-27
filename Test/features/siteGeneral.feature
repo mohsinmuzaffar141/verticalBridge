@@ -5,6 +5,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -23,6 +24,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -41,6 +43,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -56,6 +59,7 @@ Feature: verify links are not present on site header
 #
 #    Given I am on vertical bridge Page
 #    When  Login to vertical bridge with "<credentials>"
+#    When  Click checkbox button
 ##    When  I click to the select partner view button
 ##    When  selects the "<relationships>"
 ##    Then  click the select button
@@ -75,6 +79,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  verify footer on home page "<link>"
     When  I log out
 
@@ -87,6 +92,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  verify help tab on home page
     When  I log out
 
@@ -100,6 +106,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  verify search box on main menu
     When  I log out
 
@@ -113,6 +120,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -129,6 +137,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -141,12 +150,13 @@ Feature: verify links are not present on site header
       |   admin        | headerLabel |  relation    |
 
 
-    #171&172
+
   @verifyLabelOfAdvanceSearch
   Scenario Outline: verify labels of advance search
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -163,6 +173,7 @@ Feature: verify links are not present on site header
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -174,11 +185,13 @@ Feature: verify links are not present on site header
       | credentials    |     site    | relationships|
       |   admin        | headerLabel |  relation    |
 
+  #170&171
   @verifyAdvanceSearchRefinement
   Scenario Outline: verify advance search should have refinement option
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button

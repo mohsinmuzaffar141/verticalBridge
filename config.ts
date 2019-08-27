@@ -26,6 +26,7 @@ export const config: Config = {
         "./Test/features/mySites.feature",
         "./Test/features/tabs.feature",
         "./Test/features/siteGeneral.feature",
+        "./Test/features/floydSite.feature",
     ],
 
     onPrepare: () => {

@@ -46,7 +46,6 @@ var map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var sitedetail = new siteDetailPage_1.siteDetailPage();
-var maps = new siteDetailPage_1.siteDetailPage();
 cucumber_1.Then(/^verify edit and site inspection icon are not present on site header "([^"]*)"$/, { timeout: 5 * 50000 }, function (clickable) { return __awaiter(_this, void 0, void 0, function () {
     var data;
     return __generator(this, function (_a) {
@@ -154,7 +153,7 @@ cucumber_1.Then(/^verify table header of advance search "([^"]*)"$/, { timeout: 
         switch (_a.label) {
             case 0:
                 thData = site[tableHeader]['thAdvanceSearch'];
-                return [4 /*yield*/, maps.advanceSearchTableHeader(thData)];
+                return [4 /*yield*/, sitedetail.advanceSearchTableHeader(thData)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

@@ -54,7 +54,7 @@ export class LoginPage extends BasePage{
 
     async OpenBrowser() {
         browser.ignoreSynchronization = true;
-        await browser.get("https://stagepartnerportal.verticalbridge.com");
+        await browser.get("https://vnd_Ishfaq.zia:Is1928Zi@stagefloyd.verticalbridge.com");
         await browser.sleep(7000);
     }
     async launchApp() {
@@ -65,7 +65,9 @@ export class LoginPage extends BasePage{
 
 
     async giveUserName(na: string){
-        await browser.sleep(4000);
+        await browser.sleep(3000);
+        await browser.manage().deleteAllCookies();
+        await browser.sleep(7000);
         await browser.wait(until.presenceOf(this.unField), 50000, 'Element taking too long to appear in the DOM');
         // let userName = 'username';
         await this.unField.sendKeys(cred[na]['username']);
