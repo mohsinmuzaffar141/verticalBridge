@@ -61,3 +61,8 @@ Then(/^verify site detail labels not present "([^"]*)"$/, {timeout: 5 * 50000}, 
     let data=cred[invalidlabels]['detailLabel'];
     await sitedetail.verifyLabelNotPreent(data);
 });
+
+Then(/^verify relationship should be present on the top "([^"]*)"$/, {timeout: 5 * 50000}, async(relationship)=>{
+    let relation=cred[relationship]['name'];
+    await sitedetail.verifyRelationshipName(relation);
+});

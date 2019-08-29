@@ -27,6 +27,7 @@ export const config: Config = {
         "./Test/features/tabs.feature",
         "./Test/features/siteGeneral.feature",
         "./Test/features/floydSite.feature",
+        "./Test/features/reports.feature",
     ],
 
     onPrepare: () => {
@@ -65,7 +66,8 @@ export const config: Config = {
         "managementAgreement": "./Test/features/managemenetAgreement.feature",
         "site": "./Test/features/mySites.feature",
         "tabs": "./Test/features/tabs.feature",
-        "siteGeneral": "./Test/features/siteGeneral.feature"
+        "siteGeneral": "./Test/features/siteGeneral.feature",
+        "floydSite": "./Test/features/floydSite.feature"
     },
 // };
     plugins: [{

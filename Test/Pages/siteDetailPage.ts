@@ -30,6 +30,7 @@ export class siteDetailPage extends BasePage {
     helpBtn=element(by.xpath('//span[text()="Help"]'));
     advanceSearch=element(by.xpath('//span[text()="Advanced Search"]'));
     mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'));
+    relationName=element(by.xpath('//h1[@id="PartnerFullName"]'));
 
     async selectSite(value: string) {
         let siteNumber = cred[value]['siteNumber'];
@@ -254,6 +255,7 @@ export class siteDetailPage extends BasePage {
         let attribute = attributeData.split(',');
         for (let i = 0; i < attribute.length; i++) {
             let attributeDatainfo = element(by.xpath('//div[contains(text(),"' + attribute[i] + '")]'));
+            await browser.wait(until.presenceOf(attributeDatainfo), 50000, 'Element taking too long to appear in the DOM');
             await attributeDatainfo.getText().then(async function (text) {
                 console.log(text);
             });
@@ -489,7 +491,7 @@ export class siteDetailPage extends BasePage {
             let searchText=element(by.xpath('//span[contains(text()," ' +labels[i]+ ' ")]'));
             await searchText.isPresent().then(async function (display) {
                 if (display) {
-                    await browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear')
+                    await browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear');
                     await searchText.click();
                     await browser.sleep(2000);
                 } else
@@ -498,10 +500,17 @@ export class siteDetailPage extends BasePage {
         }
     }
     async advanceSearchRefinementCriteria(text:string){
-        let txt=site[text]['advanceLabelHeader'];
-            let searchText=element(by.xpath('//span[contains(text()," ' +txt+ ' ")]'));
-            await searchText.isPresent().then(async function (display) {
-                console.log(display);
-            });
-        }
+        let searchText=element(by.xpath('//span[contains(text(),"' +text+ '")]'));
+        await browser.wait(until.presenceOf(searchText), 500000, 'Relationship taking too long to appear');
+        await searchText.isPresent().then(async function (display) {
+            console.log(display);
+        });
+    }
+    async verifyRelationshipName(text:string){
+        await browser.wait(until.presenceOf(this.relationName), 500000, 'Relationship taking too long to appear');
+        await this.relationName.getText().then(async function (display) {
+            await expect(display).to.equal(text);
+        });
+    }
+
 }

@@ -1,3 +1,23 @@
 portfolioType:
   portfolio: Developer Joint Venture Partner
   portfolioName: Testabc
+  buttonName: Save
+  tabs: General,Fees
+
+portfolioType1:
+  buttonName: Cancel
+
+floydSite:
+  confirmationMessage: The portfolio was successfully created.
+
+reports:
+  tab: My Dashboard
+  count: 7,Management Agreements
+
+totalSites:
+  tab: My Dashboard
+  count: 11,Total Sites
+
+totalRevenue:
+  tab: My Dashboard
+  count: $344.46K,Total Annualized Revenue

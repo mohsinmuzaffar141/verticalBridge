@@ -187,12 +187,13 @@ cucumber_1.Then(/^verify labels of advance search "([^"]*)"$/, { timeout: 5 * 50
     });
 }); });
 cucumber_1.Then(/^verify advance search should have refinemenet criteria "([^"]*)"$/, { timeout: 5 * 50000 }, function (searchCriteria) { return __awaiter(_this, void 0, void 0, function () {
-    var txt1;
+    var txt1, txt;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 txt1 = site[searchCriteria]['advanceLabel'];
-                return [4 /*yield*/, sitedetail.advanceSearchRefinementCriteria(searchCriteria)];
+                txt = site[searchCriteria]['advanceLabelHeader'];
+                return [4 /*yield*/, sitedetail.advanceSearchRefinementCriteria(txt)];
             case 1:
                 _a.sent();
                 return [4 /*yield*/, sitedetail.verifyDataUnderPropertyInformation(txt1)];

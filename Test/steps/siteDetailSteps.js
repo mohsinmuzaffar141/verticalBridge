@@ -165,4 +165,17 @@ cucumber_1.Then(/^verify site detail labels not present "([^"]*)"$/, { timeout: 
         }
     });
 }); });
+cucumber_1.Then(/^verify relationship should be present on the top "([^"]*)"$/, { timeout: 5 * 50000 }, function (relationship) { return __awaiter(_this, void 0, void 0, function () {
+    var relation;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                relation = cred[relationship]['name'];
+                return [4 /*yield*/, sitedetail.verifyRelationshipName(relation)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=siteDetailSteps.js.map

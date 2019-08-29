@@ -54,8 +54,6 @@ var chai = require("chai").use(require("chai-as-promised"));
 //data variables
 var yaml = require('js-yaml');
 var fs = require('fs');
-// let cred = yaml.safeLoad(fs.readFileSync('../testData/users.yml', 'utf8'));
-// let configuration = yaml.safeLoad(fs.readFileSync('../testData/configurations.yml', 'utf8'));
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var configuration = yaml.safeLoad(fs.readFileSync('./Test/testData/configurations.yml', 'utf8'));
 var expect = chai.expect;
@@ -95,6 +93,8 @@ var LoginPage = /** @class */ (function (_super) {
         _this.checkbox = protractor_1.element(protractor_1.by.id("KmsiCheckboxField"));
         _this.yesbtn = protractor_1.element(protractor_1.by.xpath("//input[@id='idSIButton9']"));
         _this.logout_btn = protractor_1.element(protractor_1.by.xpath('//span[text()="Log Out"]'));
+        _this.logoutFloyd = protractor_1.element(protractor_1.by.xpath('//*[name()="svg" and @data-icon="user-circle"]'));
+        _this.signOut = protractor_1.element(protractor_1.by.xpath('//span[text()="Sign out"]'));
         return _this;
     }
     LoginPage.prototype.OpenBrowser = function () {
@@ -277,6 +277,38 @@ var LoginPage = /** @class */ (function (_super) {
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(7000)];
                     case 5:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    LoginPage.prototype.logoutfloyd = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.logoutFloyd), 500000, 'Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.logoutFloyd.click()];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                    case 3:
+                        _a.sent();
+                        //await browser.wait(until.presenceOf(this.signOut),500000, 'Element taking too long to appear in the DOM');
+                        return [4 /*yield*/, this.signOut.click()];
+                    case 4:
+                        //await browser.wait(until.presenceOf(this.signOut),500000, 'Element taking too long to appear in the DOM');
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 5:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.manage().deleteAllCookies()];
+                    case 6:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(7000)];
+                    case 7:
                         _a.sent();
                         return [2 /*return*/];
                 }

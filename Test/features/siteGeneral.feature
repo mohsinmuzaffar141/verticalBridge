@@ -202,3 +202,19 @@ Feature: verify links are not present on site header
     Examples:
       | credentials    |      site      | relationships|
       |   admin        | headerLabelNew |  relation    |
+
+  @verifyRelationshipName
+  Scenario Outline: verify relationship should be present on the top
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  verify relationship should be present on the top "<relationships>"
+    When  I log out
+
+    Examples:
+      | credentials     | relationships|
+      |   admin         |  relation    |

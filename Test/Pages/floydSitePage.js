@@ -62,7 +62,6 @@ var floydSitePage = /** @class */ (function (_super) {
     function floydSitePage() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.plusIcon = protractor_1.element(protractor_1.by.xpath('//*[name()="svg" and @data-icon="plus"]'));
-        _this.selectPortfotioType = protractor_1.element(protractor_1.by.xpath('//form[@class="ng-pristine ng-invalid ng-touched"]//div[@class="mat-select-value"]'));
         _this.portName = protractor_1.element(protractor_1.by.xpath('//input[@formcontrolname="name"]'));
         return _this;
     }
@@ -112,39 +111,26 @@ var floydSitePage = /** @class */ (function (_super) {
     };
     floydSitePage.prototype.clickPortfolioType = function (portfolio) {
         return __awaiter(this, void 0, void 0, function () {
-            var portfolioType;
+            var selectPortfotioType, portfolioType;
             return __generator(this, function (_a) {
-                portfolioType = protractor_1.element(protractor_1.by.xpath('//span[contains(text()," ' + portfolio + ' ")]'));
-                protractor_1.browser.getAllWindowHandles().then(function (handles) {
-                    protractor_1.browser.switchTo().window(handles[1]).then(function () {
-                        return __awaiter(this, void 0, void 0, function () {
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.selectPortfotioType), 5000, 'Element taking too long to appear in the DOM')];
-                                    case 1:
-                                        _a.sent();
-                                        return [4 /*yield*/, this.selectPortfotioType.click()];
-                                    case 2:
-                                        _a.sent();
-                                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
-                                    case 3:
-                                        _a.sent();
-                                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(portfolioType), 5000, 'Element taking too long to appear in the DOM')];
-                                    case 4:
-                                        _a.sent();
-                                        return [4 /*yield*/, portfolioType.click()];
-                                    case 5:
-                                        _a.sent();
-                                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
-                                    case 6:
-                                        _a.sent();
-                                        return [2 /*return*/];
-                                }
-                            });
-                        });
-                    });
-                });
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        selectPortfotioType = protractor_1.element(protractor_1.by.xpath('(//div[@class="mat-select-arrow"])[2]'));
+                        portfolioType = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + portfolio + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, selectPortfotioType.click()];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(portfolioType), 5000, 'Element taking too long to appear in the DOM')];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, portfolioType.click()];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -160,6 +146,107 @@ var floydSitePage = /** @class */ (function (_super) {
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                     case 3:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.clickSaveBtn = function (text) {
+        return __awaiter(this, void 0, void 0, function () {
+            var saveBtn;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        saveBtn = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + text + '")]'));
+                        return [4 /*yield*/, saveBtn.isPresent().then(function (display) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                if (!display) return [3 /*break*/, 3];
+                                                return [4 /*yield*/, saveBtn.click()];
+                                            case 1:
+                                                _a.sent();
+                                                return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                                            case 2:
+                                                _a.sent();
+                                                _a.label = 3;
+                                            case 3: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.verifyTabsFloydSite = function (tabs) {
+        return __awaiter(this, void 0, void 0, function () {
+            var tab, _loop_1, i;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        tab = tabs.split(',');
+                        _loop_1 = function (i) {
+                            var label;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        label = protractor_1.element(protractor_1.by.xpath('//div[contains(text(),"' + tab[i] + '")]'));
+                                        return [4 /*yield*/, label.getText().then(function (text) {
+                                                return __awaiter(this, void 0, void 0, function () {
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0: return [4 /*yield*/, label.click()];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [4 /*yield*/, expect(text).to.equal(tab[i])];
+                                                            case 2:
+                                                                _a.sent();
+                                                                return [2 /*return*/];
+                                                        }
+                                                    });
+                                                });
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < tab.length)) return [3 /*break*/, 4];
+                        return [5 /*yield**/, _loop_1(i)];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.attributeFloydSite = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var portfolioName, portfolioType;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        portfolioName = protractor_1.element(protractor_1.by.xpath('//input[@placeholder="Portfolio Name"]'));
+                        portfolioType = protractor_1.element(protractor_1.by.xpath('//mat-select[@aria-label="Portfolio type"]'));
+                        return [4 /*yield*/, expect(portfolioName.isDisplayed()).to.eventually.equals(true)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, expect(portfolioType.isDisplayed()).to.eventually.equals(true)];
+                    case 2:
                         _a.sent();
                         return [2 /*return*/];
                 }

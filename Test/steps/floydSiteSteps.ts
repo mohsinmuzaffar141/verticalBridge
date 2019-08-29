@@ -8,6 +8,7 @@ const fs = require('fs');
 let cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 let floyd = yaml.safeLoad(fs.readFileSync('./Test/testData/floydSite.yml', 'utf8'));
 
+
 const chai = require("chai").use(require("chai-as-promised"));
 const expect = chai.expect;
 const floydSite = new floydSitePage();
@@ -30,5 +31,20 @@ Then(/^Click on portfolio type "([^"]*)"$/, {timeout: 5 * 50000}, async(portfoli
 Then(/^Select portfolio name "([^"]*)"$/, {timeout: 5 * 50000}, async(portfolioName)=> {
     let portfolio=floyd[portfolioName]['portfolioName'];
     await floydSite.portfolioName(portfolio);
+});
+Then(/^Click on save button "([^"]*)"$/, {timeout: 5 * 50000}, async(btnName)=> {
+    let buttonName=floyd[btnName]['buttonName'];
+    await floydSite.clickSaveBtn(buttonName);
+});
+Then(/^verify portfolio should be created "([^"]*)"$/, {timeout: 5 * 50000}, async(confirmationMessage)=> {
+    let txt=floyd[confirmationMessage]['confirmationMessage'];
+    await sitedetail.advanceSearchRefinementCriteria(txt);
+});
+Then(/^verify tabs for portfolio "([^"]*)"$/, {timeout: 5 * 50000}, async(tabs)=> {
+    let tab=floyd[tabs]['tabs'];
+    await  floydSite.verifyTabsFloydSite(tab);
+});
+Then(/^verify attributes on floyd site$/,  {timeout: 5 * 50000}, async()=> {
+     await floydSite.attributeFloydSite();
 });
 

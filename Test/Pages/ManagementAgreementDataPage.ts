@@ -17,16 +17,16 @@ export class ManagementAgreementDataPage extends BasePage{
     selectpartner = element(by.xpath("//span[@class='mat-button-wrapper' and text()='Select Partner View']"));
     searchfield= element(by.xpath("(//div[@class='mat-form-field-infix']//input)[1]"));
     selectbtn = element(by.xpath("//span[@class='mat-button-wrapper' and text()='Select']"));
-    mysite_btn= element(by.xpath('//span[@class="mat-button-wrapper" and text()="My Sites"]'))
-    filter_btn=element(by.xpath('//span[text()="Filter On/Off"]'))
-    filter_box=element(by.xpath('//input[@id="filter-siteNo"]'))
-    verifySite=element(by.xpath('//div[@id="reportSummary"]//div'))
-    search_txt=element(by.xpath('//input[@id="GlobalSearchInput"]'))
-    searchIcon=element(by.xpath('//mat-icon[@id="SearchIcon"]'))
-    verfySearch=element(by.xpath('(//tbody[@class="ui-table-tbody"])[2]'))
-    removeFilter_btn=element(by.xpath('//span[@class="filterX hidden showX"]'))
-    text=element(by.xpath('//h2[text()="Select Partner View"]'))
-    cancel=element(by.xpath('//span[text()="Cancel"]'))
+    mysite_btn= element(by.xpath('//span[@class="mat-button-wrapper" and text()="My Sites"]'));
+    filter_btn=element(by.xpath('//span[text()="Filter On/Off"]'));
+    filter_box=element(by.xpath('//input[@id="filter-siteNo"]'));
+    verifySite=element(by.xpath('//div[@id="reportSummary"]//div'));
+    search_txt=element(by.xpath('//input[@id="GlobalSearchInput"]'));
+    searchIcon=element(by.xpath('//mat-icon[@id="SearchIcon"]'));
+    verfySearch=element(by.xpath('(//tbody[@class="ui-table-tbody"])[2]'));
+    removeFilter_btn=element(by.xpath('//span[@class="filterX hidden showX"]'));
+    text=element(by.xpath('//h2[text()="Select Partner View"]'));
+    cancel=element(by.xpath('//span[text()="Cancel"]'));
 
 
 

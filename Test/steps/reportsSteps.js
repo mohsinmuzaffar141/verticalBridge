@@ -37,100 +37,65 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var cucumber_1 = require("cucumber");
-var LoginPage_1 = require("../Pages/LoginPage");
+var siteDetailPage_1 = require("../Pages/siteDetailPage");
+var floydSitePage_1 = require("../Pages/floydSitePage");
+var reportsPage_1 = require("../Pages/reportsPage");
 //data variables
 var yaml = require('js-yaml');
 var fs = require('fs');
-var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
+var floyd = yaml.safeLoad(fs.readFileSync('./Test/testData/floydSite.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
-var loginPage = new LoginPage_1.LoginPage();
-cucumber_1.Given(/^I am on floyd Page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    var e_1;
+var sitedetail = new siteDetailPage_1.siteDetailPage();
+var floydSite = new floydSitePage_1.floydSitePage();
+var report = new reportsPage_1.reports();
+cucumber_1.Then(/^verify dashboard option on portal "([^"]*)"$/, { timeout: 5 * 50000 }, function (dashboardOption) { return __awaiter(_this, void 0, void 0, function () {
+    var dashboard;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, loginPage.OpenBrowser()];
+                dashboard = floyd[dashboardOption]['tab'];
+                return [4 /*yield*/, sitedetail.advanceSearchRefinementCriteria(dashboard)];
             case 1:
                 _a.sent();
-                return [3 /*break*/, 3];
-            case 2:
-                e_1 = _a.sent();
-                console.log(e_1);
-                return [3 /*break*/, 3];
-            case 3: return [2 /*return*/];
+                return [2 /*return*/];
         }
     });
 }); });
-cucumber_1.Given(/^I am on vertical bridge Page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    var e_2;
+cucumber_1.Then(/^I click on my dashboard "([^"]*)"$/, { timeout: 5 * 50000 }, function (dashboardOption) { return __awaiter(_this, void 0, void 0, function () {
+    var dashboard;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, loginPage.launchApp()];
-            case 1:
-                _a.sent();
-                return [3 /*break*/, 3];
-            case 2:
-                e_2 = _a.sent();
-                console.log(e_2);
-                return [3 /*break*/, 3];
-            case 3: return [2 /*return*/];
-        }
-    });
-}); });
-cucumber_1.When(/^Login to vertical bridge with "([^"]*)"$/, { timeout: 5 * 500000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, loginPage.giveUserName(text)];
-            case 1:
-                _a.sent();
-                return [4 /*yield*/, loginPage.enterPassword(text)];
-            case 2:
-                _a.sent();
-                return [4 /*yield*/, loginPage.clickLoginButton()];
-            case 3:
-                _a.sent();
-                return [2 /*return*/];
-        }
-    });
-}); });
-cucumber_1.When(/^Click checkbox button$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, loginPage.clickcheckbox()];
-            case 1:
-                _a.sent();
-                return [4 /*yield*/, loginPage.clickyesbutton()];
-            case 2:
-                _a.sent();
-                return [4 /*yield*/, loginPage.validate()];
-            case 3:
-                _a.sent();
-                return [2 /*return*/];
-        }
-    });
-}); });
-cucumber_1.When(/^I log out$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, loginPage.logout()];
+                dashboard = floyd[dashboardOption]['tab'];
+                return [4 /*yield*/, floydSite.clickSaveBtn(dashboard)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
         }
     });
 }); });
-cucumber_1.When(/^I log out from floyd site$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^verify executed date on my dashboard$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, loginPage.logoutfloyd()];
+            case 0: return [4 /*yield*/, report.executedDate()];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
         }
     });
 }); });
-//# sourceMappingURL=LoginSteps.js.map
+cucumber_1.Then(/^verify management agreement count "([^"]*)"$/, { timeout: 5 * 50000 }, function (management) { return __awaiter(_this, void 0, void 0, function () {
+    var count;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                count = floyd[management]['count'];
+                return [4 /*yield*/, sitedetail.verifyDataUnderPropertyInformation(count)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+//# sourceMappingURL=reportsSteps.js.map

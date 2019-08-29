@@ -107,4 +107,53 @@ cucumber_1.Then(/^Select portfolio name "([^"]*)"$/, { timeout: 5 * 50000 }, fun
         }
     });
 }); });
+cucumber_1.Then(/^Click on save button "([^"]*)"$/, { timeout: 5 * 50000 }, function (btnName) { return __awaiter(_this, void 0, void 0, function () {
+    var buttonName;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                buttonName = floyd[btnName]['buttonName'];
+                return [4 /*yield*/, floydSite.clickSaveBtn(buttonName)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify portfolio should be created "([^"]*)"$/, { timeout: 5 * 50000 }, function (confirmationMessage) { return __awaiter(_this, void 0, void 0, function () {
+    var txt;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                txt = floyd[confirmationMessage]['confirmationMessage'];
+                return [4 /*yield*/, sitedetail.advanceSearchRefinementCriteria(txt)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify tabs for portfolio "([^"]*)"$/, { timeout: 5 * 50000 }, function (tabs) { return __awaiter(_this, void 0, void 0, function () {
+    var tab;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                tab = floyd[tabs]['tabs'];
+                return [4 /*yield*/, floydSite.verifyTabsFloydSite(tab)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify attributes on floyd site$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, floydSite.attributeFloydSite()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=floydSiteSteps.js.map
