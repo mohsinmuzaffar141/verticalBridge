@@ -1,0 +1,1597 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "verify links are not present on site header",
+    "line": 1,
+    "id": "verify-links-are-not-present-on-site-header",
+    "tags": [],
+    "uri": "Test\\features\\siteGeneral.feature",
+    "elements": [
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-links-are-not-present-on-site-header",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "verify links are not present on site header",
+        "tags": [
+          {
+            "name": "@linksNotPresent",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6450000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12343000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5562000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1069000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 834000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5125000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5185000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "click on site link  \"siteMapData\"",
+            "match": {
+              "location": "Test\\steps\\siteDetailSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5568000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "verify edit and site inspection icon are not present on site header \"siteDetailPage\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 547000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16150000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-links-are-not-present-on-site-header",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "verify links are not present on site header",
+        "tags": [
+          {
+            "name": "@linksNotPresent",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6453000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12455000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6065000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 887000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1001000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5196000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "click on site link  \"siteMapData\"",
+            "match": {
+              "location": "Test\\steps\\siteDetailSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5534000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "verify edit and site inspection icon are not present on site header \"mapTabPage\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 375000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16083000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-links-are-not-present-on-property-tab",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "verify links are not present on property Tab",
+        "tags": [
+          {
+            "name": "@linksNotPresentUnderPropertyTab",
+            "line": 22
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6562000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12380000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5520000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1152000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 860000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5126000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5200000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "click on site link  \"siteMapData\"",
+            "match": {
+              "location": "Test\\steps\\siteDetailSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5556000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "click \"propertyTab\" on site detail page",
+            "match": {
+              "location": "Test\\steps\\tabsSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5371000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "verify management agreement are not present on property tab \"propertyTab1\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 609000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16054000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-links-to-linkedin-page-and-newsroom-page",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "verify links to linkedIn page and newsroom page",
+        "tags": [
+          {
+            "name": "@verifyLinksOnHomePage",
+            "line": 41
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 44,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6450000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12349000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 46,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6213000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1163000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "selects the \"leasesData\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 977000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5149000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 50,
+            "name": "verify links to linkedIn page and newsroom page \"homePageLink\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 51,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16427000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-footer-on-home-page",
+        "keyword": "Scenario",
+        "line": 88,
+        "name": "verify footer on home page",
+        "tags": [
+          {
+            "name": "@verifyFooterOnHomePage",
+            "line": 77
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 80,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6541000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 81,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12374000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 82,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5248000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 83,
+            "name": "verify footer on home page \"homePageLink\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 141000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 84,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16066000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-help-tab-on-home-page",
+        "keyword": "Scenario",
+        "line": 101,
+        "name": "verify help tab on home page",
+        "tags": [
+          {
+            "name": "@verifyHelpTabOnHomePage",
+            "line": 90
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 93,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6475000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 94,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12270000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 95,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6017000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 96,
+            "name": "verify help tab on home page",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 97,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16132000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-search-box-on-main-menu",
+        "keyword": "Scenario",
+        "line": 115,
+        "name": "verify search box on main menu",
+        "tags": [
+          {
+            "name": "@verifyMainMenuSearch",
+            "line": 104
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 107,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6437000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 108,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11719000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 109,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6101000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 110,
+            "name": "verify search box on main menu",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3300000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 111,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16022000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-search-box-will-display-suggestions-to-match-the-text",
+        "keyword": "Scenario",
+        "line": 133,
+        "name": "verify search box will display suggestions to match the text",
+        "tags": [
+          {
+            "name": "@verifySearchBoxSuggestions",
+            "line": 118
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 121,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5642000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 122,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12450000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 123,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5433000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 124,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1044000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 125,
+            "name": "selects the \"contactData\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 978000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 126,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5127000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 127,
+            "name": "verify search box will display suggestions to match the text \"headerLabel\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4632000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 128,
+            "name": "verify site number on detail page \"contactData\"",
+            "match": {
+              "location": "Test\\steps\\siteDetailSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1409000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 129,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17009000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-table-header-of-advance-search",
+        "keyword": "Scenario",
+        "line": 150,
+        "name": "verify table header of advance search",
+        "tags": [
+          {
+            "name": "@verifyTableHeaderOfAdvanceSearch",
+            "line": 135
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 138,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6449000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 139,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11696000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 140,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5384000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 141,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1057000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 142,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 840000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 143,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5129000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 144,
+            "name": "click on advance search",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10394000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 145,
+            "name": "verify table header of advance search \"headerLabel\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 693000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 146,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16208000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-labels-of-advance-search",
+        "keyword": "Scenario",
+        "line": 169,
+        "name": "verify labels of advance search",
+        "tags": [
+          {
+            "name": "@verifyLabelOfAdvanceSearch",
+            "line": 154
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 157,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6451000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 158,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12373000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 159,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5449000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 160,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1177000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 161,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 887000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 162,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 163,
+            "name": "click on advance search",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10411000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 164,
+            "name": "verify labels of advance search \"headerLabel\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8794000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 165,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16367000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-advance-search-should-have-refinement-option",
+        "keyword": "Scenario",
+        "line": 204,
+        "name": "verify advance search should have refinement option",
+        "tags": [
+          {
+            "name": "@verifyAdvanceSearchRefinement",
+            "line": 189
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 192,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6469000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 193,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11805000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 194,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6091000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 195,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1021000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 196,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 822000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 197,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5128000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 198,
+            "name": "click on advance search",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10393000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 199,
+            "name": "verify advance search should have refinemenet criteria \"headerLabelNew\"",
+            "match": {
+              "location": "Test\\steps\\siteGeneralSteps.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 672000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 200,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16371000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-links-are-not-present-on-site-header;verify-relationship-should-be-present-on-the-top",
+        "keyword": "Scenario",
+        "line": 220,
+        "name": "verify relationship should be present on the top",
+        "tags": [
+          {
+            "name": "@verifyRelationshipName",
+            "line": 206
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 209,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6502000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 210,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11676000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 211,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6057000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 212,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1042000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 213,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 825000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 214,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5128000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 215,
+            "name": "verify relationship should be present on the top \"relation\"",
+            "match": {
+              "location": "Test\\steps\\siteDetailSteps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 216,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16084000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "74.0.3729.169"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "verify filter against my sites",
+    "line": 1,
+    "id": "verify-filter-against-my-sites",
+    "tags": [],
+    "uri": "Test\\features\\tabs.feature",
+    "elements": [
+      {
+        "id": "verify-filter-against-my-sites;verify-data-above-map",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "verify data above map",
+        "tags": [
+          {
+            "name": "@clickMapResetTab",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on vertical bridge Page",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7585000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Login to vertical bridge with \"admin\"",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11862000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Click checkbox button",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6864000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click to the select partner view button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 443000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "selects the \"relation\"",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1968000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "click the select button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5147000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "click on my sites button",
+            "match": {
+              "location": "Test\\steps\\ManagemantAgreementSteps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5209000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "click on site link  \"siteMapData\"",
+            "match": {
+              "location": "Test\\steps\\siteDetailSteps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5592000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "search the location on the map \"mapSearch\"",
+            "match": {
+              "location": "Test\\steps\\tabsSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2645000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "click on reset button \"siteMapData\"",
+            "match": {
+              "location": "Test\\steps\\tabsSteps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1339000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I log out",
+            "match": {
+              "location": "Test\\steps\\LoginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19511000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "74.0.3729.169"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]
