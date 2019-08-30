@@ -137,27 +137,21 @@ var LoginPage = /** @class */ (function (_super) {
                     case 0: return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.manage().deleteAllCookies()];
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.unField), 500000, 'Element taking too long to appear in the DOM')];
                     case 2:
-                        _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(7000)];
-                    case 3:
-                        _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.unField), 50000, 'Element taking too long to appear in the DOM')];
-                    case 4:
                         _a.sent();
                         // let userName = 'username';
                         return [4 /*yield*/, this.unField.sendKeys(cred[na]['username'])];
-                    case 5:
+                    case 3:
                         // let userName = 'username';
                         _a.sent();
                         // await browser.wait(until.presenceOf(this.nexBtn), 50000, 'Element taking too long to appear in the DOM');
                         return [4 /*yield*/, this.nexBtn.click()];
-                    case 6:
+                    case 4:
                         // await browser.wait(until.presenceOf(this.nexBtn), 50000, 'Element taking too long to appear in the DOM');
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(4000)];
-                    case 7:
+                    case 5:
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -170,7 +164,7 @@ var LoginPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0: 
                     // let pass = 'password';
-                    return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.passwordField), 50000, 'Element taking too long to appear in the DOM')];
+                    return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.passwordField), 500000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         // let pass = 'password';
                         _a.sent();
@@ -287,8 +281,11 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.logoutFloyd), 500000, 'Element taking too long to appear in the DOM')];
+                    case 0: 
+                    // await browser.wait(until.presenceOf(this.logoutFloyd),500000, 'Element taking too long to appear in the DOM');
+                    return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                     case 1:
+                        // await browser.wait(until.presenceOf(this.logoutFloyd),500000, 'Element taking too long to appear in the DOM');
                         _a.sent();
                         return [4 /*yield*/, this.logoutFloyd.click()];
                     case 2:
@@ -301,13 +298,13 @@ var LoginPage = /** @class */ (function (_super) {
                     case 4:
                         //await browser.wait(until.presenceOf(this.signOut),500000, 'Element taking too long to appear in the DOM');
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                     case 5:
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.manage().deleteAllCookies()];
                     case 6:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(7000)];
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
                     case 7:
                         _a.sent();
                         return [2 /*return*/];

@@ -178,10 +178,26 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             var agreementData, managmentAgreemnet;
             return __generator(this, function (_a) {
-                agreementData = cred[value]['managementData'];
-                managmentAgreemnet = protractor_1.element(protractor_1.by.xpath('//div[@class="col-portfolioName ng-star-inserted" and text()="' + agreementData + '"]'));
-                expect(managmentAgreemnet.isDisplayed()).to.eventually.equals(agreementData);
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        agreementData = cred[value]['managementData'];
+                        managmentAgreemnet = protractor_1.element(protractor_1.by.xpath('//div[@class="col-portfolioName ng-star-inserted" and contains(text(),"' + agreementData + '")]'));
+                        return [4 /*yield*/, managmentAgreemnet.getText().then(function (value) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, expect(value).to.equals(agreementData)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -189,10 +205,26 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             var ownerNameData, ownerName;
             return __generator(this, function (_a) {
-                ownerNameData = cred[name]['owner_name'];
-                ownerName = protractor_1.element(protractor_1.by.xpath('//div[@class="col-ownerName ng-star-inserted" and text()="' + ownerNameData + '"]'));
-                expect(ownerName.isDisplayed()).to.eventually.equals(ownerNameData);
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        ownerNameData = cred[name]['owner_name'];
+                        ownerName = protractor_1.element(protractor_1.by.xpath('//div[@class="col-ownerName ng-star-inserted" and contains(text(),"' + ownerNameData + '")]'));
+                        return [4 /*yield*/, ownerName.getText().then(function (value) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, expect(value).to.equals(ownerNameData)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -200,10 +232,26 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             var sitesData, numberofSites;
             return __generator(this, function (_a) {
-                sitesData = cred[siteNumber]['numberOfSites'];
-                numberofSites = protractor_1.element(protractor_1.by.xpath('//div[@class="col-siteCount ng-star-inserted" and text()="' + sitesData + '"]'));
-                expect(numberofSites.isDisplayed()).to.eventually.equals(sitesData);
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        sitesData = cred[siteNumber]['numberOfSites'];
+                        numberofSites = protractor_1.element(protractor_1.by.xpath('//div[@class="col-siteCount ng-star-inserted" and contains(text(),"' + sitesData + '")]'));
+                        return [4 /*yield*/, numberofSites.getText().then(function (value) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, expect(value).to.equals(sitesData)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -211,10 +259,26 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             var revenueData, revenueValue;
             return __generator(this, function (_a) {
-                revenueData = cred[revenue]['revenue'];
-                revenueValue = protractor_1.element(protractor_1.by.xpath('//div[@class="col-siteCount ng-star-inserted" and text()="' + revenueData + '"]'));
-                expect(revenueValue.isDisplayed()).to.eventually.equals(revenueData);
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        revenueData = cred[revenue]['revenue'];
+                        revenueValue = protractor_1.element(protractor_1.by.xpath('//div[@class="right ng-star-inserted" and contains(text(),"' + revenueData + '")]'));
+                        return [4 /*yield*/, revenueValue.getText().then(function (value) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, expect(value).to.equals(revenueData)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };

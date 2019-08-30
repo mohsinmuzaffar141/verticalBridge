@@ -1,25 +1,25 @@
 Feature: verify filter against my sites
 
   #Maps Tabs
-#  @clickMapResetTab
-#  Scenario Outline: verify data above map
-#
-#    Given I am on vertical bridge Page
-#    When  Login to vertical bridge with "<credentials>"
-#    When  Click checkbox button
-#    When  I click to the select partner view button
-#    When  selects the "<relationships>"
-#    Then  click the select button
-#    Then  click on my sites button
-#    Then  click on site link  "<site>"
-#    Then  search the lotaion on the map "<location>"
-#    Then  click on reset button "<site>"
-#    When  I log out
-#
-#    Examples:
-#      | credentials  |  relationships |  location   |     site       |
-#      |   admin      |     relation   |   mapSearch |   siteMapData  |
-#
+  @clickMapResetTab
+  Scenario Outline: verify data above map
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<site>"
+    Then  search the location on the map "<location>"
+    Then  click on reset button "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |  location   |     site       |
+      |   admin      |     relation   |   mapSearch |   siteMapData  |
+
   @clickAutoViewTab
   Scenario Outline: verify on and off the auto view tab
 
@@ -792,21 +792,21 @@ Feature: verify filter against my sites
 
 
 
-#  @verifyOptionsNotPresentUnderDocumentTab
-#  Scenario Outline: verify options are not present under document tab
-#
-#    Given I am on vertical bridge Page
-#    When  Login to vertical bridge with "<credentials>"
-#    When  Click checkbox button
-#    When  I click to the select partner view button
-#    When  selects the "<relationships>"
-#    Then  click the select button
-#    Then  click on my sites button
-#    Then  click on site link  "<relationships>"
-#    Then  click "<tab>" on site detail page
-#    Then  verify options are not present under document tab "<tab>"
-#    When  I log out
-#
-#    Examples:
-#      | credentials  |  relationships  |       tab       |
-#      |   admin      |    leasesData   |   documentTab   |
+  @verifyOptionsNotPresentUnderDocumentTab
+  Scenario Outline: verify options are not present under document tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify options are not present under document tab "<tab>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |       tab       |
+      |   admin      |    leasesData   |   documentTab   |

@@ -67,7 +67,8 @@ export const config: Config = {
         "site": "./Test/features/mySites.feature",
         "tabs": "./Test/features/tabs.feature",
         "siteGeneral": "./Test/features/siteGeneral.feature",
-        "floydSite": "./Test/features/floydSite.feature"
+        "floydSite": "./Test/features/floydSite.feature",
+        "reports": "./Test/features/reports.feature",
     },
 // };
     plugins: [{

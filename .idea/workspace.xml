@@ -9,34 +9,35 @@
       <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/mySites.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/mySites.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/siteGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/siteGeneral.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/my_steps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
@@ -59,41 +60,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/features/reports.feature">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/features/mySites.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+            <state relative-caret-position="425">
+              <caret line="288" column="13" selection-start-line="288" selection-start-column="13" selection-end-line="288" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/testData/floydSite.yml">
+        <entry file="file://$PROJECT_DIR$/Test/steps/mySitesSteps.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/Pages/reportsPage.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/steps/reportsSteps.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            <state relative-caret-position="834">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -102,12 +82,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts">
+        <entry file="file://$PROJECT_DIR$/Test/steps/siteDetailSteps.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="256" column="8" selection-start-line="256" selection-start-column="8" selection-end-line="256" selection-end-column="8" />
+            <state relative-caret-position="847">
+              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
               <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#80#128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +96,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="146" column="62" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/testData/configurations.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/Pages/LoginPage.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="57" column="58" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Test/features/tabs.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="830">
+              <caret line="811" column="58" selection-start-line="811" selection-start-column="58" selection-end-line="811" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/steps/tabsSteps.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -146,6 +180,12 @@
       <find>verifyLink</find>
       <find>link</find>
       <find>click &quot;&lt;tab&gt;&quot; on site detail page</find>
+      <find>verify site number on detail page</find>
+      <find>verify search box will display suggestions to match the text</find>
+      <find>Login to vertical bridge with</find>
+      <find>selectSite</find>
+      <find>verify managment agreement data</find>
+      <find>verify that sites should be displayed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,35 +207,35 @@
         <option value="$PROJECT_DIR$/Test/features/maps.feature" />
         <option value="$PROJECT_DIR$/Test/steps/mapSteps.ts" />
         <option value="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" />
-        <option value="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" />
         <option value="$PROJECT_DIR$/ReadMe.md" />
-        <option value="$PROJECT_DIR$/Test/steps/tabsSteps.ts" />
         <option value="$PROJECT_DIR$/Test/features/step_definitions/my_steps.js" />
         <option value="$PROJECT_DIR$/Test/testData/configurations.yml" />
-        <option value="$PROJECT_DIR$/Test/testData/users.yml" />
         <option value="$PROJECT_DIR$/Test/features/login.feature" />
-        <option value="$PROJECT_DIR$/Test/features/mySites.feature" />
-        <option value="$PROJECT_DIR$/Test/features/tabs.feature" />
         <option value="$PROJECT_DIR$/Test/testData/floydSite.yml.ts" />
         <option value="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" />
         <option value="$PROJECT_DIR$/Test/testData/map.yml" />
-        <option value="$PROJECT_DIR$/Test/steps/LoginSteps.ts" />
-        <option value="$PROJECT_DIR$/Test/Pages/LoginPage.ts" />
-        <option value="$PROJECT_DIR$/Test/features/floydSite.feature" />
-        <option value="$PROJECT_DIR$/Test/features/siteGeneral.feature" />
         <option value="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" />
-        <option value="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" />
-        <option value="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" />
         <option value="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" />
         <option value="$PROJECT_DIR$/Test/testData/siteGeneral.yml" />
-        <option value="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" />
-        <option value="$PROJECT_DIR$/config.ts" />
         <option value="$PROJECT_DIR$/Test/Pages/reportsPage.ts" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" />
-        <option value="$PROJECT_DIR$/Test/steps/reportsSteps.ts" />
-        <option value="$PROJECT_DIR$/Test/testData/floydSite.yml" />
-        <option value="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" />
+        <option value="$PROJECT_DIR$/Test/features/siteGeneral.feature" />
+        <option value="$PROJECT_DIR$/Test/steps/LoginSteps.ts" />
+        <option value="$PROJECT_DIR$/Test/features/floydSite.feature" />
+        <option value="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" />
+        <option value="$PROJECT_DIR$/Test/Pages/LoginPage.ts" />
+        <option value="$PROJECT_DIR$/Test/testData/users.yml" />
+        <option value="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" />
         <option value="$PROJECT_DIR$/Test/features/reports.feature" />
+        <option value="$PROJECT_DIR$/Test/testData/floydSite.yml" />
+        <option value="$PROJECT_DIR$/Test/steps/reportsSteps.ts" />
+        <option value="$PROJECT_DIR$/config.ts" />
+        <option value="$PROJECT_DIR$/Test/features/mySites.feature" />
+        <option value="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" />
+        <option value="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" />
+        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" />
+        <option value="$PROJECT_DIR$/Test/steps/tabsSteps.ts" />
+        <option value="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" />
+        <option value="$PROJECT_DIR$/Test/features/tabs.feature" />
       </list>
     </option>
   </component>
@@ -213,6 +253,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="verticalBridge" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\verticalBridge" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="verticalBridge" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\verticalBridge" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="verticalBridge" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\verticalBridge" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,28 +317,6 @@
               <item name="verticalBridge" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
               <item name="testData" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="verticalBridge" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="E:\verticalBridge" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="verticalBridge" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="E:\verticalBridge" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="verticalBridge" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="E:\verticalBridge" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -361,12 +401,13 @@
       <workItem from="1566965841261" duration="715000" />
       <workItem from="1566968129374" duration="19208000" />
       <workItem from="1567052640194" duration="14022000" />
-      <workItem from="1567076329402" duration="3999000" />
+      <workItem from="1567076329402" duration="4509000" />
+      <workItem from="1567137325056" duration="16414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562029000" />
+    <option name="totallyTimeSpent" value="578953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,12 +422,12 @@
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.1601686" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.1601686" />
       <window_info id="Structure" order="1" sideWeight="0.5019608" side_tool="true" weight="0.98419386" />
       <window_info id="Favorites" order="2" sideWeight="0.5019608" side_tool="true" weight="0.1601686" />
       <window_info id="npm" order="3" sideWeight="0.5019608" side_tool="true" weight="0.98419386" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49910393" visible="true" weight="0.2882353" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49910393" weight="0.2882353" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50089604" side_tool="true" weight="0.4117647" />
@@ -401,6 +442,27 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.1601686" />
+      <window_info id="Structure" order="1" sideWeight="0.5019608" side_tool="true" weight="0.98419386" />
+      <window_info id="Favorites" order="2" sideWeight="0.5019608" side_tool="true" weight="0.1601686" />
+      <window_info id="npm" order="3" sideWeight="0.5019608" side_tool="true" weight="0.98419386" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49910393" weight="0.2882353" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50089604" side_tool="true" weight="0.4117647" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.32885906" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32957748" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="TypeScript" order="8" weight="0.3117371" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32848486" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -555,16 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/tabsSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/protractor/built/browser.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-168">
@@ -573,70 +625,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/features/step_definitions/my_steps.js" />
-    <entry file="file://$PROJECT_DIR$/Test/testData/configurations.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/mySites.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="280" column="31" selection-start-line="280" selection-start-column="31" selection-end-line="280" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/tabs.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2522">
-          <caret line="800" column="32" selection-start-line="800" selection-start-column="32" selection-end-line="800" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/testData/floydSite.yml.ts" />
-    <entry file="file://$PROJECT_DIR$/Test/testData/map.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/protractor/built/element.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/testData/users.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/managemenetAgreement.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="110" column="44" lean-forward="true" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/siteDetailSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
-          <folding>
-            <element signature="e#80#128#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,91 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/siteGeneral.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="188" column="2" selection-start-line="188" selection-start-column="2" selection-end-line="188" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/testData/siteGeneral.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/features/login.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Pages/LoginPage.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="119" column="10" selection-start-line="119" selection-start-column="10" selection-end-line="119" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/mySitesSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-          <folding>
-            <element signature="e#80#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/floydSiteSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/steps/LoginSteps.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -742,10 +654,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/floydSite.feature">
+    <entry file="file://$PROJECT_DIR$/Test/features/siteGeneral.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="401">
+          <caret line="124" column="33" lean-forward="true" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/steps/LoginSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/testData/siteGeneral.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -759,20 +685,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding>
+            <element signature="e#80#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/json/report/features/59ffcacc-b9c4-43f7-9791-dd578e71f15f-verify-filter-against-my-sites.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="1660" column="22" selection-start-line="1660" selection-start-column="22" selection-end-line="1660" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/steps/floydSiteSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/features/floydSite.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/testData/users.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/features/reports.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2538">
+          <caret line="94" column="2" selection-start-line="94" selection-start-column="2" selection-end-line="94" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/features/managemenetAgreement.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3132">
+          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/testData/floydSite.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="648">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/steps/reportsSteps.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        <state relative-caret-position="888">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/testData/map.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4374">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/steps/mySitesSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/features/mySites.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="288" column="13" selection-start-line="288" selection-start-column="13" selection-end-line="288" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/steps/siteDetailSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="847">
+          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+          <folding>
+            <element signature="e#80#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/testData/configurations.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Pages/LoginPage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="57" column="58" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/steps/tabsSteps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -781,18 +850,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/Pages/siteDetailPage.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="256" column="8" selection-start-line="256" selection-start-column="8" selection-end-line="256" selection-end-column="8" />
+        <state relative-caret-position="350">
+          <caret line="146" column="62" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/features/reports.feature">
+    <entry file="file://$PROJECT_DIR$/Test/features/tabs.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        <state relative-caret-position="830">
+          <caret line="811" column="58" selection-start-line="811" selection-start-column="58" selection-end-line="811" selection-end-column="58" />
         </state>
       </provider>
     </entry>

@@ -49,9 +49,12 @@ var expect = chai.expect;
 var floydSite = new floydSitePage_1.floydSitePage();
 var sitedetail = new siteDetailPage_1.siteDetailPage();
 cucumber_1.When(/^Click on additional features link "([^"]*)"$/, { timeout: 5 * 50000 }, function (link) { return __awaiter(_this, void 0, void 0, function () {
+    var hyperlink;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.selectSite(link)];
+            case 0:
+                hyperlink = floyd[link]['hyperLink'];
+                return [4 /*yield*/, sitedetail.selectSite(hyperlink)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -63,7 +66,7 @@ cucumber_1.When(/^Click on add a portfolio "([^"]*)"$/, { timeout: 5 * 50000 }, 
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                portfolio = cred[addPortfolio]['portfolio'];
+                portfolio = floyd[addPortfolio]['portfolio'];
                 return [4 /*yield*/, floydSite.clickHeading(portfolio)];
             case 1:
                 _a.sent();

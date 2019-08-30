@@ -8,15 +8,21 @@ portfolioType1:
   buttonName: Cancel
 
 floydSite:
+  hyperLink: Additional Features
+  portfolio: Add/Edit Portfolio
   confirmationMessage: The portfolio was successfully created.
 
 reports:
   tab: My Dashboard
   count: 7,Management Agreements
+  report: Rent Roll Report,Forecast Report,New Leases Report,Leasing Activity Report
+  link: My Management Agreements
 
 totalSites:
   tab: My Dashboard
   count: 11,Total Sites
+  link: Sites By Management Agreement Report
+  tabelHeader: Site No,Site Name,Site Status,Latitude,Longitude,Owners Name,Revenue,Number of Tenants,Management Agreement Name
 
 totalRevenue:
   tab: My Dashboard

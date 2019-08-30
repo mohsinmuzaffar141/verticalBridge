@@ -45,7 +45,7 @@ var map = yaml.safeLoad(fs.readFileSync('./Test/testData/map.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var maps = new siteDetailPage_1.siteDetailPage();
-cucumber_1.Then(/^search the lotaion on the map "([^"]*)"$/, { timeout: 5 * 50000 }, function (location) { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^search the location on the map "([^"]*)"$/, { timeout: 5 * 50000 }, function (location) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, maps.searchMapLocation(location)];

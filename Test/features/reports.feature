@@ -35,7 +35,7 @@ Feature: verify test cases of reports
       | credentials  |  relationships |   report  |
       |   admin      |     relation   | reports   |
 
-  @verifytTotalManagementAgreement
+  @verifyTotalManagementAgreement
   Scenario Outline: verify management agreement
 
     Given I am on vertical bridge Page
@@ -54,3 +54,59 @@ Feature: verify test cases of reports
       |   admin      |     relation   |    reports   |
       |   admin      |     relation   |   totalSites |
       |   admin      |     relation   | totalRevenue |
+
+  @verifyReports
+  Scenario Outline: verify reports on my dashboard
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  verify reports on my dashboard "<report>"
+    When  I log out
+
+
+    Examples:
+      | credentials  |  relationships |     report   |
+      |   admin      |     relation   |    reports   |
+
+  @clickManagementAgreement
+  Scenario Outline: click management agreement on my dashboard
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify managment agreement data "<relationships>"
+    When  I log out
+
+
+    Examples:
+      | credentials  |  relationships |     report   |
+      |   admin      |     relation   |    reports   |
+
+  @clickManagementAgreementReport
+  Scenario Outline: click management agreement report on my dashboard
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify managment agreement report data "<report>"
+    When  I log out
+
+
+    Examples:
+      | credentials  |  relationships |      report    |
+      |   admin      |     relation   |    totalSites   |

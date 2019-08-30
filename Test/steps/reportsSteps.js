@@ -98,4 +98,43 @@ cucumber_1.Then(/^verify management agreement count "([^"]*)"$/, { timeout: 5 * 
         }
     });
 }); });
+cucumber_1.Then(/^verify reports on my dashboard "([^"]*)"$/, { timeout: 5 * 50000 }, function (reports) { return __awaiter(_this, void 0, void 0, function () {
+    var report;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                report = floyd[reports]['report'];
+                return [4 /*yield*/, sitedetail.verifyLink(report)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click management agreement on my dashboard "([^"]*)"$/, { timeout: 5 * 50000 }, function (reportLink) { return __awaiter(_this, void 0, void 0, function () {
+    var managementLink;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                managementLink = floyd[reportLink]['link'];
+                return [4 /*yield*/, sitedetail.selectSite(managementLink)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify managment agreement report data "([^"]*)"$/, { timeout: 5 * 50000 }, function (tableHeader) { return __awaiter(_this, void 0, void 0, function () {
+    var values;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                values = floyd[tableHeader]['tabelHeader'];
+                return [4 /*yield*/, sitedetail.verifyDataUnderPropertyInformation(values)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=reportsSteps.js.map

@@ -7,8 +7,8 @@ relation:
   siteNumber: US-GA-1045
   managementData: FVE Portfolio
   owner_name: FVE Managers, Inc.
-  numberOfSites: 287
-  revenue: $14,825.64
+  numberOfSites: '289'
+  revenue: '$12,337.32'
   sitesCount: '1113'
   colName: ownerName
   count: 1
@@ -104,8 +104,6 @@ table1:
 downloadButton:
   button:  Export to Excel
 
-floydSite:
-  siteNumber: Additional Features
-  portfolio: Add/Edit Portfolio
+
 
 

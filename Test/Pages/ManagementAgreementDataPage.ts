@@ -65,23 +65,32 @@ export class ManagementAgreementDataPage extends BasePage{
 
     async verifyAgreementData(value: string) {
         let agreementData = cred[value]['managementData']
-        let managmentAgreemnet = element(by.xpath('//div[@class="col-portfolioName ng-star-inserted" and text()="' + agreementData + '"]'))
-        expect(managmentAgreemnet.isDisplayed()).to.eventually.equals(agreementData);
+        let managmentAgreemnet = element(by.xpath('//div[@class="col-portfolioName ng-star-inserted" and contains(text(),"' + agreementData + '")]'))
+        await managmentAgreemnet.getText().then(async function(value){
+            await expect(value).to.equals(agreementData);
+        });
+
     }
     async verifyOwnerName(name: string) {
         let ownerNameData = cred[name]['owner_name']
-        let ownerName = element(by.xpath('//div[@class="col-ownerName ng-star-inserted" and text()="' + ownerNameData + '"]'))
-        expect(ownerName.isDisplayed()).to.eventually.equals(ownerNameData);
+        let ownerName = element(by.xpath('//div[@class="col-ownerName ng-star-inserted" and contains(text(),"' + ownerNameData + '")]'))
+        await ownerName.getText().then(async function(value){
+            await expect(value).to.equals(ownerNameData);
+        });
     }
     async verifyNoOfsites(siteNumber:string) {
         let sitesData = cred[siteNumber]['numberOfSites']
-        let numberofSites = element(by.xpath('//div[@class="col-siteCount ng-star-inserted" and text()="' + sitesData + '"]'))
-        expect(numberofSites.isDisplayed()).to.eventually.equals(sitesData);
+        let numberofSites = element(by.xpath('//div[@class="col-siteCount ng-star-inserted" and contains(text(),"' + sitesData + '")]'))
+        await numberofSites.getText().then(async function(value){
+            await expect(value).to.equals(sitesData);
+        });
     }
     async verifyRevenue(revenue:string){
         let revenueData= cred[revenue]['revenue']
-        let revenueValue= element(by.xpath('//div[@class="col-siteCount ng-star-inserted" and text()="' +revenueData+ '"]'))
-        expect(revenueValue.isDisplayed()).to.eventually.equals(revenueData);
+        let revenueValue= element(by.xpath('//div[@class="right ng-star-inserted" and contains(text(),"' +revenueData+ '")]'))
+        await revenueValue.getText().then(async function(value){
+            await expect(value).to.equals(revenueData);
+        });
     }
 
     async verifyOwnerOrder(colName:string){

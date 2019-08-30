@@ -15,10 +15,11 @@ const floydSite = new floydSitePage();
 const sitedetail = new siteDetailPage();
 
 When(/^Click on additional features link "([^"]*)"$/, {timeout: 5 * 50000}, async(link)=> {
-    await sitedetail.selectSite(link);
+    let hyperlink=floyd[link]['hyperLink'];
+    await sitedetail.selectSite(hyperlink);
 });
 When(/^Click on add a portfolio "([^"]*)"$/, {timeout: 5 * 50000}, async(addPortfolio)=> {
-    let portfolio=cred[addPortfolio]['portfolio'];
+    let portfolio=floyd[addPortfolio]['portfolio'];
     await floydSite.clickHeading(portfolio);
 });
 Then(/^Click on plus icon button$/, {timeout: 5 * 50000}, async()=> {

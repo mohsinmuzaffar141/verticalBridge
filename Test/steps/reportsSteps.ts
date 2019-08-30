@@ -31,3 +31,15 @@ Then(/^verify management agreement count "([^"]*)"$/, {timeout: 5 * 50000}, asyn
     let count=floyd[management]['count'];
     await sitedetail.verifyDataUnderPropertyInformation(count);
 });
+Then(/^verify reports on my dashboard "([^"]*)"$/, {timeout: 5 * 50000}, async(reports)=>  {
+    let report=floyd[reports]['report'];
+    await sitedetail.verifyLink(report);
+});
+Then(/^click management agreement on my dashboard "([^"]*)"$/, {timeout: 5 * 50000}, async(reportLink)=>{
+    let managementLink=floyd[reportLink]['link'];
+    await sitedetail.selectSite(managementLink);
+});
+Then(/^verify managment agreement report data "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeader)=> {
+    let values=floyd[tableHeader]['tabelHeader'];
+    await sitedetail.verifyDataUnderPropertyInformation(values);
+});

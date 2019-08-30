@@ -77,17 +77,17 @@ var siteDetailPage = /** @class */ (function (_super) {
         _this.advanceSearch = protractor_1.element(protractor_1.by.xpath('//span[text()="Advanced Search"]'));
         _this.mainMenuSearchField = protractor_1.element(protractor_1.by.xpath('//input[@id="SearchInput"]'));
         _this.relationName = protractor_1.element(protractor_1.by.xpath('//h1[@id="PartnerFullName"]'));
+        _this.homeImage = protractor_1.element(protractor_1.by.xpath('//div[@id="HomePageImage"]'));
         return _this;
     }
     siteDetailPage.prototype.selectSite = function (value) {
         return __awaiter(this, void 0, void 0, function () {
-            var siteNumber, site;
+            var site;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        siteNumber = cred[value]['siteNumber'];
-                        site = protractor_1.element(protractor_1.by.xpath('//a[text()="' + siteNumber + '"]'));
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(site), 5000, 'Element taking too long to appear in the DOM')];
+                        site = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"' + value + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(site), 50000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, site.click()];
@@ -372,7 +372,7 @@ var siteDetailPage = /** @class */ (function (_super) {
             var searchValue, loc;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.searchMap), 5000, 'Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.searchMap), 50000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         searchValue = maps[value]['siteSearch'];
@@ -382,10 +382,10 @@ var siteDetailPage = /** @class */ (function (_super) {
                         return [4 /*yield*/, this.searchMap.sendKeys(searchValue)];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                        loc = protractor_1.element(protractor_1.by.xpath('//p[text()="' + searchValue + '"]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(loc), 50000, 'Element taking too long to appear in the DOM')];
                     case 4:
                         _a.sent();
-                        loc = protractor_1.element(protractor_1.by.xpath('//p[text()="' + searchValue + '"]'));
                         return [4 /*yield*/, loc.click()];
                     case 5:
                         _a.sent();
@@ -399,7 +399,7 @@ var siteDetailPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.resetTab), 5000, 'Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.resetTab), 50000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, this.resetTab.click()];
@@ -1162,6 +1162,21 @@ var siteDetailPage = /** @class */ (function (_super) {
             });
         });
     };
+    siteDetailPage.prototype.homePageImage = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.homeImage), 500000, 'Search Text Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, expect(this.homeImage.isDisplayed()).to.eventually.equal(true)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
     siteDetailPage.prototype.selectTabUnderHomePage = function (tabName) {
         return __awaiter(this, void 0, void 0, function () {
             var tab, tabClick;
@@ -1372,12 +1387,15 @@ var siteDetailPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         txt = site[text]['searchTxt'];
-                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + txt + '")]'));
+                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text()," ' + txt + ' ")]'));
                         return [4 /*yield*/, this.mainMenuSearchField.sendKeys(txt)];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(searchText), 500000, 'Search Text Element taking too long to appear in the DOM')];
+                        return [4 /*yield*/, protractor_1.browser.sleep(2000)];
                     case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(searchText), 500000, 'Search Text Element taking too long to appear in the DOM')];
+                    case 3:
                         _a.sent();
                         return [4 /*yield*/, searchText.isPresent().then(function (display) {
                                 return __awaiter(this, void 0, void 0, function () {
@@ -1400,7 +1418,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                                     });
                                 });
                             })];
-                    case 3:
+                    case 4:
                         _a.sent();
                         return [2 /*return*/];
                 }

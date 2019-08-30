@@ -67,9 +67,7 @@ export class LoginPage extends BasePage{
 
     async giveUserName(na: string){
         await browser.sleep(3000);
-        await browser.manage().deleteAllCookies();
-        await browser.sleep(7000);
-        await browser.wait(until.presenceOf(this.unField), 50000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(this.unField), 500000, 'Element taking too long to appear in the DOM');
         // let userName = 'username';
         await this.unField.sendKeys(cred[na]['username']);
         // await browser.wait(until.presenceOf(this.nexBtn), 50000, 'Element taking too long to appear in the DOM');
@@ -78,7 +76,7 @@ export class LoginPage extends BasePage{
     }
     async enterPassword(passwordText: string){
         // let pass = 'password';
-        await browser.wait(until.presenceOf(this.passwordField), 50000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(this.passwordField), 500000, 'Element taking too long to appear in the DOM');
         await this.passwordField.sendKeys(cred[passwordText]['password']);
 
     }
@@ -118,13 +116,14 @@ export class LoginPage extends BasePage{
         await browser.sleep(7000);
     }
     async logoutfloyd(){
-        await browser.wait(until.presenceOf(this.logoutFloyd),500000, 'Element taking too long to appear in the DOM');
+        // await browser.wait(until.presenceOf(this.logoutFloyd),500000, 'Element taking too long to appear in the DOM');
+        await browser.sleep(3000);
         await this.logoutFloyd.click();
         await browser.sleep(3000);
         //await browser.wait(until.presenceOf(this.signOut),500000, 'Element taking too long to appear in the DOM');
         await this.signOut.click();
-        await browser.sleep(5000);
+        await browser.sleep(3000);
         await browser.manage().deleteAllCookies();
-        await browser.sleep(7000);
+        await browser.sleep(5000);
     }
 }

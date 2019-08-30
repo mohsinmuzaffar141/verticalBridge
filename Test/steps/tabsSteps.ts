@@ -13,7 +13,7 @@ const expect = chai.expect;
 const maps = new siteDetailPage();
 
 
-Then(/^search the lotaion on the map "([^"]*)"$/, {timeout: 5 * 50000}, async(location)=> {
+Then(/^search the location on the map "([^"]*)"$/, {timeout: 5 * 50000}, async(location)=> {
     await maps.searchMapLocation(location);
 });
 Then(/^click on reset button "([^"]*)"$/, {timeout: 5 * 50000}, async(text)=> {

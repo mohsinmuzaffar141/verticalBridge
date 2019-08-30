@@ -81,7 +81,7 @@ cucumber_1.Given(/^I am on vertical bridge Page$/, { timeout: 5 * 50000 }, funct
         }
     });
 }); });
-cucumber_1.When(/^Login to vertical bridge with "([^"]*)"$/, { timeout: 5 * 500000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.When(/^Login to vertical bridge with "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, loginPage.giveUserName(text)];

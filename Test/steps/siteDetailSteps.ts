@@ -15,7 +15,8 @@ const sitedetail = new siteDetailPage();
 
 
 Then(/^click on site link  "([^"]*)"$/, {timeout: 5 * 50000}, async(siteNumber)=>{
-    await sitedetail.selectSite(siteNumber);
+    let site = cred[siteNumber]['siteNumber'];
+    await sitedetail.selectSite(site);
 });
 
 Then(/^verify site number on detail page "([^"]*)"$/, {timeout: 5 * 50000}, async(site)=>{
@@ -65,4 +66,7 @@ Then(/^verify site detail labels not present "([^"]*)"$/, {timeout: 5 * 50000}, 
 Then(/^verify relationship should be present on the top "([^"]*)"$/, {timeout: 5 * 50000}, async(relationship)=>{
     let relation=cred[relationship]['name'];
     await sitedetail.verifyRelationshipName(relation);
+});
+Then(/^verify home page image on portal$/, {timeout: 5 * 50000}, async()=>{
+    await sitedetail.homePageImage();
 });

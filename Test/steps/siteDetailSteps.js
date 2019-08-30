@@ -46,9 +46,12 @@ var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var sitedetail = new siteDetailPage_1.siteDetailPage();
 cucumber_1.Then(/^click on site link  "([^"]*)"$/, { timeout: 5 * 50000 }, function (siteNumber) { return __awaiter(_this, void 0, void 0, function () {
+    var site;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.selectSite(siteNumber)];
+            case 0:
+                site = cred[siteNumber]['siteNumber'];
+                return [4 /*yield*/, sitedetail.selectSite(site)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -172,6 +175,16 @@ cucumber_1.Then(/^verify relationship should be present on the top "([^"]*)"$/, 
             case 0:
                 relation = cred[relationship]['name'];
                 return [4 /*yield*/, sitedetail.verifyRelationshipName(relation)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify home page image on portal$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, sitedetail.homePageImage()];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

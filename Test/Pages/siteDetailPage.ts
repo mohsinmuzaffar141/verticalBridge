@@ -31,11 +31,11 @@ export class siteDetailPage extends BasePage {
     advanceSearch=element(by.xpath('//span[text()="Advanced Search"]'));
     mainMenuSearchField=element(by.xpath('//input[@id="SearchInput"]'));
     relationName=element(by.xpath('//h1[@id="PartnerFullName"]'));
+    homeImage=element(by.xpath('//div[@id="HomePageImage"]'));
 
     async selectSite(value: string) {
-        let siteNumber = cred[value]['siteNumber'];
-        let site = element(by.xpath('//a[text()="' + siteNumber + '"]'));
-        await browser.wait(until.presenceOf(site), 5000, 'Element taking too long to appear in the DOM');
+        let site = element(by.xpath('//a[contains(text(),"' + value + '")]'));
+        await browser.wait(until.presenceOf(site), 50000, 'Element taking too long to appear in the DOM');
         await site.click();
         await browser.sleep(5000);
     }
@@ -132,19 +132,19 @@ export class siteDetailPage extends BasePage {
     }
 
     async searchMapLocation(value: string) {
-        await browser.wait(until.presenceOf(this.searchMap), 5000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(this.searchMap), 50000, 'Element taking too long to appear in the DOM');
         let searchValue = maps[value]['siteSearch'];
         await this.searchMap.click();
         await this.searchMap.sendKeys(searchValue);
-        await browser.sleep(5000);
         let loc = element(by.xpath('//p[text()="' + searchValue + '"]'));
+        await browser.wait(until.presenceOf(loc), 50000, 'Element taking too long to appear in the DOM');
         await loc.click();
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
 
     }
 
     async clickResetTab() {
-        await browser.wait(until.presenceOf(this.resetTab), 5000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(this.resetTab), 50000, 'Element taking too long to appear in the DOM');
         await this.resetTab.click();
     }
 
@@ -389,6 +389,11 @@ export class siteDetailPage extends BasePage {
     async managementAgreementNotPresent(){
         await expect(this.managementAgreement.isPresent()).to.eventually.equal(false);
     }
+    async homePageImage(){
+        await browser.wait(until.presenceOf(this.homeImage), 500000, 'Search Text Element taking too long to appear in the DOM');
+        await expect(this.homeImage.isDisplayed()).to.eventually.equal(true);
+    }
+
 
     async selectTabUnderHomePage(tabName: string) {
         let tab = maps[tabName]['tab'];
@@ -454,8 +459,9 @@ export class siteDetailPage extends BasePage {
 
     async verifySearchSuggestion(text:string){
         let txt=site[text]['searchTxt'];
-        let searchText=element(by.xpath('//span[contains(text(),"'+txt+'")]'));
+        let searchText=element(by.xpath('//span[contains(text()," '+txt+' ")]'));
         await this.mainMenuSearchField.sendKeys(txt);
+        await browser.sleep(2000);
         await browser.wait(until.presenceOf(searchText), 500000, 'Search Text Element taking too long to appear in the DOM');
         await searchText.isPresent().then(async function (display) {
             if (display) {
