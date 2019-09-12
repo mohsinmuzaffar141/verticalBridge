@@ -3,6 +3,8 @@ typings
 /app/**/*.js
 /app/**/*.map
 .vscode/
+reports
+.idea
 
 
 .idea

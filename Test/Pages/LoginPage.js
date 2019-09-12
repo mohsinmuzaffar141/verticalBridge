@@ -54,8 +54,6 @@ var chai = require("chai").use(require("chai-as-promised"));
 //data variables
 var yaml = require('js-yaml');
 var fs = require('fs');
-// let cred = yaml.safeLoad(fs.readFileSync('../testData/users.yml', 'utf8'));
-// let configuration = yaml.safeLoad(fs.readFileSync('../testData/configurations.yml', 'utf8'));
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var configuration = yaml.safeLoad(fs.readFileSync('./Test/testData/configurations.yml', 'utf8'));
 var expect = chai.expect;
@@ -95,6 +93,8 @@ var LoginPage = /** @class */ (function (_super) {
         _this.checkbox = protractor_1.element(protractor_1.by.id("KmsiCheckboxField"));
         _this.yesbtn = protractor_1.element(protractor_1.by.xpath("//input[@id='idSIButton9']"));
         _this.logout_btn = protractor_1.element(protractor_1.by.xpath('//span[text()="Log Out"]'));
+        _this.logoutFloyd = protractor_1.element(protractor_1.by.xpath('//*[name()="svg" and @data-icon="user-circle"]'));
+        _this.signOut = protractor_1.element(protractor_1.by.xpath('//span[text()="Sign out"]'));
         return _this;
     }
     LoginPage.prototype.OpenBrowser = function () {
@@ -103,7 +103,7 @@ var LoginPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         protractor_1.browser.ignoreSynchronization = true;
-                        return [4 /*yield*/, protractor_1.browser.get("https://stagepartnerportal.verticalbridge.com")];
+                        return [4 /*yield*/, protractor_1.browser.get("https://vnd_Ishfaq.zia:Is1928Zi@stagefloyd.verticalbridge.com")];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(7000)];
@@ -118,7 +118,7 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.sleep(7000)];
+                    case 0: return [4 /*yield*/, protractor_1.browser.sleep(5000)];
                     case 1:
                         _a.sent();
                         protractor_1.browser.ignoreSynchronization = true;
@@ -134,21 +134,23 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.unField), 5000, 'Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                     case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.unField), 500000, 'Element taking too long to appear in the DOM')];
+                    case 2:
                         _a.sent();
                         // let userName = 'username';
                         return [4 /*yield*/, this.unField.sendKeys(cred[na]['username'])];
-                    case 2:
+                    case 3:
                         // let userName = 'username';
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.nexBtn), 5000, 'Element taking too long to appear in the DOM')];
-                    case 3:
-                        _a.sent();
+                        // await browser.wait(until.presenceOf(this.nexBtn), 50000, 'Element taking too long to appear in the DOM');
                         return [4 /*yield*/, this.nexBtn.click()];
                     case 4:
+                        // await browser.wait(until.presenceOf(this.nexBtn), 50000, 'Element taking too long to appear in the DOM');
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                        return [4 /*yield*/, protractor_1.browser.sleep(4000)];
                     case 5:
                         _a.sent();
                         return [2 /*return*/];
@@ -162,7 +164,7 @@ var LoginPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0: 
                     // let pass = 'password';
-                    return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.passwordField), 5000, 'Element taking too long to appear in the DOM')];
+                    return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.passwordField), 500000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         // let pass = 'password';
                         _a.sent();
@@ -178,13 +180,13 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.loginButton), 5000, 'Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.loginButton), 50000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, this.loginButton.click()];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                     case 3:
                         _a.sent();
                         return [2 /*return*/];
@@ -198,14 +200,14 @@ var LoginPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         if (!this.checkbox.checked) return [3 /*break*/, 3];
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.checkbox), 5000, 'Element taking too long to appear in the DOM')];
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.checkbox), 50000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, this.yesbtn.click()];
                     case 2:
                         _a.sent();
                         return [3 /*break*/, 6];
-                    case 3: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.checkbox), 5000, 'Element taking too long to appear in the DOM')];
+                    case 3: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.checkbox), 500000, 'Element taking too long to appear in the DOM')];
                     case 4:
                         _a.sent();
                         return [4 /*yield*/, this.checkbox.click()];
@@ -221,13 +223,13 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.yesbtn), 5000, 'Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.yesbtn), 500000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, this.yesbtn.click()];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(7000)];
+                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
                     case 3:
                         _a.sent();
                         return [2 /*return*/];
@@ -255,7 +257,7 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.logout_btn), 5000, 'Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.logout_btn), 500000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, this.logout_btn.click()];
@@ -266,6 +268,44 @@ var LoginPage = /** @class */ (function (_super) {
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.manage().deleteAllCookies()];
                     case 4:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(7000)];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    LoginPage.prototype.logoutfloyd = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: 
+                    // await browser.wait(until.presenceOf(this.logoutFloyd),500000, 'Element taking too long to appear in the DOM');
+                    return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                    case 1:
+                        // await browser.wait(until.presenceOf(this.logoutFloyd),500000, 'Element taking too long to appear in the DOM');
+                        _a.sent();
+                        return [4 /*yield*/, this.logoutFloyd.click()];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                    case 3:
+                        _a.sent();
+                        //await browser.wait(until.presenceOf(this.signOut),500000, 'Element taking too long to appear in the DOM');
+                        return [4 /*yield*/, this.signOut.click()];
+                    case 4:
+                        //await browser.wait(until.presenceOf(this.signOut),500000, 'Element taking too long to appear in the DOM');
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                    case 5:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.manage().deleteAllCookies()];
+                    case 6:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 7:
                         _a.sent();
                         return [2 /*return*/];
                 }
