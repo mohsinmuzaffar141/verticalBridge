@@ -1,14 +1,25 @@
 admin:
   username: sehel.siddiqui@kualitatem.com
-  password: KVF@0022
+  password: KVF@0011
 
 relation:
   name: RMR Group
+  siteNumber: US-GA-1045
   managementData: FVE Portfolio
   owner_name: FVE Managers, Inc.
-  numberOfSites: 287
-  revenue: $14,825.64
+  numberOfSites: '289'
+  revenue: '$12,337.32'
   sitesCount: '1113'
+  colName: ownerName
+  count: 1
+
+contactData:
+  name:  Duesenberg Investment
+  siteNumber: 'US-CA-1364'
+
+leasesData:
+  name: American Tower
+  siteNumber: 'US-ID-5021'
 
 filterSearch:
   siteNumber: US-GA-1045
@@ -20,6 +31,7 @@ filterSearch:
   zipCode: 01701
   country: United States
   status: Active
+  count: 2
 
 
 siteName:
@@ -62,7 +74,7 @@ siteDetailMohsin:
 siteContacts:
   siteNumber: 'US-CA-1253'
   contacts:  Regional Site Manager,Regional Leasing Manager,Leasing Specialist,Asset Manager,Legal
-  contactsData: Brian Bertrand - Regional Operations Manager,Tiffany McClurg - RLM,Pilar Lozano - RLS, - ,Dan Marinberg - SVP & General Counsel
+  contactsData: Brian Bertrand - Regional Operations Manager,Tiffany McClurg - RLM,Pilar Lozano - RLS, - ,Dan Marinberg - Senior Vice President and General Counsel
 
 siteDetailNotPresent:
   siteNumber: 'US-CA-1253'
@@ -79,5 +91,20 @@ siteTabs:
 siteMapData:
   siteNumber: 'US-GA-1045'
   mapData: BTA,MTA,MSA/RSA,BEA
+
+table:
+  name: Owner Name
+  colName: ownerName
+  count: 1
+
+table1:
+  name:  Site Name
+  colName: siteName
+  count: 2
+
+downloadButton:
+  button:  Export to Excel
+
+
 
 

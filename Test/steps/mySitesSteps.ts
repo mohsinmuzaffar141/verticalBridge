@@ -14,7 +14,9 @@ const manageAgreepage = new ManagementAgreementDataPage();
 
 
 Then(/^filter the management agreement list "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
-    await manageAgreepage.searchFilter(text);
+    let filterData=cred[text]['siteNumber'];
+    let count=cred[text]['count'];
+    await manageAgreepage.searchFilter(filterData,count);
 });
 
 Then(/^verify filter is provided in site list$/, {timeout: 5 * 50000}, async() => {
@@ -51,3 +53,4 @@ Then(/^verify that filter applied is removed "([^"]*)"$/, {timeout: 5 * 50000}, 
     await manageAgreepage.removeFilter();
     await manageAgreepage.verifySites(text);
 });
+

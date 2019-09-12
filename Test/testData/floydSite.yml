@@ -1,0 +1,41 @@
+portfolioType:
+  portfolio: Developer Joint Venture Partner
+  portfolioName: Testabc
+  buttonName: Save
+  tabs: General,Fees
+
+portfolioType1:
+  buttonName: Cancel
+
+floydSite:
+  hyperLink: Additional Features
+  portfolio: Add/Edit Portfolio
+  confirmationMessage: The portfolio was successfully created.
+
+reports:
+  tab: My Dashboard
+  count: 7,Management Agreements
+  report: Rent Roll Report,Forecast Report,New Leases Report,Leasing Activity Report
+  link: My Management Agreements
+
+totalSites:
+  tab: My Dashboard
+  count: 11,Total Sites
+  link: Sites By Management Agreement Report
+  tableHeader: Site No,Site Name,Site Status,Latitude,Longitude,Owners Name,Revenue,Number of Tenants,Management Agreement Name
+
+totalRevenue:
+  tab: My Dashboard
+  count: $345.9K,Total Annualized Revenue
+
+rentRollReport:
+  tab: My Dashboard
+  link: Rent Roll Report
+  colName: tenantName
+  count: 1
+  siteNumber: US-HI-1002
+
+table:
+  count: 1
+  name: Tenant Name
+  colName: tenantName

@@ -4,5 +4,159 @@ mapSearch:
 contactTab:
   tabName: Contacts
   tabLabel: Site Contacts,Ground Right Contacts,Portfolio Contacts,Tenant Contacts
-  thContacts: Contact,Type,Phone(s),Address
-  tdcontacts: Business Manager, Casey Guittarr,Company, Two Newton Place
+  thContacts: Contact,Type,Phone(s),Address,Email
+  tdcontacts: Casey Guittarr,Business Manager,Company, Two Newton Place,CGuittarr@rmrgroup.com
+  contactData: No records found
+  duplicateData: Jack,Lisa,Mario,Maian,Ryan,Sherri,Default Contact
+
+
+propertyTab:
+  tabName: Property
+  siteNumber: 'US-CA-1253'
+  attribues: Property Information,Fiber Data
+  attributeData: All Sites on This Property
+  propertyInformation:  VB Property No,PROP-US-CA-09475,Property Name,500  Esplanadae,Site Property Size,Site Ground Interest,Managed,Number of Sites,Number of Units
+  propertyDataNotPresent: Acquisitions,Ground Rights
+
+propertyTab1:
+  tabName: Property
+  propertyInformation:  Is Fiber Available,Fiber Provider(s)
+  thProperty: Site No.,Site Name,Site Type
+  tdProperty: CA-1364,500  Esplanade,Office Building
+  propertyDataNotPresent: Dynamics ERP Vendor ID,Previous Owner Site ID,Market,Inactive Reason,Inactive Date,Inactive Reason Notes,Securitization,Securitization Notes
+
+
+leasesTab:
+  tabName:  Leases
+  attributeData: Tenant Leases,Ground Rights
+  tabData: Gross Montly Rent,BBE
+  thLeases: Lease Number,Tenant Name,Relationship Name,Agreement Type,Lease Type,Termination Date,Lease Status,Tenant Site Number,Commencement Date,Landlord Rent
+
+leasesTab1:
+  tabName:  Leases
+  thLeases: Lease Number,Landlord Payment Contact,Lease Representative,Lease Type,Status,Revenue Share,GLBO,Ground Commencement Date,Payment Schedule,Payment Frequency,Equivalent Monthly Payment,Acquisition Date
+  leaseDataNotPresent: Structural Charges attribute group
+
+operationTab:
+  tabName:  Operations
+  attribues: Operations Data,Security,Tower,Site Inspection,FAA,Vertical Bridge Owned Equipment,Electricity,Lighting/Painting/Monitoring,Lease Fiber Data
+  attributeData: Site Comments
+  operationDataNotPresent: others
+  operationAttributeData: Site As Built Capacity,Available Capacity,Used Capacity BBE,Occupied Area,Fiber
+  thOperation: Comment Type,Comments,Modified By,Date Modified
+
+operationTab1:
+  tabName:  Operations
+  operationAttributeData: Building Combo,Gate Combo,Compound Gate Combo,Key Access
+  operationDataNotPresent: Telephone Provider,Telephone Account Number,Date Telephone In Service,Date Telephone Cancelled,Telephone Comments,Electricity Source Equipment Capacity
+
+operationTab2:
+  tabName:  Operations
+  operationAttributeData: Detuned,Manufacturer,Model Number,Model,AM Tower,AM Broadcast,Order Drawing Info,Built Date,Year Built
+  operationDataNotPresent: Old Monitor
+
+operationTab3:
+  tabName:  Operations
+  operationAttributeData: Structure Company,Date Of Last Structural,SIR Date,TIA Inspection Date,Drone Inspection Date,Comments
+
+operationTab4:
+  tabName:  Operations
+  operationAttributeData: Study Number,Study Ordered,Study Filed
+
+operationTab5:
+  tabName:  Operations
+  operationAttributeData: Vertical Bridge Owned Building,Comments,Vertical Bridge Owned Generator,Comments,Vertical Bridge Owned HVAC Unit,Comments
+
+operationTab6:
+  tabName:  Operations
+  operationAttributeData: Electrical Provider,Electrical Account No,Date Electric In Service,Date Electric Cancelled,Vertical Bridge PoTs Number,Electric Comments,Vertical Bridge Owns Meter,Vertical Bridge Meter No,Electricity Source,Electricity Source Equipment Location
+
+operationTab7:
+  tabName:  Operations
+  operationAttributeData: Is Painting Required,Is Tower Painted,Has Unpainted Coax or Conduit,Is Lighting Voluntary,Is Tower Lit,Lighting System Type,Controller Manufacturer,Light Controller Model,Monitoring Company,Wireless Monitor Installed,RTU#/Wireless Technology
+
+operationTab8:
+  tabName:  Operations
+  operationAttributeData: Is Fiber Available,Fiber Provider(s)
+
+FCC:
+  tabName:  FCC
+  attribues: Identification,Structure Information,Location Infomation,Registration Information
+  fccAttributeData: FCC ASR Number,FCC Application Number,FCC File Number,FAA Study Number,FCC Status
+  fccMessage: Additional information can be found at the link below.
+  fccLink: FCC ASR Search
+
+
+FCC1:
+  tabName:  FCC
+  fccAttributeData: Ground Elevation,Overall Structure Height (AGL),Structure Type,Painting and Lighting,Date Constructed
+  fccMessage: This data is periodically downloaded directly from the FCC (wireless.fcc.gov) and represents the data currently filed with the FCC for this site. Any changes to this data must be made via the FCC.
+
+FCC2:
+  tabName:  FCC
+  fccAttributeData: Address,City,State,Latitude,Longitude
+
+FCC3:
+  tabName:  FCC
+  fccAttributeData: Registration Entity,License ID,Contact
+
+radCenter:
+  tabName:  RAD Centers
+  attribues:  Property Information,Fiber Data,Operations Information
+  radAttributeData:  Ground Right Property Size (sq ft),Ground Right Property Dimensions
+  colorIndicators: Available,Observed,Abstracted,Suspect
+  thRadCenter: Tenant Name,Observed RAD Center Height,Abstracted RAD Center Height,Technology Type
+
+radCenter1:
+  tabName:  RAD Centers
+  radAttributeData: Fiber Available?,Fiber Providers
+
+radCenter2:
+  tabName:  RAD Centers
+  radAttributeData:  Do we own the building?,AM Tower,Generator Only Site?,VB Owns a Meter?,Date of Last Structural Analysis,VB Owns Generator?,Tower Structural Capacity in Use
+
+leasingActivity:
+  tabName:  Leasing Activity
+  thLeasingActivity: Site Info,Deal Number,Deal Status,Stage,Tenant Info,Proj. Monthly Rent,Inquiry Date,Executed Lease Date,Estimated Closing Date
+  leasingDataNotPresent: Create New Deal link
+
+leasingActivity1:
+  tabName:  Accounting
+
+leasingActivity2:
+  tabName:  Nearby Sites
+
+documentTab:
+  tabName:  Documents
+  documanetLabel: Construction/Regulatory Documents,Environmental Documents,Tenant Lease Documents,Ground Lease and Legal Documents
+  documanetLabel1: Blue,Green,Red,Yellow
+  fileDocument: US-ID-5021_1A2C_072615.pdf
+
+homePage:
+  tabName: About,Services,Contacts
+  header: About
+  content: Vertical Bridge (VB),VB leases,The founders and senior,Our sites
+
+servicesTab:
+  tab: Services
+  subTabName: Real Estate Owners,Utility Partners,Development Partners
+  header: Real Estate Owners
+  content: Building up the successes,Vertical Bridge has an unparalleled,At no obligation,Please email
+
+servicesTab1:
+  tab: Utility Partners
+  header: Utility Partners
+  content: Vertical Bridge views utility assets,Led by personnel with decades,At no cost or obligation,Please contact
+
+servicesTab2:
+  tab: Development Partners
+  header: Development Partners
+  content: Coming Soon
+
+contactHomePageTab:
+  tab: Contacts
+  label: Contacts for Real Estate and Property Owners,Contacts for Utility Partners,Contacts for Development Joint Venture Partners
+  labelData: Shanda Sanabria Garcia
+  listData:  Real Estate Director, Coming Soon
+  link: 561-406-4046
+  dataNotPresent: Leigh Anne Stitt Real Estate Administrator Vertical Bridge Holdings,LLC LStitt@verticalbridge.com 750 Park of Commerce Drive, Suite 200 Boca Raton, Florida 33487 561.348.5235

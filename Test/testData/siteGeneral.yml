@@ -1,0 +1,20 @@
+siteDetailPage:
+  tabData:  1 Corporate Boulevard,DeKalb,Office Building
+
+mapTabPage:
+  tabData:  Atlanta,GA-AL-NC
+
+homePageLink:
+  linkText: Visit Us on LinkedIn,Vertical Bridge Newsroom
+  footerText:  ©2019 Vertical Bridge REIT
+
+headerLabel:
+  searchTxt: US-CA-1364
+  thAdvanceSearch: Site Number,Site Name,Site Status,Category,Site Type,Coordinates,Address,City,State,Postal Code
+  advanceLabelHeader: Site Address,Portfolio,Leases/Tenants
+  advanceLabel: Site Status,Site Category,Site Type,Site Name,Address,City,County,State,Country,Owner Name,Management Agreement or Portfolio Name,Tenant Relationship Name,Tenant Name
+
+headerLabelNew:
+  advanceLabelHeader: Sites
+  advanceLabel: Site Status,Site Category,Site Type,Site Name
+

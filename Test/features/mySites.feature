@@ -1,10 +1,28 @@
 Feature: verify filter against my sites
+  @verifyTabs
+  Scenario Outline: verify Tabs on detail page
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link  "<site>"
+    Then  verify tabs on site detail page "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |    site  |
+      |   admin      |     relation   | siteTabs |
 
   @searchFilter
   Scenario Outline: verify searchFilters against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -24,6 +42,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -43,6 +62,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -50,7 +70,6 @@ Feature: verify filter against my sites
     Then  click on filter on/off tab
     Then  verify site number should be present "<searchFilter>"
     Then  verify site name should be present "<name>"
-   # Then  verify owner name id should be present "<name>"
     Then  verify address should be present "<address>"
     Then  verify city should be present "<city>"
     Then  verify state should be present "<state>"
@@ -69,6 +88,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -86,6 +106,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -106,6 +127,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -118,13 +140,12 @@ Feature: verify filter against my sites
       | credentials  |  relationships |   site   |
       |   admin      |     relation   | siteList |
 
-
-
   @verifySite
   Scenario Outline: verify searchFilters against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -143,6 +164,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -160,6 +182,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -178,6 +201,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -195,6 +219,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -213,6 +238,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -227,28 +253,14 @@ Feature: verify filter against my sites
       |   admin      |     relation   | siteDetailNotPresentMohsin |
 
 
-  @verifyTabs
-  Scenario Outline: verify Tabs on detail page
 
-    Given I am on vertical bridge Page
-    When  Login to vertical bridge with "<credentials>"
-    When  I click to the select partner view button
-    When  selects the "<relationships>"
-    Then  click the select button
-    Then  click on my sites button
-    Then  click on site link  "<site>"
-    Then  verify tabs on site detail page "<site>"
-    When  I log out
-
-    Examples:
-      | credentials  |  relationships |    site  |
-      |   admin      |     relation   | siteTabs |
 
   @verifyMapPin
   Scenario Outline: verify map pin on map
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -266,6 +278,7 @@ Feature: verify filter against my sites
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I click to the select partner view button
     When  selects the "<relationships>"
     Then  click the select button
@@ -278,3 +291,18 @@ Feature: verify filter against my sites
       | credentials  |  relationships |     site    |
       |   admin      |     relation   | siteMapData |
 
+  @verifyHomePageImage
+  Scenario Outline: verify image on home page should be present
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  verify home page image on portal
+    When  I log out
+
+    Examples:
+      | credentials  |relationships |
+      |   admin      |   relation   |
