@@ -70,7 +70,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         _this.verifySite = protractor_1.element(protractor_1.by.xpath('//div[@id="reportSummary"]//div'));
         _this.search_txt = protractor_1.element(protractor_1.by.xpath('//input[@id="GlobalSearchInput"]'));
         _this.searchIcon = protractor_1.element(protractor_1.by.xpath('//mat-icon[@id="SearchIcon"]'));
-        _this.removeFilter_btn = protractor_1.element(protractor_1.by.xpath('//span[@class="filterX hidden showX"]'));
+        _this.removeFilter_btn = protractor_1.element(protractor_1.by.xpath('//span[@id="x-siteNo"]'));
         _this.text = protractor_1.element(protractor_1.by.xpath('//h2[text()="Select Partner View"]'));
         _this.cancel = protractor_1.element(protractor_1.by.xpath('//span[text()="Cancel"]'));
         return _this;
@@ -136,25 +136,12 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    ManagementAgreementDataPage.prototype.validate = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var path, title;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        path = protractor_1.element(protractor_1.by.xpath("//h1[text()='RMR Group']")).getText();
-                        title = "RMR Group";
-                        return [4 /*yield*/, expect(path).to.eventually.equal(title)];
-                    case 1:
-                        //await expect(path).to.equal(title);
-                        if (_a.sent()) {
-                            console.log("Passed");
-                        }
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
+    // async validateRelation(name:string) {
+    //     let path = element(by.xpath('//h1[text()="'+name+'"]'));
+    //     await path.getText().then(async function(text){
+    //         await expect(text).to.equal(name);
+    //     });
+    //}
     ManagementAgreementDataPage.prototype.clickMySites = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
@@ -340,7 +327,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
     };
     ManagementAgreementDataPage.prototype.verifyDescendingOwnerOrder = function (colName, counter) {
         return __awaiter(this, void 0, void 0, function () {
-            var NAMES, table, unsortedArr;
+            var NAMES, table, unsortedArr, unsortedArr1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -385,12 +372,13 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                         console.log('Sorted Array sorted Default: ' + NAMES);
                         console.log("==========================================");
                         unsortedArr = [];
+                        unsortedArr1 = [];
                         unsortedArr = NAMES.sort();
-                        unsortedArr.reverse();
-                        return [4 /*yield*/, expect(unsortedArr).to.be.equal(NAMES)];
+                        unsortedArr1 = unsortedArr.reverse();
+                        return [4 /*yield*/, expect([unsortedArr1]).to.not.equal([NAMES])];
                     case 2:
                         _a.sent();
-                        console.log('Sorted Array unSorted: ' + unsortedArr);
+                        console.log('Sorted Array unSorted: ' + unsortedArr1);
                         return [2 /*return*/];
                 }
             });
@@ -465,7 +453,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, expect(this.filter_box.isEnabled()).to.eventually.equals(true)];
+                    case 0: return [4 /*yield*/, expect(this.filter_box.isEnabled()).to.eventually.equal(true)];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -475,29 +463,26 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
     };
     ManagementAgreementDataPage.prototype.verifySites = function (count) {
         return __awaiter(this, void 0, void 0, function () {
-            var siteData;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        siteData = cred[count]['sitesCount'];
-                        return [4 /*yield*/, this.verifySite.getText().then(function (text) {
-                                return __awaiter(this, void 0, void 0, function () {
-                                    var sp, req;
-                                    return __generator(this, function (_a) {
-                                        switch (_a.label) {
-                                            case 0:
-                                                sp = text.split('of');
-                                                req = sp[1].split(" ");
-                                                console.log(text);
-                                                console.log(req[1]);
-                                                return [4 /*yield*/, expect(req[1]).to.equals(siteData)];
-                                            case 1:
-                                                _a.sent();
-                                                return [2 /*return*/];
-                                        }
-                                    });
+                    case 0: return [4 /*yield*/, this.verifySite.getText().then(function (text) {
+                            return __awaiter(this, void 0, void 0, function () {
+                                var sp, req;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0:
+                                            sp = text.split('of');
+                                            req = sp[1].split(" ");
+                                            console.log(text);
+                                            console.log(req[1]);
+                                            return [4 /*yield*/, expect(req[1]).to.equals(count)];
+                                        case 1:
+                                            _a.sent();
+                                            return [2 /*return*/];
+                                    }
                                 });
-                            })];
+                            });
+                        })];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -534,25 +519,45 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    ManagementAgreementDataPage.prototype.searchFilter = function (searchValue, count) {
+    ManagementAgreementDataPage.prototype.searchFilter = function (searchValue, count, column) {
         return __awaiter(this, void 0, void 0, function () {
-            var verifySearch;
+            var filter, verifySearch;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.filter_box.click()];
+                    case 0:
+                        filter = protractor_1.element(protractor_1.by.xpath('//input[@id="filter-' + column + '"]'));
+                        return [4 /*yield*/, filter.click()];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, this.filter_box.sendKeys(searchValue)];
+                        return [4 /*yield*/, filter.sendKeys(searchValue)];
                     case 2:
                         _a.sent();
-                        protractor_1.browser.sleep(2000);
-                        protractor_1.browser.actions().sendKeys(protractor_1.protractor.Key.ENTER).perform();
-                        verifySearch = protractor_1.element(protractor_1.by.xpath('(//tbody[@class="ui-table-tbody"])[' + count + ']'));
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(verifySearch), 5000, 'Element taking too long to appear in the DOM')];
+                        return [4 /*yield*/, protractor_1.browser.sleep(2000)];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, expect(verifySearch.getText()).to.eventually.contain(searchValue)];
+                        protractor_1.browser.actions().sendKeys(protractor_1.protractor.Key.ENTER).perform();
+                        return [4 /*yield*/, protractor_1.browser.sleep(35000)];
                     case 4:
+                        _a.sent();
+                        verifySearch = protractor_1.element(protractor_1.by.xpath('(//tbody[@class="ui-table-tbody"])[' + count + ']'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(verifySearch), 5000, 'Element taking too long to appear in the DOM')];
+                    case 5:
+                        _a.sent();
+                        return [4 /*yield*/, verifySearch.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                console.log(text);
+                                                return [4 /*yield*/, expect(text).to.contain(searchValue)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 6:
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -563,7 +568,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, expect(this.filter_box.isPresent()).to.eventually.equals(true)];
+                    case 0: return [4 /*yield*/, expect(this.filter_box.isPresent()).to.eventually.equal(true)];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -715,17 +720,17 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    ManagementAgreementDataPage.prototype.clickEcportFile = function (exportFile) {
+    ManagementAgreementDataPage.prototype.clickExportFile = function (exportFile) {
         return __awaiter(this, void 0, void 0, function () {
             var button;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        button = protractor_1.element(protractor_1.by.xpath('//span[text()=" ' + exportFile + ' "]'));
+                        button = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + exportFile + '")]'));
                         return [4 /*yield*/, button.click()];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(10000)];
+                        return [4 /*yield*/, protractor_1.browser.sleep(35000)];
                     case 2:
                         _a.sent();
                         return [2 /*return*/];
@@ -741,6 +746,30 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                     case 0:
                         downloadsFolder = require('downloads-folder');
                         filepath = downloadsFolder() + '\\My Sites-Export.xlsx';
+                        return [4 /*yield*/, expect(fs.existsSync(filepath)).to.be.true];
+                    case 1:
+                        _a.sent();
+                        if (!fs.existsSync(filepath)) return [3 /*break*/, 4];
+                        return [4 /*yield*/, fs.unlinkSync(filepath)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.verifyDownloadFilePdf = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var downloadsFolder, filepath;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        downloadsFolder = require('downloads-folder');
+                        filepath = downloadsFolder() + '\\Rent Roll-Export.pdf';
                         return [4 /*yield*/, expect(fs.existsSync(filepath)).to.be.true];
                     case 1:
                         _a.sent();

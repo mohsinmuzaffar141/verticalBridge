@@ -23,7 +23,7 @@ export class ManagementAgreementDataPage extends BasePage{
     verifySite=element(by.xpath('//div[@id="reportSummary"]//div'));
     search_txt=element(by.xpath('//input[@id="GlobalSearchInput"]'));
     searchIcon=element(by.xpath('//mat-icon[@id="SearchIcon"]'));
-    removeFilter_btn=element(by.xpath('//span[@class="filterX hidden showX"]'));
+    removeFilter_btn=element(by.xpath('//span[@id="x-siteNo"]'));
     text=element(by.xpath('//h2[text()="Select Partner View"]'));
     cancel=element(by.xpath('//span[text()="Cancel"]'));
 
@@ -47,14 +47,12 @@ export class ManagementAgreementDataPage extends BasePage{
         await this.selectBtn.click();
         await browser.sleep(5000);
     }
-    async validate() {
-        let path = element(by.xpath("//h1[text()='RMR Group']")).getText();
-        let title: string = "RMR Group";
-        //await expect(path).to.equal(title);
-        if (await expect(path).to.eventually.equal(title)) {
-            console.log("Passed");
-        }
-    }
+    // async validateRelation(name:string) {
+    //     let path = element(by.xpath('//h1[text()="'+name+'"]'));
+    //     await path.getText().then(async function(text){
+    //         await expect(text).to.equal(name);
+    //     });
+    //}
 
     async clickMySites(){
         await browser.wait(until.presenceOf(this.mySite_btn), 5000, 'Element taking too long to appear in the DOM');
@@ -128,10 +126,11 @@ export class ManagementAgreementDataPage extends BasePage{
         console.log('Sorted Array sorted Default: '+NAMES);
         console.log("==========================================");
         let unsortedArr = [];
+        let unsortedArr1 = [];
         unsortedArr = NAMES.sort();
-        unsortedArr.reverse();
-        await expect(unsortedArr).to.be.equal(NAMES);
-        console.log('Sorted Array unSorted: '+unsortedArr)
+        unsortedArr1=unsortedArr.reverse();
+        await expect([unsortedArr1]).to.not.equal([NAMES]);
+        console.log('Sorted Array unSorted: '+unsortedArr1)
     }
 
     async getPortfolioList(portfolioName:string){
@@ -155,17 +154,16 @@ export class ManagementAgreementDataPage extends BasePage{
         await browser.sleep(5000);
     }
     async verifyFilter(){
-        await expect(this.filter_box.isEnabled()).to.eventually.equals(true);
+        await expect(this.filter_box.isEnabled()).to.eventually.equal(true);
     }
 
     async verifySites(count:string) {
-        let siteData = cred[count]['sitesCount'];
         await this.verifySite.getText().then(async function (text) {
-            var sp = text.split('of');
-            var req = sp[1].split(" ");
+            let sp = text.split('of');
+            let req = sp[1].split(" ");
             console.log(text);
             console.log(req[1]);
-            await expect(req[1]).to.equals(siteData);
+            await expect(req[1]).to.equals(count);
 
         });
     }
@@ -180,19 +178,23 @@ export class ManagementAgreementDataPage extends BasePage{
         await expect(verifySearch.getText()).to.eventually.contain(searchValue)
 
     }
-    async searchFilter(searchValue:string,count:string){
-        await this.filter_box.click();
-        await this.filter_box.sendKeys(searchValue);
-        browser.sleep(2000);
+    async searchFilter(searchValue:string,count:string,column:string){
+        let filter=element(by.xpath('//input[@id="filter-'+column+'"]'));
+        await filter.click();
+        await filter.sendKeys(searchValue);
+        await browser.sleep(2000);
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
+        await browser.sleep(35000);
         let verifySearch=element(by.xpath('(//tbody[@class="ui-table-tbody"])['+count+']'));
         await browser.wait(until.presenceOf(verifySearch), 5000, 'Element taking too long to appear in the DOM');
-        await expect(verifySearch.getText()).to.eventually.contain(searchValue);
-
+        await verifySearch.getText().then(async function (text) {
+            console.log(text);
+            await expect(text).to.contain(searchValue);
+        });
     }
 
     async verifyFilterPresent(){
-        await expect(this.filter_box.isPresent()).to.eventually.equals(true);
+        await expect(this.filter_box.isPresent()).to.eventually.equal(true);
     }
 
     async verifySiteNumber(siteNumber:string){
@@ -242,14 +244,24 @@ export class ManagementAgreementDataPage extends BasePage{
         await colName.click();
         await browser.sleep(35000);
     }
-    async clickEcportFile(exportFile:string){
-        let button=element(by.xpath('//span[text()=" '+exportFile+' "]'));
+    async clickExportFile(exportFile:string){
+        let button=element(by.xpath('//span[contains(text(),"'+exportFile+'")]'));
         await button.click();
-        await browser.sleep(10000);
+        await browser.sleep(35000);
     }
     async verifyDownloadFile(){
         let downloadsFolder = require('downloads-folder');
         let filepath = downloadsFolder() + '\\My Sites-Export.xlsx';
+        await expect(fs.existsSync(filepath)).to.be.true;
+        if(fs.existsSync(filepath)) {
+            await fs.unlinkSync(filepath);
+            await browser.sleep(5000);
+        }
+    }
+
+    async verifyDownloadFilePdf(){
+        let downloadsFolder = require('downloads-folder');
+        let filepath = downloadsFolder() + '\\Rent Roll-Export.pdf';
         await expect(fs.existsSync(filepath)).to.be.true;
         if(fs.existsSync(filepath)) {
             await fs.unlinkSync(filepath);

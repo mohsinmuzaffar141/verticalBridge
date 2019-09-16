@@ -32,7 +32,7 @@ filterSearch:
   country: United States
   status: Active
   count: 2
-
+  sitecolumn: siteNo
 
 siteName:
   name:  1 Corporate Boulevard
@@ -54,7 +54,6 @@ siteCountry:
 
 siteStatus:
   name:  Active
-
 
 siteList:
   siteNumber: 'US-CA-1253'
@@ -104,6 +103,13 @@ table1:
 
 downloadButton:
   button:  Export to Excel
+
+report:
+  siteNumber: 'US-HI-1002'
+  siteName: 1100 Ward Avenue
+
+leasesNumberReport:
+  siteNumber: 10295
 
 
 

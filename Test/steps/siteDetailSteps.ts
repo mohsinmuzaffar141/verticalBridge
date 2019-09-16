@@ -14,17 +14,20 @@ const expect = chai.expect;
 const sitedetail = new siteDetailPage();
 
 
-Then(/^click on site link  "([^"]*)"$/, {timeout: 5 * 50000}, async(siteNumber)=>{
+Then(/^click on site link "([^"]*)"$/, {timeout: 5 * 50000}, async(siteNumber)=>{
     let site = cred[siteNumber]['siteNumber'];
     await sitedetail.selectSite(site);
 });
 
 Then(/^verify site number on detail page "([^"]*)"$/, {timeout: 5 * 50000}, async(site)=>{
-    await sitedetail.verifySiteNumber(site);
+    let siteNumber = cred[site]['siteNumber'];
+    await sitedetail.verifySiteNumber(siteNumber);
 });
 
 Then(/^verify site Name on detail page "([^"]*)"$/, {timeout: 5 * 50000}, async(siteName)=>{
-    await sitedetail.verifyName(siteName);
+    let site = cred[siteName]['siteName'];
+    let siteNumber = cred[siteName]['siteNumber'];
+    await sitedetail.verifyName(site,siteNumber);
 });
 
 Then(/^verify general and contacts section on detailed page "([^"]*)"$/, {timeout: 5 * 50000}, async(label)=> {

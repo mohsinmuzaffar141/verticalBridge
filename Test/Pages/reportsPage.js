@@ -61,8 +61,12 @@ var reports = /** @class */ (function (_super) {
     __extends(reports, _super);
     function reports() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.date = protractor_1.element(protractor_1.by.xpath('//b[contains(text(),"Executed At")]'));
-        _this.tableHeader = protractor_1.element(protractor_1.by.xpath('//div[text()=" Tenant Name "]'));
+        _this.date = protractor_1.element(protractor_1.by.xpath('//div[contains(text(),"Executed On")]'));
+        _this.table = protractor_1.element(protractor_1.by.xpath('//div[text()=" Site Number "]'));
+        _this.logo = protractor_1.element(protractor_1.by.xpath('(//img[@id="Logo"])[2]'));
+        _this.startDate = protractor_1.element(protractor_1.by.xpath('//div[text()=" Start Date "]//following-sibling::div//span//input'));
+        _this.endDate = protractor_1.element(protractor_1.by.xpath('//div[text()=" End Date "]//following-sibling::div//span//input'));
+        _this.defaultDateStart = protractor_1.element(protractor_1.by.xpath('//a[contains(@class, "ui-state-active") and @draggable="false"]'));
         return _this;
     }
     reports.prototype.executedDate = function () {
@@ -90,9 +94,217 @@ var reports = /** @class */ (function (_super) {
     reports.prototype.verifyActiveTenant = function (columnName, counter) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
+                return [2 /*return*/];
+            });
+        });
+    };
+    reports.prototype.verifyLogo = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.tableHeader), 50000000)];
+                    case 0: return [4 /*yield*/, expect(this.logo.isPresent()).to.eventually.equal(true)];
                     case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.verifyReport = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.table), 50000000)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, expect(this.table.isPresent()).to.eventually.equal(true)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.setStartDate = function (date) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.startDate.sendKeys(protractor_1.protractor.Key.chord(protractor_1.protractor.Key.CONTROL, 'a'))];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.startDate.sendKeys(protractor_1.protractor.Key.DELETE)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(2000)];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.startDate.sendKeys(date)];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.setEndDate = function (date) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.endDate.sendKeys(protractor_1.protractor.Key.chord(protractor_1.protractor.Key.CONTROL, 'a'))];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.endDate.sendKeys(protractor_1.protractor.Key.DELETE)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(2000)];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.endDate.sendKeys(date)];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.defaultStartDate = function (date) {
+        return __awaiter(this, void 0, void 0, function () {
+            var labels;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        labels = date.split(',');
+                        return [4 /*yield*/, this.startDate.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.defaultDateStart), 50000000)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.defaultDateStart.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var _loop_1, i;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                console.log(text);
+                                                return [4 /*yield*/, expect(text).to.equal('1')];
+                                            case 1:
+                                                _a.sent();
+                                                _loop_1 = function (i) {
+                                                    var msg;
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0:
+                                                                msg = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + labels[i] + '")]'));
+                                                                return [4 /*yield*/, msg.getText().then(function (display) {
+                                                                        return __awaiter(this, void 0, void 0, function () {
+                                                                            return __generator(this, function (_a) {
+                                                                                switch (_a.label) {
+                                                                                    case 0:
+                                                                                        console.log(display);
+                                                                                        return [4 /*yield*/, expect(display).to.equal(labels[i])];
+                                                                                    case 1:
+                                                                                        _a.sent();
+                                                                                        return [2 /*return*/];
+                                                                                }
+                                                                            });
+                                                                        });
+                                                                    })];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [2 /*return*/];
+                                                        }
+                                                    });
+                                                };
+                                                i = 0;
+                                                _a.label = 2;
+                                            case 2:
+                                                if (!(i < labels.length)) return [3 /*break*/, 5];
+                                                return [5 /*yield**/, _loop_1(i)];
+                                            case 3:
+                                                _a.sent();
+                                                _a.label = 4;
+                                            case 4:
+                                                i++;
+                                                return [3 /*break*/, 2];
+                                            case 5: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.defaultEndDate = function (date) {
+        return __awaiter(this, void 0, void 0, function () {
+            var labels;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        labels = date.split(',');
+                        return [4 /*yield*/, this.endDate.click()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.defaultDateStart), 50000000)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.defaultDateStart.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var _loop_2, i;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                console.log(text);
+                                                return [4 /*yield*/, expect(text).to.equal('31')];
+                                            case 1:
+                                                _a.sent();
+                                                _loop_2 = function (i) {
+                                                    var msg;
+                                                    return __generator(this, function (_a) {
+                                                        switch (_a.label) {
+                                                            case 0:
+                                                                msg = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + labels[i] + '")]'));
+                                                                return [4 /*yield*/, msg.getText().then(function (display) {
+                                                                        return __awaiter(this, void 0, void 0, function () {
+                                                                            return __generator(this, function (_a) {
+                                                                                switch (_a.label) {
+                                                                                    case 0:
+                                                                                        console.log(display);
+                                                                                        return [4 /*yield*/, expect(display).to.equal(labels[i])];
+                                                                                    case 1:
+                                                                                        _a.sent();
+                                                                                        return [2 /*return*/];
+                                                                                }
+                                                                            });
+                                                                        });
+                                                                    })];
+                                                            case 1:
+                                                                _a.sent();
+                                                                return [2 /*return*/];
+                                                        }
+                                                    });
+                                                };
+                                                i = 0;
+                                                _a.label = 2;
+                                            case 2:
+                                                if (!(i < labels.length)) return [3 /*break*/, 5];
+                                                return [5 /*yield**/, _loop_2(i)];
+                                            case 3:
+                                                _a.sent();
+                                                _a.label = 4;
+                                            case 4:
+                                                i++;
+                                                return [3 /*break*/, 2];
+                                            case 5: return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
                         _a.sent();
                         return [2 /*return*/];
                 }

@@ -45,7 +45,7 @@ var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var sitedetail = new siteDetailPage_1.siteDetailPage();
-cucumber_1.Then(/^click on site link  "([^"]*)"$/, { timeout: 5 * 50000 }, function (siteNumber) { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^click on site link "([^"]*)"$/, { timeout: 5 * 50000 }, function (siteNumber) { return __awaiter(_this, void 0, void 0, function () {
     var site;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -59,9 +59,12 @@ cucumber_1.Then(/^click on site link  "([^"]*)"$/, { timeout: 5 * 50000 }, funct
     });
 }); });
 cucumber_1.Then(/^verify site number on detail page "([^"]*)"$/, { timeout: 5 * 50000 }, function (site) { return __awaiter(_this, void 0, void 0, function () {
+    var siteNumber;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.verifySiteNumber(site)];
+            case 0:
+                siteNumber = cred[site]['siteNumber'];
+                return [4 /*yield*/, sitedetail.verifySiteNumber(siteNumber)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -69,9 +72,13 @@ cucumber_1.Then(/^verify site number on detail page "([^"]*)"$/, { timeout: 5 * 
     });
 }); });
 cucumber_1.Then(/^verify site Name on detail page "([^"]*)"$/, { timeout: 5 * 50000 }, function (siteName) { return __awaiter(_this, void 0, void 0, function () {
+    var site, siteNumber;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.verifyName(siteName)];
+            case 0:
+                site = cred[siteName]['siteName'];
+                siteNumber = cred[siteName]['siteNumber'];
+                return [4 /*yield*/, sitedetail.verifyName(site, siteNumber)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

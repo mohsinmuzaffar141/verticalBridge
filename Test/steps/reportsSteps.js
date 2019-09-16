@@ -188,4 +188,165 @@ cucumber_1.Then(/^verify ascending and descending order of reports "([^"]*)"$/, 
         }
     });
 }); });
+cucumber_1.Then(/^verify rent roll report should be paginated "([^"]*)"$/, { timeout: 5 * 50000 }, function (count) { return __awaiter(_this, void 0, void 0, function () {
+    var siteData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                siteData = floyd[count]['sitesCount'];
+                return [4 /*yield*/, manageAgreePage.verifySites(siteData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify rent roll report should be downloaded "([^"]*)"$/, { timeout: 5 * 50000 }, function (exportExcel) { return __awaiter(_this, void 0, void 0, function () {
+    var exportFile;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                exportFile = floyd[exportExcel]['button'];
+                return [4 /*yield*/, manageAgreePage.clickExportFile(exportFile)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, manageAgreePage.verifyDownloadFilePdf()];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^filter the rent roll report list "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    var filterData, filterColumn, count;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                filterData = floyd[text]['siteNumber'];
+                filterColumn = floyd[text]['sitecolumn'];
+                count = floyd[text]['count'];
+                return [4 /*yield*/, manageAgreePage.searchFilter(filterData, count, filterColumn)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify logo and rent roll present on page "([^"]*)"$/, { timeout: 5 * 50000 }, function (reports) { return __awaiter(_this, void 0, void 0, function () {
+    var txt;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                txt = floyd[reports]['attributeData'];
+                return [4 /*yield*/, sitedetail.verifyAttributeOnLeasesTab(txt)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, report.verifyLogo()];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify table header of rent roll report "([^"]*)"$/, { timeout: 5 * 50000 }, function (tableHeader) { return __awaiter(_this, void 0, void 0, function () {
+    var thData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                thData = floyd[tableHeader]['thReportHeader'];
+                return [4 /*yield*/, sitedetail.advanceSearchTableHeader(thData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify that records should be displayed on rent roll report "([^"]*)"$/, { timeout: 5 * 50000 }, function (count) { return __awaiter(_this, void 0, void 0, function () {
+    var siteData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                siteData = floyd[count]['recordCount'];
+                return [4 /*yield*/, manageAgreePage.verifySites(siteData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify no parameter should be passed to generate rent roll report$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, report.verifyReport()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^Enter start date on forecast report "([^"]*)"$/, { timeout: 5 * 50000 }, function (date) { return __awaiter(_this, void 0, void 0, function () {
+    var startDate;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                startDate = floyd[date]['startDate'];
+                return [4 /*yield*/, report.setStartDate(startDate)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^Enter end date on forecast report "([^"]*)"$/, { timeout: 5 * 50000 }, function (date) { return __awaiter(_this, void 0, void 0, function () {
+    var endDate;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                endDate = floyd[date]['endDate'];
+                return [4 /*yield*/, report.setEndDate(endDate)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^Click on generate report button "([^"]*)"$/, { timeout: 5 * 50000 }, function (generateReport) { return __awaiter(_this, void 0, void 0, function () {
+    var report;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                report = floyd[generateReport]['button'];
+                return [4 /*yield*/, manageAgreePage.clickExportFile(report)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify default start date on forecast report "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    var month;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                month = floyd[text]['monthStart'];
+                return [4 /*yield*/, report.defaultStartDate(month)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify default end date on forecast report "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    var month;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                month = floyd[text]['monthEnd'];
+                return [4 /*yield*/, report.defaultEndDate(month)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=reportsSteps.js.map

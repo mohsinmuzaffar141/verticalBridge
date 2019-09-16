@@ -160,3 +160,7 @@ contactHomePageTab:
   listData:  Real Estate Director, Coming Soon
   link: 561-406-4046
   dataNotPresent: Leigh Anne Stitt Real Estate Administrator Vertical Bridge Holdings,LLC LStitt@verticalbridge.com 750 Park of Commerce Drive, Suite 200 Boca Raton, Florida 33487 561.348.5235
+
+leasesNumberReport:
+  attributeData: Tenant Leases,Ground Rights
+  tabData: Gross Montly Rent,BBE

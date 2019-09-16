@@ -34,8 +34,28 @@ rentRollReport:
   colName: tenantName
   count: 1
   siteNumber: US-HI-1002
+  attributeData: Rent Roll
+  thReportHeader: Site Number,Site Name,Tenant Name,Lease Number,Monthly Tenant Rent,Monthly Other Charges,Billing Frequency,Management Agreement Name
+  recordCount: '10'
 
 table:
   count: 1
   name: Tenant Name
   colName: tenantName
+  sitesCount: '10'
+  button:  Export to PDF
+
+filterReport:
+  siteNumber: US-HI-1002
+  count: 1
+  sitecolumn: siteNo
+
+forecastReport:
+  tab: My Dashboard
+  link: Forecast Report
+  startDate: 09/01/2019
+  endDate: 09/15/2019
+  button: Generate Report
+  recordCount: '11'
+  monthStart: January,2019
+  monthEnd: December,2019

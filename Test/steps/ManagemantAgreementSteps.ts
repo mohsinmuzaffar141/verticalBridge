@@ -53,8 +53,9 @@ Then(/^click on filter on\/off tab$/, {timeout: 5 * 50000}, async() => {
 Then(/^verify filter is enabled$/, {timeout: 5 * 50000}, async() => {
     await manageAgreePage.verifyFilter();
 });
-Then(/^verify that sites should be displayed "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
-    await manageAgreePage.verifySites(text);
+Then(/^verify that sites should be displayed "([^"]*)"$/, {timeout: 5 * 50000}, async(count) => {
+    let siteData = cred[count]['sitesCount'];
+    await manageAgreePage.verifySites(siteData);
 });
 Then(/^search the management agreement list "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
     let filterData=cred[text]['siteNumber'];
@@ -71,7 +72,7 @@ Then(/^click on ascending and descending order tab "([^"]*)"$/, {timeout: 5 * 50
 });
 Then(/^click on export to excel button "([^"]*)"$/, {timeout: 5 * 50000}, async(exportExcel) => {
     let exportFile=cred[exportExcel]['button'];
-    await manageAgreePage.clickEcportFile(exportFile);
+    await manageAgreePage.clickExportFile(exportFile);
 });
 Then(/^verify the file should be downloaded$/, {timeout: 5 * 50000}, async() =>  {
     await manageAgreePage.verifyDownloadFile();

@@ -186,7 +186,7 @@ cucumber_1.Then(/^verify labels of advance search "([^"]*)"$/, { timeout: 5 * 50
         }
     });
 }); });
-cucumber_1.Then(/^verify advance search should have refinemenet criteria "([^"]*)"$/, { timeout: 5 * 50000 }, function (searchCriteria) { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^verify advance search should have refinement criteria "([^"]*)"$/, { timeout: 5 * 50000 }, function (searchCriteria) { return __awaiter(_this, void 0, void 0, function () {
     var txt1, txt;
     return __generator(this, function (_a) {
         switch (_a.label) {

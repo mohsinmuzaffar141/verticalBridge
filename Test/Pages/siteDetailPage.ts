@@ -41,22 +41,27 @@ export class siteDetailPage extends BasePage {
     }
 
     async verifySiteNumber(value: string) {
-        let siteNumber = cred[value]['siteNumber'];
-        console.log(siteNumber);
-        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + siteNumber + '")]'));
+        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + value + '")]'));
         // await browser.wait(until.presenceOf(title), 15000, 'Element taking too long to appear in the DOM');
         await title.getText().then(async function (text) {
-            var sp = text.split(" ");
-            var req = sp[0];
+            let sp = text.split(" ");
+            let req = sp[0];
             console.log(req);
-            await expect(siteNumber).to.equals(req);
+            await expect(value).to.equals(req);
         });
     }
 
-    async verifyName(value: string) {
-        let site = cred[value]['siteName'];
-        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + site + '")]'));
-        await expect(title.getText()).to.eventually.contain(site);
+    async verifyName(value: string,number:string){
+        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + value + '")]'));
+        await title.getText().then(async function (text) {
+            let sp = text.split("keyboard_arrow_up");
+            let req = sp[0];
+            let sp1 = req.split(number+' ');
+            let req1 = sp1[1];
+            let name=req1.trim();
+            console.log(name);
+            await expect(value).to.equals(name);
+        });
     }
 
     async verifyHeaderOnDetailedPage(listed: string) {
@@ -374,9 +379,9 @@ export class siteDetailPage extends BasePage {
         // }
     }
     async optionsNotPresent(){
-        let rowToRightClick=element(by.xpath('//span[@data-text="Blue"]'));
+        //let rowToRightClick=element(by.xpath('//span[@data-text="Blue"]'));
         let alert= element(by.xpath('//a[text()="Add or View Documents/Images"]'));
-        await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
+        //await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
         await expect(alert.isPresent()).to.eventually.equal(false);
 
     }
@@ -484,6 +489,7 @@ export class siteDetailPage extends BasePage {
         let thdata = thData.split(',');
         for (let i = 1; i <= thdata.length; i++) {
             let headerData = element(by.xpath('//tr[@class="ng-star-inserted"]//th[' + i + ']'));
+            await browser.wait(until.presenceOf(headerData), 500000, 'Advance Search taking too long to appear in the DOM');
             await headerData.getText().then(async function (text) {
                 console.log(text);
                 await expect(text).to.equal(thdata[i - 1]);
@@ -516,6 +522,7 @@ export class siteDetailPage extends BasePage {
     async verifyRelationshipName(text:string){
         await browser.wait(until.presenceOf(this.relationName), 500000, 'Relationship taking too long to appear');
         await this.relationName.getText().then(async function (display) {
+            console.log(display);
             await expect(display).to.equal(text);
         });
     }

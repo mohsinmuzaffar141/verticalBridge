@@ -2,76 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ef5760-62a3-4076-bc98-958757d422f5" name="Default Changelist" comment="commit yesterday">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/features/siteGeneral.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/mySites.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/mySites.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/siteGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/siteGeneral.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/map.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/map.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/login_to_vertical_bridge.chrome.74.0.3729.169_1563885542738.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/login_to_vertical_bridge.chrome.74.0.3729.169_1567154763215.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_data_against_management_agreement.chrome.74.0.3729.169_1563885542743.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_data_against_management_agreement.chrome.74.0.3729.169_1567154763230.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_filter_against_my_sites.chrome.74.0.3729.169_1563886754091.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_filter_against_my_sites.chrome.74.0.3729.169_1567164620884.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_links_are_not_present_on_site_header.chrome.74.0.3729.169_1567154763246.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_test_cases_of_reports.chrome.74.0.3729.169_1567154763261.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/json/json-output-folder/verify_test_cases_on_floyd_site.chrome.74.0.3729.169_1567154763261.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,7 +110,9 @@
       <workItem from="1567575788739" duration="12005000" />
       <workItem from="1567657846226" duration="13515000" />
       <workItem from="1568179062229" duration="14848000" />
-      <workItem from="1568262587796" duration="3514000" />
+      <workItem from="1568262587796" duration="15043000" />
+      <workItem from="1568348300155" duration="21441000" />
+      <workItem from="1568608111561" duration="23567000" />
     </task>
     <servers />
   </component>
@@ -192,6 +158,10 @@
         <option value="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" />
         <option value="$PROJECT_DIR$/Test/steps/reportsSteps.js" />
         <option value="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" />
+        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
+        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
+        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
+        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
         <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
         <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
         <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />

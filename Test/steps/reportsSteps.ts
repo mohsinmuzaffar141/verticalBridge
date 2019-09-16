@@ -63,3 +63,54 @@ Then(/^verify ascending and descending order of reports "([^"]*)"$/, {timeout: 5
     await manageAgreePage.clickAscendingAndDescendingOrder(col);
     await manageAgreePage.verifyDescendingOwnerOrder(columnName,counter);
 });
+Then(/^verify rent roll report should be paginated "([^"]*)"$/, {timeout: 5 * 50000}, async(count)=> {
+    let siteData = floyd[count]['sitesCount'];
+    await manageAgreePage.verifySites(siteData);
+});
+Then(/^verify rent roll report should be downloaded "([^"]*)"$/, {timeout: 5 * 50000}, async(exportExcel)=>{
+    let exportFile=floyd[exportExcel]['button'];
+    await manageAgreePage.clickExportFile(exportFile);
+    await manageAgreePage.verifyDownloadFilePdf();
+});
+Then(/^filter the rent roll report list "([^"]*)"$/, {timeout: 5 * 50000}, async(text)=>{
+    let filterData=floyd[text]['siteNumber'];
+    let filterColumn=floyd[text]['sitecolumn'];
+    let count=floyd[text]['count'];
+    await manageAgreePage.searchFilter(filterData,count,filterColumn);
+});
+Then(/^verify logo and rent roll present on page "([^"]*)"$/, {timeout: 5 * 50000}, async(reports)=> {
+    let txt=floyd[reports]['attributeData'];
+    await sitedetail.verifyAttributeOnLeasesTab(txt);
+    await report.verifyLogo();
+});
+Then(/^verify table header of rent roll report "([^"]*)"$/, {timeout: 5 * 50000}, async(tableHeader)=> {
+    let thData=floyd[tableHeader]['thReportHeader'];
+    await sitedetail.advanceSearchTableHeader(thData);
+});
+Then(/^verify that records should be displayed on rent roll report "([^"]*)"$/, {timeout: 5 * 50000}, async(count)=> {
+    let siteData = floyd[count]['recordCount'];
+    await manageAgreePage.verifySites(siteData);
+});
+Then(/^verify no parameter should be passed to generate rent roll report$/, {timeout: 5 * 50000}, async()=>{
+    await report.verifyReport();
+});
+Then(/^Enter start date on forecast report "([^"]*)"$/, {timeout: 5 * 50000}, async(date)=>{
+    let startDate=floyd[date]['startDate'];
+    await report.setStartDate(startDate);
+});
+Then(/^Enter end date on forecast report "([^"]*)"$/, {timeout: 5 * 50000}, async(date)=>{
+    let endDate=floyd[date]['endDate'];
+    await report.setEndDate(endDate);
+});
+Then(/^Click on generate report button "([^"]*)"$/, {timeout: 5 * 50000}, async(generateReport)=> {
+    let report=floyd[generateReport]['button'];
+    await manageAgreePage.clickExportFile(report);
+});
+Then(/^verify default start date on forecast report "([^"]*)"$/, {timeout: 5 * 50000}, async(text)=> {
+    let month=floyd[text]['monthStart'];
+    await report.defaultStartDate(month);
+});
+Then(/^verify default end date on forecast report "([^"]*)"$/, {timeout: 5 * 50000}, async(text)=> {
+    let month=floyd[text]['monthEnd'];
+    await report.defaultEndDate(month);
+});

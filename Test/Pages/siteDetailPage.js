@@ -103,13 +103,11 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.verifySiteNumber = function (value) {
         return __awaiter(this, void 0, void 0, function () {
-            var siteNumber, title;
+            var title;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        siteNumber = cred[value]['siteNumber'];
-                        console.log(siteNumber);
-                        title = protractor_1.element(protractor_1.by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + siteNumber + '")]'));
+                        title = protractor_1.element(protractor_1.by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + value + '")]'));
                         // await browser.wait(until.presenceOf(title), 15000, 'Element taking too long to appear in the DOM');
                         return [4 /*yield*/, title.getText().then(function (text) {
                                 return __awaiter(this, void 0, void 0, function () {
@@ -120,7 +118,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                                                 sp = text.split(" ");
                                                 req = sp[0];
                                                 console.log(req);
-                                                return [4 /*yield*/, expect(siteNumber).to.equals(req)];
+                                                return [4 /*yield*/, expect(value).to.equals(req)];
                                             case 1:
                                                 _a.sent();
                                                 return [2 /*return*/];
@@ -136,15 +134,33 @@ var siteDetailPage = /** @class */ (function (_super) {
             });
         });
     };
-    siteDetailPage.prototype.verifyName = function (value) {
+    siteDetailPage.prototype.verifyName = function (value, number) {
         return __awaiter(this, void 0, void 0, function () {
-            var site, title;
+            var title;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        site = cred[value]['siteName'];
-                        title = protractor_1.element(protractor_1.by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + site + '")]'));
-                        return [4 /*yield*/, expect(title.getText()).to.eventually.contain(site)];
+                        title = protractor_1.element(protractor_1.by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + value + '")]'));
+                        return [4 /*yield*/, title.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var sp, req, sp1, req1, name;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                sp = text.split("keyboard_arrow_up");
+                                                req = sp[0];
+                                                sp1 = req.split(number + ' ');
+                                                req1 = sp1[1];
+                                                name = req1.trim();
+                                                console.log(name);
+                                                return [4 /*yield*/, expect(value).to.equals(name)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -1122,17 +1138,15 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.optionsNotPresent = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var rowToRightClick, alert;
+            var alert;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        rowToRightClick = protractor_1.element(protractor_1.by.xpath('//span[@data-text="Blue"]'));
                         alert = protractor_1.element(protractor_1.by.xpath('//a[text()="Add or View Documents/Images"]'));
-                        return [4 /*yield*/, protractor_1.browser.actions().click(rowToRightClick, protractor_1.protractor.Button.RIGHT).perform()];
-                    case 1:
-                        _a.sent();
+                        //await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
                         return [4 /*yield*/, expect(alert.isPresent()).to.eventually.equal(false)];
-                    case 2:
+                    case 1:
+                        //await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -1472,6 +1486,9 @@ var siteDetailPage = /** @class */ (function (_super) {
                                 switch (_a.label) {
                                     case 0:
                                         headerData = protractor_1.element(protractor_1.by.xpath('//tr[@class="ng-star-inserted"]//th[' + i + ']'));
+                                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(headerData), 500000, 'Advance Search taking too long to appear in the DOM')];
+                                    case 1:
+                                        _a.sent();
                                         return [4 /*yield*/, headerData.getText().then(function (text) {
                                                 return __awaiter(this, void 0, void 0, function () {
                                                     return __generator(this, function (_a) {
@@ -1486,7 +1503,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                                                     });
                                                 });
                                             })];
-                                    case 1:
+                                    case 2:
                                         _a.sent();
                                         return [2 /*return*/];
                                 }
@@ -1604,7 +1621,9 @@ var siteDetailPage = /** @class */ (function (_super) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     return __generator(this, function (_a) {
                                         switch (_a.label) {
-                                            case 0: return [4 /*yield*/, expect(display).to.equal(text)];
+                                            case 0:
+                                                console.log(display);
+                                                return [4 /*yield*/, expect(display).to.equal(text)];
                                             case 1:
                                                 _a.sent();
                                                 return [2 /*return*/];

@@ -159,10 +159,13 @@ cucumber_1.Then(/^verify filter is enabled$/, { timeout: 5 * 50000 }, function (
         }
     });
 }); });
-cucumber_1.Then(/^verify that sites should be displayed "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^verify that sites should be displayed "([^"]*)"$/, { timeout: 5 * 50000 }, function (count) { return __awaiter(_this, void 0, void 0, function () {
+    var siteData;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, manageAgreePage.verifySites(text)];
+            case 0:
+                siteData = cred[count]['sitesCount'];
+                return [4 /*yield*/, manageAgreePage.verifySites(siteData)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -210,7 +213,7 @@ cucumber_1.Then(/^click on export to excel button "([^"]*)"$/, { timeout: 5 * 50
         switch (_a.label) {
             case 0:
                 exportFile = cred[exportExcel]['button'];
-                return [4 /*yield*/, manageAgreePage.clickEcportFile(exportFile)];
+                return [4 /*yield*/, manageAgreePage.clickExportFile(exportFile)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
