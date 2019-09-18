@@ -69,8 +69,9 @@ Then(/^verify rent roll report should be paginated "([^"]*)"$/, {timeout: 5 * 50
 });
 Then(/^verify rent roll report should be downloaded "([^"]*)"$/, {timeout: 5 * 50000}, async(exportExcel)=>{
     let exportFile=floyd[exportExcel]['button'];
+    let file= floyd[exportExcel]['fileName'];
     await manageAgreePage.clickExportFile(exportFile);
-    await manageAgreePage.verifyDownloadFilePdf();
+    await manageAgreePage.verifyDownloadFilePdf(file);
 });
 Then(/^filter the rent roll report list "([^"]*)"$/, {timeout: 5 * 50000}, async(text)=>{
     let filterData=floyd[text]['siteNumber'];
@@ -113,4 +114,15 @@ Then(/^verify default start date on forecast report "([^"]*)"$/, {timeout: 5 * 5
 Then(/^verify default end date on forecast report "([^"]*)"$/, {timeout: 5 * 50000}, async(text)=> {
     let month=floyd[text]['monthEnd'];
     await report.defaultEndDate(month);
+});
+Then(/^click start date from calendar on forecast report "([^"]*)"$/, {timeout: 5 * 50000}, async(startDate)=>  {
+    let startDateFromCalender=floyd[startDate]['startDateCalender'];
+    await report.selectStartDateFromCalender(startDateFromCalender);
+});
+Then(/^click end date from calendar on forecast report "([^"]*)"$/, {timeout: 5 * 50000}, async(endDate)=>  {
+    let endDateFromCalender=floyd[endDate]['endDateCalender'];
+    await report.selectEndDateFromCalender(endDateFromCalender);
+});
+Then(/^verify executed date report on my dashboard$/, {timeout: 5 * 50000}, async()=>{
+    await report.executedDateReport();
 });

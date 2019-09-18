@@ -69,7 +69,7 @@ Then(/^verify data present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, asyn
     let leaseData=map[leasesData]['tabData'];
     await maps.verifyLeasesTabData(leaseData);
 });
-Then(/^verify leases tab labels sholud be present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, async(leasesLabels)=>  {
+Then(/^verify leases tab labels should be present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, async(leasesLabels)=>  {
     let leaseData=map[leasesLabels]['thLeases'];
     await maps.verifyLeasesLabel(leaseData);
 });

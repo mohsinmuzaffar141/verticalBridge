@@ -15,7 +15,8 @@ let until = protractor.ExpectedConditions;
 
 export class reports extends BasePage {
 
-    date = element(by.xpath('//div[contains(text(),"Executed On")]'));
+    date = element(by.xpath('//b[contains(text(),"Executed At")]'));
+    reportDate=element(by.xpath('//div[contains(text(),"Executed On")]'));
     table = element(by.xpath('//div[text()=" Site Number "]'));
     logo = element(by.xpath('(//img[@id="Logo"])[2]'));
     startDate = element(by.xpath('//div[text()=" Start Date "]//following-sibling::div//span//input'));
@@ -28,6 +29,12 @@ export class reports extends BasePage {
             console.log(text);
         });
         await expect(this.date.isPresent()).to.eventually.equal(true);
+    }
+    async executedDateReport() {
+        await this.reportDate.getText().then(async function (text) {
+            console.log(text);
+        });
+        await expect(this.reportDate.isPresent()).to.eventually.equal(true);
     }
 
     async verifyActiveTenant(columnName: string, counter: string) {
@@ -98,5 +105,16 @@ export class reports extends BasePage {
                 });
             }
         });
+    }
+
+    async selectStartDateFromCalender(date:string){
+        await this.startDate.click();
+        let selectDate=element(by.xpath('//a[contains(text(),"'+date+'")]'));
+        await selectDate.click();
+    }
+    async selectEndDateFromCalender(date:string){
+        await this.endDate.click();
+        let selectDate=element(by.xpath('//a[contains(text(),"'+date+'")]'));
+        await selectDate.click();
     }
 }

@@ -61,7 +61,8 @@ var reports = /** @class */ (function (_super) {
     __extends(reports, _super);
     function reports() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.date = protractor_1.element(protractor_1.by.xpath('//div[contains(text(),"Executed On")]'));
+        _this.date = protractor_1.element(protractor_1.by.xpath('//b[contains(text(),"Executed At")]'));
+        _this.reportDate = protractor_1.element(protractor_1.by.xpath('//div[contains(text(),"Executed On")]'));
         _this.table = protractor_1.element(protractor_1.by.xpath('//div[text()=" Site Number "]'));
         _this.logo = protractor_1.element(protractor_1.by.xpath('(//img[@id="Logo"])[2]'));
         _this.startDate = protractor_1.element(protractor_1.by.xpath('//div[text()=" Start Date "]//following-sibling::div//span//input'));
@@ -84,6 +85,28 @@ var reports = /** @class */ (function (_super) {
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, expect(this.date.isPresent()).to.eventually.equal(true)];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.executedDateReport = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.reportDate.getText().then(function (text) {
+                            return __awaiter(this, void 0, void 0, function () {
+                                return __generator(this, function (_a) {
+                                    console.log(text);
+                                    return [2 /*return*/];
+                                });
+                            });
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, expect(this.reportDate.isPresent()).to.eventually.equal(true)];
                     case 2:
                         _a.sent();
                         return [2 /*return*/];
@@ -305,6 +328,40 @@ var reports = /** @class */ (function (_super) {
                                 });
                             })];
                     case 3:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.selectStartDateFromCalender = function (date) {
+        return __awaiter(this, void 0, void 0, function () {
+            var selectDate;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.startDate.click()];
+                    case 1:
+                        _a.sent();
+                        selectDate = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"' + date + '")]'));
+                        return [4 /*yield*/, selectDate.click()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    reports.prototype.selectEndDateFromCalender = function (date) {
+        return __awaiter(this, void 0, void 0, function () {
+            var selectDate;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.endDate.click()];
+                    case 1:
+                        _a.sent();
+                        selectDate = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"' + date + '")]'));
+                        return [4 /*yield*/, selectDate.click()];
+                    case 2:
                         _a.sent();
                         return [2 /*return*/];
                 }

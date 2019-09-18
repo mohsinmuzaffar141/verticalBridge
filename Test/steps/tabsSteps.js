@@ -221,7 +221,7 @@ cucumber_1.Then(/^verify data present on leases tab "([^"]*)"$/, { timeout: 5 * 
         }
     });
 }); });
-cucumber_1.Then(/^verify leases tab labels sholud be present on leases tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (leasesLabels) { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.Then(/^verify leases tab labels should be present on leases tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (leasesLabels) { return __awaiter(_this, void 0, void 0, function () {
     var leaseData;
     return __generator(this, function (_a) {
         switch (_a.label) {

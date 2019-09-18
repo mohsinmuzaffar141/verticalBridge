@@ -254,7 +254,7 @@ Feature: verify test cases of different tabs
     Then  click on my sites button
     Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
-    Then  verify leases tab labels sholud be present on leases tab "<tab>"
+    Then  verify leases tab labels should be present on leases tab "<tab>"
     When  I log out
 
     Examples:

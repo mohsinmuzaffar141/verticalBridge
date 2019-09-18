@@ -44,6 +44,7 @@ table:
   colName: tenantName
   sitesCount: '10'
   button:  Export to PDF
+  fileName: \\Rent Roll-Export.pdf
 
 filterReport:
   siteNumber: US-HI-1002
@@ -59,3 +60,64 @@ forecastReport:
   recordCount: '11'
   monthStart: January,2019
   monthEnd: December,2019
+  startDateCalender: 29
+  endDateCalender: 15
+  attributeData: Forecast Report
+  thReportHeader: Management Agreement Name,Site Number,Site Name,Site Start Date,Site Address,Relationship Name,Tenant Legal Name,Lease Number,Agreement Type,Renewal Type,Renewal Term,Number Of Renewals,Current Renewal Term,Auto Renewal Comment,Current Term End Date,Final Term Expiration Date,Lease Commecement Date,Lease Effective Date,Escalation Amount,Vertical Bridge Fee Percentage,Billing Frequency,Charge Type,1/1/2019,2/1/2019,3/1/2019,4/1/2019,5/1/2019,6/1/2019,7/1/2019,8/1/2019,9/1/2019,10/1/2019,11/1/2019,12/1/2019,Total Tenant Rent
+
+filterReportForecast:
+  siteNumber: SONESTA GWINNETT PLACE- DULUTH
+  count: 1
+  sitecolumn: siteName
+
+tableForecast:
+  count: 1
+  name: Site Address
+  colName: siteAddress
+  sitesCount: '11'
+  button:  Export to PDF
+  fileName: \\Forecast Report-Export.pdf
+
+newLeasesReport:
+  tab: My Dashboard
+  link: New Leases Report
+  recordCount: '10'
+  count: 1
+  siteNumber: 8569
+  attributeData: New Leases
+  thReportHeader: Site Number,Site Name,Lease Number,Tenant Name,Relationship Name,Pre-Existing Lease,Prior Tenant Rent,Current Tenant Rent,Management Agreement Name
+
+filterReportNewLeases:
+  siteNumber: T-Mobile South, LLC
+  count: 1
+  sitecolumn: tenantName
+
+tableNewLeases:
+  count: 1
+  name: Tenant Name
+  colName: tenantName
+  sitesCount: '10'
+  button:  Export to PDF
+  fileName: \\New Leases-Export.pdf
+
+leasingActivityReport:
+  tab: My Dashboard
+  link: Leasing Activity Report
+  recordCount: '41'
+  siteNumber: C-100994
+  count: 1
+  attributeData: Leasing Activity
+  thReportHeader: Management Agreement Name,Site Number,Site Name,Deal Number,Tenant Name,Tenant Relationship Name,Projected Rent,Deal Status,Inquiry Date,Application Received Date,Estimated Closure Date
+
+filterReportLeasingActivity:
+  siteNumber: C-101207
+  count: 1
+  sitecolumn: dealNumber
+
+tableLeasingActivity:
+  count: 1
+  name: Deal Number
+  colName: dealNumber
+  sitesCount: '41'
+  button:  Export to PDF
+  fileName: \\Leasing Activity-Export.pdf

@@ -202,15 +202,16 @@ cucumber_1.Then(/^verify rent roll report should be paginated "([^"]*)"$/, { tim
     });
 }); });
 cucumber_1.Then(/^verify rent roll report should be downloaded "([^"]*)"$/, { timeout: 5 * 50000 }, function (exportExcel) { return __awaiter(_this, void 0, void 0, function () {
-    var exportFile;
+    var exportFile, file;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 exportFile = floyd[exportExcel]['button'];
+                file = floyd[exportExcel]['fileName'];
                 return [4 /*yield*/, manageAgreePage.clickExportFile(exportFile)];
             case 1:
                 _a.sent();
-                return [4 /*yield*/, manageAgreePage.verifyDownloadFilePdf()];
+                return [4 /*yield*/, manageAgreePage.verifyDownloadFilePdf(file)];
             case 2:
                 _a.sent();
                 return [2 /*return*/];
@@ -343,6 +344,42 @@ cucumber_1.Then(/^verify default end date on forecast report "([^"]*)"$/, { time
             case 0:
                 month = floyd[text]['monthEnd'];
                 return [4 /*yield*/, report.defaultEndDate(month)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click start date from calendar on forecast report "([^"]*)"$/, { timeout: 5 * 50000 }, function (startDate) { return __awaiter(_this, void 0, void 0, function () {
+    var startDateFromCalender;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                startDateFromCalender = floyd[startDate]['startDateCalender'];
+                return [4 /*yield*/, report.selectStartDateFromCalender(startDateFromCalender)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click end date from calendar on forecast report "([^"]*)"$/, { timeout: 5 * 50000 }, function (endDate) { return __awaiter(_this, void 0, void 0, function () {
+    var endDateFromCalender;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                endDateFromCalender = floyd[endDate]['endDateCalender'];
+                return [4 /*yield*/, report.selectEndDateFromCalender(endDateFromCalender)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify executed date report on my dashboard$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, report.executedDateReport()];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

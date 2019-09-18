@@ -175,7 +175,10 @@ export class ManagementAgreementDataPage extends BasePage{
         await browser.sleep(35000);
         let verifySearch=element(by.xpath('(//tbody[@class="ui-table-tbody"])['+count+']'));
         await browser.wait(until.presenceOf(verifySearch), 5000000, 'Element taking too long to appear in the DOM');
-        await expect(verifySearch.getText()).to.eventually.contain(searchValue)
+        await verifySearch.getText().then(async function (text) {
+            console.log(text);
+            await expect(text).to.contain(searchValue);
+        });
 
     }
     async searchFilter(searchValue:string,count:string,column:string){
@@ -259,9 +262,9 @@ export class ManagementAgreementDataPage extends BasePage{
         }
     }
 
-    async verifyDownloadFilePdf(){
+    async verifyDownloadFilePdf(file:string){
         let downloadsFolder = require('downloads-folder');
-        let filepath = downloadsFolder() + '\\Rent Roll-Export.pdf';
+        let filepath = downloadsFolder() + file;
         await expect(fs.existsSync(filepath)).to.be.true;
         if(fs.existsSync(filepath)) {
             await fs.unlinkSync(filepath);

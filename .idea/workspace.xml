@@ -9,29 +9,16 @@
       <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/mySites.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/mySites.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/siteGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/siteGeneral.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/mySitesSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteDetailSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/map.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/map.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
@@ -112,7 +99,11 @@
       <workItem from="1568179062229" duration="14848000" />
       <workItem from="1568262587796" duration="15043000" />
       <workItem from="1568348300155" duration="21441000" />
-      <workItem from="1568608111561" duration="23567000" />
+      <workItem from="1568608111561" duration="30907000" />
+      <workItem from="1568695708675" duration="22166000" />
+      <workItem from="1568749658926" duration="415000" />
+      <workItem from="1568781512563" duration="819000" />
+      <workItem from="1568782663916" duration="3697000" />
     </task>
     <servers />
   </component>

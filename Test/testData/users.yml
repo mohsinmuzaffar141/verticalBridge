@@ -111,6 +111,20 @@ report:
 leasesNumberReport:
   siteNumber: 10295
 
+reportForecast:
+  siteNumber: 'US-GA-1058'
+  siteName: SONESTA GWINNETT PLACE- DULUTH
 
+leasesNumberForecastReport:
+  siteNumber: 7727
 
+reportNewLeases:
+  siteNumber: 'US-FL-1111'
+  siteName: The Forum at Deer Creek
 
+leasesNumberNewLeasesReport:
+  siteNumber: 9790
+
+reportLeasingActivity:
+  siteNumber: 'US-MD-1049'
+  siteName: Five Star Premier Residences of Chevy Chase

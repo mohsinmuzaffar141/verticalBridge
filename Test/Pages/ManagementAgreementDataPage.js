@@ -511,7 +511,20 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                         return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(verifySearch), 5000000, 'Element taking too long to appear in the DOM')];
                     case 5:
                         _a.sent();
-                        return [4 /*yield*/, expect(verifySearch.getText()).to.eventually.contain(searchValue)];
+                        return [4 /*yield*/, verifySearch.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                console.log(text);
+                                                return [4 /*yield*/, expect(text).to.contain(searchValue)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
                     case 6:
                         _a.sent();
                         return [2 /*return*/];
@@ -762,14 +775,14 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    ManagementAgreementDataPage.prototype.verifyDownloadFilePdf = function () {
+    ManagementAgreementDataPage.prototype.verifyDownloadFilePdf = function (file) {
         return __awaiter(this, void 0, void 0, function () {
             var downloadsFolder, filepath;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         downloadsFolder = require('downloads-folder');
-                        filepath = downloadsFolder() + '\\Rent Roll-Export.pdf';
+                        filepath = downloadsFolder() + file;
                         return [4 /*yield*/, expect(fs.existsSync(filepath)).to.be.true];
                     case 1:
                         _a.sent();

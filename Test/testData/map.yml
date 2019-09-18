@@ -164,3 +164,11 @@ contactHomePageTab:
 leasesNumberReport:
   attributeData: Tenant Leases,Ground Rights
   tabData: Gross Montly Rent,BBE
+
+leasesNumberForecastReport:
+  attributeData: Tenant Leases,Ground Rights
+  tabData: Gross Montly Rent,BBE
+
+leasesNumberNewLeasesReport:
+  attributeData: Tenant Leases,Ground Rights
+  tabData: Gross Montly Rent,BBE

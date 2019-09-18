@@ -195,7 +195,7 @@ Feature: verify test cases of reports
       |   admin      |     relation   |    rentRollReport   |   table   |
 
   @downloadRentRollReport
-  Scenario Outline: verify rent roll report should be paginated
+  Scenario Outline: verify rent roll report should be downloaded
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
@@ -277,7 +277,7 @@ Feature: verify test cases of reports
       |   admin      |     relation   |    rentRollReport   |  leasesNumberReport  |
 
   @verifyAttributesAgainstRentRollReport
-  Scenario Outline: verify leases number on rent roll report
+  Scenario Outline: verify attributes on rent roll report
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
@@ -289,7 +289,7 @@ Feature: verify test cases of reports
     Then  click management agreement on my dashboard "<report>"
     Then  verify no parameter should be passed to generate rent roll report
     Then  verify relationship should be present on the top "<relationships>"
-    Then  verify executed date on my dashboard
+    Then  verify executed date report on my dashboard
     Then  verify logo and rent roll present on page "<report>"
     When  I log out
 
@@ -360,7 +360,7 @@ Feature: verify test cases of reports
     #ForeCast Report
   #32&38&39
   @generateForecastReport
-  Scenario Outline: verify footer on rent roll report
+  Scenario Outline: generate forecast report
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
@@ -418,7 +418,7 @@ Feature: verify test cases of reports
       |   admin      |     relation   |    forecastReport   |
 
   @enterStartDateToRetrieveForecastReport
-  Scenario Outline: verify footer on rent roll report
+  Scenario Outline: enter start date to retrieve forecast report
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
@@ -438,7 +438,7 @@ Feature: verify test cases of reports
       |   admin      |     relation   |    forecastReport   |
 
   @enterEndDateToRetrieveForecastReport
-  Scenario Outline: verify footer on rent roll report
+  Scenario Outline: enter end date to retrieve forecast report
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
@@ -456,3 +456,585 @@ Feature: verify test cases of reports
     Examples:
       | credentials  |  relationships |        report       |
       |   admin      |     relation   |    forecastReport   |
+
+  @enterStartAndEndDateFromCalendarOnForecastReport
+  Scenario Outline: verify footer on rent roll report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  click start date from calendar on forecast report "<report>"
+    Then  click end date from calendar on forecast report "<report>"
+    Then  Click on generate report button "<report>"
+    Then  verify that records should be displayed on rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |
+      |   admin      |     relation   |    forecastReport   |
+
+  @verifyFilterAgainstForecastReport
+  Scenario Outline: verify filter against forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on filter on/off tab
+    Then  filter the rent roll report list "<searchFilter>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |        searchFilter      |
+      |   admin      |     relation   |    forecastReport   |   filterReportForecast  |
+
+  @verifyAscendingDescendingAgainstForecastReport
+  Scenario Outline: verify ascending & descending against forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify ascending and descending order of reports "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |        order       |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   |
+
+  @verifyForecastReportPaginated
+  Scenario Outline: verify forecast report should be paginated
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify rent roll report should be paginated "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |        order       |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   |
+
+  @downloadForecastReport
+  Scenario Outline: verify forecast report should be downloaded
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify rent roll report should be downloaded "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |        order      |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   |
+
+  @clickSiteNumberOnForecastReport
+  Scenario Outline: click site number on forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on site link "<site>"
+    Then  verify site number on detail page "<site>"
+    Then  verify site Name on detail page "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |       site        |
+      |   admin      |     relation   |    forecastReport   |  reportForecast  |
+
+  @verifyLeasesTabLinkOnForecastReport
+  Scenario Outline: verify leases number on forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on site link "<site>"
+    Then  verify leases tab attribute should be present "<site>"
+    Then  verify data present on leases tab "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |             site              |
+      |   admin      |     relation   |    forecastReport   |  leasesNumberForecastReport  |
+
+  @verifyAttributesAgainstForecastReport
+  Scenario Outline: verify attributes on forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify relationship should be present on the top "<relationships>"
+    Then  verify executed date report on my dashboard
+    Then  verify logo and rent roll present on page "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |
+      |   admin      |     relation   |    forecastReport   |
+
+
+  @verifyColumnAgainstForecastReport
+  Scenario Outline: verify column and fields against forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify table header of rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |
+      |   admin      |     relation   |    forecastReport   |
+
+
+
+  @verifyFooterOnForecastReport
+  Scenario Outline: verify footer on forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify that records should be displayed on rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |
+      |   admin      |     relation   |    forecastReport   |
+
+    #New Leases Report
+  #56&57&62
+  @generateNewLeasesReport
+  Scenario Outline: generate new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify that records should be displayed on rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report        |
+      |   admin      |     relation   |    newLeasesReport   |
+
+  @verifyFilterAgainstNewLeasesReport
+  Scenario Outline: verify filter against new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on filter on/off tab
+    Then  filter the rent roll report list "<searchFilter>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report        |         searchFilter     |
+      |   admin      |     relation   |    newLeasesReport   |   filterReportNewLeases  |
+
+  @verifyAscendingDescendingAgainstNewLeasesReport
+  Scenario Outline: verify ascending & descending against new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify ascending and descending order of reports "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report        |        order        |
+      |   admin      |     relation   |    newLeasesReport   |    tableNewLeases   |
+
+  @downloadNewLeasesReport
+  Scenario Outline: verify new leases report should be downloaded
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify rent roll report should be downloaded "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report        |         order      |
+      |   admin      |     relation   |    newLeasesReport   |   tableNewLeases   |
+
+  @clickSiteNumberOnNewLeasesReport
+  Scenario Outline: click site number on New leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on site link "<site>"
+    Then  verify site number on detail page "<site>"
+    Then  verify site Name on detail page "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report        |       site        |
+      |   admin      |     relation   |    newLeasesReport   |  reportNewLeases  |
+
+  @verifyLeasesTabLinkOnNewLeasesReport
+  Scenario Outline: verify leases number on new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on site link "<site>"
+    Then  verify leases tab attribute should be present "<site>"
+    Then  verify data present on leases tab "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report        |             site              |
+      |   admin      |     relation   |    newLeasesReport   |  leasesNumberNewLeasesReport  |
+
+  @verifyAttributesAgainstNewLeasesReport
+  Scenario Outline: verify attributes on new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify relationship should be present on the top "<relationships>"
+    Then  verify executed date report on my dashboard
+    Then  verify logo and rent roll present on page "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |         report       |
+      |   admin      |     relation   |    newLeasesReport   |
+#
+
+  @verifyColumnAgainstNewLeasesReport
+  Scenario Outline: verify column and fields against new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify table header of rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |
+      |   admin      |     relation   |    newLeasesReport   |
+
+  @verifyFooterOnNewLeasesReport
+  Scenario Outline: verify footer on new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify that records should be displayed on rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report        |
+      |   admin      |     relation   |    newLeasesReport   |
+
+  @verifySearchAgainstNewLeasesReport
+  Scenario Outline: verify search against new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  search the rent roll report list "<report>"
+    When  I log out
+
+
+    Examples:
+      | credentials  |  relationships |        report         |
+      |   admin      |     relation   |    newLeasesReport   |
+
+     #LeasingActivityReport
+  #72&73&78
+  @generateLeasingActivityReport
+  Scenario Outline: generate leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify that records should be displayed on rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |            report           |
+      |   admin      |     relation   |    leasingActivityReport   |
+
+  @verifyFilterAgainstLeasingActivityReport
+  Scenario Outline: verify filter against leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on filter on/off tab
+    Then  filter the rent roll report list "<searchFilter>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |            report          |           searchFilter         |
+      |   admin      |     relation   |    leasingActivityReport   |   filterReportLeasingActivity  |
+
+  @verifyAscendingDescendingAgainstLeasingActivityReport
+  Scenario Outline: verify ascending & descending against leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify ascending and descending order of reports "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |            report          |             order         |
+      |   admin      |     relation   |    leasingActivityReport   |    tableLeasingActivity   |
+
+  @downloadLeasingActivityReport
+  Scenario Outline: verify leasing activity report should be downloaded
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify rent roll report should be downloaded "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |             report         |           order          |
+      |   admin      |     relation   |    leasingActivityReport   |   tableLeasingActivity   |
+
+  @clickSiteNumberOnLeasingActivityReport
+  Scenario Outline: click site number on leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on site link "<site>"
+    Then  verify site number on detail page "<site>"
+    Then  verify site Name on detail page "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |           report           |            site         |
+      |   admin      |     relation   |    leasingActivityReport   |  reportLeasingActivity  |
+
+  @verifyAttributesAgainstLeasingActivityReport
+  Scenario Outline: verify attributes on leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify relationship should be present on the top "<relationships>"
+    Then  verify executed date report on my dashboard
+    Then  verify logo and rent roll present on page "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |             report         |
+      |   admin      |     relation   |    leasingActivityReport   |
+
+
+  @verifyColumnAgainstLeasingActivityReport
+  Scenario Outline: verify column and fields against leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify table header of rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |            report          |
+      |   admin      |     relation   |    leasingActivityReport   |
+
+  @verifyFooterOnLeasingActivityReport
+  Scenario Outline: verify footer on leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify that records should be displayed on rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |           report           |
+      |   admin      |     relation   |    leasingActivityReport   |
+
+
+  @verifySearchAgainstLeasingActivityReport
+  Scenario Outline: verify search against leasing activity report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  search the rent roll report list "<report>"
+    When  I log out
+
+
+    Examples:
+      | credentials  |  relationships |             report         |
+      |   admin      |     relation   |    leasingActivityReport   |
