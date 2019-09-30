@@ -45,6 +45,7 @@ var reportsPage_1 = require("../Pages/reportsPage");
 var yaml = require('js-yaml');
 var fs = require('fs');
 var floyd = yaml.safeLoad(fs.readFileSync('./Test/testData/floydSite.yml', 'utf8'));
+var site = yaml.safeLoad(fs.readFileSync('./Test/testData/siteGeneral.yml', 'utf8'));
 var manageAgreePage = new ManagementAgreementDataPage_1.ManagementAgreementDataPage();
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
@@ -381,6 +382,338 @@ cucumber_1.Then(/^verify executed date report on my dashboard$/, { timeout: 5 * 
         switch (_a.label) {
             case 0: return [4 /*yield*/, report.executedDateReport()];
             case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click on hide column "([^"]*)"$/, { timeout: 5 * 50000 }, function (hideColumn) { return __awaiter(_this, void 0, void 0, function () {
+    var hide;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                hide = floyd[hideColumn]['button'];
+                return [4 /*yield*/, manageAgreePage.clickExportFile(hide)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^selected column should be hidden "([^"]*)"$/, { timeout: 5 * 50000 }, function (columnName) { return __awaiter(_this, void 0, void 0, function () {
+    var name;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                name = floyd[columnName]['colName'];
+                return [4 /*yield*/, report.hideColumn(name)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify that selected column should be unhidden "([^"]*)"$/, { timeout: 5 * 50000 }, function (columnName) { return __awaiter(_this, void 0, void 0, function () {
+    var name;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                name = floyd[columnName]['colName'];
+                return [4 /*yield*/, report.unHideColumn(name)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify the scroll should move$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, report.scrollMovement()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify group hierarchy on forecast report "([^"]*)"$/, { timeout: 5 * 50000 }, function (columnName) { return __awaiter(_this, void 0, void 0, function () {
+    var colName, count, siteNumber, leaseNumber;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                colName = floyd[columnName]['colName'];
+                count = floyd[columnName]['count'];
+                siteNumber = floyd[columnName]['siteNumber'];
+                leaseNumber = floyd[columnName]['leaseNumber'];
+                return [4 /*yield*/, report.verifyManagementAgreementForecast(colName, count)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.verifyLink(siteNumber)];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.verifyLink(leaseNumber)];
+            case 3:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify group hierarchy on new leases report "([^"]*)"$/, { timeout: 5 * 50000 }, function (columnName) { return __awaiter(_this, void 0, void 0, function () {
+    var siteNumber, leaseNumber;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                siteNumber = floyd[columnName]['siteNumber'];
+                leaseNumber = floyd[columnName]['leaseNumber'];
+                return [4 /*yield*/, sitedetail.verifyLink(siteNumber)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, sitedetail.verifyLink(leaseNumber)];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data of rent roll report against partner portal "([^"]*)"$/, { timeout: 5 * 50000 }, function (data) { return __awaiter(_this, void 0, void 0, function () {
+    var colName, value;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                colName = floyd[data]['columnName'];
+                value = floyd[data]['value'];
+                return [4 /*yield*/, floydSite.getPartnerPortalData(colName, value)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data of rent roll report against floyd site "([^"]*)"$/, { timeout: 5 * 50000 }, function (data) { return __awaiter(_this, void 0, void 0, function () {
+    var colName, value, siteNumber, siteName, number;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                colName = floyd[data]['columnName'];
+                value = floyd[data]['value'];
+                siteNumber = floyd[data]['siteNumber'];
+                siteName = floyd[data]['siteName'];
+                number = floyd[data]['number'];
+                return [4 /*yield*/, floydSite.clickOnTab()];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, floydSite.verifySiteNameFloyd(siteNumber, siteName, number)];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, floydSite.getFloydSiteData(value)];
+            case 3:
+                _a.sent();
+                return [4 /*yield*/, floydSite.verifyDataOfBothSides()];
+            case 4:
+                _a.sent();
+                return [4 /*yield*/, floydSite.deleteArray()];
+            case 5:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^search the values in floyd site "([^"]*)"$/, { timeout: 5 * 50000 }, function (floydData) { return __awaiter(_this, void 0, void 0, function () {
+    var siteNumber;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                siteNumber = floyd[floydData]['siteNumber'];
+                return [4 /*yield*/, floydSite.sendValuesToFloyd(siteNumber)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^I click on floyd stage "([^"]*)"$/, { timeout: 5 * 50000 }, function (floydStage) { return __awaiter(_this, void 0, void 0, function () {
+    var floydLink;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                floydLink = floyd[floydStage]['floydStage'];
+                return [4 /*yield*/, sitedetail.selectSite(floydLink)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data on partner portal site "([^"]*)"$/, { timeout: 5 * 50000 }, function (partnerPortal) { return __awaiter(_this, void 0, void 0, function () {
+    var partnerData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                partnerData = floyd[partnerPortal]['labels'];
+                return [4 /*yield*/, floydSite.partnerPortalSiteData(partnerData)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify data on floyd site "([^"]*)"$/, { timeout: 5 * 50000 }, function (floydSiteData) { return __awaiter(_this, void 0, void 0, function () {
+    var floydData;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                floydData = floyd[floydSiteData]['labelsFloyd'];
+                return [4 /*yield*/, floydSite.floydSiteData(floydData)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, floydSite.verifyDataOfBothSides()];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, floydSite.deleteArray()];
+            case 3:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels on partner portal site "([^"]*)"$/, { timeout: 5 * 50000 }, function (labelsPartnerPortal) { return __awaiter(_this, void 0, void 0, function () {
+    var partnerLabels;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                partnerLabels = floyd[labelsPartnerPortal]['labelsPartner'];
+                return [4 /*yield*/, floydSite.partnerPortalSiteData(partnerLabels)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify labels on floyd site "([^"]*)"$/, { timeout: 5 * 50000 }, function (labelsFloyd) { return __awaiter(_this, void 0, void 0, function () {
+    var floydLabels;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                floydLabels = floyd[labelsFloyd]['labelsFloyd'];
+                return [4 /*yield*/, floydSite.floydSiteLabels(floydLabels)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click "([^"]*)" on floyd site$/, { timeout: 5 * 50000 }, function (tabs) { return __awaiter(_this, void 0, void 0, function () {
+    var floydTabs;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                floydTabs = floyd[tabs]['tab'];
+                return [4 /*yield*/, sitedetail.verifyLabelsUnderAdvanceSearch(floydTabs)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify label on floyd site "([^"]*)"$/, { timeout: 5 * 50000 }, function (labelsFloyd) { return __awaiter(_this, void 0, void 0, function () {
+    var floydLabels;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                floydLabels = floyd[labelsFloyd]['labelsFloyd'];
+                return [4 /*yield*/, floydSite.floydSiteData(floydLabels)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify documents on partner portal site "([^"]*)"$/, { timeout: 5 * 50000 }, function (documentPartnerPortal) { return __awaiter(_this, void 0, void 0, function () {
+    var partnerDocuments;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                partnerDocuments = floyd[documentPartnerPortal]['labelsPartner'];
+                return [4 /*yield*/, floydSite.partnerSiteDocument(partnerDocuments)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click on document on site detail page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, floydSite.clickDocumentPartner()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify documents on floyd site "([^"]*)"$/, { timeout: 5 * 50000 }, function (documentFloyd) { return __awaiter(_this, void 0, void 0, function () {
+    var floydDocuments;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                floydDocuments = floyd[documentFloyd]['labelsFloyd'];
+                return [4 /*yield*/, floydSite.partnerSiteDocument(floydDocuments)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^click on document on floyd site detail page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, floydSite.clickDocumentFloyd()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify header against rent roll report "([^"]*)"$/, { timeout: 5 * 50000 }, function (reportHeader) { return __awaiter(_this, void 0, void 0, function () {
+    var header;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                header = floyd[reportHeader]['thReportHeader'];
+                return [4 /*yield*/, sitedetail.verifyDataUnderPropertyInformation(header)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify active sites against rent roll report "([^"]*)"$/, { timeout: 5 * 50000 }, function (activeSites) { return __awaiter(_this, void 0, void 0, function () {
+    var count;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                count = floyd[activeSites]['siteCount'];
+                return [4 /*yield*/, floydSite.verifySitesAgainstRentRollReport(count)];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^verify sites against rent roll report "([^"]*)"$/, { timeout: 5 * 50000 }, function (sites) { return __awaiter(_this, void 0, void 0, function () {
+    var count;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                count = floyd[sites]['siteCount'];
+                return [4 /*yield*/, floydSite.verifySitesRentRollReport(count)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, floydSite.verifyDataOfBothSides()];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, floydSite.deleteArray()];
+            case 3:
                 _a.sent();
                 return [2 /*return*/];
         }

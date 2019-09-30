@@ -136,12 +136,6 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    // async validateRelation(name:string) {
-    //     let path = element(by.xpath('//h1[text()="'+name+'"]'));
-    //     await path.getText().then(async function(text){
-    //         await expect(text).to.equal(name);
-    //     });
-    //}
     ManagementAgreementDataPage.prototype.clickMySites = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
@@ -160,19 +154,18 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    ManagementAgreementDataPage.prototype.verifyAgreementData = function (value) {
+    ManagementAgreementDataPage.prototype.verifyAgreementData = function (value, colName) {
         return __awaiter(this, void 0, void 0, function () {
-            var agreementData, managementAgreement;
+            var managementAgreement;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        agreementData = cred[value]['managementData'];
-                        managementAgreement = protractor_1.element(protractor_1.by.xpath('//div[@class="col-portfolioName ng-star-inserted" and contains(text(),"' + agreementData + '")]'));
-                        return [4 /*yield*/, managementAgreement.getText().then(function (value) {
+                        managementAgreement = protractor_1.element(protractor_1.by.xpath('//div[@class="' + colName + ' ng-star-inserted" and contains(text(),"' + value + '")]'));
+                        return [4 /*yield*/, managementAgreement.getText().then(function (text) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     return __generator(this, function (_a) {
                                         switch (_a.label) {
-                                            case 0: return [4 /*yield*/, expect(value).to.equals(agreementData)];
+                                            case 0: return [4 /*yield*/, expect(text).to.equals(value)];
                                             case 1:
                                                 _a.sent();
                                                 return [2 /*return*/];

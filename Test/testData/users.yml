@@ -12,6 +12,7 @@ relation:
   sitesCount: '1113'
   colName: ownerName
   count: 1
+  columnName: col-portfolioName
 
 contactData:
   name:  Duesenberg Investment
@@ -128,3 +129,7 @@ leasesNumberNewLeasesReport:
 reportLeasingActivity:
   siteNumber: 'US-MD-1049'
   siteName: Five Star Premier Residences of Chevy Chase
+
+dataValidation:
+  name: American Tower
+  siteNumber: 'US-ID-5021'

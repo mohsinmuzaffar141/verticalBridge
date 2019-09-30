@@ -6,21 +6,29 @@
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/reportsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/reportsPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/siteGeneralSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/map.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/map.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
@@ -53,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ts.external.directory.path" value="E:\verticalBridge\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
@@ -103,7 +111,15 @@
       <workItem from="1568695708675" duration="22166000" />
       <workItem from="1568749658926" duration="415000" />
       <workItem from="1568781512563" duration="819000" />
-      <workItem from="1568782663916" duration="3697000" />
+      <workItem from="1568782663916" duration="22510000" />
+      <workItem from="1568867052014" duration="21959000" />
+      <workItem from="1568973153894" duration="11749000" />
+      <workItem from="1569212403056" duration="14969000" />
+      <workItem from="1569302673988" duration="13693000" />
+      <workItem from="1569384796983" duration="677000" />
+      <workItem from="1569412923763" duration="1248000" />
+      <workItem from="1569481969538" duration="18300000" />
+      <workItem from="1569824814612" duration="22373000" />
     </task>
     <servers />
   </component>
@@ -114,21 +130,17 @@
         <option value="$PROJECT_DIR$/Test/reporting/CucumberReportExtension.js.map" />
         <option value="$PROJECT_DIR$/Test/reporting/CucumberReportExtension.js" />
         <option value="$PROJECT_DIR$/Test/hooks/reporter.js" />
-        <option value="$PROJECT_DIR$/config.js.map" />
         <option value="$PROJECT_DIR$/Test/hooks/hooks.js" />
         <option value="$PROJECT_DIR$/Test/hooks/ScenarioHooks.js" />
         <option value="$PROJECT_DIR$/Test/hooks/reporter.js.map" />
         <option value="$PROJECT_DIR$/Test/hooks/ScenarioHooks.js.map" />
         <option value="$PROJECT_DIR$/Test/hooks/hooks.js.map" />
         <option value="$PROJECT_DIR$/Test/steps/mySitesSteps.js.map" />
-        <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/Test/steps/mySitesSteps.js" />
         <option value="$PROJECT_DIR$/Test/steps/siteDetailSteps.js.map" />
         <option value="$PROJECT_DIR$/Test/steps/siteDetailSteps.js" />
         <option value="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" />
         <option value="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" />
-        <option value="$PROJECT_DIR$/Test/steps/mapSteps.js" />
-        <option value="$PROJECT_DIR$/Test/steps/mapSteps.js.map" />
         <option value="$PROJECT_DIR$/Test/Pages/BasePage.js" />
         <option value="$PROJECT_DIR$/Test/Pages/BasePage.js.map" />
         <option value="$PROJECT_DIR$/Test/Pages/LoginPage.js" />
@@ -137,8 +149,6 @@
         <option value="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" />
         <option value="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" />
         <option value="$PROJECT_DIR$/Test/steps/LoginSteps.js" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
         <option value="$PROJECT_DIR$/Test/Pages/reportsPage.js" />
         <option value="$PROJECT_DIR$/Test/Pages/floydSitePage.js" />
         <option value="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" />
@@ -151,14 +161,8 @@
         <option value="$PROJECT_DIR$/Test/steps/siteGeneralSteps.js" />
         <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
         <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" />
-        <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
+        <option value="$PROJECT_DIR$/config.js.map" />
+        <option value="$PROJECT_DIR$/config.js" />
       </list>
     </option>
   </component>

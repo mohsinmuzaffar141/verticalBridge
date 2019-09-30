@@ -57,7 +57,8 @@ Then(/^click on advance search$/, {timeout: 5 * 50000}, async()=> {
 });
 Then(/^verify labels of advance search "([^"]*)"$/, {timeout: 5 * 50000}, async(label)=>{
     let txt1=site[label]['advanceLabel'];
-    await sitedetail.verifyLabelsUderAdvanceSearch(label);
+    let txt=site[label]['advanceLabelHeader'];
+    await sitedetail.verifyLabelsUnderAdvanceSearch(txt);
     await sitedetail.verifyDataUnderPropertyInformation(txt1);
 });
 Then(/^verify advance search should have refinement criteria "([^"]*)"$/, {timeout: 5 * 50000}, async(searchCriteria)=>{

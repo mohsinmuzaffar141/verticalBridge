@@ -30,7 +30,9 @@ Then(/^click on my sites button$/, {timeout: 5 * 50000}, async() => {
     await manageAgreePage.clickMySites();
 });
 Then(/^verify management agreement data "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
-    await manageAgreePage.verifyAgreementData(text);
+    let agreementData = cred[text]['managementData'];
+    let colName = cred[text]['columnName'];
+    await manageAgreePage.verifyAgreementData(agreementData,colName);
     await manageAgreePage.verifyOwnerName(text);
     await manageAgreePage.verifyNoOfSites(text);
     await manageAgreePage.verifyRevenue(text);

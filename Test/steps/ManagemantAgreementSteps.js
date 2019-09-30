@@ -87,9 +87,13 @@ cucumber_1.Then(/^click on my sites button$/, { timeout: 5 * 50000 }, function (
     });
 }); });
 cucumber_1.Then(/^verify management agreement data "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    var agreementData, colName;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, manageAgreePage.verifyAgreementData(text)];
+            case 0:
+                agreementData = cred[text]['managementData'];
+                colName = cred[text]['columnName'];
+                return [4 /*yield*/, manageAgreePage.verifyAgreementData(agreementData, colName)];
             case 1:
                 _a.sent();
                 return [4 /*yield*/, manageAgreePage.verifyOwnerName(text)];

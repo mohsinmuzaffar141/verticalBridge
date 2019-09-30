@@ -1,5 +1,48 @@
 Feature: verify test cases of reports
 
+  @verifyScrollMoveOnForecastReport
+  Scenario Outline: verify scroll horizontally on forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify the scroll should move
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |           report          |
+      |   admin      |     relation   |    filterReportForecast   |
+
+  #  @verifyActiveTenantUnderRentRollReport
+  Scenario Outline: verify active tenant should be present under report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify active tenant should be present under rent roll report "<report>"
+    When  I log out
+
+
+    Examples:
+      | credentials  |  relationships |             report         |
+      |   admin      |     relation   |        rentRollReport      |
+      |   admin      |     relation   |       rentRollReport1      |
+      |   admin      |     relation   |       newLeasesReport      |
+      |   admin      |     relation   |       reportForecast       |
+      |   admin      |     relation   |    leasingActivityReport   |
+
+
   @verifyReports
   Scenario Outline: verify reports on my dashboard
 
@@ -117,24 +160,6 @@ Feature: verify test cases of reports
 
 
     #Rent Roll Report
-#  @verifyActiveTenantUnderRentRollReport
-#  Scenario Outline: verify active tenant should be present under rent roll report
-#
-#    Given I am on vertical bridge Page
-#    When  Login to vertical bridge with "<credentials>"
-#    When  Click checkbox button
-#    When  I click to the select partner view button
-#    When  selects the "<relationships>"
-#    Then  click the select button
-#    Then  I click on my dashboard "<report>"
-#    Then  click management agreement on my dashboard "<report>"
-#    Then  verify active tenant should be present under rent roll report "<report>"
-#    When  I log out
-#
-#
-#    Examples:
-#      | credentials  |  relationships |        report       |
-#      |   admin      |     relation   |    rentRollReport   |
 
   @verifySearchAgainstRentRollReport
   Scenario Outline: verify search against rent roll report
@@ -317,6 +342,26 @@ Feature: verify test cases of reports
       | credentials  |  relationships |        report       |
       |   admin      |     relation   |    rentRollReport   |
 
+  @verifyHeaderAgainstRentRollReport
+  Scenario Outline: verify header against rent roll report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify header against rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |
+      |   admin      |     relation   |    rentRollReport1   |
+
+
   @verifyFooterOnRentRollReport
   Scenario Outline: verify footer on rent roll report
 
@@ -356,6 +401,60 @@ Feature: verify test cases of reports
       | credentials  |  relationships |        report       |
       |   admin      |     relation   |    rentRollReport   |
 
+  @verifyDataOfRentRollReportAgainstFloydSite
+  Scenario Outline: verify data of rent roll report against floyd site
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify data of rent roll report against partner portal "<partnerPortal>"
+    When  I log out
+    Given I am on floyd Page
+    Then  search the values in floyd site "<site>"
+    Then  verify data of rent roll report against floyd site "<floydSite>"
+    Then  I click on floyd stage "<floydSite>"
+    When  Click on additional features link "<site>"
+    When  Click on add a portfolio "<site>"
+    When  Login to vertical bridge with "<credentials>"
+    When  I log out from floyd site
+
+    Examples:
+      | credentials  |  relationships |        report         |       partnerPortal        |         site        |        floydSite        |
+      |   admin      |     relation   |    rentRollReport   |      partnerPortalValue     |      floydSite      |       floydSiteValue    |
+
+  @verifyActiveSitesAgainstRentRollReport
+  Scenario Outline: verify active sites against rent roll report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  verify active sites against rent roll report "<report>"
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<site>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify sites against rent roll report "<site>"
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify that records should be displayed on rent roll report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |              report         |           site        |
+      |   admin      |     relation   |         rentRollReport     |    rentRollReportSites |
+      |   admin      |     relation   |        forecastReport      |    rentRollReportSites |
+      |   admin      |     relation   |       newLeasesReport      |    rentRollReportSites  |
+      |   admin      |     relation   |    leasingActivityReport   |    rentRollReportSites |
 
     #ForeCast Report
   #32&38&39
@@ -379,6 +478,25 @@ Feature: verify test cases of reports
     Examples:
       | credentials  |  relationships |        report       |
       |   admin      |     relation   |    forecastReport   |
+
+  @downloadForecastReport
+  Scenario Outline: verify forecast report should be downloaded
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify rent roll report should be downloaded "<order>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |        order      |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   |
 
 
   @defaultStartDateOnForecastReport
@@ -536,24 +654,7 @@ Feature: verify test cases of reports
       | credentials  |  relationships |        report       |        order       |
       |   admin      |     relation   |    forecastReport   |   tableForecast   |
 
-  @downloadForecastReport
-  Scenario Outline: verify forecast report should be downloaded
 
-    Given I am on vertical bridge Page
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
-    When  I click to the select partner view button
-    When  selects the "<relationships>"
-    Then  click the select button
-    Then  I click on my dashboard "<report>"
-    Then  click management agreement on my dashboard "<report>"
-    Then  verify no parameter should be passed to generate rent roll report
-    Then  verify rent roll report should be downloaded "<order>"
-    When  I log out
-
-    Examples:
-      | credentials  |  relationships |        report       |        order      |
-      |   admin      |     relation   |    forecastReport   |   tableForecast   |
 
   @clickSiteNumberOnForecastReport
   Scenario Outline: click site number on forecast report
@@ -658,6 +759,79 @@ Feature: verify test cases of reports
     Examples:
       | credentials  |  relationships |        report       |
       |   admin      |     relation   |    forecastReport   |
+
+  @verifyHideAndUnHideColumnOnForecastReport
+  Scenario Outline: verify hide and un hide column on forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  click on hide column "<report>"
+    Then  selected column should be hidden "<report>"
+    Then  click on hide column "<report>"
+    Then  verify that selected column should be unhidden "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |           report          |
+      |   admin      |     relation   |    filterReportForecast   |
+
+
+
+
+    @verifyGroupHierarchyOnForecastReport
+  Scenario Outline: verify group hierarchy on forecast report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify group hierarchy on forecast report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |        report       |
+      |   admin      |     relation   |    forecastReport   |
+
+
+  @verifyDataOfForecastReportAgainstFloydSite
+  Scenario Outline: verify data of rent roll report against floyd site
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify data of rent roll report against partner portal "<partnerPortal>"
+    When  I log out
+    Given I am on floyd Page
+    Then  search the values in floyd site "<site>"
+    Then  verify data of rent roll report against floyd site "<floydSite>"
+    Then  I click on floyd stage "<floydSite>"
+    When  Click on additional features link "<site>"
+    When  Click on add a portfolio "<site>"
+    When  Login to vertical bridge with "<credentials>"
+    When  I log out from floyd site
+
+    Examples:
+      | credentials  |  relationships |        report         |       partnerPortal        |         site        |        floydSite       |
+      |   admin      |     relation   |    forecastReport   |  partnerPortalValueForecast  |  floydSiteForecast |  floydSiteValueForecast |
+
 
     #New Leases Report
   #56&57&62
@@ -859,6 +1033,53 @@ Feature: verify test cases of reports
       | credentials  |  relationships |        report         |
       |   admin      |     relation   |    newLeasesReport   |
 
+  @verifyDataOfNewLeasingReportAgainstFloydSite
+  Scenario Outline: verify data of new leasing report against floyd site
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify data of rent roll report against partner portal "<partnerPortal>"
+    When  I log out
+    Given I am on floyd Page
+    Then  search the values in floyd site "<site>"
+    Then  verify data of rent roll report against floyd site "<floydSite>"
+    Then  I click on floyd stage "<floydSite>"
+    When  Click on additional features link "<site>"
+    When  Click on add a portfolio "<site>"
+    When  Login to vertical bridge with "<credentials>"
+    When  I log out from floyd site
+
+    Examples:
+      | credentials  |  relationships |        report         |       partnerPortal        |         site        |        floydSite        |
+      |   admin      |     relation   |    newLeasesReport   |  partnerPortalValueLeasing  |   floydSiteLeasing |  floydSiteValueLeasing |
+
+
+    @verifyGroupHierarchyOnNewLeasesReport
+  Scenario Outline: verify group hierarchy on new leases report
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  I click on my dashboard "<report>"
+    Then  click management agreement on my dashboard "<report>"
+    Then  verify no parameter should be passed to generate rent roll report
+    Then  verify group hierarchy on new leases report "<report>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |         report       |
+      |   admin      |     relation   |    tableNewLeases   |
+
      #LeasingActivityReport
   #72&73&78
   @generateLeasingActivityReport
@@ -1038,3 +1259,98 @@ Feature: verify test cases of reports
     Examples:
       | credentials  |  relationships |             report         |
       |   admin      |     relation   |    leasingActivityReport   |
+
+
+
+    #Data_Validation_TestCases
+
+  @verifyDataOnPartnerPortalSiteAndFloydSite
+  Scenario Outline: verify data on partner portal and floyd site should be same
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link "<relationships>"
+    Then  verify data on partner portal site "<partnerPortalSite>"
+    When  I log out
+    Given I am on floyd Page
+    Then  search the values in floyd site "<partnerPortalSite>"
+    Then  verify data on floyd site "<partnerPortalSite>"
+    Then  I click on floyd stage "<site>"
+    When  Click on additional features link "<site>"
+    When  Click on add a portfolio "<site>"
+    When  Login to vertical bridge with "<credentials>"
+    When  I log out from floyd site
+
+    Examples:
+      | credentials  |  relationships |     partnerPortalSite     |        site        |
+      |   admin      |     relation   |  partnerPortalSiteData   |   floydSiteLeasing |
+
+
+  @verifyLabelsOnPartnerPortalSiteAndFloydSite
+  Scenario Outline: verify labels on partner portal and floyd site should be same
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify labels on partner portal site "<partnerPortalSite>"
+    Then  click "<tab1>" on site detail page
+    Then  verify labels on partner portal site "<partnerPortalSite1>"
+    When  I log out
+    Given I am on floyd Page
+    Then  search the values in floyd site "<partnerPortalSite>"
+    Then  click "<partnerPortalSite>" on floyd site
+    Then  verify labels on floyd site "<partnerPortalSite>"
+    Then  click "<partnerPortalSite1>" on floyd site
+    Then  verify label on floyd site "<partnerPortalSite1>"
+    Then  I click on floyd stage "<site>"
+    When  Click on additional features link "<site>"
+    When  Click on add a portfolio "<site>"
+    When  Login to vertical bridge with "<credentials>"
+    When  I log out from floyd site
+
+    Examples:
+      | credentials  |  relationships  |     partnerPortalSite      |        site        |   tab   |   tab1  |     partnerPortalSite1    |
+      |   admin      |     relation   |  partnerPortalSiteLabels   |   floydSiteLeasing |    FCC  | radCenter|  partnerPortalSiteLabels1|
+
+
+#
+#  @verifyDocumentsOnPartnerPortalSiteAndFloydSite
+#  Scenario Outline: verify documents on partner portal and floyd site should be same
+#
+##    Given I am on vertical bridge Page
+##    When  Login to vertical bridge with "<credentials>"
+##    When  Click checkbox button
+##    When  I click to the select partner view button
+##    When  selects the "<relationships>"
+##    Then  click the select button
+##    Then  click on my sites button
+##    Then  click on site link "<relationships>"
+##    Then  click "<tab>" on site detail page
+##    Then  click on document on site detail page
+##    Then  verify documents on partner portal site "<partnerPortalSite>"
+##    When  I log out
+#    Given I am on floyd Page
+#    Then  search the values in floyd site "<partnerPortalSite>"
+#    Then  click "<partnerPortalSite>" on floyd site
+#    Then  click on document on floyd site detail page
+#    Then  verify documents on floyd site "<partnerPortalSite>"
+#    Then  I click on floyd stage "<site>"
+#    When  Click on additional features link "<site>"
+#    When  Click on add a portfolio "<site>"
+#    When  Login to vertical bridge with "<credentials>"
+#    When  I log out from floyd site
+#
+#    Examples:
+#      | credentials  |  relationships   |     partnerPortalSite       |        site        |     tab     |
+#      |   admin      | dataValidation  |  partnerPortalSiteDocument   |   floydSiteLeasing |  documentTab |

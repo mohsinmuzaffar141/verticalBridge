@@ -379,11 +379,8 @@ export class siteDetailPage extends BasePage {
         // }
     }
     async optionsNotPresent(){
-        //let rowToRightClick=element(by.xpath('//span[@data-text="Blue"]'));
         let alert= element(by.xpath('//a[text()="Add or View Documents/Images"]'));
-        //await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
         await expect(alert.isPresent()).to.eventually.equal(false);
-
     }
 
     async editSiteNOtPresent(){
@@ -497,11 +494,10 @@ export class siteDetailPage extends BasePage {
         }
     }
 
-    async verifyLabelsUderAdvanceSearch(text:string){
-        let txt=site[text]['advanceLabelHeader'];
-        let labels = txt.split(',');
+    async verifyLabelsUnderAdvanceSearch(text:string){
+        let labels = text.split(',');
         for (let i = 0; i < labels.length; i++) {
-            let searchText=element(by.xpath('//span[contains(text()," ' +labels[i]+ ' ")]'));
+            let searchText=element(by.xpath('//span[contains(text(),"' +labels[i]+ '")]'));
             await searchText.isPresent().then(async function (display) {
                 if (display) {
                     await browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear');

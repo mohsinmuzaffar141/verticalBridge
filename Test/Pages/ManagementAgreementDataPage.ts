@@ -47,12 +47,6 @@ export class ManagementAgreementDataPage extends BasePage{
         await this.selectBtn.click();
         await browser.sleep(5000);
     }
-    // async validateRelation(name:string) {
-    //     let path = element(by.xpath('//h1[text()="'+name+'"]'));
-    //     await path.getText().then(async function(text){
-    //         await expect(text).to.equal(name);
-    //     });
-    //}
 
     async clickMySites(){
         await browser.wait(until.presenceOf(this.mySite_btn), 5000, 'Element taking too long to appear in the DOM');
@@ -60,16 +54,14 @@ export class ManagementAgreementDataPage extends BasePage{
         await browser.sleep(5000);
     }
 
-    async verifyAgreementData(value: string) {
-        let agreementData = cred[value]['managementData']
-        let managementAgreement = element(by.xpath('//div[@class="col-portfolioName ng-star-inserted" and contains(text(),"' + agreementData + '")]'))
-        await managementAgreement.getText().then(async function(value){
-            await expect(value).to.equals(agreementData);
+    async verifyAgreementData(value: string,colName:string) {
+        let managementAgreement = element(by.xpath('//div[@class="'+colName+' ng-star-inserted" and contains(text(),"' + value + '")]'))
+        await managementAgreement.getText().then(async function(text){
+            await expect(text).to.equals(value);
         });
-
     }
     async verifyOwnerName(name: string) {
-        let ownerNameData = cred[name]['owner_name']
+        let ownerNameData = cred[name]['owner_name'];
         let ownerName = element(by.xpath('//div[@class="col-ownerName ng-star-inserted" and contains(text(),"' + ownerNameData + '")]'))
         await ownerName.getText().then(async function(value){
             await expect(value).to.equals(ownerNameData);
@@ -202,7 +194,7 @@ export class ManagementAgreementDataPage extends BasePage{
 
     async verifySiteNumber(siteNumber:string){
         let data=cred[siteNumber]['siteNumber'];
-        let siteNo=element(by.xpath('//div[@class="ng-star-inserted"]/a[text()="' +data+ '"]'))
+        let siteNo=element(by.xpath('//div[@class="ng-star-inserted"]/a[text()="' +data+ '"]'));
         await siteNo.getText().then(async function (text) {
             await expect(text).to.equals(data);
         });
@@ -211,7 +203,7 @@ export class ManagementAgreementDataPage extends BasePage{
 
     async verifySiteData(sitedata:string){
         let data=cred[sitedata]['name'];
-        let siteData=element(by.xpath('//td[@class="ng-star-inserted"]//div[text()=" '+data +' "]'))
+        let siteData=element(by.xpath('//td[@class="ng-star-inserted"]//div[text()=" '+data +' "]'));
         await siteData.getText().then(async function (text) {
             await expect(text).to.equals(data);
         });
@@ -219,11 +211,11 @@ export class ManagementAgreementDataPage extends BasePage{
 
 
     async verifySiteOrder(){
-        let table=element.all(by.xpath('//tr[@class="ui-selectable-row ng-star-inserted"]'))
+        let table=element.all(by.xpath('//tr[@class="ui-selectable-row ng-star-inserted"]'));
         await table.then(async function (txt) {
             var NAMES=[];
             for (let i=1;i<=txt.length;i++) {
-                let ownerName = element(by.xpath('(//div[@class="col-siteName ng-star-inserted"])['+i+']'))
+                let ownerName = element(by.xpath('(//div[@class="col-siteName ng-star-inserted"])['+i+']'));
                 await ownerName.getText().then(async function (text){
                     await NAMES.push(text);
                 });

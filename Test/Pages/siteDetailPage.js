@@ -1143,10 +1143,8 @@ var siteDetailPage = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         alert = protractor_1.element(protractor_1.by.xpath('//a[text()="Add or View Documents/Images"]'));
-                        //await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
                         return [4 /*yield*/, expect(alert.isPresent()).to.eventually.equal(false)];
                     case 1:
-                        //await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -1525,20 +1523,19 @@ var siteDetailPage = /** @class */ (function (_super) {
             });
         });
     };
-    siteDetailPage.prototype.verifyLabelsUderAdvanceSearch = function (text) {
+    siteDetailPage.prototype.verifyLabelsUnderAdvanceSearch = function (text) {
         return __awaiter(this, void 0, void 0, function () {
-            var txt, labels, _loop_8, i;
+            var labels, _loop_8, i;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        txt = site[text]['advanceLabelHeader'];
-                        labels = txt.split(',');
+                        labels = text.split(',');
                         _loop_8 = function (i) {
                             var searchText;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0:
-                                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text()," ' + labels[i] + ' ")]'));
+                                        searchText = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + labels[i] + '")]'));
                                         return [4 /*yield*/, searchText.isPresent().then(function (display) {
                                                 return __awaiter(this, void 0, void 0, function () {
                                                     return __generator(this, function (_a) {
