@@ -73,6 +73,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         _this.removeFilter_btn = protractor_1.element(protractor_1.by.xpath('//span[@id="x-siteNo"]'));
         _this.text = protractor_1.element(protractor_1.by.xpath('//h2[text()="Select Partner View"]'));
         _this.cancel = protractor_1.element(protractor_1.by.xpath('//span[text()="Cancel"]'));
+        _this.table = protractor_1.element(protractor_1.by.xpath('//div[@class="ui-scrollpanel-content"]'));
         return _this;
     }
     ManagementAgreementDataPage.prototype.clickOnSearchButton = function () {
@@ -497,7 +498,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                         return [4 /*yield*/, this.searchIcon.click()];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(35000)];
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.table), 5000000, 'Element taking too long to appear in the DOM')];
                     case 4:
                         _a.sent();
                         verifySearch = protractor_1.element(protractor_1.by.xpath('(//tbody[@class="ui-table-tbody"])[' + count + ']'));
@@ -508,9 +509,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     return __generator(this, function (_a) {
                                         switch (_a.label) {
-                                            case 0:
-                                                console.log(text);
-                                                return [4 /*yield*/, expect(text).to.contain(searchValue)];
+                                            case 0: return [4 /*yield*/, expect(text).to.contain(searchValue)];
                                             case 1:
                                                 _a.sent();
                                                 return [2 /*return*/];
@@ -788,6 +787,43 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                         _a.sent();
                         _a.label = 4;
                     case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.verifyMySiteAccess = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var site;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        site = protractor_1.element(protractor_1.by.id('smalltext'));
+                        return [4 /*yield*/, expect(site.isPresent()).to.eventually.equal(true)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.viewManagementList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var data;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        data = protractor_1.element(protractor_1.by.id('ReportHeaderLeft'));
+                        return [4 /*yield*/, data.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        console.log(text);
+                                        return [2 /*return*/];
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
                 }
             });
         });

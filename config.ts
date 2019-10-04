@@ -28,6 +28,7 @@ export const config: Config = {
         "./Test/features/siteGeneral.feature",
         "./Test/features/floydSite.feature",
         "./Test/features/reports.feature",
+        "./Test/features/rolesPermission.feature",
     ],
 
     onPrepare: () => {

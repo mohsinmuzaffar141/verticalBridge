@@ -19,7 +19,7 @@ Feature: verify test cases of reports
       | credentials  |  relationships |           report          |
       |   admin      |     relation   |    filterReportForecast   |
 
-  #  @verifyActiveTenantUnderRentRollReport
+    @verifyActiveTenantUnderRentRollReport
   Scenario Outline: verify active tenant should be present under report
 
     Given I am on vertical bridge Page
@@ -1324,33 +1324,64 @@ Feature: verify test cases of reports
       |   admin      |     relation   |  partnerPortalSiteLabels   |   floydSiteLeasing |    FCC  | radCenter|  partnerPortalSiteLabels1|
 
 
-#
-#  @verifyDocumentsOnPartnerPortalSiteAndFloydSite
-#  Scenario Outline: verify documents on partner portal and floyd site should be same
-#
-##    Given I am on vertical bridge Page
-##    When  Login to vertical bridge with "<credentials>"
-##    When  Click checkbox button
-##    When  I click to the select partner view button
-##    When  selects the "<relationships>"
-##    Then  click the select button
-##    Then  click on my sites button
-##    Then  click on site link "<relationships>"
-##    Then  click "<tab>" on site detail page
-##    Then  click on document on site detail page
-##    Then  verify documents on partner portal site "<partnerPortalSite>"
-##    When  I log out
-#    Given I am on floyd Page
-#    Then  search the values in floyd site "<partnerPortalSite>"
-#    Then  click "<partnerPortalSite>" on floyd site
-#    Then  click on document on floyd site detail page
-#    Then  verify documents on floyd site "<partnerPortalSite>"
-#    Then  I click on floyd stage "<site>"
-#    When  Click on additional features link "<site>"
-#    When  Click on add a portfolio "<site>"
-#    When  Login to vertical bridge with "<credentials>"
-#    When  I log out from floyd site
-#
-#    Examples:
-#      | credentials  |  relationships   |     partnerPortalSite       |        site        |     tab     |
-#      |   admin      | dataValidation  |  partnerPortalSiteDocument   |   floydSiteLeasing |  documentTab |
+
+  @verifyDocumentsOnPartnerPortalSiteAndFloydSite
+  Scenario Outline: verify documents on partner portal and floyd site should be same
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  click on document on site detail page
+    Then  verify documents on partner portal site "<partnerPortalSite>"
+    When  I log out
+    Given I am on floyd Page
+    Then  search the values in floyd site "<partnerPortalSite>"
+    Then  click "<partnerPortalSite>" on floyd site
+    Then  click on document on floyd site detail page
+    Then  verify documents on floyd site "<partnerPortalSite>"
+    Then  i switch back to main frame
+    Then  I click on floyd stage "<site>"
+    When  Click on additional features link "<site>"
+    When  Click on add a portfolio "<site>"
+    When  Login to vertical bridge with "<credentials>"
+    When  I log out from floyd site
+
+    Examples:
+      | credentials  |  relationships   |     partnerPortalSite       |        site        |     tab     |
+      |   admin      | dataValidation  |  partnerPortalSiteDocument   |   floydSiteLeasing |  documentTab |
+
+  @verifyTabsDataOnPartnerPortalSiteAndFloydSite
+  Scenario Outline: verify tabs data on partner portal and floyd site should be same
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link "<relationships>"
+    Then  verify tabs data on partner portal site "<partnerPortalSite>"
+    Then  click "<tab>" on site detail page
+    Then  verify tabs data on partner portal site "<partnerPortalSite1>"
+    When  I log out
+    Given I am on floyd Page
+    Then  search the values in floyd site "<partnerPortalSite>"
+    Then  verify tabs data on floyd site "<partnerPortalSite>"
+    Then  click "<partnerPortalSite>" on floyd site
+    Then  verify tabs data div on partner portal site "<partnerPortalSite1>"
+    Then  I click on floyd stage "<site>"
+    When  Click on additional features link "<site>"
+    When  Click on add a portfolio "<site>"
+    When  Login to vertical bridge with "<credentials>"
+    When  I log out from floyd site
+
+    Examples:
+      | credentials  |  relationships   |     partnerPortalSite    |        site        |     tab     |   partnerPortalSite1   |
+      |   admin      | dataValidation  |  partnerPortalTabsData   |   floydSiteLeasing |  propertyTab |  partnerPortalTabsData1|

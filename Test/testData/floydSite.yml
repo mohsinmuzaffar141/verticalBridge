@@ -223,3 +223,13 @@ partnerPortalSiteDocument:
   labelsFloyd: US-ID-5021_1A2C_072615.pdf,US-ID-5021_FAA_012516.pdf,US-ID-5021_SS_072815.pdf
   siteNumber: US-ID-5021
   tab: Documents
+
+partnerPortalTabsData:
+  tabsPartner: Twin Falls,Salt Lake City,Idaho 5 - Butte,Twin Fall
+  tabsFloyd: Twin Falls,Salt Lake City,Idaho 5 - Butte,Twin Fall
+  siteNumber: US-ID-5021
+  tab: Property
+
+partnerPortalTabsData1:
+  tabsPartner: PROP-US-ID-00025,Easement
+  tabPartnerSpan: PROP-US-ID-00025,Easement

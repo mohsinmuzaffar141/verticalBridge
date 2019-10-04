@@ -60,7 +60,7 @@ export class floydSitePage extends BasePage {
         await saveBtn.isPresent().then(async function (display) {
             if (display) {
                 await saveBtn.click();
-                await browser.sleep(3000);
+                await browser.sleep(15000);
             }
         });
     }
@@ -99,13 +99,13 @@ export class floydSitePage extends BasePage {
     async getFloydSiteData(value:string) {
         let secondValue=value.split(',');
         for(let i=0;i<secondValue.length;i++){
-            let managementAgreement = element(by.xpath('//td//a[contains(text(),"'+secondValue[i]+'")]'));
+            let managementAgreement = element(by.xpath('//a[contains(text(),"'+secondValue[i]+'")]'));
             await browser.wait(until.presenceOf(managementAgreement), 50000, 'Element taking too long to appear in the DOM');
             await managementAgreement.getText().then(async function(text){
                 await floydSite.push(text);
             });
-            console.log(floydSite[i]);
         }
+        console.log(floydSite);
     }
 
     async verifyDataOfBothSides(){
@@ -147,8 +147,8 @@ export class floydSitePage extends BasePage {
             await partnerPortalData.getText().then(async function(text){
                 await partnerPortal.push(text);
             });
-            console.log(partnerPortal[i]);
         }
+        console.log(partnerPortal)
     }
 
     async partnerSiteDocument(partnerData:string){
@@ -158,9 +158,10 @@ export class floydSitePage extends BasePage {
             await browser.wait(until.presenceOf(partnerDocument), 50000, 'Element taking too long to appear in the DOM');
             await partnerDocument.getText().then(async function(text){
                 await partnerPortal.push(text);
+                console.log(text);
             });
-            console.log(partnerPortal[i]);
         }
+        console.log(partnerPortal)
     }
 
     async floydSiteData(floydData:string){
@@ -171,8 +172,8 @@ export class floydSitePage extends BasePage {
             await floydSiteData.getText().then(async function(text){
                 await floydSite.push(text);
             });
-            console.log(floydSite[i]);
         }
+        console.log(floydSite);
     }
 
     async floydSiteLabels(floydData:string){
@@ -205,25 +206,30 @@ export class floydSitePage extends BasePage {
         });
     }
 
-
-
-
-
-
-
     async clickDocumentPartner(){
         await browser.wait(until.presenceOf(this.document_Arrow), 50000, 'Element taking too long to appear in the DOM');
         await this.document_Arrow.click();
     }
     async clickDocumentFloyd(){
-        let windowHandles = browser.getAllWindowHandles();
-        let parentHandle;
-        // let frame1 = element(by.id("bmapFrame"));
         await browser.switchTo().frame(1);
-        await browser.sleep(8000);
+        await browser.sleep(5000);
         await this.document_Arrow.click();
-        await browser.sleep(2000);
-        // await browser.switchTo().frame(frame1);
 
+    }
+    async switchFrame(){
+        let windowHandles = browser.getAllWindowHandles();
+        let parentHandle, childHandle;
+        await browser.sleep(2000);
+        await windowHandles.then(async function (handles) {
+            parentHandle = handles[0];
+            console.log("Total Handles :- " + handles.length);
+            await browser.switchTo().window(parentHandle).then(async function () {
+            });
+        });
+    }
+
+    async buttonPresent(text:string){
+        let btn = element(by.xpath('//span[contains(text(),"' + text + '")]'));
+        await expect(btn.isPresent()).to.eventually.equal(false);
     }
 }

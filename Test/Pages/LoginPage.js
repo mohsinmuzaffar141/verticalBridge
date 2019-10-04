@@ -118,12 +118,15 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 0: return [4 /*yield*/, protractor_1.browser.manage().deleteAllCookies()];
                     case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 2:
                         _a.sent();
                         protractor_1.browser.ignoreSynchronization = true;
                         return [4 /*yield*/, protractor_1.browser.get(configuration['App-url'])];
-                    case 2:
+                    case 3:
                         _a.sent();
                         return [2 /*return*/];
                 }

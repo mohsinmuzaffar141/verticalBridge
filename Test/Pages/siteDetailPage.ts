@@ -39,7 +39,6 @@ export class siteDetailPage extends BasePage {
         await site.click();
         await browser.sleep(5000);
     }
-
     async verifySiteNumber(value: string) {
         let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + value + '")]'));
         // await browser.wait(until.presenceOf(title), 15000, 'Element taking too long to appear in the DOM');
@@ -107,6 +106,8 @@ export class siteDetailPage extends BasePage {
             let pageTabs = element(by.xpath('//a[text()=" ' + tabs[i] + ' "]'));
             await pageTabs.getText().then(async function (text) {
                 console.log(text);
+                await pageTabs.click();
+                await browser.sleep(3000);
             });
             await expect(pageTabs.isDisplayed()).to.eventually.equal(true);
         }

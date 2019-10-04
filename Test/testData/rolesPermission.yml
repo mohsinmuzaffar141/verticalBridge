@@ -1,0 +1,24 @@
+rolesPermission:
+  tab: Security
+  link: Manage Users
+  search: reuseracct1@gmail.com
+  count: 1
+  role: Is Internal
+
+
+rolesPermission1:
+  tab: Security
+  link: Manage Users
+  search: utiluseracct1@gmail.com
+  count: 1
+  role: Is Internal
+
+rolesPermission2:
+  tab: Security
+  link: Manage Users
+  search: vbjvuseracct3@gmail.com
+  count: 1
+  role: Is Internal
+
+externalUser:
+  button: Select Partner View

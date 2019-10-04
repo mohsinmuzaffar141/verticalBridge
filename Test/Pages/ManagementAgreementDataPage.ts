@@ -26,6 +26,7 @@ export class ManagementAgreementDataPage extends BasePage{
     removeFilter_btn=element(by.xpath('//span[@id="x-siteNo"]'));
     text=element(by.xpath('//h2[text()="Select Partner View"]'));
     cancel=element(by.xpath('//span[text()="Cancel"]'));
+    table=element(by.xpath('//div[@class="ui-scrollpanel-content"]'));
 
 
 
@@ -164,11 +165,10 @@ export class ManagementAgreementDataPage extends BasePage{
         await this.search_txt.click();
         await this.search_txt.sendKeys(searchValue);
         await this.searchIcon.click();
-        await browser.sleep(35000);
+        await browser.wait(until.presenceOf(this.table), 5000000, 'Element taking too long to appear in the DOM');
         let verifySearch=element(by.xpath('(//tbody[@class="ui-table-tbody"])['+count+']'));
         await browser.wait(until.presenceOf(verifySearch), 5000000, 'Element taking too long to appear in the DOM');
         await verifySearch.getText().then(async function (text) {
-            console.log(text);
             await expect(text).to.contain(searchValue);
         });
 
@@ -262,6 +262,18 @@ export class ManagementAgreementDataPage extends BasePage{
             await fs.unlinkSync(filepath);
             await browser.sleep(5000);
         }
+    }
+    async verifyMySiteAccess(){
+        let site=element(by.id('smalltext'));
+        await expect(site.isPresent()).to.eventually.equal(true);
+    }
+    async viewManagementList(){
+        let data=element(by.id('ReportHeaderLeft'));
+        await data.getText().then(async function(text) {
+                console.log(text);
+                //await expect(list[i].isPresent()).to.equal(true);
+        });
+
     }
 
 }

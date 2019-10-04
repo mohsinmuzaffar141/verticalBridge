@@ -164,7 +164,7 @@ Then(/^verify data of rent roll report against partner portal "([^"]*)"$/, {time
 });
 
 Then(/^verify data of rent roll report against floyd site "([^"]*)"$/, {timeout: 5 * 50000}, async(data)=>{
-    let colName=floyd[data]['columnName'];
+    // let colName=floyd[data]['columnName'];
     let value=floyd[data]['value'];
     let siteNumber=floyd[data]['siteNumber'];
     let siteName=floyd[data]['siteName'];
@@ -219,7 +219,7 @@ Then(/^click on document on site detail page$/, {timeout: 5 * 50000}, async ()=>
 });
 Then(/^verify documents on floyd site "([^"]*)"$/, {timeout: 5 * 50000}, async (documentFloyd)=> {
     let floydDocuments=floyd[documentFloyd]['labelsFloyd'];
-    await floydSite.partnerSiteDocument(floydDocuments);
+    await floydSite.floydSiteData(floydDocuments);
 });
 Then(/^click on document on floyd site detail page$/, {timeout: 5 * 50000}, async ()=> {
     await floydSite.clickDocumentFloyd();
@@ -235,6 +235,25 @@ Then(/^verify active sites against rent roll report "([^"]*)"$/, {timeout: 5 * 5
 Then(/^verify sites against rent roll report "([^"]*)"$/, {timeout: 5 * 50000}, async (sites)=> {
     let count=floyd[sites]['siteCount'];
     await floydSite.verifySitesRentRollReport(count);
+    await floydSite.verifyDataOfBothSides();
+    await floydSite.deleteArray();
+});
+Then(/^i switch back to main frame$/, {timeout: 5 * 50000}, async ()=> {
+    await floydSite.switchFrame();
+    await floydSite.verifyDataOfBothSides();
+    await floydSite.deleteArray();
+});
+Then(/^verify tabs data on partner portal site "([^"]*)"$/, {timeout: 5 * 50000}, async (tabsData)=> {
+    let tabData=floyd[tabsData]['tabsPartner'];
+    await floydSite.partnerPortalSiteData(tabData);
+});
+Then(/^verify tabs data on floyd site "([^"]*)"$/, {timeout: 5 * 50000}, async (tabsData)=> {
+    let tabData=floyd[tabsData]['tabsFloyd'];
+    await floydSite.getFloydSiteData(tabData);
+});
+Then(/^verify tabs data div on partner portal site "([^"]*)"$/, {timeout: 5 * 50000}, async (tabsData)=> {
+    let tabDataDiv=floyd[tabsData]['tabPartnerSpan'];
+    await floydSite.floydSiteData(tabDataDiv);
     await floydSite.verifyDataOfBothSides();
     await floydSite.deleteArray();
 });

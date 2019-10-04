@@ -1,32 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var cucumber_1 = require("cucumber");
-cucumber_1.Then(/^search the values in floyd site "([^"]*)"$/, function () {
+var cucumber_2 = require("cucumber");
+cucumber_1.Then(/^verify my site access on main page for internal\/external users "([^"]*)"$/, function () {
 });
-cucumber_1.Then(/^I click on floyd stage "([^"]*)"$/, function () {
+cucumber_1.Then(/^verify management agreement list "([^"]*)"$/, function () {
 });
-cucumber_1.Then(/^verify data on partner portal site "([^"]*)"$/, function () {
+cucumber_1.Then(/^verify relationship should not be viewable for external users "([^"]*)"$/, function () {
 });
-cucumber_1.Then(/^verify labels on partner portal site "([^"]*)"$/, function () {
-});
-cucumber_1.Then(/^verify labels on floyd site "([^"]*)"$/, function () {
-});
-cucumber_1.Then(/^click "([^"]*)" on floyd site$/, function () {
-});
-cucumber_1.Then(/^verify label on floyd site "([^"]*)"$/, function () {
-});
-cucumber_1.Then(/^verify documents on partner portal site "([^"]*)"$/, function () {
-});
-cucumber_1.Then(/^click on document on site detail page$/, function () {
-});
-cucumber_1.Then(/^verify documents on floyd site "([^"]*)"$/, function () {
-});
-cucumber_1.Then(/^click on document on floyd site detail page$/, function () {
-});
-cucumber_1.Then(/^verify header against rent roll report "([^"]*)"$/, function () {
-});
-cucumber_1.Then(/^verify active sites against rent roll report  "([^"]*)"$/, function () {
-});
-cucumber_1.Then(/^verify sites against rent roll report$/, function () {
+cucumber_2.When(/^I click on youtube$/, function () {
 });
 //# sourceMappingURL=MySteps.js.map

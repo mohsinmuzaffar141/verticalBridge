@@ -133,3 +133,38 @@ reportLeasingActivity:
 dataValidation:
   name: American Tower
   siteNumber: 'US-ID-5021'
+
+
+#  Roles_And_Permissions_Data
+realEstateAdmin:
+  username: readacct1@gmail.com
+  password: V3rt1c@l
+  list: My Sites
+
+realEstateUser:
+  username: reuseracct1@gmail.com
+  password: V3rt1c@l
+  list: My Management Agreements
+
+utilityPartnerAdmin:
+  username: utiladacct1@gmail.com
+  password: V3rt1c@l
+  list: My Sites
+
+utilityPartnerUser:
+  username: utiluseracct1@gmail.com
+  password: V3rt1c@l
+  list: My Management Agreements
+
+jvPartnerAdmin:
+  username: jvadacct1@gmail.com
+  password: V3rt1c@l
+  list: My Sites
+
+jvPartnerUser:
+  username: vbjvuseracct3@gmail.com
+  password: V3rt1c@l
+  list: My Management Agreements
+
+detailPage:
+  siteNumber: US-NY-1021

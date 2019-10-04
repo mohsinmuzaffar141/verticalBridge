@@ -175,7 +175,7 @@ var floydSitePage = /** @class */ (function (_super) {
                                                 return [4 /*yield*/, saveBtn.click()];
                                             case 1:
                                                 _a.sent();
-                                                return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                                                return [4 /*yield*/, protractor_1.browser.sleep(15000)];
                                             case 2:
                                                 _a.sent();
                                                 _a.label = 3;
@@ -308,7 +308,7 @@ var floydSitePage = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         if (!(i < secondValue.length)) return [3 /*break*/, 5];
-                        managementAgreement = protractor_1.element(protractor_1.by.xpath('//td//a[contains(text(),"' + secondValue[i] + '")]'));
+                        managementAgreement = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"' + secondValue[i] + '")]'));
                         return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(managementAgreement), 50000, 'Element taking too long to appear in the DOM')];
                     case 2:
                         _a.sent();
@@ -326,12 +326,13 @@ var floydSitePage = /** @class */ (function (_super) {
                             })];
                     case 3:
                         _a.sent();
-                        console.log(floydSite[i]);
                         _a.label = 4;
                     case 4:
                         i++;
                         return [3 /*break*/, 1];
-                    case 5: return [2 /*return*/];
+                    case 5:
+                        console.log(floydSite);
+                        return [2 /*return*/];
                 }
             });
         });
@@ -459,12 +460,13 @@ var floydSitePage = /** @class */ (function (_super) {
                             })];
                     case 3:
                         _a.sent();
-                        console.log(partnerPortal[i]);
                         _a.label = 4;
                     case 4:
                         i++;
                         return [3 /*break*/, 1];
-                    case 5: return [2 /*return*/];
+                    case 5:
+                        console.log(partnerPortal);
+                        return [2 /*return*/];
                 }
             });
         });
@@ -491,6 +493,7 @@ var floydSitePage = /** @class */ (function (_super) {
                                             case 0: return [4 /*yield*/, partnerPortal.push(text)];
                                             case 1:
                                                 _a.sent();
+                                                console.log(text);
                                                 return [2 /*return*/];
                                         }
                                     });
@@ -498,12 +501,13 @@ var floydSitePage = /** @class */ (function (_super) {
                             })];
                     case 3:
                         _a.sent();
-                        console.log(partnerPortal[i]);
                         _a.label = 4;
                     case 4:
                         i++;
                         return [3 /*break*/, 1];
-                    case 5: return [2 /*return*/];
+                    case 5:
+                        console.log(partnerPortal);
+                        return [2 /*return*/];
                 }
             });
         });
@@ -537,12 +541,13 @@ var floydSitePage = /** @class */ (function (_super) {
                             })];
                     case 3:
                         _a.sent();
-                        console.log(floydSite[i]);
                         _a.label = 4;
                     case 4:
                         i++;
                         return [3 /*break*/, 1];
-                    case 5: return [2 /*return*/];
+                    case 5:
+                        console.log(floydSite);
+                        return [2 /*return*/];
                 }
             });
         });
@@ -662,24 +667,69 @@ var floydSitePage = /** @class */ (function (_super) {
     };
     floydSitePage.prototype.clickDocumentFloyd = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var windowHandles, parentHandle;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        windowHandles = protractor_1.browser.getAllWindowHandles();
-                        // let frame1 = element(by.id("bmapFrame"));
-                        return [4 /*yield*/, protractor_1.browser.switchTo().frame(1)];
+                    case 0: return [4 /*yield*/, protractor_1.browser.switchTo().frame(1)];
                     case 1:
-                        // let frame1 = element(by.id("bmapFrame"));
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(8000)];
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
                     case 2:
                         _a.sent();
                         return [4 /*yield*/, this.document_Arrow.click()];
                     case 3:
                         _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.switchFrame = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var windowHandles, parentHandle, childHandle;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        windowHandles = protractor_1.browser.getAllWindowHandles();
                         return [4 /*yield*/, protractor_1.browser.sleep(2000)];
-                    case 4:
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, windowHandles.then(function (handles) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                parentHandle = handles[0];
+                                                console.log("Total Handles :- " + handles.length);
+                                                return [4 /*yield*/, protractor_1.browser.switchTo().window(parentHandle).then(function () {
+                                                        return __awaiter(this, void 0, void 0, function () {
+                                                            return __generator(this, function (_a) {
+                                                                return [2 /*return*/];
+                                                            });
+                                                        });
+                                                    })];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.buttonPresent = function (text) {
+        return __awaiter(this, void 0, void 0, function () {
+            var btn;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        btn = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + text + '")]'));
+                        return [4 /*yield*/, expect(btn.isPresent()).to.eventually.equal(false)];
+                    case 1:
                         _a.sent();
                         return [2 /*return*/];
                 }
