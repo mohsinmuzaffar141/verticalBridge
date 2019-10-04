@@ -359,13 +359,12 @@ export class siteDetailPage extends BasePage {
 
 
     async fileSearch(file: string){
-        let files=maps[file]['fileDocument'];
-        let doc=element(by.xpath('//span[text()="'+files+'"]'));
+        let doc=element(by.xpath('//span[text()="'+file+'"]'));
         await this.searchFile.click();
-        await this.searchFile.sendKeys(files);
+        await this.searchFile.sendKeys(file);
         await this.search_btn.click();
         await browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM');
-        await expect(files).to.be.exist;
+        await expect(file).to.be.exist;
     }
 
     async folderAndSubFolder(){

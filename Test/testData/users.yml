@@ -168,3 +168,9 @@ jvPartnerUser:
 
 detailPage:
   siteNumber: US-NY-1021
+
+detailPage1:
+  siteNumber: US-DC-1009
+
+headerLabel1:
+  siteNumber: US-NY-1021

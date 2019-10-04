@@ -140,11 +140,12 @@ Then(/^verify label not present under leasing activity tab "([^"]*)"$/, {timeout
     await maps.verifyLabelNotPreent(label);
 });
 Then(/^verify labels under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(labelDocument)=> {
-    let label=map[labelDocument]['documanetLabel1'];
+    let label=map[labelDocument]['documentLabel1'];
     await maps.documentLabel(label);
 });
 Then(/^verify files under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(filesDocument)=>{
-    await maps.fileSearch(filesDocument);
+    let files=maps[filesDocument]['fileDocument'];
+    await maps.fileSearch(files);
 });
 Then(/^click folder and sub folder under document tab$/, {timeout: 5 * 50000}, async()=>{
     await maps.folderAndSubFolder()

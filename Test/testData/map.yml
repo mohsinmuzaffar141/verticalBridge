@@ -126,11 +126,18 @@ leasingActivity1:
 leasingActivity2:
   tabName:  Nearby Sites
 
+leasingActivity3:
+  tabName:  Development
+
 documentTab:
   tabName:  Documents
   documanetLabel: Construction/Regulatory Documents,Environmental Documents,Tenant Lease Documents,Ground Lease and Legal Documents
-  documanetLabel1: Blue,Green,Red,Yellow
+  documentLabel1: Blue,Green,Red,Yellow
   fileDocument: US-ID-5021_1A2C_072615.pdf
+
+documentTab1:
+  tabName:  Documents
+  fileDocument: WALZ_062515_1629_Columbia_Road_DC_LLC.pdf
 
 homePage:
   tabName: About,Services,Contacts

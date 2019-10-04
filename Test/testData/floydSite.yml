@@ -233,3 +233,20 @@ partnerPortalTabsData:
 partnerPortalTabsData1:
   tabsPartner: PROP-US-ID-00025,Easement
   tabPartnerSpan: PROP-US-ID-00025,Easement
+
+reportsKPI:
+  tab: My Dashboard
+  count: 9,Management Agreements
+  link: My Management Agreements
+
+totalSitesKPI:
+  tab: My Dashboard
+  count: 167,Total Sites
+  link: Sites By Management Agreement Report
+  tableHeader: Site No,Site Name,Site Status,Latitude,Longitude,Owners Name,Revenue,Number of Tenants,Management Agreement Name
+
+
+totalRevenueKPI:
+  tab: My Dashboard
+  count: $691.28K,Total Annualized Revenue
+
