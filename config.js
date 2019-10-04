@@ -24,6 +24,7 @@ exports.config = {
         "./Test/features/siteGeneral.feature",
         "./Test/features/floydSite.feature",
         "./Test/features/reports.feature",
+        "./Test/features/rolesPermission.feature",
     ],
     onPrepare: function () {
         protractor_1.browser.ignoreSynchronization = true;

@@ -10,14 +10,12 @@ Feature: verify data against management agreement
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  verify managment agreement data "<relationships>"
+    Then  verify management agreement data "<relationships>"
     When  I log out
 
     Examples:
        | credentials  |  relationships |
        |   admin      |     relation   |
-
-
 
   @sortingOwnerName
   Scenario Outline: verify that owner name should be sorted in ascending order
@@ -36,8 +34,6 @@ Feature: verify data against management agreement
        | credentials  |  relationships |
        |   admin      |     relation   |
 
-
-
   @verifyRevenue
   Scenario Outline: verify revenue against management agreement
 
@@ -55,7 +51,6 @@ Feature: verify data against management agreement
       | credentials  |  relationships |
       |   admin      |     relation   |
 
-
   @verifyPortfolioList
   Scenario Outline: verify portfolio list
 
@@ -69,8 +64,6 @@ Feature: verify data against management agreement
     Examples:
       | credentials  | relationships |
       |   admin      |   relation    |
-
-
 
   @verifyFilterEnable
   Scenario Outline: verify filler should be enable
@@ -91,8 +84,6 @@ Feature: verify data against management agreement
           | credentials  |  relationships |
           |   admin      |     relation   |
 
-
-
   @verifySites
   Scenario Outline: verify sites against portfolio
 
@@ -110,7 +101,6 @@ Feature: verify data against management agreement
     Examples:
            | credentials  |  relationships |
            |   admin      |     relation   |
-
 
   @searchSite
   Scenario Outline: verify search against management agreement
@@ -131,7 +121,6 @@ Feature: verify data against management agreement
         | credentials  |  relationships | searchFilter |
         |   admin      |     relation   |filterSearch  |
 
-
   @ascendingDescendingOrder
   Scenario Outline: verify ascending and descending order of management agreement
 
@@ -151,7 +140,7 @@ Feature: verify data against management agreement
       |   admin      |  table1   |   relation     |
 
   @verifyDownloadSiteToExcelFile
-  Scenario Outline: verify the mysite file should be downloaded
+  Scenario Outline: verify the my site file should be downloaded
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"

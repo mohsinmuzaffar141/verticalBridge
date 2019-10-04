@@ -46,9 +46,14 @@ var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var manageAgreepage = new ManagementAgreementDataPage_1.ManagementAgreementDataPage();
 cucumber_1.Then(/^filter the management agreement list "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    var filterData, filterColumn, count;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, manageAgreepage.searchFilter(text)];
+            case 0:
+                filterData = cred[text]['siteNumber'];
+                filterColumn = cred[text]['sitecolumn'];
+                count = cred[text]['count'];
+                return [4 /*yield*/, manageAgreepage.searchFilter(filterData, count, filterColumn)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -156,19 +161,19 @@ cucumber_1.Then(/^verify site name should be sorted in ascending order$/, { time
     });
 }); });
 cucumber_1.Then(/^verify that filter applied is removed "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    var count;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, manageAgreepage.removeFilter()];
+            case 0:
+                count = cred[text]['sitesCount'];
+                return [4 /*yield*/, manageAgreepage.removeFilter()];
             case 1:
                 _a.sent();
-                return [4 /*yield*/, manageAgreepage.verifySites(text)];
+                return [4 /*yield*/, manageAgreepage.verifySites(count)];
             case 2:
                 _a.sent();
                 return [2 /*return*/];
         }
     });
 }); });
-// Then(/^verify options are not present under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(text) => {
-//
-// });
 //# sourceMappingURL=mySitesSteps.js.map

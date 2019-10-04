@@ -44,14 +44,14 @@ var fs = require('fs');
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
-var sitedetail = new siteDetailPage_1.siteDetailPage();
-cucumber_1.Then(/^click on site link  "([^"]*)"$/, { timeout: 5 * 50000 }, function (siteNumber) { return __awaiter(_this, void 0, void 0, function () {
+var siteDetail = new siteDetailPage_1.siteDetailPage();
+cucumber_1.Then(/^click on site link "([^"]*)"$/, { timeout: 5 * 50000 }, function (siteNumber) { return __awaiter(_this, void 0, void 0, function () {
     var site;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 site = cred[siteNumber]['siteNumber'];
-                return [4 /*yield*/, sitedetail.selectSite(site)];
+                return [4 /*yield*/, siteDetail.selectSite(site)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -59,9 +59,12 @@ cucumber_1.Then(/^click on site link  "([^"]*)"$/, { timeout: 5 * 50000 }, funct
     });
 }); });
 cucumber_1.Then(/^verify site number on detail page "([^"]*)"$/, { timeout: 5 * 50000 }, function (site) { return __awaiter(_this, void 0, void 0, function () {
+    var siteNumber;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.verifySiteNumber(site)];
+            case 0:
+                siteNumber = cred[site]['siteNumber'];
+                return [4 /*yield*/, siteDetail.verifySiteNumber(siteNumber)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -69,9 +72,13 @@ cucumber_1.Then(/^verify site number on detail page "([^"]*)"$/, { timeout: 5 * 
     });
 }); });
 cucumber_1.Then(/^verify site Name on detail page "([^"]*)"$/, { timeout: 5 * 50000 }, function (siteName) { return __awaiter(_this, void 0, void 0, function () {
+    var site, siteNumber;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.verifyName(siteName)];
+            case 0:
+                site = cred[siteName]['siteName'];
+                siteNumber = cred[siteName]['siteNumber'];
+                return [4 /*yield*/, siteDetail.verifyName(site, siteNumber)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -84,7 +91,7 @@ cucumber_1.Then(/^verify general and contacts section on detailed page "([^"]*)"
         switch (_a.label) {
             case 0:
                 data = cred[label]['label'];
-                return [4 /*yield*/, sitedetail.verifyHeaderOnDetailedPage(data)];
+                return [4 /*yield*/, siteDetail.verifyHeaderOnDetailedPage(data)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -98,7 +105,7 @@ cucumber_1.Then(/^verify site detail labels "([^"]*)"$/, { timeout: 5 * 50000 },
             case 0:
                 data = cred[detailLabel]['detailLabel'];
                 value = cred[detailLabel]['labelValue'];
-                return [4 /*yield*/, sitedetail.verifySiteDetailsData(data, value)];
+                return [4 /*yield*/, siteDetail.verifySiteDetailsData(data, value)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -112,7 +119,7 @@ cucumber_1.Then(/^verify site contacts labels "([^"]*)"$/, { timeout: 5 * 50000 
             case 0:
                 contact = cred[contacts]['contacts'];
                 contactData = cred[contacts]['contactsData'];
-                return [4 /*yield*/, sitedetail.verifySiteContacts(contact, contactData)];
+                return [4 /*yield*/, siteDetail.verifySiteContacts(contact, contactData)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -125,7 +132,7 @@ cucumber_1.Then(/^verify tabs on site detail page "([^"]*)"$/, { timeout: 5 * 50
         switch (_a.label) {
             case 0:
                 tab = cred[tabs]['tabs'];
-                return [4 /*yield*/, sitedetail.verifyTabs(tab)];
+                return [4 /*yield*/, siteDetail.verifyTabs(tab)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -135,7 +142,7 @@ cucumber_1.Then(/^verify tabs on site detail page "([^"]*)"$/, { timeout: 5 * 50
 cucumber_1.Then(/^verify map pin site detail page "([^"]*)"$/, { timeout: 5 * 50000 }, function (mapPin) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.verifyMapPin(mapPin)];
+            case 0: return [4 /*yield*/, siteDetail.verifyMapPin(mapPin)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -148,7 +155,7 @@ cucumber_1.Then(/^verify data above map on site detail page "([^"]*)"$/, { timeo
         switch (_a.label) {
             case 0:
                 mapData = cred[mapdata]['mapData'];
-                return [4 /*yield*/, sitedetail.verifyMapData(mapData)];
+                return [4 /*yield*/, siteDetail.verifyMapData(mapData)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -161,7 +168,7 @@ cucumber_1.Then(/^verify site detail labels not present "([^"]*)"$/, { timeout: 
         switch (_a.label) {
             case 0:
                 data = cred[invalidlabels]['detailLabel'];
-                return [4 /*yield*/, sitedetail.verifyLabelNotPreent(data)];
+                return [4 /*yield*/, siteDetail.verifyLabelNotPreent(data)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -174,7 +181,7 @@ cucumber_1.Then(/^verify relationship should be present on the top "([^"]*)"$/, 
         switch (_a.label) {
             case 0:
                 relation = cred[relationship]['name'];
-                return [4 /*yield*/, sitedetail.verifyRelationshipName(relation)];
+                return [4 /*yield*/, siteDetail.verifyRelationshipName(relation)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
@@ -184,7 +191,7 @@ cucumber_1.Then(/^verify relationship should be present on the top "([^"]*)"$/, 
 cucumber_1.Then(/^verify home page image on portal$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, sitedetail.homePageImage()];
+            case 0: return [4 /*yield*/, siteDetail.homePageImage()];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

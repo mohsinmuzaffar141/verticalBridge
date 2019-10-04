@@ -59,6 +59,7 @@ export class LoginPage extends BasePage{
         await browser.sleep(7000);
     }
     async launchApp() {
+        await browser.manage().deleteAllCookies();
         await browser.sleep(5000);
         browser.ignoreSynchronization = true;
         await browser.get(configuration['App-url']);

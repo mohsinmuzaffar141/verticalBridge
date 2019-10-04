@@ -10,7 +10,7 @@ Feature: verify links are not present on site header
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify edit and site inspection icon are not present on site header "<tab>"
     When  I log out
 
@@ -29,7 +29,7 @@ Feature: verify links are not present on site header
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  click "<tab>" on site detail page
     Then  verify management agreement are not present on property tab "<link>"
     When  I log out
@@ -70,8 +70,6 @@ Feature: verify links are not present on site header
 #    Examples:
 #      | credentials  |  relationships  |           tab          |
 #      |   admin      |    leasesData   |   contactHomePageTab   |
-
-
 
 
   @verifyFooterOnHomePage
@@ -150,7 +148,6 @@ Feature: verify links are not present on site header
       |   admin        | headerLabel |  relation    |
 
 
-
   @verifyLabelOfAdvanceSearch
   Scenario Outline: verify labels of advance search
 
@@ -196,7 +193,7 @@ Feature: verify links are not present on site header
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on advance search
-    Then  verify advance search should have refinemenet criteria "<site>"
+    Then  verify advance search should have refinement criteria "<site>"
     When  I log out
 
     Examples:

@@ -39,8 +39,8 @@ Then(/^verify contact data are not present "([^"]*)"$/, {timeout: 5 * 50000}, as
     await maps.contactDataNOtPresent(contactsData);
 });
 Then(/^verify contact data should not be duplicated "([^"]*)"$/, {timeout: 5 * 50000}, async(duplicateData)=> {
-    let contctData=map[duplicateData]['duplicateData'];
-    await maps.contactDataDuplication(contctData);
+    let contactData=map[duplicateData]['duplicateData'];
+    await maps.contactDataDuplication(contactData);
 });
 Then(/^verify attributes should be present on property tab "([^"]*)"$/, {timeout: 5 * 50000}, async(attributeProperty)=> {
     let attributeData=map[attributeProperty]['attribues'];
@@ -69,7 +69,7 @@ Then(/^verify data present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, asyn
     let leaseData=map[leasesData]['tabData'];
     await maps.verifyLeasesTabData(leaseData);
 });
-Then(/^verify leases tab labels sholud be present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, async(leasesLabels)=>  {
+Then(/^verify leases tab labels should be present on leases tab "([^"]*)"$/, {timeout: 5 * 50000}, async(leasesLabels)=>  {
     let leaseData=map[leasesLabels]['thLeases'];
     await maps.verifyLeasesLabel(leaseData);
 });
@@ -185,4 +185,7 @@ Then(/^verify content data under contact tab "([^"]*)"$/, {timeout: 5 * 50000}, 
     await maps.verifyMapData(data);
     await maps.verifyListContentUnderContactTab(content);
     await maps.verifyLabelNotPreent(dataNotPresent);
+});
+Then(/^verify options are not present under document tab$/, {timeout: 5 * 50000}, async() => {
+    await maps.optionsNotPresent();
 });

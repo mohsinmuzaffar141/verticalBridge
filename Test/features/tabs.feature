@@ -1,4 +1,4 @@
-Feature: verify filter against my sites
+Feature: verify test cases of different tabs
 
   #Maps Tabs
   @clickMapResetTab
@@ -11,7 +11,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  search the location on the map "<location>"
     Then  click on reset button "<site>"
     When  I log out
@@ -30,7 +30,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  click on auto view button
     When  I log out
 
@@ -51,7 +51,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  click "<tab>" on site detail page
     Then  verify contact label are present "<tab>"
     When  I log out
@@ -70,7 +70,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  click "<tab>" on site detail page
     Then  verify contact data are present "<tab>"
     When  I log out
@@ -90,7 +90,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  click "<tab>" on site detail page
     Then  verify contact data are not present "<tab>"
     When  I log out
@@ -110,7 +110,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify contact data should not be duplicated "<tab>"
     When  I log out
@@ -118,7 +118,6 @@ Feature: verify filter against my sites
     Examples:
       | credentials  |  relationships    |     tab     |
       |   admin      |     contactData   |  contactTab |
-
 
 
       #PropertyTab
@@ -132,7 +131,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify attributes should be present on property tab "<tab>"
     When  I log out
@@ -152,7 +151,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify data should be present under property information "<tab>"
     When  I log out
@@ -173,7 +172,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify property data are present "<tab>"
     When  I log out
@@ -193,7 +192,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify property data is not present "<tab>"
     When  I log out
@@ -215,7 +214,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify leases tab attribute should be present "<tab>"
     When  I log out
@@ -234,7 +233,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify data present on leases tab "<tab>"
     When  I log out
@@ -253,9 +252,9 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
-    Then  verify leases tab labels sholud be present on leases tab "<tab>"
+    Then  verify leases tab labels should be present on leases tab "<tab>"
     When  I log out
 
     Examples:
@@ -272,7 +271,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify data should be present under ground rights "<tab>"
     When  I log out
@@ -291,7 +290,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify leases tab data is not present "<tab>"
     When  I log out
@@ -312,7 +311,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify labels on operational tab "<tab>"
     When  I log out
@@ -331,7 +330,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify labels not present on operational tab "<tab>"
     When  I log out
@@ -353,7 +352,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify data under operational attribute "<tab>"
     When  I log out
@@ -381,7 +380,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify data under site comments "<tab>"
     When  I log out
@@ -402,7 +401,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify labels under FCC tab "<tab>"
     When  I log out
@@ -421,7 +420,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify labels data under FCC tab "<tab>"
     When  I log out
@@ -443,7 +442,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify display message under FCC tab "<tab>"
     Then  verify link under FCC tab "<tab>"
@@ -463,7 +462,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify display message under FCC tab "<tab>"
     When  I log out
@@ -484,7 +483,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify label under rad center tab "<tab>"
     When  I log out
@@ -503,7 +502,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify label data under rad center tab "<tab>"
     When  I log out
@@ -524,7 +523,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify indicator under rad center tab "<tab>"
     When  I log out
@@ -543,7 +542,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify table header under rad center tab "<tab>"
     When  I log out
@@ -564,7 +563,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify table header under leasing activity tab "<tab>"
     When  I log out
@@ -583,7 +582,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify label not present under leasing activity tab "<tab>"
     When  I log out
@@ -602,7 +601,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     When  I log out
 
@@ -623,7 +622,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify labels under document tab "<tab>"
     When  I log out
@@ -642,7 +641,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  verify files under document tab "<tab>"
     When  I log out
@@ -661,9 +660,29 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<relationships>"
+    Then  click on site link "<relationships>"
     Then  click "<tab>" on site detail page
     Then  click folder and sub folder under document tab
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships  |       tab       |
+      |   admin      |    leasesData   |   documentTab   |
+
+    #108-119 && 121/122
+    @verifyOptionsNotPresentUnderDocumentTab
+  Scenario Outline: verify options are not present under document tab
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link "<relationships>"
+    Then  click "<tab>" on site detail page
+    Then  verify options are not present under document tab
     When  I log out
 
     Examples:
@@ -792,21 +811,3 @@ Feature: verify filter against my sites
 
 
 
-  @verifyOptionsNotPresentUnderDocumentTab
-  Scenario Outline: verify options are not present under document tab
-
-    Given I am on vertical bridge Page
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
-    When  I click to the select partner view button
-    When  selects the "<relationships>"
-    Then  click the select button
-    Then  click on my sites button
-    Then  click on site link  "<relationships>"
-    Then  click "<tab>" on site detail page
-    Then  verify options are not present under document tab "<tab>"
-    When  I log out
-
-    Examples:
-      | credentials  |  relationships  |       tab       |
-      |   admin      |    leasesData   |   documentTab   |

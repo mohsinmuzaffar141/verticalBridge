@@ -22,7 +22,7 @@ export class siteDetailPage extends BasePage {
     autoView = element(by.xpath('//div[@class="mat-checkbox-inner-container"]//input[@type="checkbox"]'));
     autoV = element(by.xpath('//div[@class="mat-checkbox-inner-container"]'));
     linkTitle = element(by.xpath('//div[@class="header-title"]'));
-    saerchFile=element(by.id('SearchDocument'));
+    searchFile=element(by.id('SearchDocument'));
     search_btn=element(by.id('DocSearchBtn'));
     editFile=element(by.xpath('//i[@class="fa fa-pencil-square-o fa-2x"]'));
     siteInspection=element(by.xpath('//i[@class="fa fa-file-text-o fa-2x"]'));
@@ -39,24 +39,28 @@ export class siteDetailPage extends BasePage {
         await site.click();
         await browser.sleep(5000);
     }
-
     async verifySiteNumber(value: string) {
-        let siteNumber = cred[value]['siteNumber'];
-        console.log(siteNumber);
-        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + siteNumber + '")]'));
+        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + value + '")]'));
         // await browser.wait(until.presenceOf(title), 15000, 'Element taking too long to appear in the DOM');
         await title.getText().then(async function (text) {
-            var sp = text.split(" ");
-            var req = sp[0];
+            let sp = text.split(" ");
+            let req = sp[0];
             console.log(req);
-            await expect(siteNumber).to.equals(req);
+            await expect(value).to.equals(req);
         });
     }
 
-    async verifyName(value: string) {
-        let site = cred[value]['siteName'];
-        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + site + '")]'));
-        await expect(title.getText()).to.eventually.contain(site);
+    async verifyName(value: string,number:string){
+        let title = element(by.xpath('//div[@class="PageTitle"]//div[contains(text()," ' + value + '")]'));
+        await title.getText().then(async function (text) {
+            let sp = text.split("keyboard_arrow_up");
+            let req = sp[0];
+            let sp1 = req.split(number+' ');
+            let req1 = sp1[1];
+            let name=req1.trim();
+            console.log(name);
+            await expect(value).to.equals(name);
+        });
     }
 
     async verifyHeaderOnDetailedPage(listed: string) {
@@ -102,6 +106,8 @@ export class siteDetailPage extends BasePage {
             let pageTabs = element(by.xpath('//a[text()=" ' + tabs[i] + ' "]'));
             await pageTabs.getText().then(async function (text) {
                 console.log(text);
+                await pageTabs.click();
+                await browser.sleep(3000);
             });
             await expect(pageTabs.isDisplayed()).to.eventually.equal(true);
         }
@@ -254,12 +260,12 @@ export class siteDetailPage extends BasePage {
     async verifyDataUnderPropertyInformation(attributeData: string) {
         let attribute = attributeData.split(',');
         for (let i = 0; i < attribute.length; i++) {
-            let attributeDatainfo = element(by.xpath('//div[contains(text(),"' + attribute[i] + '")]'));
-            await browser.wait(until.presenceOf(attributeDatainfo), 50000, 'Element taking too long to appear in the DOM');
-            await attributeDatainfo.getText().then(async function (text) {
+            let attributeDataInfo = element(by.xpath('//div[contains(text(),"' + attribute[i] + '")]'));
+            await browser.wait(until.presenceOf(attributeDataInfo), 50000, 'Element taking too long to appear in the DOM');
+            await attributeDataInfo.getText().then(async function (text) {
                 console.log(text);
             });
-            await expect(attributeDatainfo.isDisplayed()).to.eventually.equal(true);
+            await expect(attributeDataInfo.isDisplayed()).to.eventually.equal(true);
         }
     }
 
@@ -355,8 +361,8 @@ export class siteDetailPage extends BasePage {
     async fileSearch(file: string){
         let files=maps[file]['fileDocument'];
         let doc=element(by.xpath('//span[text()="'+files+'"]'));
-        await this.saerchFile.click();
-        await this.saerchFile.sendKeys(files);
+        await this.searchFile.click();
+        await this.searchFile.sendKeys(files);
         await this.search_btn.click();
         await browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM');
         await expect(files).to.be.exist;
@@ -373,12 +379,10 @@ export class siteDetailPage extends BasePage {
         //     await folder.click();
         // }
     }
-//     async optionsNotPresent(){
-//         let rowToRightClick=element(by.xpath('//span[@data-text="Blue"]'))
-//         await browser.actions().click(rowToRightClick, protractor.Button.RIGHT).perform();
-//        await expect.IsTrue(popup.Exists, "Write your own message here");
-//
-//     }
+    async optionsNotPresent(){
+        let alert= element(by.xpath('//a[text()="Add or View Documents/Images"]'));
+        await expect(alert.isPresent()).to.eventually.equal(false);
+    }
 
     async editSiteNOtPresent(){
         await expect(this.editFile.isPresent()).to.eventually.equal(false);
@@ -483,6 +487,7 @@ export class siteDetailPage extends BasePage {
         let thdata = thData.split(',');
         for (let i = 1; i <= thdata.length; i++) {
             let headerData = element(by.xpath('//tr[@class="ng-star-inserted"]//th[' + i + ']'));
+            await browser.wait(until.presenceOf(headerData), 500000, 'Advance Search taking too long to appear in the DOM');
             await headerData.getText().then(async function (text) {
                 console.log(text);
                 await expect(text).to.equal(thdata[i - 1]);
@@ -490,11 +495,10 @@ export class siteDetailPage extends BasePage {
         }
     }
 
-    async verifyLabelsUderAdvanceSearch(text:string){
-        let txt=site[text]['advanceLabelHeader'];
-        let labels = txt.split(',');
+    async verifyLabelsUnderAdvanceSearch(text:string){
+        let labels = text.split(',');
         for (let i = 0; i < labels.length; i++) {
-            let searchText=element(by.xpath('//span[contains(text()," ' +labels[i]+ ' ")]'));
+            let searchText=element(by.xpath('//span[contains(text(),"' +labels[i]+ '")]'));
             await searchText.isPresent().then(async function (display) {
                 if (display) {
                     await browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear');
@@ -515,6 +519,7 @@ export class siteDetailPage extends BasePage {
     async verifyRelationshipName(text:string){
         await browser.wait(until.presenceOf(this.relationName), 500000, 'Relationship taking too long to appear');
         await this.relationName.getText().then(async function (display) {
+            console.log(display);
             await expect(display).to.equal(text);
         });
     }

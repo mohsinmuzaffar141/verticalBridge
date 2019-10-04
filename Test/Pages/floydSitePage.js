@@ -57,12 +57,19 @@ var fs = require('fs');
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var expect = chai.expect;
 var until = protractor_1.protractor.ExpectedConditions;
+var partnerPortal = [];
+var floydSite = [];
 var floydSitePage = /** @class */ (function (_super) {
     __extends(floydSitePage, _super);
     function floydSitePage() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.plusIcon = protractor_1.element(protractor_1.by.xpath('//*[name()="svg" and @data-icon="plus"]'));
         _this.portName = protractor_1.element(protractor_1.by.xpath('//input[@formcontrolname="name"]'));
+        _this.floydSearch = protractor_1.element(protractor_1.by.xpath('//input[@id="txtSearchBox"]'));
+        _this.goButton = protractor_1.element(protractor_1.by.xpath('//button[@id="goHome"]'));
+        _this.lease = protractor_1.element(protractor_1.by.xpath('//div[text()="Leases"]'));
+        _this.document_Arrow = protractor_1.element(protractor_1.by.xpath('(//span[@class="toggle-children"])[1]'));
+        _this.verifySite = protractor_1.element(protractor_1.by.xpath('//div[@id="reportSummary"]//div'));
         return _this;
     }
     floydSitePage.prototype.clickHeading = function (heading) {
@@ -168,7 +175,7 @@ var floydSitePage = /** @class */ (function (_super) {
                                                 return [4 /*yield*/, saveBtn.click()];
                                             case 1:
                                                 _a.sent();
-                                                return [4 /*yield*/, protractor_1.browser.sleep(3000)];
+                                                return [4 /*yield*/, protractor_1.browser.sleep(15000)];
                                             case 2:
                                                 _a.sent();
                                                 _a.label = 3;
@@ -242,11 +249,487 @@ var floydSitePage = /** @class */ (function (_super) {
                     case 0:
                         portfolioName = protractor_1.element(protractor_1.by.xpath('//input[@placeholder="Portfolio Name"]'));
                         portfolioType = protractor_1.element(protractor_1.by.xpath('//mat-select[@aria-label="Portfolio type"]'));
-                        return [4 /*yield*/, expect(portfolioName.isDisplayed()).to.eventually.equals(true)];
+                        return [4 /*yield*/, expect(portfolioName.isDisplayed()).to.eventually.equal(true)];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, expect(portfolioType.isDisplayed()).to.eventually.equals(true)];
+                        return [4 /*yield*/, expect(portfolioType.isDisplayed()).to.eventually.equal(true)];
                     case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.getPartnerPortalData = function (colName, value) {
+        return __awaiter(this, void 0, void 0, function () {
+            var firstValue, secondValue, i, managementAgreement;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        firstValue = colName.split(',');
+                        secondValue = value.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < firstValue.length)) return [3 /*break*/, 4];
+                        managementAgreement = protractor_1.element(protractor_1.by.xpath('//div[@class="col-' + firstValue[i] + ' ng-star-inserted" and contains(text(),"' + secondValue[i] + '")]'));
+                        return [4 /*yield*/, managementAgreement.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, partnerPortal.push(text)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        console.log(partnerPortal[i]);
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.getFloydSiteData = function (value) {
+        return __awaiter(this, void 0, void 0, function () {
+            var secondValue, i, managementAgreement;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        secondValue = value.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < secondValue.length)) return [3 /*break*/, 5];
+                        managementAgreement = protractor_1.element(protractor_1.by.xpath('//a[contains(text(),"' + secondValue[i] + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(managementAgreement), 50000, 'Element taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, managementAgreement.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, floydSite.push(text)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5:
+                        console.log(floydSite);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.verifyDataOfBothSides = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var i;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < partnerPortal.length)) return [3 /*break*/, 4];
+                        return [4 /*yield*/, expect(partnerPortal[i]).to.be.contains(floydSite[i])];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.sendValuesToFloyd = function (number) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.floydSearch.sendKeys(number)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.goButton.click()];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.lease), 50000, 'Element taking too long to appear in the DOM')];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.clickOnTab = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.lease.click()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.verifySiteNameFloyd = function (siteNumber, name, number) {
+        return __awaiter(this, void 0, void 0, function () {
+            var sitName;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        sitName = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + siteNumber + '")]'));
+                        return [4 /*yield*/, sitName.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var sp;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                sp = text.split(number + ' ');
+                                                console.log(sp[1]);
+                                                return [4 /*yield*/, expect(sp[1]).to.equal(name)];
+                                            case 1:
+                                                _a.sent();
+                                                return [4 /*yield*/, floydSite.push(sp[1])];
+                                            case 2:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.deleteArray = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                partnerPortal.splice(0, partnerPortal.length);
+                floydSite.splice(0, floydSite.length);
+                return [2 /*return*/];
+            });
+        });
+    };
+    floydSitePage.prototype.partnerPortalSiteData = function (partnerData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var data, i, partnerPortalData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        data = partnerData.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < data.length)) return [3 /*break*/, 5];
+                        partnerPortalData = protractor_1.element(protractor_1.by.xpath('//div[contains(text(),"' + data[i] + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(partnerPortalData), 50000, 'Element taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, partnerPortalData.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, partnerPortal.push(text)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5:
+                        console.log(partnerPortal);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.partnerSiteDocument = function (partnerData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var data, i, partnerDocument;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        data = partnerData.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < data.length)) return [3 /*break*/, 5];
+                        partnerDocument = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + data[i] + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(partnerDocument), 50000, 'Element taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, partnerDocument.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, partnerPortal.push(text)];
+                                            case 1:
+                                                _a.sent();
+                                                console.log(text);
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5:
+                        console.log(partnerPortal);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.floydSiteData = function (floydData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var data, i, floydSiteData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        data = floydData.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < data.length)) return [3 /*break*/, 5];
+                        floydSiteData = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + data[i] + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(floydSiteData), 50000, 'Element taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, floydSiteData.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, floydSite.push(text)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5:
+                        console.log(floydSite);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.floydSiteLabels = function (floydData) {
+        return __awaiter(this, void 0, void 0, function () {
+            var data, i, floydSiteData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        data = floydData.split(',');
+                        i = 0;
+                        _a.label = 1;
+                    case 1:
+                        if (!(i < data.length)) return [3 /*break*/, 5];
+                        floydSiteData = protractor_1.element(protractor_1.by.xpath('//td[contains(text(),"' + data[i] + '")]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(floydSiteData), 50000, 'Element taking too long to appear in the DOM')];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, floydSiteData.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, floydSite.push(text)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 3:
+                        _a.sent();
+                        console.log(floydSite[i]);
+                        _a.label = 4;
+                    case 4:
+                        i++;
+                        return [3 /*break*/, 1];
+                    case 5: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.verifySitesAgainstRentRollReport = function (count) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.verifySite.getText().then(function (text) {
+                            return __awaiter(this, void 0, void 0, function () {
+                                var sp, req;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0:
+                                            sp = text.split('of');
+                                            req = sp[1].split(" ");
+                                            console.log(req[1]);
+                                            return [4 /*yield*/, partnerPortal.push(req[1])];
+                                        case 1:
+                                            _a.sent();
+                                            return [2 /*return*/];
+                                    }
+                                });
+                            });
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.verifySitesRentRollReport = function (count) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.verifySite.getText().then(function (text) {
+                            return __awaiter(this, void 0, void 0, function () {
+                                var sp, req;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0:
+                                            sp = text.split('of');
+                                            req = sp[1].split(" ");
+                                            console.log(req[1]);
+                                            return [4 /*yield*/, floydSite.push(req[1])];
+                                        case 1:
+                                            _a.sent();
+                                            return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                                        case 2:
+                                            _a.sent();
+                                            return [2 /*return*/];
+                                    }
+                                });
+                            });
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.clickDocumentPartner = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.document_Arrow), 50000, 'Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.document_Arrow.click()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.clickDocumentFloyd = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.switchTo().frame(1)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this.document_Arrow.click()];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.switchFrame = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var windowHandles, parentHandle, childHandle;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        windowHandles = protractor_1.browser.getAllWindowHandles();
+                        return [4 /*yield*/, protractor_1.browser.sleep(2000)];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, windowHandles.then(function (handles) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                parentHandle = handles[0];
+                                                console.log("Total Handles :- " + handles.length);
+                                                return [4 /*yield*/, protractor_1.browser.switchTo().window(parentHandle).then(function () {
+                                                        return __awaiter(this, void 0, void 0, function () {
+                                                            return __generator(this, function (_a) {
+                                                                return [2 /*return*/];
+                                                            });
+                                                        });
+                                                    })];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    floydSitePage.prototype.buttonPresent = function (text) {
+        return __awaiter(this, void 0, void 0, function () {
+            var btn;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        btn = protractor_1.element(protractor_1.by.xpath('//span[contains(text(),"' + text + '")]'));
+                        return [4 /*yield*/, expect(btn.isPresent()).to.eventually.equal(false)];
+                    case 1:
                         _a.sent();
                         return [2 /*return*/];
                 }

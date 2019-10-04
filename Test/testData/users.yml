@@ -12,6 +12,7 @@ relation:
   sitesCount: '1113'
   colName: ownerName
   count: 1
+  columnName: col-portfolioName
 
 contactData:
   name:  Duesenberg Investment
@@ -31,7 +32,8 @@ filterSearch:
   zipCode: 01701
   country: United States
   status: Active
-
+  count: 2
+  sitecolumn: siteNo
 
 siteName:
   name:  1 Corporate Boulevard
@@ -53,7 +55,6 @@ siteCountry:
 
 siteStatus:
   name:  Active
-
 
 siteList:
   siteNumber: 'US-CA-1253'
@@ -104,6 +105,66 @@ table1:
 downloadButton:
   button:  Export to Excel
 
+report:
+  siteNumber: 'US-HI-1002'
+  siteName: 1100 Ward Avenue
+
+leasesNumberReport:
+  siteNumber: 10295
+
+reportForecast:
+  siteNumber: 'US-GA-1058'
+  siteName: SONESTA GWINNETT PLACE- DULUTH
+
+leasesNumberForecastReport:
+  siteNumber: 7727
+
+reportNewLeases:
+  siteNumber: 'US-FL-1111'
+  siteName: The Forum at Deer Creek
+
+leasesNumberNewLeasesReport:
+  siteNumber: 9790
+
+reportLeasingActivity:
+  siteNumber: 'US-MD-1049'
+  siteName: Five Star Premier Residences of Chevy Chase
+
+dataValidation:
+  name: American Tower
+  siteNumber: 'US-ID-5021'
 
 
+#  Roles_And_Permissions_Data
+realEstateAdmin:
+  username: readacct1@gmail.com
+  password: V3rt1c@l
+  list: My Sites
 
+realEstateUser:
+  username: reuseracct1@gmail.com
+  password: V3rt1c@l
+  list: My Management Agreements
+
+utilityPartnerAdmin:
+  username: utiladacct1@gmail.com
+  password: V3rt1c@l
+  list: My Sites
+
+utilityPartnerUser:
+  username: utiluseracct1@gmail.com
+  password: V3rt1c@l
+  list: My Management Agreements
+
+jvPartnerAdmin:
+  username: jvadacct1@gmail.com
+  password: V3rt1c@l
+  list: My Sites
+
+jvPartnerUser:
+  username: vbjvuseracct3@gmail.com
+  password: V3rt1c@l
+  list: My Management Agreements
+
+detailPage:
+  siteNumber: US-NY-1021

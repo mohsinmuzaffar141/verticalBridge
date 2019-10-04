@@ -1,4 +1,21 @@
 Feature: verify filter against my sites
+  @verifyTabs
+  Scenario Outline: verify Tabs on detail page
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  click on site link "<site>"
+    Then  verify tabs on site detail page "<site>"
+    When  I log out
+
+    Examples:
+      | credentials  |  relationships |    site  |
+      |   admin      |     relation   | siteTabs |
 
   @searchFilter
   Scenario Outline: verify searchFilters against my sites
@@ -103,8 +120,6 @@ Feature: verify filter against my sites
       | credentials  |  relationships | searchFilter |
       |   admin      |     relation   |filterSearch  |
 
-
-
   @selectSiteLink
   Scenario Outline: verify go to site detailed page
 
@@ -115,7 +130,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify site number on detail page "<site>"
     When  I log out
 
@@ -124,7 +139,7 @@ Feature: verify filter against my sites
       |   admin      |     relation   | siteList |
 
   @verifySite
-  Scenario Outline: verify searchFilters against my sites
+  Scenario Outline: verify site name on detail page
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
@@ -133,7 +148,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify site Name on detail page "<site>"
     When  I log out
 
@@ -152,7 +167,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify general and contacts section on detailed page "<site>"
     When  I log out
 
@@ -170,7 +185,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify site detail labels "<site>"
     When  I log out
 
@@ -189,7 +204,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify site detail labels "<site>"
     When  I log out
 
@@ -207,7 +222,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify site contacts labels "<site>"
     When  I log out
 
@@ -226,7 +241,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify site detail labels not present "<site>"
     When  I log out
 
@@ -236,23 +251,7 @@ Feature: verify filter against my sites
       |   admin      |     relation   | siteDetailNotPresentMohsin |
 
 
-  @verifyTabs
-  Scenario Outline: verify Tabs on detail page
 
-    Given I am on vertical bridge Page
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
-    When  I click to the select partner view button
-    When  selects the "<relationships>"
-    Then  click the select button
-    Then  click on my sites button
-    Then  click on site link  "<site>"
-    Then  verify tabs on site detail page "<site>"
-    When  I log out
-
-    Examples:
-      | credentials  |  relationships |    site  |
-      |   admin      |     relation   | siteTabs |
 
   @verifyMapPin
   Scenario Outline: verify map pin on map
@@ -264,7 +263,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify map pin site detail page "<site>"
     When  I log out
 
@@ -282,7 +281,7 @@ Feature: verify filter against my sites
     When  selects the "<relationships>"
     Then  click the select button
     Then  click on my sites button
-    Then  click on site link  "<site>"
+    Then  click on site link "<site>"
     Then  verify data above map on site detail page "<site>"
     When  I log out
 

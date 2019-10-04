@@ -7,11 +7,6 @@ portfolioType:
 portfolioType1:
   buttonName: Cancel
 
-floydSite:
-  hyperLink: Additional Features
-  portfolio: Add/Edit Portfolio
-  confirmationMessage: The portfolio was successfully created.
-
 reports:
   tab: My Dashboard
   count: 7,Management Agreements
@@ -22,8 +17,219 @@ totalSites:
   tab: My Dashboard
   count: 11,Total Sites
   link: Sites By Management Agreement Report
-  tabelHeader: Site No,Site Name,Site Status,Latitude,Longitude,Owners Name,Revenue,Number of Tenants,Management Agreement Name
+  tableHeader: Site No,Site Name,Site Status,Latitude,Longitude,Owners Name,Revenue,Number of Tenants,Management Agreement Name
 
 totalRevenue:
   tab: My Dashboard
-  count: $344.46K,Total Annualized Revenue
+  count: $345.9K,Total Annualized Revenue
+
+rentRollReport:
+  tab: My Dashboard
+  link: Rent Roll Report
+  colName: tenantName
+  count: 1
+  siteNumber: US-HI-1002
+  attributeData: Rent Roll
+  thReportHeader: Site Number,Site Name,Tenant Name,Lease Number,Monthly Tenant Rent,Monthly Other Charges,Billing Frequency,Management Agreement Name
+  recordCount: '10'
+
+
+rentRollReportSites:
+  link: Sites By Management Agreement
+  siteCount: '1113'
+
+rentRollReport1:
+  tab: My Dashboard
+  link: Rent Roll Report
+  colName: monthlyTenantRent right
+  count: 1
+  thReportHeader: Tenant Name,Lease Number,Billing Frequency
+
+table:
+  count: 1
+  name: Tenant Name
+  colName: tenantName
+  sitesCount: '10'
+  button:  Export to PDF
+  fileName: \\Rent Roll-Export.pdf
+
+filterReport:
+  siteNumber: US-HI-1002
+  count: 1
+  sitecolumn: siteNo
+
+forecastReport:
+  tab: My Dashboard
+  link: Forecast Report
+  startDate: 09/01/2019
+  endDate: 09/15/2019
+  button: Generate Report
+  recordCount: '11'
+  monthStart: January,2019
+  monthEnd: December,2019
+  startDateCalender: 29
+  endDateCalender: 15
+  attributeData: Forecast Report
+  thReportHeader: Management Agreement Name,Site Number,Site Name,Site Start Date,Site Address,Relationship Name,Tenant Legal Name,Lease Number,Agreement Type,Renewal Type,Renewal Term,Number Of Renewals,Current Renewal Term,Auto Renewal Comment,Current Term End Date,Final Term Expiration Date,Lease Commecement Date,Lease Effective Date,Escalation Amount,Vertical Bridge Fee Percentage,Billing Frequency,Charge Type,1/1/2019,2/1/2019,3/1/2019,4/1/2019,5/1/2019,6/1/2019,7/1/2019,8/1/2019,9/1/2019,10/1/2019,11/1/2019,12/1/2019,Total Tenant Rent
+  colName: managementAgreementName
+  count: 1
+  siteNumber: US-GA-1058,US-SC-1021,US-MD-1049,US-MD-1049,US-MA-1033,US-TX-1209,US-KS-1053,US-FL-1111,US-MA-1036,US-MA-1036
+  leaseNumber: 7727,7774,8373,8569,8762,8351,6494,9790,8566,8566
+
+filterReportForecast:
+  tab: My Dashboard
+  link: Forecast Report
+  button: Hide Columns
+  siteNumber: SONESTA GWINNETT PLACE- DULUTH
+  count: 1
+  sitecolumn: siteName
+  colName: Site Number
+
+reportForecast:
+  tab: My Dashboard
+  link: Forecast Report
+  count: 1
+  colName: tenantLegalName
+
+tableForecast:
+  count: 1
+  name: Site Address
+  colName: siteAddress
+  sitesCount: '11'
+  button:  Export to PDF
+  fileName: \\Forecast Report-Export.pdf
+
+newLeasesReport:
+  tab: My Dashboard
+  link: New Leases Report
+  colName: tenantName
+  recordCount: '10'
+  count: 1
+  siteNumber: 8569
+  attributeData: New Leases
+  thReportHeader: Site Number,Site Name,Lease Number,Tenant Name,Relationship Name,Pre-Existing Lease,Prior Tenant Rent,Current Tenant Rent,Management Agreement Name
+
+filterReportNewLeases:
+  siteNumber: T-Mobile South, LLC
+  count: 1
+  sitecolumn: tenantName
+
+tableNewLeases:
+  tab: My Dashboard
+  link: New Leases Report
+  count: 1
+  name: Tenant Name
+  colName: tenantName
+  sitesCount: '10'
+  button:  Export to PDF
+  fileName: \\New Leases-Export.pdf
+  siteNumber: US-FL-1111,US-GA-1058,US-HI-1002,US-KS-1053,US-MA-1033,US-MA-1036,US-MD-1049,US-MD-1049,US-SC-1021,US-TX-1209
+  leaseNumber: 9790,7727,10295,6494,8762,8566,8373,8569,7774,8351
+
+leasingActivityReport:
+  tab: My Dashboard
+  link: Leasing Activity Report
+  colName: tenantLegalName
+  recordCount: '41'
+  siteNumber: C-100994
+  count: 1
+  attributeData: Leasing Activity
+  thReportHeader: Management Agreement Name,Site Number,Site Name,Deal Number,Tenant Name,Tenant Relationship Name,Projected Rent,Deal Status,Inquiry Date,Application Received Date,Estimated Closure Date
+
+filterReportLeasingActivity:
+  siteNumber: C-101207
+  count: 1
+  sitecolumn: dealNumber
+
+tableLeasingActivity:
+  count: 1
+  name: Deal Number
+  colName: dealNumber
+  sitesCount: '41'
+  button:  Export to PDF
+  fileName: \\Leasing Activity-Export.pdf
+
+partnerPortalValue:
+  columnName: siteName,tenantName
+  value: 912 South Capital of Texas Highway,Dallas MTA
+
+floydSiteValue:
+  value: Dallas MTA
+  siteNumber: US-TX-1209
+  siteName: 912 South Capital of Texas Highway
+  number: 1209
+  floydStage: Floyd - Stage
+
+floydSite:
+  hyperLink: Additional Features
+  portfolio: Add/Edit Portfolio
+  confirmationMessage: The portfolio was successfully created.
+  siteNumber: US-TX-1209
+
+partnerPortalValueForecast:
+  columnName: siteName,tenantLegalName
+  value: SONESTA GWINNETT PLACE- DULUTH,SouthernLINC
+
+floydSiteValueForecast:
+  columnName: tenantName
+  value: SouthernLINC
+  siteNumber: US-GA-1058
+  siteName: SONESTA GWINNETT PLACE- DULUTH
+  number: 1058
+  floydStage: Floyd - Stage
+
+floydSiteForecast:
+  hyperLink: Additional Features
+  portfolio: Add/Edit Portfolio
+  siteNumber: US-GA-1058
+
+partnerPortalValueLeasing:
+  columnName: siteName,tenantName
+  value: The Forum at Deer Creek,T-Mobile South
+
+floydSiteValueLeasing:
+  columnName: tenantName
+  value: T-Mobile South
+  siteNumber: US-FL-1111
+  siteName: The Forum at Deer Creek
+  number: 1111
+  floydStage: Floyd - Stage
+
+floydSiteLeasing:
+  hyperLink: Additional Features
+  portfolio: Add/Edit Portfolio
+  siteNumber: US-FL-1111
+  floydStage: Floyd - Stage
+
+partnerPortalSiteData:
+  labels: Office Building,Rooftop,33.83471200
+  labelsFloyd: Office Building,Rooftop,33.83471200,-84.33396000
+  siteNumber: US-GA-1045
+
+partnerPortalSiteLabels:
+  labelsPartner: FCC ASR Number,FCC Application Number,FCC File Number,FAA Study Number,FCC Status
+  labelsFloyd: FCC ASR Number,FCC Application Number,FCC File Number,FAA Study Number,FCC Status
+  siteNumber: US-GA-1045
+  tab: FCC
+
+partnerPortalSiteLabels1:
+  labelsPartner: Ground Right Property Size,Ground Right Property Dimensions
+  labelsFloyd: Ground Right Property Size,Ground Right Property Dimensions
+  siteNumber: US-GA-1045
+  tab: RAD Centers
+
+partnerPortalSiteDocument:
+  labelsPartner: US-ID-5021_1A2C_072615.pdf,US-ID-5021_FAA_012516.pdf,US-ID-5021_SS_072815.pdf
+  labelsFloyd: US-ID-5021_1A2C_072615.pdf,US-ID-5021_FAA_012516.pdf,US-ID-5021_SS_072815.pdf
+  siteNumber: US-ID-5021
+  tab: Documents
+
+partnerPortalTabsData:
+  tabsPartner: Twin Falls,Salt Lake City,Idaho 5 - Butte,Twin Fall
+  tabsFloyd: Twin Falls,Salt Lake City,Idaho 5 - Butte,Twin Fall
+  siteNumber: US-ID-5021
+  tab: Property
+
+partnerPortalTabsData1:
+  tabsPartner: PROP-US-ID-00025,Easement
+  tabPartnerSpan: PROP-US-ID-00025,Easement
