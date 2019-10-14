@@ -9,6 +9,7 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 let role = yaml.safeLoad(fs.readFileSync('./Test/testData/rolesPermission.yml', 'utf8'));
 let cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
+let floyd = yaml.safeLoad(fs.readFileSync('./Test/testData/floydSite.yml', 'utf8'));
 
 const chai = require("chai").use(require("chai-as-promised"));
 const expect = chai.expect;
@@ -50,4 +51,11 @@ Then(/^verify management agreement list "([^"]*)"$/, {timeout: 5 * 50000}, async
 Then(/^verify relationship should not be viewable for external users "([^"]*)"$/, {timeout: 5 * 50000}, async (text)=>{
     let btn=role[text]['button'];
     await floydSite.buttonPresent(btn);
+});
+Then(/^I click on view button "([^"]*)"$/, {timeout: 5 * 50000}, async (text)=> {
+    let btn=role[text]['button'];
+    let document=role[text]['document'];
+    await manageAgreePage.viewDocument();
+    await siteDetail.advanceSearchRefinementCriteria(document);
+    await siteDetail.verifyLabelsUnderAdvanceSearch(btn);
 });

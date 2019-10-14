@@ -174,3 +174,36 @@ detailPage1:
 
 headerLabel1:
   siteNumber: US-NY-1021
+
+reportsKPI:
+  colName: portfolioName
+  count: 1
+
+reports:
+  colName: ownerName
+  count: 1
+
+relationship:
+  relation: relationships
+  value: CIM
+
+relationshipRole:
+  relation: relationshipRoles
+  value: Real Estate/Property Owner User
+
+relationship1:
+  relation: owners
+  value: CIM
+
+relationshipRole1:
+  relation: ownerRoles
+  value: Real Estate/Property Owner User
+
+relationship2:
+  relation: portfolios
+  value: CIM
+
+relationshipRole2:
+  relation: portfolioRoles
+  value: Real Estate/Property Owner User
+

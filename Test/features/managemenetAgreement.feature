@@ -156,3 +156,102 @@ Feature: verify data against management agreement
     Examples:
       | credentials  |      download      |  relationships |
       |   admin      |   downloadButton   |   relation     |
+
+  @verifyRelationship/Owner/PortfolioData
+  Scenario Outline: view relationship/owner/portfolio for Vb admin
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
+    Then  click on my sites button
+    Then  verify owner name should be sorted in ascending order "<report>"
+    Then  verify owner name should be sorted in ascending order "<report1>"
+    When  I log out
+
+    Examples:
+      | credentials |   report   |  report1  |  relationships |
+      |   admin    |  reportsKPI |  reports  |    relation    |
+
+  @verifyDropDownForRelationship/Owner/PortfolioData
+  Scenario Outline: verify dropdown for relationship/owner/portfolio
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
+    When  Click on security button "<roles>"
+    When  Click on manage users "<roles>"
+    When  Search the External/Internal users "<roles>"
+    When  Click on external and internal user "<roles>"
+    Then  Click on relationship dropdown "<relationships>"
+    Then  Click on relationship dropdown "<relation>"
+    Then  Click on save button "<portfolio>"
+    When  I log out
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentialsInternal>"
+    Then  click on my sites button
+    Then  verify owner name should be sorted in ascending order "<report>"
+    Then  verify owner name should be sorted in ascending order "<report1>"
+    When  I log out
+
+    Examples:
+      | credentials |      roles    |  portfolio    | relationships  |     relation     |credentialsInternal| report  | report1|
+      |   admin    | rolesPermission| portfolioType | relationship1 | relationshipRole1 |  realEstateUser  |reportsKPI|reports|
+      |   admin    | rolesPermission| portfolioType | relationship2 | relationshipRole2 |  realEstateUser  |reportsKPI|reports|
+      |   admin    | rolesPermission| portfolioType | relationship  | relationshipRole  |  realEstateUser  |reportsKPI|reports|
+
+
+  @verifyExternalUsersAccessDataForPortfolio
+  Scenario Outline: verify external user should access data for portfolio
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentialsInternal>"
+    Then  click on my sites button
+    Then  verify relationship should not be viewable for external users "<external>"
+    Then  verify owner name should be sorted in ascending order "<report>"
+    Then  verify owner name should be sorted in ascending order "<report1>"
+    When  I log out
+
+    Examples:
+         | credentialsInternal  |    report    |  report1   |   external    |
+         |    realEstateUser    |  reportsKPI  |   reports  | externalUser  |
+         |  utilityPartnerUser  |  reportsKPI  |   reports  | externalUser  |
+         |  jvPartnerUser      |   reportsKPI  |   reports  | externalUser  |
+
+  @verifyInternalUsersAccessDataForPortfolio
+  Scenario Outline: verify internal user should access data for portfolio
+
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentialsAdmin>"
+    When  Click checkbox button
+    When  Click on security button "<roles>"
+    When  Click on manage users "<roles>"
+    When  Search the External/Internal users "<roles>"
+    When  Click on external and internal user "<roles>"
+    Then  Click on is internal checkbox "<roles>"
+    Then  Click on save button "<portfolio>"
+    When  I log out
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentialsInternal>"
+    Then  click on my sites button
+    Then  verify owner name should be sorted in ascending order "<report>"
+    Then  verify owner name should be sorted in ascending order "<report1>"
+    When  I log out
+    Given I am on vertical bridge Page
+    When  Login to vertical bridge with "<credentialsAdmin>"
+    When  Click checkbox button
+    When  Click on security button "<roles>"
+    When  Click on manage users "<roles>"
+    When  Search the External/Internal users "<roles>"
+    When  Click on external and internal user "<roles>"
+    Then  Click on is internal checkbox "<roles>"
+    Then  Click on save button "<portfolio>"
+    When  I log out
+
+    Examples:
+      |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |   report    |  report1   |
+      |rolesPermission  |    realEstateUser     |     admin        | portfolioType | reportsKPI  |   reports  |
+      |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | reportsKPI  |   reports  |
+      |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | reportsKPI  |   reports  |

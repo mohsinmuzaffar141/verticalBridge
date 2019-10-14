@@ -10,4 +10,6 @@ cucumber_1.Then(/^verify relationship should not be viewable for external users 
 });
 cucumber_2.When(/^I click on youtube$/, function () {
 });
+cucumber_1.Then(/^I click on view button "([^"]*)"$/, function () {
+});
 //# sourceMappingURL=MySteps.js.map

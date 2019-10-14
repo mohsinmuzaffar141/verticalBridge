@@ -4,6 +4,7 @@ import { browser,element,by } from "protractor";
 import { LoginPage } from "../Pages/LoginPage";
 import { when } from "q";
 import {ManagementAgreementDataPage} from "../Pages/ManagementAgreementDataPage";
+import {siteDetailPage} from "../Pages/siteDetailPage";
 
 //data variables
 const yaml = require('js-yaml');
@@ -13,7 +14,7 @@ let cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 const chai = require("chai").use(require("chai-as-promised"));
 const expect = chai.expect;
 const manageAgreePage = new ManagementAgreementDataPage();
-//const login: LoginPage = new LoginPage();
+const siteDetail = new siteDetailPage();
 
 When(/^I click to the select partner view button$/, {timeout: 5 * 50000}, async() => {
     await manageAgreePage.clickOnSearchButton();
@@ -78,4 +79,10 @@ Then(/^click on export to excel button "([^"]*)"$/, {timeout: 5 * 50000}, async(
 });
 Then(/^verify the file should be downloaded$/, {timeout: 5 * 50000}, async() =>  {
     await manageAgreePage.verifyDownloadFile();
+});
+Then(/^Click on relationship dropdown "([^"]*)"$/, {timeout: 5 * 50000}, async(relation) => {
+    let rel=cred[relation]['relation'];
+    let value=cred[relation]['value'];
+    await manageAgreePage.clickRelationship(rel);
+    await manageAgreePage.verifyRelationshipRole(value);
 });

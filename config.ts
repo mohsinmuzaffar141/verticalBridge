@@ -70,6 +70,7 @@ export const config: Config = {
         "siteGeneral": "./Test/features/siteGeneral.feature",
         "floydSite": "./Test/features/floydSite.feature",
         "reports": "./Test/features/reports.feature",
+        "role": "./Test/features/rolesPermission.feature",
     },
 // };
     plugins: [{

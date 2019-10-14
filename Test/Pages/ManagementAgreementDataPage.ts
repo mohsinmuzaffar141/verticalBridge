@@ -27,6 +27,7 @@ export class ManagementAgreementDataPage extends BasePage{
     text=element(by.xpath('//h2[text()="Select Partner View"]'));
     cancel=element(by.xpath('//span[text()="Cancel"]'));
     table=element(by.xpath('//div[@class="ui-scrollpanel-content"]'));
+    viewButton=element(by.xpath('(//button[@class="ViewBtn mat-raised-button"])[1]'));s
 
 
 
@@ -267,13 +268,32 @@ export class ManagementAgreementDataPage extends BasePage{
         let site=element(by.id('smalltext'));
         await expect(site.isPresent()).to.eventually.equal(true);
     }
-    async viewManagementList(){
-        let data=element(by.id('ReportHeaderLeft'));
-        await data.getText().then(async function(text) {
-                console.log(text);
-                //await expect(list[i].isPresent()).to.equal(true);
-        });
-
+    // async viewManagementList(){
+    //     let data=element(by.id('ReportHeaderLeft'));
+    //     await data.getText().then(async function(text) {
+    //             console.log(text);
+    //             //await expect(list[i].isPresent()).to.equal(true);
+    //     });
+    // }
+    async viewDocument(){
+        await browser.wait(until.presenceOf(this.viewButton), 5000, 'Element taking too long to appear in the DOM');
+        await this.viewButton.click();
     }
+    async clickRelationship(relationship:string){
+        let relation=element(by.xpath('//mat-select[@formcontrolname="'+relationship+'"]'));
+        await browser.wait(until.presenceOf(relation), 5000, 'Element taking too long to appear in the DOM');
+        await relation.click();
+    }
+    async verifyRelationshipRole(text:string){
+            let searchText=element(by.xpath('//mat-option//span[contains(text(),"' +text+ '")]'));
+            await searchText.isPresent().then(async function (display) {
+                if (display) {
+                    await browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear');
+                    await searchText.click();
+                    await browser.sleep(2000);
+                } else
+                    console.log(searchText + " is not present")
+            });
+        }
 
 }

@@ -1105,25 +1105,24 @@ var siteDetailPage = /** @class */ (function (_super) {
     };
     siteDetailPage.prototype.fileSearch = function (file) {
         return __awaiter(this, void 0, void 0, function () {
-            var files, doc;
+            var doc;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        files = maps[file]['fileDocument'];
-                        doc = protractor_1.element(protractor_1.by.xpath('//span[text()="' + files + '"]'));
+                        doc = protractor_1.element(protractor_1.by.xpath('//span[text()="' + file + '"]'));
                         return [4 /*yield*/, this.searchFile.click()];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, this.searchFile.sendKeys(files)];
+                        return [4 /*yield*/, this.searchFile.sendKeys(file)];
                     case 2:
                         _a.sent();
                         return [4 /*yield*/, this.search_btn.click()];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM')];
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(doc), 500000, 'Element taking too long to appear in the DOM')];
                     case 4:
                         _a.sent();
-                        return [4 /*yield*/, expect(files).to.be.exist];
+                        return [4 /*yield*/, expect(file).to.be.exist];
                     case 5:
                         _a.sent();
                         return [2 /*return*/];

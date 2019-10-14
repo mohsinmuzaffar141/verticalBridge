@@ -13,3 +13,6 @@ Then(/^verify relationship should not be viewable for external users "([^"]*)"$/
 When(/^I click on youtube$/, function () {
 
 });
+Then(/^I click on view button "([^"]*)"$/, function () {
+
+});

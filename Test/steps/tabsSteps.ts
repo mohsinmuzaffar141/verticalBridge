@@ -144,7 +144,7 @@ Then(/^verify labels under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async
     await maps.documentLabel(label);
 });
 Then(/^verify files under document tab "([^"]*)"$/, {timeout: 5 * 50000}, async(filesDocument)=>{
-    let files=maps[filesDocument]['fileDocument'];
+    let files=map[filesDocument]['fileDocument'];
     await maps.fileSearch(files);
 });
 Then(/^click folder and sub folder under document tab$/, {timeout: 5 * 50000}, async()=>{

@@ -451,7 +451,7 @@ cucumber_1.Then(/^verify labels under document tab "([^"]*)"$/, { timeout: 5 * 5
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                label = map[labelDocument]['documanetLabel1'];
+                label = map[labelDocument]['documentLabel1'];
                 return [4 /*yield*/, maps.documentLabel(label)];
             case 1:
                 _a.sent();
@@ -460,9 +460,12 @@ cucumber_1.Then(/^verify labels under document tab "([^"]*)"$/, { timeout: 5 * 5
     });
 }); });
 cucumber_1.Then(/^verify files under document tab "([^"]*)"$/, { timeout: 5 * 50000 }, function (filesDocument) { return __awaiter(_this, void 0, void 0, function () {
+    var files;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, maps.fileSearch(filesDocument)];
+            case 0:
+                files = map[filesDocument]['fileDocument'];
+                return [4 /*yield*/, maps.fileSearch(files)];
             case 1:
                 _a.sent();
                 return [2 /*return*/];

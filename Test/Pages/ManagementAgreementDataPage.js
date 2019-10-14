@@ -74,6 +74,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
         _this.text = protractor_1.element(protractor_1.by.xpath('//h2[text()="Select Partner View"]'));
         _this.cancel = protractor_1.element(protractor_1.by.xpath('//span[text()="Cancel"]'));
         _this.table = protractor_1.element(protractor_1.by.xpath('//div[@class="ui-scrollpanel-content"]'));
+        _this.viewButton = protractor_1.element(protractor_1.by.xpath('(//button[@class="ViewBtn mat-raised-button"])[1]'));
         return _this;
     }
     ManagementAgreementDataPage.prototype.clickOnSearchButton = function () {
@@ -806,18 +807,74 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
             });
         });
     };
-    ManagementAgreementDataPage.prototype.viewManagementList = function () {
+    // async viewManagementList(){
+    //     let data=element(by.id('ReportHeaderLeft'));
+    //     await data.getText().then(async function(text) {
+    //             console.log(text);
+    //             //await expect(list[i].isPresent()).to.equal(true);
+    //     });
+    // }
+    ManagementAgreementDataPage.prototype.viewDocument = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var data;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.viewButton), 5000, 'Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.viewButton.click()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.clickRelationship = function (relationship) {
+        return __awaiter(this, void 0, void 0, function () {
+            var relation;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        data = protractor_1.element(protractor_1.by.id('ReportHeaderLeft'));
-                        return [4 /*yield*/, data.getText().then(function (text) {
+                        relation = protractor_1.element(protractor_1.by.xpath('//mat-select[@formcontrolname="' + relationship + '"]'));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(relation), 5000, 'Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, relation.click()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ManagementAgreementDataPage.prototype.verifyRelationshipRole = function (text) {
+        return __awaiter(this, void 0, void 0, function () {
+            var searchText;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        searchText = protractor_1.element(protractor_1.by.xpath('//mat-option//span[contains(text(),"' + text + '")]'));
+                        return [4 /*yield*/, searchText.isPresent().then(function (display) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     return __generator(this, function (_a) {
-                                        console.log(text);
-                                        return [2 /*return*/];
+                                        switch (_a.label) {
+                                            case 0:
+                                                if (!display) return [3 /*break*/, 4];
+                                                return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(searchText), 500000, 'Labels Advance search taking too long to appear')];
+                                            case 1:
+                                                _a.sent();
+                                                return [4 /*yield*/, searchText.click()];
+                                            case 2:
+                                                _a.sent();
+                                                return [4 /*yield*/, protractor_1.browser.sleep(2000)];
+                                            case 3:
+                                                _a.sent();
+                                                return [3 /*break*/, 5];
+                                            case 4:
+                                                console.log(searchText + " is not present");
+                                                _a.label = 5;
+                                            case 5: return [2 /*return*/];
+                                        }
                                     });
                                 });
                             })];

@@ -22,3 +22,7 @@ rolesPermission2:
 
 externalUser:
   button: Select Partner View
+
+viewDocument:
+  button: Close
+  document: 125_Fund CIM V_COI-Endt_080715.pdf

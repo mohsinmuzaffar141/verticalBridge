@@ -32,6 +32,7 @@ rentRollReport:
   attributeData: Rent Roll
   thReportHeader: Site Number,Site Name,Tenant Name,Lease Number,Monthly Tenant Rent,Monthly Other Charges,Billing Frequency,Management Agreement Name
   recordCount: '10'
+  sitesCount: '27'
 
 
 rentRollReportSites:
@@ -75,6 +76,7 @@ forecastReport:
   count: 1
   siteNumber: US-GA-1058,US-SC-1021,US-MD-1049,US-MD-1049,US-MA-1033,US-TX-1209,US-KS-1053,US-FL-1111,US-MA-1036,US-MA-1036
   leaseNumber: 7727,7774,8373,8569,8762,8351,6494,9790,8566,8566
+  sitesCount: '32'
 
 filterReportForecast:
   tab: My Dashboard
@@ -108,6 +110,7 @@ newLeasesReport:
   siteNumber: 8569
   attributeData: New Leases
   thReportHeader: Site Number,Site Name,Lease Number,Tenant Name,Relationship Name,Pre-Existing Lease,Prior Tenant Rent,Current Tenant Rent,Management Agreement Name
+  sitesCount: '27'
 
 filterReportNewLeases:
   siteNumber: T-Mobile South, LLC
@@ -135,6 +138,7 @@ leasingActivityReport:
   count: 1
   attributeData: Leasing Activity
   thReportHeader: Management Agreement Name,Site Number,Site Name,Deal Number,Tenant Name,Tenant Relationship Name,Projected Rent,Deal Status,Inquiry Date,Application Received Date,Estimated Closure Date
+  sitesCount: '57'
 
 filterReportLeasingActivity:
   siteNumber: C-101207
@@ -216,7 +220,7 @@ partnerPortalSiteLabels1:
   labelsPartner: Ground Right Property Size,Ground Right Property Dimensions
   labelsFloyd: Ground Right Property Size,Ground Right Property Dimensions
   siteNumber: US-GA-1045
-  tab: RAD Centers
+  tab: Project Ready
 
 partnerPortalSiteDocument:
   labelsPartner: US-ID-5021_1A2C_072615.pdf,US-ID-5021_FAA_012516.pdf,US-ID-5021_SS_072815.pdf

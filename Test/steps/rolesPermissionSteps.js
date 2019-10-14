@@ -46,6 +46,7 @@ var yaml = require('js-yaml');
 var fs = require('fs');
 var role = yaml.safeLoad(fs.readFileSync('./Test/testData/rolesPermission.yml', 'utf8'));
 var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
+var floyd = yaml.safeLoad(fs.readFileSync('./Test/testData/floydSite.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var siteDetail = new siteDetailPage_1.siteDetailPage();
@@ -149,6 +150,26 @@ cucumber_1.Then(/^verify relationship should not be viewable for external users 
                 btn = role[text]['button'];
                 return [4 /*yield*/, floydSite.buttonPresent(btn)];
             case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^I click on view button "([^"]*)"$/, { timeout: 5 * 50000 }, function (text) { return __awaiter(_this, void 0, void 0, function () {
+    var btn, document;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                btn = role[text]['button'];
+                document = role[text]['document'];
+                return [4 /*yield*/, manageAgreePage.viewDocument()];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, siteDetail.advanceSearchRefinementCriteria(document)];
+            case 2:
+                _a.sent();
+                return [4 /*yield*/, siteDetail.verifyLabelsUnderAdvanceSearch(btn)];
+            case 3:
                 _a.sent();
                 return [2 /*return*/];
         }

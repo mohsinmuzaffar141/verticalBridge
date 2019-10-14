@@ -62,6 +62,7 @@ exports.config = {
         "siteGeneral": "./Test/features/siteGeneral.feature",
         "floydSite": "./Test/features/floydSite.feature",
         "reports": "./Test/features/reports.feature",
+        "role": "./Test/features/rolesPermission.feature",
     },
     // };
     plugins: [{

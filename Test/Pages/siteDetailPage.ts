@@ -363,7 +363,7 @@ export class siteDetailPage extends BasePage {
         await this.searchFile.click();
         await this.searchFile.sendKeys(file);
         await this.search_btn.click();
-        await browser.wait(until.presenceOf(doc), 15000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(doc), 500000, 'Element taking too long to appear in the DOM');
         await expect(file).to.be.exist;
     }
 

@@ -5,7 +5,6 @@ import {siteDetailPage} from "../Pages/siteDetailPage";
 //data variables
 const yaml = require('js-yaml');
 const fs = require('fs');
-let cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 let floyd = yaml.safeLoad(fs.readFileSync('./Test/testData/floydSite.yml', 'utf8'));
 
 

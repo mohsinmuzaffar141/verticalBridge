@@ -38,6 +38,7 @@ var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var cucumber_1 = require("cucumber");
 var ManagementAgreementDataPage_1 = require("../Pages/ManagementAgreementDataPage");
+var siteDetailPage_1 = require("../Pages/siteDetailPage");
 //data variables
 var yaml = require('js-yaml');
 var fs = require('fs');
@@ -45,7 +46,7 @@ var cred = yaml.safeLoad(fs.readFileSync('./Test/testData/users.yml', 'utf8'));
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var manageAgreePage = new ManagementAgreementDataPage_1.ManagementAgreementDataPage();
-//const login: LoginPage = new LoginPage();
+var siteDetail = new siteDetailPage_1.siteDetailPage();
 cucumber_1.When(/^I click to the select partner view button$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -229,6 +230,23 @@ cucumber_1.Then(/^verify the file should be downloaded$/, { timeout: 5 * 50000 }
         switch (_a.label) {
             case 0: return [4 /*yield*/, manageAgreePage.verifyDownloadFile()];
             case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Then(/^Click on relationship dropdown "([^"]*)"$/, { timeout: 5 * 50000 }, function (relation) { return __awaiter(_this, void 0, void 0, function () {
+    var rel, value;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                rel = cred[relation]['relation'];
+                value = cred[relation]['value'];
+                return [4 /*yield*/, manageAgreePage.clickRelationship(rel)];
+            case 1:
+                _a.sent();
+                return [4 /*yield*/, manageAgreePage.verifyRelationshipRole(value)];
+            case 2:
                 _a.sent();
                 return [2 /*return*/];
         }

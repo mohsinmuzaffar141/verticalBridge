@@ -806,7 +806,7 @@ Feature: verify test cases of reports
 
 
   @verifyDataOfForecastReportAgainstFloydSite
-  Scenario Outline: verify data of rent roll report against floyd site
+  Scenario Outline: verify data of forecast report against floyd site
 
     Given I am on vertical bridge Page
     When  Login to vertical bridge with "<credentials>"
@@ -973,7 +973,7 @@ Feature: verify test cases of reports
     Examples:
       | credentials  |  relationships |         report       |
       |   admin      |     relation   |    newLeasesReport   |
-#
+
 
   @verifyColumnAgainstNewLeasesReport
   Scenario Outline: verify column and fields against new leases report

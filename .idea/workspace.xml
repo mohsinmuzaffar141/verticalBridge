@@ -3,13 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="f4ef5760-62a3-4076-bc98-958757d422f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/rolesPermission.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/rolesPermission.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/ManagemantAgreementSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/reportsSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/tabsSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/map.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/map.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/rolesPermission.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/rolesPermission.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
     </list>
@@ -120,6 +146,12 @@
       <workItem from="1570084276065" duration="20651000" />
       <workItem from="1570162545076" duration="1822000" />
       <workItem from="1570166265274" duration="16123000" />
+      <workItem from="1570264681544" duration="2201000" />
+      <workItem from="1570430295380" duration="19327000" />
+      <workItem from="1570509730569" duration="15436000" />
+      <workItem from="1570595198422" duration="15817000" />
+      <workItem from="1570689584894" duration="11830000" />
+      <workItem from="1571035173259" duration="4108000" />
     </task>
     <servers />
   </component>
@@ -188,7 +220,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
