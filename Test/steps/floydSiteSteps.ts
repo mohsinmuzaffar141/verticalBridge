@@ -21,7 +21,7 @@ When(/^Click on add a portfolio "([^"]*)"$/, {timeout: 5 * 50000}, async(addPort
     let portfolio=floyd[addPortfolio]['portfolio'];
     await floydSite.clickHeading(portfolio);
 });
-Then(/^Click on plus icon button$/, {timeout: 5 * 50000}, async()=> {
+Then(/^Click on plus icon button$/, {timeout: 5 * 5000}, async()=> {
     await floydSite.clickPlusIcon();
 });
 Then(/^Click on portfolio type "([^"]*)"$/, {timeout: 5 * 50000}, async(portfolioType)=> {

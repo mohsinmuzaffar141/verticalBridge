@@ -1088,7 +1088,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                     case 1:
                         if (!(i < labels.length)) return [3 /*break*/, 5];
                         msg = protractor_1.element(protractor_1.by.xpath('(//div[@class="node-content-wrapper"])[' + i + ']'));
-                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(msg), 15000, 'Element taking too long to appear in the DOM')];
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(msg), 50000, 'Element taking too long to appear in the DOM')];
                     case 2:
                         _a.sent();
                         return [4 /*yield*/, expect(msg).to.be.exist];
@@ -1612,7 +1612,7 @@ var siteDetailPage = /** @class */ (function (_super) {
                         return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(searchText), 500000, 'Relationship taking too long to appear')];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, searchText.isPresent().then(function (display) {
+                        return [4 /*yield*/, searchText.getText().then(function (display) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     return __generator(this, function (_a) {
                                         console.log(display);

@@ -48,12 +48,14 @@ export class LoginPage extends BasePage{
     checkbox = element(by.id("KmsiCheckboxField"));
     yesbtn = element(by.xpath("//input[@id='idSIButton9']"));
     logout_btn=element(by.xpath('//span[text()="Log Out"]'));
-    logoutFloyd=element(by.xpath('//*[name()="svg" and @data-icon="user-circle"]'));
+    logoutFloyd=element(by.xpath('//*[name()="svg" and @data-icon="user-circle" and @data-prefix="fas"]'));
     signOut=element(by.xpath('//span[text()="Sign out"]'));
 
 
 
     async OpenBrowser() {
+        await browser.manage().deleteAllCookies();
+        await browser.sleep(5000);
         browser.ignoreSynchronization = true;
         await browser.get("https://vnd_Ishfaq.zia:Is1928Zi@stagefloyd.verticalbridge.com");
         await browser.sleep(7000);
@@ -82,9 +84,11 @@ export class LoginPage extends BasePage{
 
     }
     async clickLoginButton(){
+        await browser.sleep(1000);
         await browser.wait(until.presenceOf(this.loginButton), 50000, 'Element taking too long to appear in the DOM');
         await this.loginButton.click();
-        await browser.sleep(3000);
+        // await browser.manage().deleteAllCookies();
+        await browser.sleep(10000);
     }
     async clickcheckbox(){
         if (this.checkbox.checked) {
@@ -117,14 +121,20 @@ export class LoginPage extends BasePage{
         await browser.sleep(7000);
     }
     async logoutfloyd(){
-        // await browser.wait(until.presenceOf(this.logoutFloyd),500000, 'Element taking too long to appear in the DOM');
-        await browser.sleep(3000);
+        await browser.wait(until.presenceOf(this.logoutFloyd),50000, 'logout floyd Element taking too long to appear in the DOM');
         await this.logoutFloyd.click();
-        await browser.sleep(3000);
-        //await browser.wait(until.presenceOf(this.signOut),500000, 'Element taking too long to appear in the DOM');
+        await browser.sleep(2000);
+        //await browser.wait(until.presenceOf(this.signOut),50000, 'Element taking too long to appear in the DOM');
         await this.signOut.click();
-        await browser.sleep(3000);
+        await browser.sleep(5000);
+        // await browser.manage().deleteAllCookies();
+        // await browser.sleep(5000);
+    }
+
+    async launchFloyd() {
         await browser.manage().deleteAllCookies();
         await browser.sleep(5000);
+        browser.ignoreSynchronization = true;
+        await browser.get(configuration['floydURL']);
     }
 }

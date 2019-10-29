@@ -1,4 +1,5 @@
 App-url: https://stagepartnerportal.verticalbridge.com
+floydURL: https://login.microsoftonline.com
   
 systemvalues:
   casepath: \C$\Projects

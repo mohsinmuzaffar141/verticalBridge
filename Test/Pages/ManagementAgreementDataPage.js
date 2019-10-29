@@ -244,6 +244,9 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                     case 0:
                         revenueData = cred[revenue]['revenue'];
                         revenueValue = protractor_1.element.all(protractor_1.by.xpath('//div[@class="right ng-star-inserted"]'));
+                        return [4 /*yield*/, protractor_1.browser.sleep(5000)];
+                    case 1:
+                        _a.sent();
                         return [4 /*yield*/, revenueValue.getText().then(function (value) {
                                 return __awaiter(this, void 0, void 0, function () {
                                     var i;
@@ -255,7 +258,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                                     });
                                 });
                             })];
-                    case 1:
+                    case 2:
                         _a.sent();
                         return [2 /*return*/];
                 }

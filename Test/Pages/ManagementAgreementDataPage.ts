@@ -79,6 +79,7 @@ export class ManagementAgreementDataPage extends BasePage{
     async verifyRevenue(revenue:string){
         let revenueData= cred[revenue]['revenue'];
         let revenueValue= element.all(by.xpath('//div[@class="right ng-star-inserted"]'));
+        await browser.sleep(5000);
         await revenueValue.getText().then(async function(value){
          for(let i=0;i<value.length;i++){
              console.log(value[i]);

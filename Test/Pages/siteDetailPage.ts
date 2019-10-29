@@ -352,7 +352,7 @@ export class siteDetailPage extends BasePage {
         let labels = label.split(',');
         for (let i = 1; i < labels.length; i++) {
             let msg = element(by.xpath('(//div[@class="node-content-wrapper"])['+i+']'));
-            await browser.wait(until.presenceOf(msg), 15000, 'Element taking too long to appear in the DOM');
+            await browser.wait(until.presenceOf(msg), 50000, 'Element taking too long to appear in the DOM');
             await expect(msg).to.be.exist;
         }
     }
@@ -511,7 +511,7 @@ export class siteDetailPage extends BasePage {
     async advanceSearchRefinementCriteria(text:string){
         let searchText=element(by.xpath('//span[contains(text(),"' +text+ '")]'));
         await browser.wait(until.presenceOf(searchText), 500000, 'Relationship taking too long to appear');
-        await searchText.isPresent().then(async function (display) {
+        await searchText.getText().then(async function (display) {
             console.log(display);
         });
     }

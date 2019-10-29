@@ -113,7 +113,7 @@ cucumber_1.When(/^Click checkbox button$/, { timeout: 5 * 50000 }, function () {
         }
     });
 }); });
-cucumber_1.When(/^I log out$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.When(/^I log out$/, { timeout: 5 * 500000 }, function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, loginPage.logout()];
@@ -123,13 +123,31 @@ cucumber_1.When(/^I log out$/, { timeout: 5 * 50000 }, function () { return __aw
         }
     });
 }); });
-cucumber_1.When(/^I log out from floyd site$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+cucumber_1.When(/^I log out from floyd site$/, { timeout: 5 * 500000 }, function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, loginPage.logoutfloyd()];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
+        }
+    });
+}); });
+cucumber_1.Given(/^I am on floyd login Page$/, { timeout: 5 * 50000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    var e_3;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, loginPage.launchFloyd()];
+            case 1:
+                _a.sent();
+                return [3 /*break*/, 3];
+            case 2:
+                e_3 = _a.sent();
+                console.log(e_3);
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
         }
     });
 }); });

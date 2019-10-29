@@ -36,7 +36,7 @@ export class floydSitePage extends BasePage {
     }
 
     async clickPlusIcon() {
-        await browser.wait(until.presenceOf(this.plusIcon), 500000, 'Element taking too long to appear in the DOM');
+        await browser.wait(until.presenceOf(this.plusIcon), 5000, 'Element taking too long to appear in the DOM');
         await this.plusIcon.click();
     }
 

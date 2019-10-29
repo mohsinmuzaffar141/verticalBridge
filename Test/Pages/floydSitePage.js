@@ -105,7 +105,7 @@ var floydSitePage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.plusIcon), 500000, 'Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.plusIcon), 5000, 'Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
                         return [4 /*yield*/, this.plusIcon.click()];

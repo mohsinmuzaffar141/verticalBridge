@@ -199,8 +199,8 @@ Feature: verify data against management agreement
     Examples:
       | credentials |      roles    |  portfolio    | relationships  |     relation     |credentialsInternal| report  | report1|
       |   admin    | rolesPermission| portfolioType | relationship1 | relationshipRole1 |  realEstateUser  |reportsKPI|reports|
-      |   admin    | rolesPermission| portfolioType | relationship2 | relationshipRole2 |  realEstateUser  |reportsKPI|reports|
-      |   admin    | rolesPermission| portfolioType | relationship  | relationshipRole  |  realEstateUser  |reportsKPI|reports|
+#      |   admin    | rolesPermission| portfolioType | relationship2 | relationshipRole2 |  realEstateUser  |reportsKPI|reports|
+#      |   admin    | rolesPermission| portfolioType | relationship  | relationshipRole  |  realEstateUser  |reportsKPI|reports|
 
 
   @verifyExternalUsersAccessDataForPortfolio
@@ -217,8 +217,8 @@ Feature: verify data against management agreement
     Examples:
          | credentialsInternal  |    report    |  report1   |   external    |
          |    realEstateUser    |  reportsKPI  |   reports  | externalUser  |
-         |  utilityPartnerUser  |  reportsKPI  |   reports  | externalUser  |
-         |  jvPartnerUser      |   reportsKPI  |   reports  | externalUser  |
+#         |  utilityPartnerUser  |  reportsKPI  |   reports  | externalUser  |
+#         |  jvPartnerUser      |   reportsKPI  |   reports  | externalUser  |
 
   @verifyInternalUsersAccessDataForPortfolio
   Scenario Outline: verify internal user should access data for portfolio
@@ -253,5 +253,5 @@ Feature: verify data against management agreement
     Examples:
       |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |   report    |  report1   |
       |rolesPermission  |    realEstateUser     |     admin        | portfolioType | reportsKPI  |   reports  |
-      |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | reportsKPI  |   reports  |
-      |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | reportsKPI  |   reports  |
+#      |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | reportsKPI  |   reports  |
+#      |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | reportsKPI  |   reports  |
