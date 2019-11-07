@@ -3,30 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f4ef5760-62a3-4076-bc98-958757d422f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/siteDetailPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/rolesPermission.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/rolesPermission.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/floydSiteSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/configurations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/configurations.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
     </list>
@@ -63,6 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="E:\verticalBridge\node_modules\typescript\lib" />
   </component>
@@ -150,6 +132,8 @@
       <workItem from="1571562183476" duration="3014000" />
       <workItem from="1571640877618" duration="13173000" />
       <workItem from="1571719757815" duration="13152000" />
+      <workItem from="1573125885311" duration="721000" />
+      <workItem from="1573129867986" duration="2759000" />
     </task>
     <servers />
   </component>
@@ -210,6 +194,10 @@
         <option value="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" />
         <option value="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.js.map" />
         <option value="$PROJECT_DIR$/Test/steps/rolesPermissionSteps.js" />
+        <option value="$PROJECT_DIR$/Test/Pages/apiPage.js" />
+        <option value="$PROJECT_DIR$/Test/Pages/apiPage.js.map" />
+        <option value="$PROJECT_DIR$/Test/steps/apiSteps.js.map" />
+        <option value="$PROJECT_DIR$/Test/steps/apiSteps.js" />
       </list>
     </option>
   </component>

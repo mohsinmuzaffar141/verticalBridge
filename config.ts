@@ -71,6 +71,7 @@ export const config: Config = {
         "floydSite": "./Test/features/floydSite.feature",
         "reports": "./Test/features/reports.feature",
         "role": "./Test/features/rolesPermission.feature",
+        "api": "./Test/features/api.feature",
     },
 // };
     plugins: [{

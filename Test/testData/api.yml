@@ -1,0 +1,196 @@
+homepage:
+  link: /PortalAPI/Home/?siteNumber=US-WY-5007
+  content: American Tower
+
+siteAllContacts:
+  link: /PortalAPI/Contact/GetAllContactsBySiteNumber/?siteNumber=US-WY-5007
+  content: Matt Schilz
+
+siteContacts:
+  link: /PortalAPI/Contact/GetSiteContactsBySiteNumber/?siteNumber=US-WY-5007
+  content: matt.schilz@townsquaremedia.com
+
+partnerPortal:
+  link: /PortalAPI/Admin/GetPartnerPortalPages
+  content: Home Page - AboutTab
+
+groundRightsContacts:
+  link: /PortalAPI/Contact/GetGRContactsBySiteNumber/?siteNumber=US-WY-5007
+  content: Burnett Land and Livestock LTD
+
+portfolioContacts:
+  link: /PortalAPI/Contact/GetPortfolioContactsBySiteNumber/?siteNumber=US-CA-1085
+  content: 31ac6ac5-fabc-e411-9408-00155df03f40
+
+tenantContacts:
+  link: /PortalAPI/Contact/GetTenantContactsBySiteNumber/?siteNumber=US-CA-1085
+  content: Vice President of Real Estate
+
+deploymentData:
+  link: /PortalAPI/Development/GetDeploymentData/?siteNumber=US-WY-5007
+  content: null
+
+managementAgreementList:
+  link: /PortalAPI/Document/ManagementAgreementDocumentsList
+  content: No Access
+
+FCCSiteData:
+  link: /PortalAPI/FCC/GetFCCSiteDataBySiteNumber/?siteNumber=US-WY-5007
+  content: L02135681
+
+leasingActivityData:
+  link: /PortalAPI/LeasingActivity/GetLeasingActivityBySiteNumber/?siteNumber=US-WY-5007
+  content: D-005791
+
+groundRightsData:
+  link: /PortalAPI/Tenant/GetGroundRights/?siteNumber=US-WY-5007
+  content: 2260
+
+tenantHeader:
+  link: /PortalAPI/Tenant/GetTenantHeaderInfo/?siteNumber=US-WY-5007
+  content: $ 1835.93
+
+operationTab:
+  link: /PortalAPI/Site/GetSiteCommentsForOperationsTab/?siteNumber=US-WY-5007
+  content: system
+
+revenuePortfolio:
+  link: /PortalAPI/ManagementAgreement/GetRevenueByPortfolioGuid/?portfolioGuid=f92e2169-9809-4eba-93f0-2beea68b65aa
+  content: $54,833.32
+
+map:
+  link: /PortalAPI/Map/?NewSiteNo=US-WY-5007
+  content: Guyed Towe
+
+myDashboard:
+  link: /PortalAPI/MyDashboard
+  content: 9
+
+annualizedRevenue:
+  link: /PortalAPI/MyDashboard/GetAnnualizedRevenue
+  content: 659869.87999956
+
+radCenterData:
+  link: /PortalAPI/RADCenter/GetRADData/?newSiteNo=US-WY-5007
+  content: EOG Resources, Inc.
+
+siteNumber:
+  link: /PortalAPI/Site/GetSiteBySiteNumber/?siteNumber=US-WY-5008
+  content: KRVK_KRNK-FM
+
+advanceSearch:
+  link: /PortalAPI/Search/GetAdvancedSearchViewModel
+  content: Educational Facility
+
+operationsData:
+  link: /PortalAPI/Site/GetOperationsDataBySiteNumber/?siteNumber=US-WY-5008
+  content: TownSquare Key
+
+agreementOnly:
+  link: /PortalAPI/ManagementAgreement/GetManagementAgreementsOnly
+  content: American Tower - TSQ - LEASES ONLY
+
+roles:
+  link: /PortalAPI/User/GetRoles
+  content: Development JV Partner Admin
+
+user:
+  link: /PortalAPI/User/GetUserByUserGuid/?userGuid=3e0e9993-ef6a-48b3-7971-08d6de20ebde
+  content: VB Admin
+
+relationshipOwnerPortfolio:
+  link: /PortalAPI/Admin/GetRelationshipsOwnersAndPortfoliosForInternalUser
+  content: (AHIP) Lodging Enterprises LLC
+
+saveImpersonateData:
+  link: /PortalAPI/Admin/SaveImpersonateData/?type=relationship&typeGuid=5727c045-60bc-e411-9408-00155df03f40
+  content: true
+
+tenantLeases:
+  link: /PortalAPI/Tenant/GetTenantLeases/?siteNumber=US-WY-5008
+  content: United States Department of Homeland Security
+
+rolePagePermission:
+  link: /PortalAPI/Admin/GetPartnerPortalRolePagePermissions/?partnerPortalRolesGuid=69900a0f-e4ed-41ff-b7eb-25a0d0c61d1f
+  content: 69900a0f-e4ed-41ff-b7eb-25a0d0c61d1f
+
+permissionForLoggedInUser:
+  link: /PortalAPI/Admin/GetPartnerPortalRolePagePermissionsForLoggedInUser
+  content: Advanced Search page
+
+appConfig:
+  link: /PortalAPI/AppConfig/GetAppConfig
+  content: Vertical Bridge
+
+simpleSearch:
+  link: /PortalAPI/Site/GetSimpleSearchData/?SearchText=US-WY-5007
+  content: KIGN-FM
+
+
+
+  #POST_REQUEST_TEST_DATA
+
+rentRoll:
+  link: /PortalAPI/Report/GetRentRollReportData/
+  content: Townsquare Radio
+  bodyData: '{"PageSize": 50, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
+
+leasingActivity:
+  link: /PortalAPI/Report/GetLeasingActivityReportData/
+  content: Inquiry or Hit
+  bodyData: '{"PageSize":50,"first":0,"sortDir":1,"filters":[]}'
+
+dataManagementAgreement:
+  link: /PortalAPI/MyDashboard/SitesByManagementAgreement
+  content: 42.54337778
+  bodyData: '{"PageSize": 50, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
+
+getManagementAgreement:
+  link: /PortalAPI/ManagementAgreement/GetManagementAgreements
+  content: bd4accde-6d44-4304-95fb-e29cd8ffa22d
+  bodyData: '{"PageSize": 50, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
+
+leasesReport:
+  link: /PortalAPI/Report/GetNewLeasesReportData
+  content: Salt & Light Radio, Inc.
+  bodyData: '{"PageSize": 50, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
+
+forecastReport:
+  link: /PortalAPI/Report/GetForecastReportData/?startDate=01/01/2019&endDate=12/31/2019
+  content: 1/1/2019
+  bodyData: '{"PageSize": 10, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
+
+advanceSearchGet:
+  link: /PortalAPI/Search/GetAdvancedSearchData
+  content: US-ID-5021
+  bodyData: '{"searchRequest":{"SiteStatus":{"All":false,"Active":true,"Inactive":false},"SiteCategory":{"All":false,"Towers":false,"Rooftops":false,"Land":false,"Billboards":false,"DAS":false}},"reportRequest":{"PageSize":20,"first":0,"sortDir":1,"filters":[]}}'
+
+userList:
+  link: /PortalAPI/User/GetUserList
+  content: vbl\\mberlin
+  bodyData: '{"PageSize":50,"first":0,"sortDir":1,"filters":[]}'
+
+documentList:
+  link: /PortalAPI/Document/DocumentList
+  content: Blue
+  bodyData: '{"NewSiteNo":"US-WY-5007","SearchValue":"US-WY-5007_DDSA_061515 (ACQ).pdf"}'
+
+RolePermission:
+  link: /PortalAPI/Admin/SavePartnerPortalRolePagePermissions/?roleGuid=1855c0a5-55c2-4ab3-afe0-30a26dc23cda
+  content: true
+  bodyData: '[{"partnerPortalPagesGuid":"08770a3c-8049-4bc4-ac74-bd64adb6f97f","pageName":"Advanced Search page","routerPath":"search"},{"partnerPortalPagesGuid":"5a895d55-3cd9-4c94-a8db-dfdae617ff90","pageName":"Home Page -  Contact Tab","routerPath":"homeContactTab"},{"partnerPortalPagesGuid":"b7d0645b-6d84-4068-8153-fcb48341a0dc","pageName":"Home Page -  Simple Search Box","routerPath":"simpleSearchBox"},{"partnerPortalPagesGuid":"91e6b822-135c-4a60-b874-10173b8c0f16","pageName":"Home Page - AboutTab","routerPath":"homeAboutTab"},{"partnerPortalPagesGuid":"45530d45-22ca-4a05-b7f4-b91cd4831336","pageName":"Home Page - AdvancedSearchLink","routerPath":"advancedSearchLink"},{"partnerPortalPagesGuid":"89b46237-e7b4-4a07-9a74-7f96abd7cec3","pageName":"Home Page - Help","routerPath":"help"},{"partnerPortalPagesGuid":"cdbf96ee-7195-4271-9da9-f77a03943494","pageName":"Home Page - Services Tab","routerPath":"homeServicesTab"},{"partnerPortalPagesGuid":"4a5d180d-3e0e-4265-9a9b-ade592875117","pageName":"Home Page Link - Home Newsroom Link","routerPath":"homeNewsroomLink"},{"partnerPortalPagesGuid":"e15da255-0338-4b3e-937e-69def5bb8b33","pageName":"Home Page Link - Linked In Link","routerPath":"homeLinkedInLink"},{"partnerPortalPagesGuid":"ef7d0016-cdf5-425c-89d9-d345ea6795ac","pageName":"My Dashboard","routerPath":"dashboard"},{"partnerPortalPagesGuid":"2ba881f2-e291-4523-95ba-e5e589247d54","pageName":"My Dashboard - ForecastReport","routerPath":"myDashboardForecastReport"},{"partnerPortalPagesGuid":"55ef8f02-7dc8-47fe-83d8-e7d796259b35","pageName":"My Dashboard - LeasingActivityReport","routerPath":"myDashboardLeasingActivityReport"},{"partnerPortalPagesGuid":"84d89265-88aa-4939-8c6c-98a151de9b6d","pageName":"My Dashboard - ManagementAgreements","routerPath":"myDashboardManagementAgreements"},{"partnerPortalPagesGuid":"37bb3608-34b0-4a97-a7fd-941638110443","pageName":"My Dashboard - NewLeasesReport","routerPath":"myDashboardNewLeasesReport"},{"partnerPortalPagesGuid":"80524346-9102-47b0-8e1e-af235a8de3b8","pageName":"My Dashboard - Print","routerPath":"myDashboardPrint"},{"partnerPortalPagesGuid":"7f563b37-472f-4058-9229-4e9d3a2a8d6f","pageName":"My Dashboard - RentRollReport","routerPath":"myDashboardRentRollReport"},{"partnerPortalPagesGuid":"3f7c6445-a7ff-442f-ab0f-45751471e8c0","pageName":"My Dashboard - SitesByManagementAgreementReport","routerPath":"myDashboardSitesByManagementAgreementReport"},{"partnerPortalPagesGuid":"3879cff9-5bd9-4392-bf53-dd2f87a06027","pageName":"My Dashboard - Total Sites","routerPath":"myDashboardTotalSites"},{"partnerPortalPagesGuid":"71164b8e-671d-45ea-87b6-64e04a66775e","pageName":"My Dashboard - TotalAnnualizedRevenue","routerPath":"myDashboardTotalAnnualizedRevenue"},{"partnerPortalPagesGuid":"ff9959c0-f467-46a2-9409-3c81b5a36259","pageName":"My Sites","routerPath":"mysites"},{"partnerPortalPagesGuid":"200a8110-86d8-4b8e-8093-ac5a074ec584","pageName":"My Sites - Sites View Site List","routerPath":"mySitesViewSiteList"},{"partnerPortalPagesGuid":"7fb83a7a-9be2-4420-b318-e586b5274b51","pageName":"My Sites -ManagementAgreements","routerPath":"mySitesManagementAgreements"},{"partnerPortalPagesGuid":"bfce73bf-ab28-481f-908d-554ce032fa90","pageName":"Security - Add Edit Users","routerPath":"addEditUser/:userGuid"},{"partnerPortalPagesGuid":"b8b03ec1-92d1-4ba8-a42a-3dba80bcbae2","pageName":"Security - Main","routerPath":"security"},{"partnerPortalPagesGuid":"da3a50ff-ec75-4e2d-b448-6bcbd15657dc","pageName":"Security - Manage Permissions","routerPath":"managePermissions"},{"partnerPortalPagesGuid":"ee520c89-1cd4-4bd8-b53f-08910eb95652","pageName":"Security - Manage Users","routerPath":"manageUsers"},{"partnerPortalPagesGuid":"124e3b51-dcdc-465f-8515-bfffee509882","pageName":"Site Details - Contacts Tab","routerPath":"contacts"},{"partnerPortalPagesGuid":"8e073e12-4211-4f74-8e8b-9b62a67cd074","pageName":"Site Details - Development Tab","routerPath":"development"},{"partnerPortalPagesGuid":"8d8a9cea-1b86-45f7-a2fe-3beebeda1299","pageName":"Site Details - Documents Tab","routerPath":"documents"},{"partnerPortalPagesGuid":"2e7106bc-6ff0-4412-8f51-550fa0ddf2c7","pageName":"Site Details - DocumentsTabSearchDocuments","routerPath":"siteDetailsDocumentsTabSearchDocuments"},{"partnerPortalPagesGuid":"876c4a93-a532-4bfa-a509-6d193013eb22","pageName":"Site Details - FCC Tab","routerPath":"fcc"},{"partnerPortalPagesGuid":"851df0b0-f7aa-42a0-aa83-61e4fce973db","pageName":"Site Details - HeaderSection","routerPath":"siteDetailsHeaderSection"},{"partnerPortalPagesGuid":"6a6d18b6-5196-4f61-8897-841d0b54b678","pageName":"Site Details - Images Tab","routerPath":"images"},{"partnerPortalPagesGuid":"afc84c14-c33a-4c3e-97b4-6b410173116c","pageName":"Site Details - Leases Tab","routerPath":"leases"},{"partnerPortalPagesGuid":"53982f5f-fab2-44dc-a5a1-e8687a8b5179","pageName":"Site Details - Leasing Activity Tab","routerPath":"leasingActivity"},{"partnerPortalPagesGuid":"c4a0adf2-5f5b-4a30-93b8-92742b708c57","pageName":"Site Details - Maps Tab","routerPath":"maps"},{"partnerPortalPagesGuid":"e93af184-5aa9-4a79-9e4c-bd72f66c1451","pageName":"Site Details - Operations Tab","routerPath":"operations"},{"partnerPortalPagesGuid":"9aac3c26-733f-4131-8150-5f0c39c90fc2","pageName":"Site Details - Property Tab","routerPath":"property"},{"partnerPortalPagesGuid":"0b3f954b-9411-488f-b5f8-085b2be1378f","pageName":"Site Details - RADCenters Tab","routerPath":"radCenters"},{"partnerPortalPagesGuid":"ca52e652-1469-449f-b90b-e96ba2c09597","pageName":"Site Details -ContactsTabTenantContacts","routerPath":"siteDetailsContactsTabTenantContacts"},{"partnerPortalPagesGuid":"f4ac389d-50f4-40a0-987c-139c000bd0dd","pageName":"Site Details -ManagementAgreements","routerPath":"mySitesManagementAgreements"}]'
+
+createUser:
+  link: /PortalAPI/User/CreateUser/
+  content: ''
+  bodyData: '{"username":"mohsin.muzaffar@kualitatem.com","userShortName":"muzaffar","userGuid":"00000000-0000-0000-0000-000000000000","isInternal":false,"portfolios":null,"portfolioRoles":null,"relationships":null,"relationshipRoles":null,"owners":null,"ownerRoles":null,"lastLoginDate":null}'
+
+updateUser:
+  link: /PortalAPI/User/UpdateUser/
+  content: ''
+  bodyData: '{"username":"mohsin.muzaffar@kualitatem.com","userShortName":"muzaffarA","userGuid":"b8011976-aa04-4ea1-3355-08d761ee789e","isInternal":false,"portfolios":null,"portfolioRoles":null,"relationships":null,"relationshipRoles":null,"owners":null,"ownerRoles":null,"lastLoginDate":null}'
+
+portfolioGuid:
+  link: /PortalAPI/Site/GetSitesByPortfolioGuids?portfolioGuids=f92e2169-9809-4eba-93f0-2beea68b65aa,bd4accde-6d44-4304-95fb-e29cd8ffa22d
+  content: Cheyenne
+  bodyData: '{"PageSize":50,"first":0,"sortDir":1,"filters":[],"isPDF":false}'
