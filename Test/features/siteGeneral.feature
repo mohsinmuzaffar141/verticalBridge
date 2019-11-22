@@ -130,41 +130,25 @@ Feature: verify links are not present on site header
       | credentials    | suggestion     |  relationships |
       |   admin        |  headerLabel   |   contactData  |
 
-  @verifyTableHeaderOfAdvanceSearch
-  Scenario Outline: verify table header of advance search
+    #taking too long to appear
+#  @verifyTableHeaderOfAdvanceSearch
+#  Scenario Outline: verify table header of advance search
+#
+#    Given I am on vertical bridge Page
+#    When  Login to vertical bridge with "<credentials>"
+#    When  Click checkbox button
+#    When  I click to the select partner view button
+#    When  selects the "<relationships>"
+#    Then  click the select button
+#    Then  click on advance search
+#    Then  verify table header of advance search "<site>"
+#    When  I log out
+#
+#    Examples:
+#      | credentials    |     site    | relationships|
+#      |   admin        | headerLabel |  relation    |
 
-    Given I am on vertical bridge Page
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
-    When  I click to the select partner view button
-    When  selects the "<relationships>"
-    Then  click the select button
-    Then  click on advance search
-    Then  verify table header of advance search "<site>"
-    When  I log out
-
-    Examples:
-      | credentials    |     site    | relationships|
-      |   admin        | headerLabel |  relation    |
-
-
-  @verifyLabelOfAdvanceSearch
-  Scenario Outline: verify labels of advance search
-
-    Given I am on vertical bridge Page
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
-    When  I click to the select partner view button
-    When  selects the "<relationships>"
-    Then  click the select button
-    Then  click on advance search
-    Then  verify labels of advance search "<site>"
-    When  I log out
-
-    Examples:
-      | credentials    |     site    | relationships|
-      |   admin        | headerLabel |  relation    |
-
+#Same Above
 #  @verifyLabelOfAdvanceSearch
 #  Scenario Outline: verify labels of advance search
 #
@@ -181,6 +165,7 @@ Feature: verify links are not present on site header
 #    Examples:
 #      | credentials    |     site    | relationships|
 #      |   admin        | headerLabel |  relation    |
+
 
   #170&171
   @verifyAdvanceSearchRefinement

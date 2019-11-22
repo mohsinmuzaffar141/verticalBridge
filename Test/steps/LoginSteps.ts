@@ -40,7 +40,7 @@ When(/^Login to vertical bridge with "([^"]*)"$/, {timeout:  5 * 50000}, async(t
 When(/^Click checkbox button$/, {timeout:  5 * 50000}, async() => {
     await loginPage.clickcheckbox();
     await loginPage.clickyesbutton();
-    await loginPage.validate();
+    // await loginPage.validate();
 });
 When(/^I log out$/, {timeout:  5 * 500000}, async() =>{
     await loginPage.logout();

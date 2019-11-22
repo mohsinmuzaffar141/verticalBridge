@@ -450,9 +450,9 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |              report         |           site        |
-      |   admin      |     relation   |         rentRollReport     |    rentRollReportSites |
-      |   admin      |     relation   |        forecastReport      |    rentRollReportSites |
+      | credentials  |  relationships |              report         |           site         |
+      |   admin      |     relation   |         rentRollReport     |    rentRollReportSites  |
+      |   admin      |     relation   |        forecastReport      |    rentRollReportSites  |
       |   admin      |     relation   |       newLeasesReport      |    rentRollReportSites  |
       |   admin      |     relation   |    leasingActivityReport   |    rentRollReportSites |
 
@@ -1284,6 +1284,7 @@ Feature: verify test cases of reports
     When  Click on additional features link "<site>"
     When  Click on add a portfolio "<site>"
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
@@ -1380,6 +1381,7 @@ Feature: verify test cases of reports
     When  Click on additional features link "<site>"
     When  Click on add a portfolio "<site>"
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:

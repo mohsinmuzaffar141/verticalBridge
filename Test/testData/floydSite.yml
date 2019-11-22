@@ -21,7 +21,7 @@ totalSites:
 
 totalRevenue:
   tab: My Dashboard
-  count: $345.9K,Total Annualized Revenue
+  count: $292.53K,Total Annualized Revenue
 
 rentRollReport:
   tab: My Dashboard
@@ -31,7 +31,7 @@ rentRollReport:
   siteNumber: US-HI-1002
   attributeData: Rent Roll
   thReportHeader: Site Number,Site Name,Tenant Name,Lease Number,Monthly Tenant Rent,Monthly Other Charges,Billing Frequency,Management Agreement Name
-  recordCount: '10'
+  recordCount: '8'
   sitesCount: '27'
 
 
@@ -50,7 +50,7 @@ table:
   count: 1
   name: Tenant Name
   colName: tenantName
-  sitesCount: '10'
+  sitesCount: '8'
   button:  Export to PDF
   fileName: \\Rent Roll-Export.pdf
 
@@ -65,7 +65,7 @@ forecastReport:
   startDate: 09/01/2019
   endDate: 09/15/2019
   button: Generate Report
-  recordCount: '11'
+  recordCount: '7'
   monthStart: January,2019
   monthEnd: December,2019
   startDateCalender: 29
@@ -74,8 +74,10 @@ forecastReport:
   thReportHeader: Management Agreement Name,Site Number,Site Name,Site Start Date,Site Address,Relationship Name,Tenant Legal Name,Lease Number,Agreement Type,Renewal Type,Renewal Term,Number Of Renewals,Current Renewal Term,Auto Renewal Comment,Current Term End Date,Final Term Expiration Date,Lease Commecement Date,Lease Effective Date,Escalation Amount,Vertical Bridge Fee Percentage,Billing Frequency,Charge Type,1/1/2019,2/1/2019,3/1/2019,4/1/2019,5/1/2019,6/1/2019,7/1/2019,8/1/2019,9/1/2019,10/1/2019,11/1/2019,12/1/2019,Total Tenant Rent
   colName: managementAgreementName
   count: 1
-  siteNumber: US-GA-1058,US-SC-1021,US-MD-1049,US-MD-1049,US-MA-1033,US-TX-1209,US-KS-1053,US-FL-1111,US-MA-1036,US-MA-1036
-  leaseNumber: 7727,7774,8373,8569,8762,8351,6494,9790,8566,8566
+  siteNumber: US-GA-1058,US-SC-1021,US-MD-1049,US-MD-1049,US-MA-1033,US-TX-1209,US-FL-1111
+#  ,US-KS-1053,US-MA-1036,US-MA-1036
+  leaseNumber: 7727,7774,8373,8569,8762,8351,9790
+#  ,6494,8566,8566
   sitesCount: '32'
 
 filterReportForecast:
@@ -97,7 +99,7 @@ tableForecast:
   count: 1
   name: Site Address
   colName: siteAddress
-  sitesCount: '11'
+  sitesCount: '7'
   button:  Export to PDF
   fileName: \\Forecast Report-Export.pdf
 
@@ -105,7 +107,7 @@ newLeasesReport:
   tab: My Dashboard
   link: New Leases Report
   colName: tenantName
-  recordCount: '10'
+  recordCount: '8'
   count: 1
   siteNumber: 8569
   attributeData: New Leases
@@ -123,17 +125,19 @@ tableNewLeases:
   count: 1
   name: Tenant Name
   colName: tenantName
-  sitesCount: '10'
+  sitesCount: '8'
   button:  Export to PDF
   fileName: \\New Leases-Export.pdf
-  siteNumber: US-FL-1111,US-GA-1058,US-HI-1002,US-KS-1053,US-MA-1033,US-MA-1036,US-MD-1049,US-MD-1049,US-SC-1021,US-TX-1209
-  leaseNumber: 9790,7727,10295,6494,8762,8566,8373,8569,7774,8351
+  siteNumber: US-FL-1111,US-GA-1058,US-HI-1002,US-MA-1033,US-MD-1049,US-MD-1049,US-SC-1021,US-TX-1209
+#  ,US-KS-1053,US-MA-1036
+  leaseNumber: 9790,7727,10295,8762,8373,8569,7774,8351
+#  ,6494,8566
 
 leasingActivityReport:
   tab: My Dashboard
   link: Leasing Activity Report
   colName: tenantLegalName
-  recordCount: '41'
+  recordCount: '56'
   siteNumber: C-100994
   count: 1
   attributeData: Leasing Activity

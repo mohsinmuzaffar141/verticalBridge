@@ -48,7 +48,7 @@ groundRightsData:
 
 tenantHeader:
   link: /PortalAPI/Tenant/GetTenantHeaderInfo/?siteNumber=US-WY-5007
-  content: $ 1835.93
+  content: $ 2385.93
 
 operationTab:
   link: /PortalAPI/Site/GetSiteCommentsForOperationsTab/?siteNumber=US-WY-5007
@@ -68,7 +68,7 @@ myDashboard:
 
 annualizedRevenue:
   link: /PortalAPI/MyDashboard/GetAnnualizedRevenue
-  content: 659869.87999956
+  content: 666469.87999956
 
 radCenterData:
   link: /PortalAPI/RADCenter/GetRADData/?newSiteNo=US-WY-5007
@@ -88,7 +88,7 @@ operationsData:
 
 agreementOnly:
   link: /PortalAPI/ManagementAgreement/GetManagementAgreementsOnly
-  content: American Tower - TSQ - LEASES ONLY
+  content: 7
 
 roles:
   link: /PortalAPI/User/GetRoles

@@ -106,9 +106,6 @@ cucumber_1.When(/^Click checkbox button$/, { timeout: 5 * 50000 }, function () {
                 return [4 /*yield*/, loginPage.clickyesbutton()];
             case 2:
                 _a.sent();
-                return [4 /*yield*/, loginPage.validate()];
-            case 3:
-                _a.sent();
                 return [2 /*return*/];
         }
     });

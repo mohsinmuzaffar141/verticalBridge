@@ -14,16 +14,16 @@ Feature: Get token from vertical bridge site
       | credentials  |        apiLink        |
       | admin        |    siteAllContacts    |
 
-#
-#  @verifyHomePage
-#  Scenario Outline: verify that home page should be displayed
-#
-#    When I send get request to site "<apiLink>"
-#
-#    Examples:
-#      |     apiLink        |
-#      |     homepage       |
-#
+
+  @verifyHomePage
+  Scenario Outline: verify that home page should be displayed
+
+    When I send get request to site "<apiLink>"
+
+    Examples:
+      |     apiLink        |
+      |     homepage       |
+
 #
 #  @gettingUpSiteContacts
 #  Scenario Outline: verify that getting up site contacts
@@ -52,27 +52,27 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |            apiLink          |
 #      |     groundRightsContacts    |
-  #different module
 #
-#  @portfolioContacts
-#  Scenario Outline: Display the portfolio contacts
+  # site changed
+##  @portfolioContacts
+##  Scenario Outline: Display the portfolio contacts
+##
+##    When I send get request to site "<apiLink>"
+##
+##    Examples:
+##      |         apiLink          |
+##      |     portfolioContacts    |
+##
+##  @tenantContacts
+##  Scenario Outline: Display the tenant contacts
+##
+##    When I send get request to site "<apiLink>"
+##
+##    Examples:
+##      |        apiLink        |
+##      |     tenantContacts    |
 #
-#    When I send get request to site "<apiLink>"
 #
-#    Examples:
-#      |         apiLink          |
-#      |     portfolioContacts    |
-#
-#  @tenantContacts
-#  Scenario Outline: Display the tenant contacts
-#
-#    When I send get request to site "<apiLink>"
-#
-#    Examples:
-#      |        apiLink        |
-#      |     tenantContacts    |
-
-
 #  @deploymentData
 #  Scenario Outline: Get deployment data
 #
@@ -100,7 +100,7 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |       apiLink      |
 #      |     FCCSiteData    |
-#
+
 #  @leasingActivitySiteData
 #  Scenario Outline: Display leasing activity site data
 #
@@ -146,7 +146,7 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |         apiLink         |
 #      |     revenuePortfolio    |
-
+#
 #  @mapSiteDetail
 #  Scenario Outline: Display data related to map
 #
@@ -200,7 +200,7 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |      apiLink       |
 #      |   advanceSearch    |
-
+#
 #  @getOperationDataBySiteNumber
 #  Scenario Outline: Display operation data by site number
 #
@@ -246,7 +246,7 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |             apiLink             |
 #      |   relationshipOwnerPortfolio    |
-
+#
 #  @getImpersonateData
 #  Scenario Outline: Display save impersonate data
 #
@@ -264,6 +264,7 @@ Feature: Get token from vertical bridge site
 ##    Examples:
 ##      |    apiLink     |
 ##      |  tenantLeases  |
+##
 #
 #    @getPartnerRolesPermission
 #  Scenario Outline: Display data related to role page permission
@@ -292,7 +293,7 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |   apiLink   |
 #      |  appConfig  |
-#
+
 ##  @simpleSearchValue
 ##  Scenario Outline: Display data related to simple search
 ##
@@ -307,42 +308,42 @@ Feature: Get token from vertical bridge site
 
 #    #POST_REQUEST_TEST_CASES
 
+#
+  @rentRollReportInformation
+  Scenario Outline: Display the information of rent roll report
 
-#  @rentRollReportInformation
-#  Scenario Outline: Display the information of rent roll report
-#
-#    When I send post request to site "<apiLink>"
-#
-#    Examples:
-#      |   apiLink   |
-#      |   rentRoll  |
-#
-#  @leasingReportInformation
-#  Scenario Outline: Display the information of leasing report
-#
-#    When I send post request to site "<apiLink>"
-#
-#    Examples:
-#      |       apiLink     |
-#      |   leasingActivity |
-#
-#  @dataManagementAgreementList
-#  Scenario Outline: Display the data of management agreement from dashboard
-#
-#    When I send post request to site "<apiLink>"
-#
-#    Examples:
-#      |          apiLink        |
-#      | dataManagementAgreement |
-#
-#  @getManagementAgreementList
-#  Scenario Outline: getting the data of management agreement
-#
-#    When I send post request to site "<apiLink>"
-#
-#    Examples:
-#      |          apiLink        |
-#      |  getManagementAgreement |
+    When I send post request to site "<apiLink>"
+
+    Examples:
+      |   apiLink   |
+      |   rentRoll  |
+
+  @leasingReportInformation
+  Scenario Outline: Display the information of leasing report
+
+    When I send post request to site "<apiLink>"
+
+    Examples:
+      |       apiLink     |
+      |   leasingActivity |
+
+  @dataManagementAgreementList
+  Scenario Outline: Display the data of management agreement from dashboard
+
+    When I send post request to site "<apiLink>"
+
+    Examples:
+      |          apiLink        |
+      | dataManagementAgreement |
+
+  @getManagementAgreementList
+  Scenario Outline: getting the data of management agreement
+
+    When I send post request to site "<apiLink>"
+
+    Examples:
+      |          apiLink        |
+      |  getManagementAgreement |
 #
 #
 #  @leasesReportData

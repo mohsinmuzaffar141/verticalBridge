@@ -3,11 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="f4ef5760-62a3-4076-bc98-958757d422f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/api.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/siteGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/siteGeneral.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/api.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/api.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
     </list>
@@ -134,6 +143,12 @@
       <workItem from="1571719757815" duration="13152000" />
       <workItem from="1573125885311" duration="721000" />
       <workItem from="1573129867986" duration="2759000" />
+      <workItem from="1573744520704" duration="1033000" />
+      <workItem from="1573798897023" duration="1569000" />
+      <workItem from="1574061064401" duration="10485000" />
+      <workItem from="1574142495535" duration="10856000" />
+      <workItem from="1574224226447" duration="10232000" />
+      <workItem from="1574318154640" duration="5377000" />
     </task>
     <servers />
   </component>

@@ -8,15 +8,56 @@ export const config: Config = {
 
     seleniumAddress: "http://127.0.0.1:4444/wd/hub",
 
-    SELENIUM_PROMISE_MANAGER: false,
+    //SELENIUM_PROMISE_MANAGER: false,
 
     baseUrl: "https://www.google.com/",
 
+    suites:{
+        "login":"../features/login.feature",
+        "managementAgreement": "./Test/features/managemenetAgreement.feature",
+        "site": "./Test/features/mySites.feature",
+        "tabs": "./Test/features/tabs.feature",
+        "siteGeneral": "./Test/features/siteGeneral.feature",
+        //"floydSite": "./Test/features/floydSite.feature",
+         "reports": "./Test/features/reports.feature",
+        // "role": "./Test/features/rolesPermission.feature",
+         "api": "./Test/features/api.feature",
+
+
+        portal:[
+            "./Test/features/login.feature",
+            "./Test/features/managemenetAgreement.feature",
+            "./Test/features/mySites.feature",
+            "./Test/features/tabs.feature",
+            "./Test/features/siteGeneral.feature",
+        ],
+        general:[
+
+            //"./Test/features/floydSite.feature",
+        ],
+        report:[
+            "./Test/features/reports.feature",
+            "./Test/features/rolesPermission.feature",
+            "./Test/features/api.feature",
+        ],
+
+
+    },
+
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+        unexpectedAlertBehaviour: 'accept',
+
+        'goog:chromeOptions': {
+            'w3c': false
+        },
+        chromeOptions: {
+            args:['--window-size=1920,1080']
+        }
     },
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
+    ignoreUncaughtExceptions: true,
     // framework: "custom",
     // frameworkPath: require.resolve("protractor-cucumber-framework"),
 
@@ -29,6 +70,7 @@ export const config: Config = {
         "./Test/features/floydSite.feature",
         "./Test/features/reports.feature",
         "./Test/features/rolesPermission.feature",
+        "./Test/features/api.feature",
     ],
 
     onPrepare: () => {
@@ -62,17 +104,7 @@ export const config: Config = {
         Reporter.createHTMLReport();
     },
 
-    suites:{
-        "login":"../features/login.feature",
-        "managementAgreement": "./Test/features/managemenetAgreement.feature",
-        "site": "./Test/features/mySites.feature",
-        "tabs": "./Test/features/tabs.feature",
-        "siteGeneral": "./Test/features/siteGeneral.feature",
-        "floydSite": "./Test/features/floydSite.feature",
-        "reports": "./Test/features/reports.feature",
-        "role": "./Test/features/rolesPermission.feature",
-        "api": "./Test/features/api.feature",
-    },
+
 // };
     plugins: [{
         package: require.resolve('protractor-multiple-cucumber-html-reporter-plugin'),

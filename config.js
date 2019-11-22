@@ -7,13 +7,47 @@ var jsonReports = process.cwd() + "/reports/json";
 exports.config = {
     defaultTimeoutInterval: 144550000,
     seleniumAddress: "http://127.0.0.1:4444/wd/hub",
-    SELENIUM_PROMISE_MANAGER: false,
+    //SELENIUM_PROMISE_MANAGER: false,
     baseUrl: "https://www.google.com/",
+    suites: {
+        "login": "../features/login.feature",
+        "managementAgreement": "./Test/features/managemenetAgreement.feature",
+        "site": "./Test/features/mySites.feature",
+        "tabs": "./Test/features/tabs.feature",
+        "siteGeneral": "./Test/features/siteGeneral.feature",
+        //"floydSite": "./Test/features/floydSite.feature",
+        "reports": "./Test/features/reports.feature",
+        // "role": "./Test/features/rolesPermission.feature",
+        "api": "./Test/features/api.feature",
+        portal: [
+            "./Test/features/login.feature",
+            "./Test/features/managemenetAgreement.feature",
+            "./Test/features/mySites.feature",
+            "./Test/features/tabs.feature",
+            "./Test/features/siteGeneral.feature",
+        ],
+        general: [
+        //"./Test/features/floydSite.feature",
+        ],
+        report: [
+            "./Test/features/reports.feature",
+            "./Test/features/rolesPermission.feature",
+            "./Test/features/api.feature",
+        ],
+    },
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+        unexpectedAlertBehaviour: 'accept',
+        'goog:chromeOptions': {
+            'w3c': false
+        },
+        chromeOptions: {
+            args: ['--window-size=1920,1080']
+        }
     },
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
+    ignoreUncaughtExceptions: true,
     // framework: "custom",
     // frameworkPath: require.resolve("protractor-cucumber-framework"),
     specs: [
@@ -25,6 +59,7 @@ exports.config = {
         "./Test/features/floydSite.feature",
         "./Test/features/reports.feature",
         "./Test/features/rolesPermission.feature",
+        "./Test/features/api.feature",
     ],
     onPrepare: function () {
         protractor_1.browser.ignoreSynchronization = true;
@@ -53,17 +88,6 @@ exports.config = {
     },
     onComplete: function () {
         reporter_1.Reporter.createHTMLReport();
-    },
-    suites: {
-        "login": "../features/login.feature",
-        "managementAgreement": "./Test/features/managemenetAgreement.feature",
-        "site": "./Test/features/mySites.feature",
-        "tabs": "./Test/features/tabs.feature",
-        "siteGeneral": "./Test/features/siteGeneral.feature",
-        "floydSite": "./Test/features/floydSite.feature",
-        "reports": "./Test/features/reports.feature",
-        "role": "./Test/features/rolesPermission.feature",
-        "api": "./Test/features/api.feature",
     },
     // };
     plugins: [{
