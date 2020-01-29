@@ -32,7 +32,7 @@ rentRollReport:
   attributeData: Rent Roll
   thReportHeader: Site Number,Site Name,Tenant Name,Lease Number,Monthly Tenant Rent,Monthly Other Charges,Billing Frequency,Management Agreement Name
   recordCount: '8'
-  sitesCount: '27'
+  sitesCount: '26'
 
 
 rentRollReportSites:
@@ -78,7 +78,7 @@ forecastReport:
 #  ,US-KS-1053,US-MA-1036,US-MA-1036
   leaseNumber: 7727,7774,8373,8569,8762,8351,9790
 #  ,6494,8566,8566
-  sitesCount: '32'
+  sitesCount: '31'
 
 filterReportForecast:
   tab: My Dashboard
@@ -112,7 +112,7 @@ newLeasesReport:
   siteNumber: 8569
   attributeData: New Leases
   thReportHeader: Site Number,Site Name,Lease Number,Tenant Name,Relationship Name,Pre-Existing Lease,Prior Tenant Rent,Current Tenant Rent,Management Agreement Name
-  sitesCount: '27'
+  sitesCount: '26'
 
 filterReportNewLeases:
   siteNumber: T-Mobile South, LLC
@@ -142,7 +142,7 @@ leasingActivityReport:
   count: 1
   attributeData: Leasing Activity
   thReportHeader: Management Agreement Name,Site Number,Site Name,Deal Number,Tenant Name,Tenant Relationship Name,Projected Rent,Deal Status,Inquiry Date,Application Received Date,Estimated Closure Date
-  sitesCount: '57'
+  sitesCount: '96'
 
 filterReportLeasingActivity:
   siteNumber: C-101207
@@ -256,5 +256,7 @@ totalSitesKPI:
 
 totalRevenueKPI:
   tab: My Dashboard
-  count: $691.28K,Total Annualized Revenue
+  count: $689.56K,Total Annualized Revenue
+
+
 

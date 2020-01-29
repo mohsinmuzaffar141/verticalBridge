@@ -57,3 +57,11 @@ Given(/^I am on floyd login Page$/,{timeout:  5 * 50000}, async() => {
         console.log(e);
     }
 });
+Given(/^I am on "([^"]*)" Page$/, {timeout:  5 * 50000}, async(url) => {
+    try {
+               await loginPage.launchUrl(url);
+    }
+    catch(e) {
+        console.log(e);
+    }
+});

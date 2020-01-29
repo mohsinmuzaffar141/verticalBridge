@@ -1,29 +1,32 @@
 Feature: Get token from vertical bridge site
 
-  @token
+  @token  @regression
   Scenario Outline: verify that all the contacts of site should be displayed
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
+    When  I click to the select partner view button
+    When  selects the "<relationships>"
+    Then  click the select button
     When  we get token from site
     When  I log out
     When  I send get request to site "<apiLink>"
 
     Examples:
-      | credentials  |        apiLink        |
-      | admin        |    siteAllContacts    |
+      | credentials  |        apiLink        |   relationships  |     URL    |
+      | admin        |    siteAllContacts    |  dataValidation  |  VBStaging |
 
 
-  @verifyHomePage
-  Scenario Outline: verify that home page should be displayed
-
-    When I send get request to site "<apiLink>"
-
-    Examples:
-      |     apiLink        |
-      |     homepage       |
-
+#  @verifyHomePage  @regression
+#  Scenario Outline: verify that home page should be displayed
+#
+#    When I send get request to site "<apiLink>"
+#
+#    Examples:
+#      |     apiLink        |
+#      |     homepage       |
+#
 #
 #  @gettingUpSiteContacts
 #  Scenario Outline: verify that getting up site contacts
@@ -53,7 +56,7 @@ Feature: Get token from vertical bridge site
 #      |            apiLink          |
 #      |     groundRightsContacts    |
 #
-  # site changed
+##   site changed
 ##  @portfolioContacts
 ##  Scenario Outline: Display the portfolio contacts
 ##
@@ -100,7 +103,7 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |       apiLink      |
 #      |     FCCSiteData    |
-
+#
 #  @leasingActivitySiteData
 #  Scenario Outline: Display leasing activity site data
 #
@@ -136,16 +139,16 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |      apiLink        |
 #      |     operationTab    |
-
-  #unexpected token $
-#  @getRevenuePortfolio
-#  Scenario Outline: Display revenue portfolio
 #
-#    When I send get request to site "<apiLink>"
-#
-#    Examples:
-#      |         apiLink         |
-#      |     revenuePortfolio    |
+##  unexpected token $
+##  @getRevenuePortfolio
+##  Scenario Outline: Display revenue portfolio
+##
+##    When I send get request to site "<apiLink>"
+##
+##    Examples:
+##      |         apiLink         |
+##      |     revenuePortfolio    |
 #
 #  @mapSiteDetail
 #  Scenario Outline: Display data related to map
@@ -164,16 +167,16 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |     apiLink      |
 #      |   myDashboard    |
-#
-#  @getAnnualizedRevenue
-#  Scenario Outline: Display data related to annualized revenue
-#
-#    When I send get request to site "<apiLink>"
-#
-#    Examples:
-#      |        apiLink         |
-#      |   annualizedRevenue    |
-#
+
+  @getAnnualizedRevenue
+  Scenario Outline: Display data related to annualized revenue
+
+    When I send get request to site "<apiLink>"
+
+    Examples:
+      |        apiLink         |
+      |   annualizedRevenue    |
+
 #  @getRadCentreData
 #  Scenario Outline: Display data related to rad centre
 #
@@ -293,7 +296,7 @@ Feature: Get token from vertical bridge site
 #    Examples:
 #      |   apiLink   |
 #      |  appConfig  |
-
+#
 ##  @simpleSearchValue
 ##  Scenario Outline: Display data related to simple search
 ##
@@ -302,48 +305,48 @@ Feature: Get token from vertical bridge site
 ##    Examples:
 ##      |    apiLink     |
 ##      |  simpleSearch  |
-
-
-
-
-#    #POST_REQUEST_TEST_CASES
-
 #
-  @rentRollReportInformation
-  Scenario Outline: Display the information of rent roll report
-
-    When I send post request to site "<apiLink>"
-
-    Examples:
-      |   apiLink   |
-      |   rentRoll  |
-
-  @leasingReportInformation
-  Scenario Outline: Display the information of leasing report
-
-    When I send post request to site "<apiLink>"
-
-    Examples:
-      |       apiLink     |
-      |   leasingActivity |
-
-  @dataManagementAgreementList
-  Scenario Outline: Display the data of management agreement from dashboard
-
-    When I send post request to site "<apiLink>"
-
-    Examples:
-      |          apiLink        |
-      | dataManagementAgreement |
-
-  @getManagementAgreementList
-  Scenario Outline: getting the data of management agreement
-
-    When I send post request to site "<apiLink>"
-
-    Examples:
-      |          apiLink        |
-      |  getManagementAgreement |
+#
+#
+#
+#    #POST_REQUEST_TEST_CASES
+#
+#
+#  @rentRollReportInformation
+#  Scenario Outline: Display the information of rent roll report
+#
+#    When I send post request to site "<apiLink>"
+#
+#    Examples:
+#      |   apiLink   |
+#      |   rentRoll  |
+#
+#  @leasingReportInformation
+#  Scenario Outline: Display the information of leasing report
+#
+#    When I send post request to site "<apiLink>"
+#
+#    Examples:
+#      |       apiLink     |
+#      |   leasingActivity |
+#
+#  @dataManagementAgreementList
+#  Scenario Outline: Display the data of management agreement from dashboard
+#
+#    When I send post request to site "<apiLink>"
+#
+#    Examples:
+#      |          apiLink        |
+#      | dataManagementAgreement |
+#
+#  @getManagementAgreementList
+#  Scenario Outline: getting the data of management agreement
+#
+#    When I send post request to site "<apiLink>"
+#
+#    Examples:
+#      |          apiLink        |
+#      |  getManagementAgreement |
 #
 #
 #  @leasesReportData
@@ -364,15 +367,15 @@ Feature: Get token from vertical bridge site
 #      |     apiLink     |
 #      |  forecastReport |
 #
-#
-#  @getAdvanceSearch
-#  Scenario Outline: Display the data of advance search
-#
-#    When I send post request to site "<apiLink>"
-#
-#    Examples:
-#      |      apiLink     |
-#      | advanceSearchGet |
+##Server Error
+##  @getAdvanceSearch
+##  Scenario Outline: Display the data of advance search
+##
+##    When I send post request to site "<apiLink>"
+##
+##    Examples:
+##      |      apiLink     |
+##      | advanceSearchGet |
 #
 #
 #  @userList
@@ -404,30 +407,30 @@ Feature: Get token from vertical bridge site
 #      |     apiLink    |
 #      | RolePermission |
 #
-#  @siteByPortfolioGuid
-#  Scenario Outline: Get data of sites by portfolio guid
+##  @siteByPortfolioGuid
+##  Scenario Outline: Get data of sites by portfolio guid
+##
+##    When I send post request to site "<apiLink>"
+##
+##    Examples:
+##      |    apiLink    |
+##      | portfolioGuid |
 #
-#    When I send post request to site "<apiLink>"
+##JASON
+##  @createUser
+##  Scenario Outline: new user should be created
+##
+##    When I send post request to site "<apiLink>"
+##
+##    Examples:
+##      |   apiLink  |
+##      | createUser |
 #
-#    Examples:
-#      |    apiLink    |
-#      | portfolioGuid |
-
-#JASON
-#  @createUser
-#  Scenario Outline: new user should be created
-#
-#    When I send post request to site "<apiLink>"
-#
-#    Examples:
-#      |   apiLink  |
-#      | createUser |
-
-#  @updateUser
-#  Scenario Outline: new user should be updated
-#
-#    When I send put request to site "<apiLink>"
-#
-#    Examples:
-#      |  apiLink   |
-#      | updateUser |
+##  @updateUser
+##  Scenario Outline: new user should be updated
+##
+##    When I send put request to site "<apiLink>"
+##
+##    Examples:
+##      |  apiLink   |
+##      | updateUser |

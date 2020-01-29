@@ -2,7 +2,7 @@ Feature: verify filter against my sites
   @verifyTabs
   Scenario Outline: verify Tabs on detail page
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -14,13 +14,13 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |    site  |
-      |   admin      |     relation   | siteTabs |
+      | credentials  |  relationships |    site  |     URL   |
+      |   admin      |     relation   | siteTabs | VBStaging |
 
   @searchFilter
   Scenario Outline: verify searchFilters against my sites
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -33,14 +33,14 @@ Feature: verify filter against my sites
 
 
     Examples:
-      | credentials  |  relationships | searchFilter |
-      |   admin      |     relation   |filterSearch  |
+      | credentials  |  relationships | searchFilter |     URL   |
+      |   admin      |     relation   |filterSearch  | VBStaging |
 
 
   @verifyFilterPresent
   Scenario Outline: verify filler should be present
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -52,15 +52,15 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |relationships |
-      |   admin      |   relation   |
+      | credentials  |relationships |     URL   |
+      |   admin      |   relation   | VBStaging |
 
 
 
   @verifySiteData
   Scenario Outline: verify site data should be present
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -79,14 +79,14 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |relationships | searchFilter |  name  | address   | city   | state   | zipcode   | country   |  status  |
-      |   admin      | relation     | filterSearch |siteName|siteAddress|siteCity|siteState|siteZipCode|siteCountry|siteStatus|
+      | credentials  |relationships | searchFilter |  name  | address   | city   | state   | zipcode   | country   |  status  |     URL   |
+      |   admin      | relation     | filterSearch |siteName|siteAddress|siteCity|siteState|siteZipCode|siteCountry|siteStatus| VBStaging |
 
 
   @sortingSiteName
   Scenario Outline: verify that owner name should be sorted in ascending order
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -97,14 +97,14 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |
-      |   admin      |     relation   |
+      | credentials  |  relationships |     URL   |
+      |   admin      |     relation   | VBStaging |
 
 
   @removeFilter
   Scenario Outline: verify Filters applied against my sites is removed
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -117,13 +117,13 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships | searchFilter |
-      |   admin      |     relation   |filterSearch  |
+      | credentials  |  relationships | searchFilter |     URL   |
+      |   admin      |     relation   |filterSearch  | VBStaging |
 
   @selectSiteLink
   Scenario Outline: verify go to site detailed page
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -135,13 +135,13 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |   site   |
-      |   admin      |     relation   | siteList |
+      | credentials  |  relationships |   site   |     URL   |
+      |   admin      |     relation   | siteList | VBStaging |
 
   @verifySite
   Scenario Outline: verify site name on detail page
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -153,14 +153,14 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |   site   |
-      |   admin      |     relation   | siteList |
+      | credentials  |  relationships |   site   |     URL   |
+      |   admin      |     relation   | siteList | VBStaging |
 
 
   @verifyHeaderDetailPage
   Scenario Outline: verify general and contacts on header detail page
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -172,13 +172,13 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |   site   |
-      |   admin      |     relation   | siteList |
+      | credentials  |  relationships |   site   |     URL   |
+      |   admin      |     relation   | siteList | VBStaging |
 
   @verifySiteDetailLabel
   Scenario Outline: verify site detail Labels
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -190,14 +190,14 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |    site    |
-      |   admin      |     relation   | siteDetail |
+      | credentials  |  relationships |    site    |     URL   |
+      |   admin      |     relation   | siteDetail | VBStaging |
 
 
   @verifySiteGeneralDetail
   Scenario Outline: verify site detail Labels
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -209,13 +209,13 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |    site          |
-      |   admin      |     relation   | siteDetailMohsin |
+      | credentials  |  relationships |    site          |     URL   |
+      |   admin      |     relation   | siteDetailMohsin | VBStaging |
 
   @verifySiteContacts
   Scenario Outline: verify site detail Labels
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -227,14 +227,14 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |    site      |
-      |   admin      |     relation   | siteContacts |
+      | credentials  |  relationships |    site      |     URL   |
+      |   admin      |     relation   | siteContacts | VBStaging |
 
 
   @verifySiteDetailNotPresent
   Scenario Outline: verify site detail Labels not present
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -246,9 +246,9 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |          site              |
-      |   admin      |     relation   |    siteDetailNotPresent    |
-      |   admin      |     relation   | siteDetailNotPresentMohsin |
+      | credentials  |  relationships |          site              |     URL   |
+      |   admin      |     relation   |    siteDetailNotPresent    | VBStaging |
+      |   admin      |     relation   | siteDetailNotPresentMohsin | VBStaging |
 
 
 
@@ -256,7 +256,7 @@ Feature: verify filter against my sites
   @verifyMapPin
   Scenario Outline: verify map pin on map
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -268,13 +268,13 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |    site  |
-      |   admin      |     relation   | siteTabs |
+      | credentials  |  relationships |    site  |     URL   |
+      |   admin      |     relation   | siteTabs | VBStaging |
 
   @verifyMapData
   Scenario Outline: verify data above map
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -286,13 +286,13 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |  relationships |     site    |
-      |   admin      |     relation   | siteMapData |
+      | credentials  |  relationships |     site    |     URL   |
+      |   admin      |     relation   | siteMapData | VBStaging |
 
   @verifyHomePageImage
   Scenario Outline: verify image on home page should be present
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -302,5 +302,5 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |relationships |
-      |   admin      |   relation   |
+      | credentials  |relationships |     URL   |
+      |   admin      |   relation   | VBStaging |

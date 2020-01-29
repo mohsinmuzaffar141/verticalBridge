@@ -3,20 +3,42 @@
   <component name="ChangeListManager">
     <list default="true" id="f4ef5760-62a3-4076-bc98-958757d422f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/apiPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/apiPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/apiPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/apiPage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/apiPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/apiPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/api.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/mySites.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/mySites.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/rolesPermission.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/rolesPermission.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/siteGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/siteGeneral.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/apiSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/apiSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/apiSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/apiSteps.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/steps/apiSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/apiSteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/api.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/api.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/configurations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/configurations.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/users.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
     </list>
@@ -149,17 +171,30 @@
       <workItem from="1574142495535" duration="10856000" />
       <workItem from="1574224226447" duration="10232000" />
       <workItem from="1574318154640" duration="5377000" />
+      <workItem from="1574418507374" duration="1559000" />
+      <workItem from="1575905556210" duration="1281000" />
+      <workItem from="1575956281546" duration="5015000" />
+      <workItem from="1576039485452" duration="6101000" />
+      <workItem from="1576152657948" duration="1019000" />
+      <workItem from="1576214309458" duration="3959000" />
+      <workItem from="1576748970165" duration="1683000" />
+      <workItem from="1577444629483" duration="2467000" />
+      <workItem from="1578384410491" duration="1579000" />
+      <workItem from="1578483296781" duration="4612000" />
+      <workItem from="1578566902805" duration="4429000" />
+      <workItem from="1578663386091" duration="2505000" />
+      <workItem from="1579035596783" duration="256000" />
+      <workItem from="1579095371856" duration="3948000" />
+      <workItem from="1579157270100" duration="2158000" />
+      <workItem from="1579172618473" duration="3354000" />
+      <workItem from="1579503028875" duration="10457000" />
+      <workItem from="1579611918911" duration="999000" />
+      <workItem from="1579783990013" duration="602000" />
+      <workItem from="1579846934901" duration="1971000" />
+      <workItem from="1579864318960" duration="2677000" />
+      <workItem from="1580192847478" duration="9549000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />

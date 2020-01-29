@@ -107,4 +107,14 @@ cucumber_1.When(/^I send put request to site "([^"]*)"$/, { timeout: 5 * 500000 
         }
     });
 }); });
+cucumber_1.Then(/^Verify the total annualized revenue for external and internal user$/, { timeout: 5 * 500000 }, function () { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, apiPage.compareAnnualizedRevenue()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=apiSteps.js.map

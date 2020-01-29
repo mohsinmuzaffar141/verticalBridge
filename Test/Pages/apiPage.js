@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -38,16 +51,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var protractor_1 = require("protractor");
 // const http = require('http');
 var request = require("request-promise-native");
+var BasePage_1 = require("./BasePage");
 var yaml = require('js-yaml');
 var fs = require('fs');
+// import * as http from "http";
 // const request = require('request');
 var chai = require("chai").use(require("chai-as-promised"));
 var expect = chai.expect;
 var baseUrl = "https://stagepartnerportal.verticalbridge.com";
 var tokenKey;
 var headerOptions;
-var APIPage = /** @class */ (function () {
+var annualizedRevenue;
+var until = protractor_1.protractor.ExpectedConditions;
+var APIPage = /** @class */ (function (_super) {
+    __extends(APIPage, _super);
     function APIPage() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     APIPage.prototype.getHeaderOptions = function (data) {
         return __awaiter(this, void 0, void 0, function () {
@@ -103,9 +122,7 @@ var APIPage = /** @class */ (function () {
                                         case 2:
                                             _a.sent();
                                             console.log('body', bodyObj);
-                                            return [4 /*yield*/, expect(body).to.contains(value)];
-                                        case 3:
-                                            _a.sent();
+                                            annualizedRevenue = body;
                                             return [2 /*return*/];
                                     }
                                 });
@@ -207,7 +224,40 @@ var APIPage = /** @class */ (function () {
             });
         });
     };
+    APIPage.prototype.compareAnnualizedRevenue = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var revenueApi, revenue;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        revenueApi = annualizedRevenue.substr(0, 3);
+                        revenue = protractor_1.element(protractor_1.by.xpath("(//div[@class='TopNumber ng-star-inserted'])[2]"));
+                        return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(revenue), 50000, 'Element taking too long to appear in the DOM')];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, revenue.getText().then(function (text) {
+                                return __awaiter(this, void 0, void 0, function () {
+                                    var revenuePortal;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                revenuePortal = text.substr(1, 3);
+                                                return [4 /*yield*/, expect(revenuePortal).to.equal(revenueApi)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                });
+                            })];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
     return APIPage;
-}());
+}(BasePage_1.BasePage));
 exports.APIPage = APIPage;
 //# sourceMappingURL=apiPage.js.map

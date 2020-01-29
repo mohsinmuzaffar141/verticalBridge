@@ -267,7 +267,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
     };
     ManagementAgreementDataPage.prototype.verifyOwnerOrder = function (colName, counter) {
         return __awaiter(this, void 0, void 0, function () {
-            var NAMES, table, unsortedArr;
+            var NAMES, table, sortedArr;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -309,14 +309,14 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                             })];
                     case 1:
                         _a.sent();
-                        console.log('Sorted Array sorted default: ' + NAMES);
+                        console.log('Array Default: ' + NAMES);
                         console.log("==========================================");
-                        unsortedArr = [];
-                        unsortedArr = NAMES.sort();
-                        return [4 /*yield*/, expect(unsortedArr).to.be.equal(NAMES)];
+                        sortedArr = [];
+                        sortedArr = NAMES.sort();
+                        return [4 /*yield*/, expect(sortedArr).to.be.equal(NAMES)];
                     case 2:
                         _a.sent();
-                        console.log('Sorted Array sorted: ' + unsortedArr);
+                        console.log('Sorted Array: ' + sortedArr);
                         console.log("==========================================");
                         return [2 /*return*/];
                 }
@@ -367,7 +367,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                             })];
                     case 1:
                         _a.sent();
-                        console.log('Sorted Array sorted Default: ' + NAMES);
+                        console.log('Sorted Array Default: ' + NAMES);
                         console.log("==========================================");
                         unsortedArr = [];
                         unsortedArr1 = [];
@@ -376,7 +376,7 @@ var ManagementAgreementDataPage = /** @class */ (function (_super) {
                         return [4 /*yield*/, expect([unsortedArr1]).to.not.equal([NAMES])];
                     case 2:
                         _a.sent();
-                        console.log('Sorted Array unSorted: ' + unsortedArr1);
+                        console.log('Unsorted Array: ' + unsortedArr1);
                         return [2 /*return*/];
                 }
             });

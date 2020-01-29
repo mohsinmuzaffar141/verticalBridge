@@ -148,4 +148,22 @@ cucumber_1.Given(/^I am on floyd login Page$/, { timeout: 5 * 50000 }, function 
         }
     });
 }); });
+cucumber_1.Given(/^I am on "([^"]*)" Page$/, { timeout: 5 * 50000 }, function (url) { return __awaiter(_this, void 0, void 0, function () {
+    var e_4;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, loginPage.launchUrl(url)];
+            case 1:
+                _a.sent();
+                return [3 /*break*/, 3];
+            case 2:
+                e_4 = _a.sent();
+                console.log(e_4);
+                return [3 /*break*/, 3];
+            case 3: return [2 /*return*/];
+        }
+    });
+}); });
 //# sourceMappingURL=LoginSteps.js.map

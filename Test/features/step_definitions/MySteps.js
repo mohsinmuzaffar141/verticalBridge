@@ -12,4 +12,6 @@ cucumber_2.When(/^I click on youtube$/, function () {
 });
 cucumber_1.Then(/^I click on view button "([^"]*)"$/, function () {
 });
+cucumber_1.Then(/^Verify the total annualized revenue for external and internal user$/, function () {
+});
 //# sourceMappingURL=MySteps.js.map

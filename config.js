@@ -30,9 +30,9 @@ exports.config = {
         //"./Test/features/floydSite.feature",
         ],
         report: [
+            // "./Test/features/api.feature",
             "./Test/features/reports.feature",
             "./Test/features/rolesPermission.feature",
-            "./Test/features/api.feature",
         ],
     },
     capabilities: {

@@ -99,12 +99,12 @@ export class ManagementAgreementDataPage extends BasePage{
                 });
             }
         });
-        console.log('Sorted Array sorted default: '+NAMES);
+        console.log('Array Default: '+NAMES);
         console.log("==========================================");
-        let unsortedArr = [];
-        unsortedArr = NAMES.sort();
-        await expect(unsortedArr).to.be.equal(NAMES);
-        console.log('Sorted Array sorted: '+unsortedArr);
+        let sortedArr = [];
+        sortedArr = NAMES.sort();
+        await expect(sortedArr).to.be.equal(NAMES);
+        console.log('Sorted Array: '+sortedArr);
         console.log("==========================================");
     }
     async verifyDescendingOwnerOrder(colName:string,counter:string){
@@ -118,14 +118,14 @@ export class ManagementAgreementDataPage extends BasePage{
                 });
             }
         });
-        console.log('Sorted Array sorted Default: '+NAMES);
+        console.log('Sorted Array Default: '+NAMES);
         console.log("==========================================");
         let unsortedArr = [];
         let unsortedArr1 = [];
         unsortedArr = NAMES.sort();
         unsortedArr1=unsortedArr.reverse();
         await expect([unsortedArr1]).to.not.equal([NAMES]);
-        console.log('Sorted Array unSorted: '+unsortedArr1)
+        console.log('Unsorted Array: '+unsortedArr1)
     }
 
     async getPortfolioList(portfolioName:string){

@@ -3,7 +3,7 @@ Feature: verify links are not present on site header
   @linksNotPresent
   Scenario Outline: verify links are not present on site header
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -15,14 +15,14 @@ Feature: verify links are not present on site header
     When  I log out
 
     Examples:
-      | credentials  |  relationships |     site       |        tab      |
-      |   admin      |     relation   |   siteMapData  |  siteDetailPage |
-      |   admin      |     relation   |   siteMapData  |    mapTabPage   |
+      | credentials  |  relationships |     site       |        tab      |     URL    |
+      |   admin      |     relation   |   siteMapData  |  siteDetailPage | VBStaging |
+      |   admin      |     relation   |   siteMapData  |    mapTabPage   | VBStaging |
 
   @linksNotPresentUnderPropertyTab
   Scenario Outline: verify links are not present on property Tab
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -35,13 +35,13 @@ Feature: verify links are not present on site header
     When  I log out
 
     Examples:
-      | credentials  |  relationships |     site       |       tab      |       link       |
-      |   admin      |     relation   |   siteMapData  |   propertyTab  |    propertyTab1  |
+      | credentials  |  relationships |     site       |       tab      |       link       |     URL    |
+      |   admin      |     relation   |   siteMapData  |   propertyTab  |    propertyTab1  | VBStaging |
 
   @verifyLinksOnHomePage
   Scenario Outline: verify links to linkedIn page and newsroom page
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -51,13 +51,13 @@ Feature: verify links are not present on site header
     When  I log out
 
     Examples:
-      | credentials  |  relationships  |      link       |
-      |   admin      |    leasesData   |   homePageLink  |
+      | credentials  |  relationships  |      link       |     URL    |
+      |   admin      |    leasesData   |   homePageLink  | VBStaging |
 
 #  @verifyClickToCallFunction
 #  Scenario Outline: verify click to call function under contact tab
 #
-#    Given I am on vertical bridge Page
+#   Given I am on "<URL>" Page
 #    When  Login to vertical bridge with "<credentials>"
 #    When  Click checkbox button
 ##    When  I click to the select partner view button
@@ -68,55 +68,55 @@ Feature: verify links are not present on site header
 #    When  I log out
 #
 #    Examples:
-#      | credentials  |  relationships  |           tab          |
-#      |   admin      |    leasesData   |   contactHomePageTab   |
+#      | credentials  |  relationships  |           tab          |     URL    |
+#      |   admin      |    leasesData   |   contactHomePageTab   | VBStaging |
 
 
   @verifyFooterOnHomePage
   Scenario Outline: verify footer on home page
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     Then  verify footer on home page "<link>"
     When  I log out
 
     Examples:
-      | credentials    |      link       |
-      |   admin        |   homePageLink  |
+      | credentials    |      link       |     URL    |
+      |   admin        |   homePageLink  | VBStaging |
 
   @verifyHelpTabOnHomePage
   Scenario Outline: verify help tab on home page
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     Then  verify help tab on home page
     When  I log out
 
     Examples:
-      | credentials    |
-      |   admin        |
+      | credentials    |     URL    |
+      |   admin        | VBStaging |
 
   #164&165
   @verifyMainMenuSearch
   Scenario Outline: verify search box on main menu
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     Then  verify search box on main menu
     When  I log out
 
     Examples:
-      | credentials    |
-      |   admin        |
+      | credentials    |     URL    |
+      |   admin        | VBStaging |
 
     #166&167&168&169
   @verifySearchBoxSuggestions
   Scenario Outline: verify search box will display suggestions to match the text
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -127,14 +127,14 @@ Feature: verify links are not present on site header
     When  I log out
 
     Examples:
-      | credentials    | suggestion     |  relationships |
-      |   admin        |  headerLabel   |   contactData  |
+      | credentials    | suggestion     |  relationships |     URL    |
+      |   admin        |  headerLabel   |   contactData  | VBStaging |
 
     #taking too long to appear
 #  @verifyTableHeaderOfAdvanceSearch
 #  Scenario Outline: verify table header of advance search
 #
-#    Given I am on vertical bridge Page
+#   Given I am on "<URL>" Page
 #    When  Login to vertical bridge with "<credentials>"
 #    When  Click checkbox button
 #    When  I click to the select partner view button
@@ -145,14 +145,14 @@ Feature: verify links are not present on site header
 #    When  I log out
 #
 #    Examples:
-#      | credentials    |     site    | relationships|
-#      |   admin        | headerLabel |  relation    |
+#      | credentials    |     site    | relationships|     URL    |
+#      |   admin        | headerLabel |  relation    | VBStaging |
 
 #Same Above
 #  @verifyLabelOfAdvanceSearch
 #  Scenario Outline: verify labels of advance search
 #
-#    Given I am on vertical bridge Page
+#   Given I am on "<URL>" Page
 #    When  Login to vertical bridge with "<credentials>"
 #    When  Click checkbox button
 #    When  I click to the select partner view button
@@ -163,15 +163,15 @@ Feature: verify links are not present on site header
 #    When  I log out
 #
 #    Examples:
-#      | credentials    |     site    | relationships|
-#      |   admin        | headerLabel |  relation    |
+#      | credentials    |     site    | relationships|     URL    |
+#      |   admin        | headerLabel |  relation    | VBStaging |
 
 
   #170&171
   @verifyAdvanceSearchRefinement
   Scenario Outline: verify advance search should have refinement option
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -182,13 +182,13 @@ Feature: verify links are not present on site header
     When  I log out
 
     Examples:
-      | credentials    |      site      | relationships|
-      |   admin        | headerLabelNew |  relation    |
+      | credentials    |      site      | relationships|     URL    |
+      |   admin        | headerLabelNew |  relation    | VBStaging |
 
   @verifyRelationshipName
   Scenario Outline: verify relationship should be present on the top
 
-    Given I am on vertical bridge Page
+   Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -198,5 +198,5 @@ Feature: verify links are not present on site header
     When  I log out
 
     Examples:
-      | credentials     | relationships|
-      |   admin         |  relation    |
+      | credentials     | relationships|     URL    |
+      |   admin         |  relation    | VBStaging |

@@ -132,17 +132,17 @@ simpleSearch:
 
 rentRoll:
   link: /PortalAPI/Report/GetRentRollReportData/
-  content: Townsquare Radio
+  content: US-CA-1093
   bodyData: '{"PageSize": 50, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
 
 leasingActivity:
   link: /PortalAPI/Report/GetLeasingActivityReportData/
-  content: Inquiry or Hit
+  content: 96
   bodyData: '{"PageSize":50,"first":0,"sortDir":1,"filters":[]}'
 
 dataManagementAgreement:
   link: /PortalAPI/MyDashboard/SitesByManagementAgreement
-  content: 42.54337778
+  content: 167
   bodyData: '{"PageSize": 50, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
 
 getManagementAgreement:
@@ -152,7 +152,7 @@ getManagementAgreement:
 
 leasesReport:
   link: /PortalAPI/Report/GetNewLeasesReportData
-  content: Salt & Light Radio, Inc.
+  content: US-CA-1007
   bodyData: '{"PageSize": 50, "first": 0, "sortDir": 1, "filters": [], "isPDF": false}'
 
 forecastReport:
@@ -172,7 +172,7 @@ userList:
 
 documentList:
   link: /PortalAPI/Document/DocumentList
-  content: Blue
+  content: No Access
   bodyData: '{"NewSiteNo":"US-WY-5007","SearchValue":"US-WY-5007_DDSA_061515 (ACQ).pdf"}'
 
 RolePermission:

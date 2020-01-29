@@ -60,13 +60,18 @@ export class LoginPage extends BasePage{
         await browser.get("https://vnd_Ishfaq.zia:Is1928Zi@stagefloyd.verticalbridge.com");
         await browser.sleep(7000);
     }
+    async launchUrl(url) {
+        await browser.manage().deleteAllCookies();
+        await browser.sleep(5000);
+        browser.ignoreSynchronization = true;
+        await browser.get(configuration[url]);
+    }
     async launchApp() {
         await browser.manage().deleteAllCookies();
         await browser.sleep(5000);
         browser.ignoreSynchronization = true;
-        await browser.get(configuration['App-url']);
+        await browser.get(configuration['App-Url']);
     }
-
 
     async giveUserName(na: string){
         await browser.sleep(3000);

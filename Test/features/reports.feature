@@ -3,7 +3,7 @@ Feature: verify test cases of reports
   @verifyScrollMoveOnForecastReport
   Scenario Outline: verify scroll horizontally on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -16,13 +16,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |           report          |
-      |   admin      |     relation   |    filterReportForecast   |
+      | credentials  |  relationships |           report          |      URL        |
+      |   admin      |     relation   |    filterReportForecast   |    VBStaging    |
 
     @verifyActiveTenantUnderRentRollReport
   Scenario Outline: verify active tenant should be present under report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -35,18 +35,18 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |             report         |
-      |   admin      |     relation   |        rentRollReport      |
-      |   admin      |     relation   |       rentRollReport1      |
-      |   admin      |     relation   |       newLeasesReport      |
-      |   admin      |     relation   |       reportForecast       |
-      |   admin      |     relation   |    leasingActivityReport   |
+      | credentials  |  relationships |             report         |    URL     |
+      |   admin      |     relation   |        rentRollReport      | VBStaging  |
+      |   admin      |     relation   |       rentRollReport1      | VBStaging  |
+      |   admin      |     relation   |       newLeasesReport      | VBStaging  |
+      |   admin      |     relation   |       reportForecast       | VBStaging  |
+      |   admin      |     relation   |    leasingActivityReport   | VBStaging  |
 
 
   @verifyReports
   Scenario Outline: verify reports on my dashboard
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -58,13 +58,13 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |     report   |
-      |   admin      |     relation   |    reports   |
+      | credentials  |  relationships |     report   |    URL     |
+      |   admin      |     relation   |    reports   | VBStaging |
 
   @clickManagementAgreementReport
   Scenario Outline: click management agreement report on my dashboard
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -77,14 +77,14 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |      report    |
-      |   admin      |     relation   |    totalSites   |
+      | credentials  |  relationships |      report    |    URL     |
+      |   admin      |     relation   |    totalSites  | VBStaging |
 
 
   @verifyDashboard
   Scenario Outline: verify dashboard option on portal
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -95,13 +95,13 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |   report  |
-      |   admin      |     relation   |  reports  |
+      | credentials  |  relationships |   report  |    URL     |
+      |   admin      |     relation   |  reports  | VBStaging |
 
   @verifyExecutedDate
   Scenario Outline: verify executed date on my dashboard
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -113,13 +113,13 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |   report  |
-      |   admin      |     relation   | reports   |
+      | credentials  |  relationships |   report  |   URL     |
+      |   admin      |     relation   | reports   | VBStaging |
 
   @verifyTotalManagementAgreement
   Scenario Outline: verify management agreement
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -131,17 +131,17 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |     report   |
-      |   admin      |     relation   |    reports   |
-      |   admin      |     relation   |   totalSites |
-      |   admin      |     relation   | totalRevenue |
+      | credentials  |  relationships |     report   |    URL    |
+      |   admin      |     relation   |    reports   | VBStaging |
+      |   admin      |     relation   |   totalSites | VBStaging |
+      |   admin      |     relation   | totalRevenue | VBStaging |
 
 
 
   @clickManagementAgreement
   Scenario Outline: click management agreement on my dashboard
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -154,8 +154,8 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |     report   |
-      |   admin      |     relation   |    reports   |
+      | credentials  |  relationships |     report   |    URL     |
+      |   admin      |     relation   |    reports   | VBStaging |
 
 
 
@@ -164,7 +164,7 @@ Feature: verify test cases of reports
   @verifySearchAgainstRentRollReport
   Scenario Outline: verify search against rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -178,13 +178,13 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    rentRollReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    rentRollReport   | VBStaging |
 
   @verifyAscendingDescendingAgainstRentRollReport
   Scenario Outline: verify ascending & descending against rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -197,13 +197,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |   order   |
-      |   admin      |     relation   |    rentRollReport   |   table   |
+      | credentials  |  relationships |        report       |   order   |    URL     |
+      |   admin      |     relation   |    rentRollReport   |   table   | VBStaging |
 
   @verifyRentRollReportPaginated
   Scenario Outline: verify rent roll report should be paginated
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -216,13 +216,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |   order   |
-      |   admin      |     relation   |    rentRollReport   |   table   |
+      | credentials  |  relationships |        report       |   order   |    URL     |
+      |   admin      |     relation   |    rentRollReport   |   table   | VBStaging |
 
   @downloadRentRollReport
   Scenario Outline: verify rent roll report should be downloaded
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -235,14 +235,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |   order   |
-      |   admin      |     relation   |    rentRollReport   |   table   |
+      | credentials  |  relationships |        report       |   order   |    URL     |
+      |   admin      |     relation   |    rentRollReport   |   table   | VBStaging |
 
 
   @verifyFilterAgainstRentRollReport
   Scenario Outline: verify filter against rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -256,13 +256,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |   searchFilter   |
-      |   admin      |     relation   |    rentRollReport   |   filterReport  |
+      | credentials  |  relationships |        report       |   searchFilter   |    URL     |
+      |   admin      |     relation   |    rentRollReport   |   filterReport  | VBStaging |
 
   @clickSiteNumberOnRentRollReport
   Scenario Outline: click site number on rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -277,13 +277,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |   site   |
-      |   admin      |     relation   |    rentRollReport   |  report  |
+      | credentials  |  relationships |        report       |   site   |    URL     |
+      |   admin      |     relation   |    rentRollReport   |  report  | VBStaging |
 
   @verifyLeasesTabLinkOnRentRollReport
   Scenario Outline: verify leases number on rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -298,13 +298,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |          site        |
-      |   admin      |     relation   |    rentRollReport   |  leasesNumberReport  |
+      | credentials  |  relationships |        report       |          site        |    URL     |
+      |   admin      |     relation   |    rentRollReport   |  leasesNumberReport  | VBStaging |
 
   @verifyAttributesAgainstRentRollReport
   Scenario Outline: verify attributes on rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -319,14 +319,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    rentRollReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    rentRollReport   | VBStaging |
 
 
   @verifyColumnAgainstRentRollReport
   Scenario Outline: verify column and fields against rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -339,13 +339,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    rentRollReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    rentRollReport   | VBStaging |
 
   @verifyHeaderAgainstRentRollReport
   Scenario Outline: verify header against rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -358,14 +358,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    rentRollReport1   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    rentRollReport1  | VBStaging |
 
 
   @verifyFooterOnRentRollReport
   Scenario Outline: verify footer on rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -378,15 +378,15 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    rentRollReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    rentRollReport   | VBStaging |
 
 
     #17&18
   @generateRentRollReport
   Scenario Outline: verify no parameter should be passed to generate rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -398,13 +398,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    rentRollReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    rentRollReport   | VBStaging |
 
-  @verifyDataOfRentRollReportAgainstFloydSite
+  @verifyDataOfRentReportAgainstFloydSite
   Scenario Outline: verify data of rent roll report against floyd site
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -422,16 +422,17 @@ Feature: verify test cases of reports
     When  Click on additional features link "<site>"
     When  Click on add a portfolio "<site>"
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
-      | credentials  |  relationships |        report         |       partnerPortal        |         site        |        floydSite        |
-      |   admin      |     relation   |    rentRollReport   |      partnerPortalValue     |      floydSite      |       floydSiteValue    |
+      | credentials  |  relationships |     report       |   partnerPortal     |  site      |  floydSite     |    URL     |
+      |   admin      |     relation   | rentRollReport  | partnerPortalValue  |  floydSite  | floydSiteValue | VBStaging |
 
   @verifyActiveSitesAgainstRentRollReport
   Scenario Outline: verify active sites against rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -450,18 +451,18 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |              report         |           site         |
-      |   admin      |     relation   |         rentRollReport     |    rentRollReportSites  |
-      |   admin      |     relation   |        forecastReport      |    rentRollReportSites  |
-      |   admin      |     relation   |       newLeasesReport      |    rentRollReportSites  |
-      |   admin      |     relation   |    leasingActivityReport   |    rentRollReportSites |
+      | credentials  |  relationships |              report         |           site         |    URL     |
+      |   admin      |     relation   |         rentRollReport     |    rentRollReportSites  | VBStaging |
+      |   admin      |     relation   |        forecastReport      |    rentRollReportSites  | VBStaging |
+      |   admin      |     relation   |       newLeasesReport      |    rentRollReportSites  | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   |    rentRollReportSites | VBStaging |
 
     #ForeCast Report
   #32&38&39
   @generateForecastReport
   Scenario Outline: generate forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -476,13 +477,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
   @downloadForecastReport
   Scenario Outline: verify forecast report should be downloaded
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -495,14 +496,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |        order      |
-      |   admin      |     relation   |    forecastReport   |   tableForecast   |
+      | credentials  |  relationships |        report       |        order      |    URL     |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   | VBStaging |
 
 
   @defaultStartDateOnForecastReport
   Scenario Outline: verify default start date on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -514,13 +515,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
   @defaultEndDateOnForecastReport
   Scenario Outline:  verify default end date on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -532,13 +533,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
   @enterStartDateToRetrieveForecastReport
   Scenario Outline: enter start date to retrieve forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -552,13 +553,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
   @enterEndDateToRetrieveForecastReport
   Scenario Outline: enter end date to retrieve forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -572,13 +573,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
   @enterStartAndEndDateFromCalendarOnForecastReport
   Scenario Outline: verify footer on rent roll report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -593,13 +594,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
   @verifyFilterAgainstForecastReport
   Scenario Outline: verify filter against forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -613,13 +614,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |        searchFilter      |
-      |   admin      |     relation   |    forecastReport   |   filterReportForecast  |
+      | credentials  |  relationships |        report       |        searchFilter      |    URL     |
+      |   admin      |     relation   |    forecastReport   |   filterReportForecast  | VBStaging |
 
   @verifyAscendingDescendingAgainstForecastReport
   Scenario Outline: verify ascending & descending against forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -632,13 +633,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |        order       |
-      |   admin      |     relation   |    forecastReport   |   tableForecast   |
+      | credentials  |  relationships |        report       |        order       |    URL    |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   | VBStaging |
 
   @verifyForecastReportPaginated
   Scenario Outline: verify forecast report should be paginated
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -651,15 +652,15 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |        order       |
-      |   admin      |     relation   |    forecastReport   |   tableForecast   |
+      | credentials  |  relationships |        report       |        order       |    URL    |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   | VBStaging |
 
 
 
   @clickSiteNumberOnForecastReport
   Scenario Outline: click site number on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -674,13 +675,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |       site        |
-      |   admin      |     relation   |    forecastReport   |  reportForecast  |
+      | credentials  |  relationships |        report       |       site        |    URL    |
+      |   admin      |     relation   |    forecastReport   |  reportForecast  | VBStaging |
 
   @verifyLeasesTabLinkOnForecastReport
   Scenario Outline: verify leases number on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -695,13 +696,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |             site              |
-      |   admin      |     relation   |    forecastReport   |  leasesNumberForecastReport  |
+      | credentials  |  relationships |        report       |             site              |    URL     |
+      |   admin      |     relation   |    forecastReport   |  leasesNumberForecastReport  | VBStaging |
 
   @verifyAttributesAgainstForecastReport
   Scenario Outline: verify attributes on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -716,14 +717,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
 
   @verifyColumnAgainstForecastReport
   Scenario Outline: verify column and fields against forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -736,15 +737,15 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
 
 
   @verifyFooterOnForecastReport
   Scenario Outline: verify footer on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -757,13 +758,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
   @verifyHideAndUnHideColumnOnForecastReport
   Scenario Outline: verify hide and un hide column on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -779,8 +780,8 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |           report          |
-      |   admin      |     relation   |    filterReportForecast   |
+      | credentials  |  relationships |           report          |    URL     |
+      |   admin      |     relation   |    filterReportForecast   | VBStaging |
 
 
 
@@ -788,7 +789,7 @@ Feature: verify test cases of reports
     @verifyGroupHierarchyOnForecastReport
   Scenario Outline: verify group hierarchy on forecast report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -801,14 +802,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    forecastReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    forecastReport   | VBStaging |
 
 
   @verifyDataOfForecastReportAgainstFloydSite
   Scenario Outline: verify data of forecast report against floyd site
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -826,11 +827,12 @@ Feature: verify test cases of reports
     When  Click on additional features link "<site>"
     When  Click on add a portfolio "<site>"
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
-      | credentials  |  relationships |        report         |       partnerPortal        |         site        |        floydSite       |
-      |   admin      |     relation   |    forecastReport   |  partnerPortalValueForecast  |  floydSiteForecast |  floydSiteValueForecast |
+      | credentials | relationships |     report      |      partnerPortal        |        site       |       floydSite       |    URL     |
+      |   admin     |   relation   | forecastReport  | partnerPortalValueForecast | floydSiteForecast | floydSiteValueForecast| VBStaging |
 
 
     #New Leases Report
@@ -838,7 +840,7 @@ Feature: verify test cases of reports
   @generateNewLeasesReport
   Scenario Outline: generate new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -850,13 +852,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report        |
-      |   admin      |     relation   |    newLeasesReport   |
+      | credentials  |  relationships |        report        |    URL     |
+      |   admin      |     relation   |    newLeasesReport   | VBStaging |
 
   @verifyFilterAgainstNewLeasesReport
   Scenario Outline: verify filter against new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -870,13 +872,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report        |         searchFilter     |
-      |   admin      |     relation   |    newLeasesReport   |   filterReportNewLeases  |
+      | credentials  |  relationships |        report        |         searchFilter     |    URL     |
+      |   admin      |     relation   |    newLeasesReport   |   filterReportNewLeases  | VBStaging |
 
   @verifyAscendingDescendingAgainstNewLeasesReport
   Scenario Outline: verify ascending & descending against new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -889,13 +891,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report        |        order        |
-      |   admin      |     relation   |    newLeasesReport   |    tableNewLeases   |
+      | credentials  |  relationships |        report        |        order        |    URL     |
+      |   admin      |     relation   |    newLeasesReport   |    tableNewLeases   | VBStaging |
 
   @downloadNewLeasesReport
   Scenario Outline: verify new leases report should be downloaded
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -908,13 +910,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report        |         order      |
-      |   admin      |     relation   |    newLeasesReport   |   tableNewLeases   |
+      | credentials  |  relationships |        report        |         order      |    URL     |
+      |   admin      |     relation   |    newLeasesReport   |   tableNewLeases   | VBStaging |
 
   @clickSiteNumberOnNewLeasesReport
   Scenario Outline: click site number on New leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -929,13 +931,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report        |       site        |
-      |   admin      |     relation   |    newLeasesReport   |  reportNewLeases  |
+      | credentials  |  relationships |        report        |       site        |    URL     |
+      |   admin      |     relation   |    newLeasesReport   |  reportNewLeases  | VBStaging |
 
   @verifyLeasesTabLinkOnNewLeasesReport
   Scenario Outline: verify leases number on new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -950,13 +952,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report        |             site              |
-      |   admin      |     relation   |    newLeasesReport   |  leasesNumberNewLeasesReport  |
+      | credentials  |  relationships |        report        |             site              |    URL     |
+      |   admin      |     relation   |    newLeasesReport   |  leasesNumberNewLeasesReport  | VBStaging |
 
   @verifyAttributesAgainstNewLeasesReport
   Scenario Outline: verify attributes on new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -971,14 +973,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |         report       |
-      |   admin      |     relation   |    newLeasesReport   |
+      | credentials  |  relationships |         report       |    URL     |
+      |   admin      |     relation   |    newLeasesReport   | VBStaging |
 
 
   @verifyColumnAgainstNewLeasesReport
   Scenario Outline: verify column and fields against new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -991,13 +993,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report       |
-      |   admin      |     relation   |    newLeasesReport   |
+      | credentials  |  relationships |        report       |    URL     |
+      |   admin      |     relation   |    newLeasesReport  | VBStaging |
 
   @verifyFooterOnNewLeasesReport
   Scenario Outline: verify footer on new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1010,13 +1012,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |        report        |
-      |   admin      |     relation   |    newLeasesReport   |
+      | credentials  |  relationships |        report        |     URL   |
+      |   admin      |     relation   |    newLeasesReport   | VBStaging |
 
   @verifySearchAgainstNewLeasesReport
   Scenario Outline: verify search against new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1030,13 +1032,13 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |        report         |
-      |   admin      |     relation   |    newLeasesReport   |
+      | credentials  |  relationships |        report         |    URL     |
+      |   admin      |     relation   |    newLeasesReport   | VBStaging |
 
   @verifyDataOfNewLeasingReportAgainstFloydSite
   Scenario Outline: verify data of new leasing report against floyd site
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1054,17 +1056,18 @@ Feature: verify test cases of reports
     When  Click on additional features link "<site>"
     When  Click on add a portfolio "<site>"
     When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
-      | credentials  |  relationships |        report         |       partnerPortal        |         site        |        floydSite        |
-      |   admin      |     relation   |    newLeasesReport   |  partnerPortalValueLeasing  |   floydSiteLeasing |  floydSiteValueLeasing |
+      | credentials  | relationships |     report      |     partnerPortal        |      site        |     floydSite       |    URL   |
+      |   admin      |   relation   | newLeasesReport | partnerPortalValueLeasing | floydSiteLeasing |floydSiteValueLeasing| VBStaging|
 
 
     @verifyGroupHierarchyOnNewLeasesReport
   Scenario Outline: verify group hierarchy on new leases report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1077,15 +1080,15 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |         report       |
-      |   admin      |     relation   |    tableNewLeases   |
+      | credentials  |  relationships |         report       |    URL    |
+      |   admin      |     relation   |    tableNewLeases   | VBStaging |
 
      #LeasingActivityReport
   #72&73&78
   @generateLeasingActivityReport
   Scenario Outline: generate leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1097,13 +1100,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |            report           |
-      |   admin      |     relation   |    leasingActivityReport   |
+      | credentials  |  relationships |            report           |    URL    |
+      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
 
   @verifyFilterAgainstLeasingActivityReport
   Scenario Outline: verify filter against leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1117,13 +1120,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |            report          |           searchFilter         |
-      |   admin      |     relation   |    leasingActivityReport   |   filterReportLeasingActivity  |
+      | credentials  |  relationships |            report          |           searchFilter         |    URL    |
+      |   admin      |     relation   |    leasingActivityReport   |   filterReportLeasingActivity  | VBStaging |
 
   @verifyAscendingDescendingAgainstLeasingActivityReport
   Scenario Outline: verify ascending & descending against leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1136,13 +1139,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |            report          |             order         |
-      |   admin      |     relation   |    leasingActivityReport   |    tableLeasingActivity   |
+      | credentials  |  relationships |            report          |             order         |    URL     |
+      |   admin      |     relation   |    leasingActivityReport   |    tableLeasingActivity   | VBStaging |
 
   @downloadLeasingActivityReport
   Scenario Outline: verify leasing activity report should be downloaded
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1155,13 +1158,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |             report         |           order          |
-      |   admin      |     relation   |    leasingActivityReport   |   tableLeasingActivity   |
+      | credentials  |  relationships |             report         |           order          |    URL     |
+      |   admin      |     relation   |    leasingActivityReport   |   tableLeasingActivity   | VBStaging |
 
   @clickSiteNumberOnLeasingActivityReport
   Scenario Outline: click site number on leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1176,13 +1179,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |           report           |            site         |
-      |   admin      |     relation   |    leasingActivityReport   |  reportLeasingActivity  |
+      | credentials  |  relationships |           report           |            site         |    URL     |
+      |   admin      |     relation   |    leasingActivityReport   |  reportLeasingActivity  | VBStaging |
 
   @verifyAttributesAgainstLeasingActivityReport
   Scenario Outline: verify attributes on leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1197,14 +1200,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |             report         |
-      |   admin      |     relation   |    leasingActivityReport   |
+      | credentials  |  relationships |             report         |    URL     |
+      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
 
 
   @verifyColumnAgainstLeasingActivityReport
   Scenario Outline: verify column and fields against leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1217,13 +1220,13 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |            report          |
-      |   admin      |     relation   |    leasingActivityReport   |
+      | credentials  |  relationships |            report          |    URL     |
+      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
 
   @verifyFooterOnLeasingActivityReport
   Scenario Outline: verify footer on leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1236,14 +1239,14 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |           report           |
-      |   admin      |     relation   |    leasingActivityReport   |
+      | credentials  |  relationships |           report           |    URL     |
+      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
 
 
   @verifySearchAgainstLeasingActivityReport
   Scenario Outline: verify search against leasing activity report
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1257,8 +1260,8 @@ Feature: verify test cases of reports
 
 
     Examples:
-      | credentials  |  relationships |             report         |
-      |   admin      |     relation   |    leasingActivityReport   |
+      | credentials  |  relationships |             report         |    URL     |
+      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
 
 
 
@@ -1267,7 +1270,7 @@ Feature: verify test cases of reports
   @verifyDataOnPartnerPortalSiteAndFloydSite
   Scenario Outline: verify that data on site detail page for partner portal and floyd site should be same
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1288,14 +1291,14 @@ Feature: verify test cases of reports
     When  I log out from floyd site
 
     Examples:
-      | credentials  |  relationships |     partnerPortalSite     |        site        |
-      |   admin      |     relation   |  partnerPortalSiteData   |   floydSiteLeasing |
+      | credentials  |  relationships |     partnerPortalSite     |        site        |    URL     |
+      |   admin      |     relation   |  partnerPortalSiteData   |   floydSiteLeasing | VBStaging |
 
 
 #  @verifyLabelsOnPartnerPortalSiteAndFloydSite
 #  Scenario Outline: verify labels on partner portal and floyd site should be same
 #
-#    Given I am on vertical bridge Page
+#    Given I am on "<URL>" Page
 #    When  Login to vertical bridge with "<credentials>"
 #    When  Click checkbox button
 #    When  I click to the select partner view button
@@ -1321,15 +1324,15 @@ Feature: verify test cases of reports
 #    When  I log out from floyd site
 #
 #    Examples:
-#      | credentials  |  relationships  |     partnerPortalSite      |        site        |   tab   |   tab1  |     partnerPortalSite1    |
-#      |   admin      |     relation   |  partnerPortalSiteLabels   |   floydSiteLeasing |    FCC  | radCenter|  partnerPortalSiteLabels1|
+#      | credentials  |  relationships  |     partnerPortalSite      |        site        |   tab   |   tab1  |     partnerPortalSite1    |    URL    |
+#      |   admin      |     relation   |  partnerPortalSiteLabels   |   floydSiteLeasing |    FCC  | radCenter|  partnerPortalSiteLabels1| VBStaging |
 
 
 
 #  @verifyDocumentsOnPartnerPortalSiteAndFloydSite
 #  Scenario Outline: verify documents on partner portal and floyd site should be same
 #
-#    Given I am on vertical bridge Page
+#    Given I am on "<URL>" Page
 #    When  Login to vertical bridge with "<credentials>"
 #    When  Click checkbox button
 #    When  I click to the select partner view button
@@ -1354,13 +1357,13 @@ Feature: verify test cases of reports
 #    When  I log out from floyd site
 #
 #    Examples:
-#      | credentials  |  relationships   |     partnerPortalSite       |        site        |     tab     |
-#      |   admin      | dataValidation  |  partnerPortalSiteDocument   |   floydSiteLeasing |  documentTab |
+#      | credentials  |  relationships   |     partnerPortalSite       |        site        |     tab     |    URL     |
+#      |   admin      | dataValidation  |  partnerPortalSiteDocument   |   floydSiteLeasing |  documentTab| VBStaging |
 
   @verifyTabsDataOnPartnerPortalSiteAndFloydSite
   Scenario Outline: verify tabs data on partner portal and floyd site should be same
 
-    Given I am on vertical bridge Page
+    Given I am on "<URL>" Page
     When  Login to vertical bridge with "<credentials>"
     When  Click checkbox button
     When  I click to the select partner view button
@@ -1385,5 +1388,5 @@ Feature: verify test cases of reports
     When  I log out from floyd site
 
     Examples:
-      | credentials  |  relationships   |     partnerPortalSite    |        site        |     tab     |   partnerPortalSite1   |
-      |   admin      | dataValidation  |  partnerPortalTabsData   |   floydSiteLeasing |  propertyTab |  partnerPortalTabsData1|
+      | credentials  |  relationships   |     partnerPortalSite    |        site        |     tab     |   partnerPortalSite1   |    URL     |
+      |   admin      | dataValidation  |  partnerPortalTabsData   |   floydSiteLeasing |  propertyTab |  partnerPortalTabsData1| VBStaging |

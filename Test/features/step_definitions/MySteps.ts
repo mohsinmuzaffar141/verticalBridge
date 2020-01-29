@@ -16,3 +16,6 @@ When(/^I click on youtube$/, function () {
 Then(/^I click on view button "([^"]*)"$/, function () {
 
 });
+Then(/^Verify the total annualized revenue for external and internal user$/, function () {
+
+});

@@ -1,5 +1,6 @@
-App-url: https://stagepartnerportal.verticalbridge.com
+VBStaging: https://stagepartnerportal.verticalbridge.com
 floydURL: https://login.microsoftonline.com
+QAVB: https://qapartnerportal.verticalbridge.com
   
 systemvalues:
   casepath: \C$\Projects

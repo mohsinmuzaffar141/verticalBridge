@@ -41,3 +41,7 @@ When(/^I send put request to site "([^"]*)"$/, {timeout:  5 * 500000}, async(lin
     await apiPage.getHeaderOptions(apiData);
     await apiPage.putRequest(apiLink,apiContent);
 });
+
+Then(/^Verify the total annualized revenue for external and internal user$/, {timeout:  5 * 500000}, async()=> {
+    await apiPage.compareAnnualizedRevenue();
+});

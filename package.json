@@ -37,6 +37,7 @@
     "jasmine-spec-reporter": "^4.2.1",
     "jasminewd2": "^2.2.0",
     "js-yaml": "^3.13.1",
+    "mkdirp": "^0.5.1",
     "ng2f-bootstrap": "~0.0.4",
     "ng2f-server": "~0.2.3",
     "protractor-dev": "^0.23.6",
