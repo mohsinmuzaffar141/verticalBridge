@@ -33,6 +33,7 @@ export class floydSitePage extends BasePage {
                 await label.click();
             }
         });
+
     }
 
     async clickPlusIcon() {

@@ -13,33 +13,35 @@ export const config: Config = {
     baseUrl: "https://www.google.com/",
 
     suites:{
-        "login":"../features/login.feature",
-        "managementAgreement": "./Test/features/managemenetAgreement.feature",
+        "login":"./Test/features/login.feature",
+        "managementAgreement": "./Test/features/managementAgreement.feature",
         "site": "./Test/features/mySites.feature",
         "tabs": "./Test/features/tabs.feature",
         "siteGeneral": "./Test/features/siteGeneral.feature",
-        //"floydSite": "./Test/features/floydSite.feature",
-         "reports": "./Test/features/reports.feature",
-        // "role": "./Test/features/rolesPermission.feature",
-         "api": "./Test/features/api.feature",
+        // "floydSite": "./Test/features/floydSite.feature",
+        "reports": "./Test/features/reports.feature",
+        "role": "./Test/features/rolesPermission.feature",
+        "api": "./Test/features/api.feature",
 
 
-        portal:[
+        sites:[
             "./Test/features/login.feature",
-            "./Test/features/managemenetAgreement.feature",
-            "./Test/features/mySites.feature",
-            "./Test/features/tabs.feature",
+            "./Test/features/managementAgreement.feature",
             "./Test/features/siteGeneral.feature",
         ],
-        general:[
-
+        siteDetail:[
+            "./Test/features/mySites.feature",
+            "./Test/features/tabs.feature",
             //"./Test/features/floydSite.feature",
         ],
         report:[
-            // "./Test/features/api.feature",
             "./Test/features/reports.feature",
+            ],
+        rolesPermission:[
             "./Test/features/rolesPermission.feature",
-
+            ],
+        portalApi:[
+            "./Test/features/api.feature"
         ],
 
 
@@ -64,7 +66,7 @@ export const config: Config = {
 
     specs: [
         "./Test/features/login.feature",
-        "./Test/features/managemenetAgreement.feature",
+        "./Test/features/managementAgreement.feature",
         "./Test/features/mySites.feature",
         "./Test/features/tabs.feature",
         "./Test/features/siteGeneral.feature",

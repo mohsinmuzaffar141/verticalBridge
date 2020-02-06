@@ -1,0 +1,1 @@
+webdriver-manager start --versions.chrome 74.0.3729.6

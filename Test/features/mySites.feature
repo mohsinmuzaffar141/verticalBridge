@@ -15,7 +15,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |    site  |     URL   |
-      |   admin      |     relation   | siteTabs | VBStaging |
+      |   admin      |     relation   | siteTabs | UrlLink |
 
   @searchFilter
   Scenario Outline: verify searchFilters against my sites
@@ -34,7 +34,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships | searchFilter |     URL   |
-      |   admin      |     relation   |filterSearch  | VBStaging |
+      |   admin      |     relation   |filterSearch  | UrlLink |
 
 
   @verifyFilterPresent
@@ -53,7 +53,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |relationships |     URL   |
-      |   admin      |   relation   | VBStaging |
+      |   admin      |   relation   | UrlLink |
 
 
 
@@ -80,7 +80,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |relationships | searchFilter |  name  | address   | city   | state   | zipcode   | country   |  status  |     URL   |
-      |   admin      | relation     | filterSearch |siteName|siteAddress|siteCity|siteState|siteZipCode|siteCountry|siteStatus| VBStaging |
+      |   admin      | relation     | filterSearch |siteName|siteAddress|siteCity|siteState|siteZipCode|siteCountry|siteStatus| UrlLink |
 
 
   @sortingSiteName
@@ -98,7 +98,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |     URL   |
-      |   admin      |     relation   | VBStaging |
+      |   admin      |     relation   | UrlLink |
 
 
   @removeFilter
@@ -118,7 +118,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships | searchFilter |     URL   |
-      |   admin      |     relation   |filterSearch  | VBStaging |
+      |   admin      |     relation   |filterSearch  | UrlLink |
 
   @selectSiteLink
   Scenario Outline: verify go to site detailed page
@@ -136,7 +136,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |   site   |     URL   |
-      |   admin      |     relation   | siteList | VBStaging |
+      |   admin      |     relation   | siteList | UrlLink |
 
   @verifySite
   Scenario Outline: verify site name on detail page
@@ -154,7 +154,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |   site   |     URL   |
-      |   admin      |     relation   | siteList | VBStaging |
+      |   admin      |     relation   | siteList | UrlLink |
 
 
   @verifyHeaderDetailPage
@@ -173,7 +173,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |   site   |     URL   |
-      |   admin      |     relation   | siteList | VBStaging |
+      |   admin      |     relation   | siteList | UrlLink |
 
   @verifySiteDetailLabel
   Scenario Outline: verify site detail Labels
@@ -191,7 +191,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |    site    |     URL   |
-      |   admin      |     relation   | siteDetail | VBStaging |
+      |   admin      |     relation   | siteDetail | UrlLink |
 
 
   @verifySiteGeneralDetail
@@ -210,7 +210,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |    site          |     URL   |
-      |   admin      |     relation   | siteDetailMohsin | VBStaging |
+      |   admin      |     relation   | siteDetailMohsin | UrlLink |
 
   @verifySiteContacts
   Scenario Outline: verify site detail Labels
@@ -228,7 +228,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |    site      |     URL   |
-      |   admin      |     relation   | siteContacts | VBStaging |
+      |   admin      |     relation   | siteContacts | UrlLink |
 
 
   @verifySiteDetailNotPresent
@@ -247,8 +247,8 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |          site              |     URL   |
-      |   admin      |     relation   |    siteDetailNotPresent    | VBStaging |
-      |   admin      |     relation   | siteDetailNotPresentMohsin | VBStaging |
+      |   admin      |     relation   |    siteDetailNotPresent    | UrlLink |
+      |   admin      |     relation   | siteDetailNotPresentMohsin | UrlLink |
 
 
 
@@ -269,7 +269,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |    site  |     URL   |
-      |   admin      |     relation   | siteTabs | VBStaging |
+      |   admin      |     relation   | siteTabs | UrlLink |
 
   @verifyMapData
   Scenario Outline: verify data above map
@@ -287,7 +287,7 @@ Feature: verify filter against my sites
 
     Examples:
       | credentials  |  relationships |     site    |     URL   |
-      |   admin      |     relation   | siteMapData | VBStaging |
+      |   admin      |     relation   | siteMapData | UrlLink |
 
   @verifyHomePageImage
   Scenario Outline: verify image on home page should be present
@@ -302,5 +302,5 @@ Feature: verify filter against my sites
     When  I log out
 
     Examples:
-      | credentials  |relationships |     URL   |
-      |   admin      |   relation   | VBStaging |
+      | credentials  |relationships |     URL  |
+      |   admin      |   relation   | UrlLink |

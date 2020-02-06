@@ -6,39 +6,21 @@
       <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/LoginPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/ManagementAgreementDataPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/apiPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/apiPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/apiPage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/apiPage.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Pages/apiPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/apiPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Pages/floydSitePage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/api.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/floydSite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/floydSite.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/features/managemenetAgreement.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/managementAgreement.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/mySites.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/mySites.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/reports.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/reports.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/rolesPermission.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/rolesPermission.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/siteGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/siteGeneral.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/step_definitions/MySteps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/features/tabs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Test/features/tabs.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/LoginSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/apiSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/apiSteps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/apiSteps.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/apiSteps.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/steps/apiSteps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Test/steps/apiSteps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/api.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/api.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/configurations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/configurations.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/testData/floydSite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/floydSite.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testData/siteGeneral.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/html/cucumber_reporter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/json/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/json/report/index.html" afterDir="false" />
     </list>
@@ -193,6 +175,12 @@
       <workItem from="1579846934901" duration="1971000" />
       <workItem from="1579864318960" duration="2677000" />
       <workItem from="1580192847478" duration="9549000" />
+      <workItem from="1580303467654" duration="2560000" />
+      <workItem from="1580365406286" duration="11625000" />
+      <workItem from="1580392226334" duration="1191000" />
+      <workItem from="1580447020635" duration="7626000" />
+      <workItem from="1580725313182" duration="8432000" />
+      <workItem from="1580802787009" duration="7246000" />
     </task>
     <servers />
   </component>

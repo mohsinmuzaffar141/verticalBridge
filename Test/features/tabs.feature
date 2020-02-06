@@ -17,8 +17,8 @@ Feature: verify test cases of different tabs
     When  I log out
 
     Examples:
-      | credentials  |  relationships |  location   |     site       |     URL    |
-      |   admin      |     relation   |   mapSearch |   siteMapData  | VBStaging |
+      | credentials  |  relationships |  location   |     site       |     URL  |
+      |   admin      |     relation   |   mapSearch |   siteMapData  | UrlLink |
 
   @clickAutoViewTab
   Scenario Outline: verify on and off the auto view tab
@@ -36,7 +36,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships |     site       |     URL    |
-      |   admin      |     relation   |   siteMapData  | VBStaging |
+      |   admin      |     relation   |   siteMapData  | UrlLink |
 
 
 
@@ -58,7 +58,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships |     site       |    tab     |     URL    |
-      |   admin      |     relation   |   siteMapData  | contactTab | VBStaging |
+      |   admin      |     relation   |   siteMapData  | contactTab | UrlLink |
 
   @verifyContactGroupData
   Scenario Outline: verify contact group should contain data
@@ -77,7 +77,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships |     site       |    tab     |     URL    |
-      |   admin      |     relation   |   siteMapData  | contactTab | VBStaging |
+      |   admin      |     relation   |   siteMapData  | contactTab | UrlLink |
 
 
   @verifyNoRecordsFound
@@ -97,7 +97,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships |     site       |    tab     |     URL    |
-      |   admin      |     relation   |   siteMapData  | contactTab | VBStaging |
+      |   admin      |     relation   |   siteMapData  | contactTab | UrlLink |
 
 
   @verifyNoDuplicateData
@@ -117,7 +117,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships    |     tab     |     URL    |
-      |   admin      |     contactData   |  contactTab | VBStaging |
+      |   admin      |     contactData   |  contactTab | UrlLink |
 
 
       #PropertyTab
@@ -138,7 +138,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships    |       tab     |     URL    |
-      |   admin      |     contactData   |   propertyTab | VBStaging |
+      |   admin      |     contactData   |   propertyTab | UrlLink |
 
 
   @verifyDataUnderPropertyInformationAndFiberData
@@ -158,8 +158,8 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships    |     tab        |     URL    |
-      |   admin      |     contactData   |   propertyTab  | VBStaging |
-      |   admin      |     contactData   |   propertyTab1 | VBStaging |
+      |   admin      |     contactData   |   propertyTab  | UrlLink |
+      |   admin      |     contactData   |   propertyTab1 | UrlLink |
 
 
   @verifyDataUnderAllSiteOfProperties
@@ -179,7 +179,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships    |       tab      |     URL    |
-      |   admin      |     contactData   |   propertyTab1 | VBStaging |
+      |   admin      |     contactData   |   propertyTab1 | UrlLink |
 
 
   @verifyDataIsNotPresent
@@ -199,8 +199,8 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships    |     tab      |     URL    |
-      |   admin      |     contactData   | propertyTab  | VBStaging |
-      |   admin      |     contactData   | propertyTab1 | VBStaging |
+      |   admin      |     contactData   | propertyTab  | UrlLink |
+      |   admin      |     contactData   | propertyTab1 | UrlLink |
 
 
     #Leases Tab
@@ -221,7 +221,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships    |     tab      |     URL    |
-      |   admin      |     contactData   |   leasesTab  | VBStaging |
+      |   admin      |     contactData   |   leasesTab  | UrlLink |
 
   @verifyLeasesTabData
   Scenario Outline: verify data should be present on leases tab
@@ -240,7 +240,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  | relationships  |     tab      |     URL    |
-      |   admin      |  contactData   |   leasesTab  | VBStaging |
+      |   admin      |  contactData   |   leasesTab  | UrlLink |
 
   @verifyLeasesTabLabels
   Scenario Outline: verify labels should be present on leases tab
@@ -259,7 +259,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  | relationships  |     tab      |     URL    |
-      |   admin      |  contactData   |   leasesTab  | VBStaging |
+      |   admin      |  contactData   |   leasesTab  | UrlLink |
 
   @verifyDataUnderGroundRights
   Scenario Outline: verify data should be present under ground rights
@@ -278,7 +278,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  | relationships |     tab      |     URL    |
-      |   admin      |  leasesData   |  leasesTab1  | VBStaging |
+      |   admin      |  leasesData   |  leasesTab1  | UrlLink |
 
   @verifyDataNotPresent
   Scenario Outline: verify data should be not present
@@ -297,7 +297,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  | relationships |     tab      |     URL    |
-      |   admin      |  leasesData   |  leasesTab1  | VBStaging |
+      |   admin      |  leasesData   |  leasesTab1  | UrlLink |
 
 
     #Opreation Tab
@@ -318,7 +318,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  | relationships |      tab       |     URL    |
-      |   admin      |    relation   |  operationTab  | VBStaging |
+      |   admin      |    relation   |  operationTab  | UrlLink |
 
   @verifyLabelsNotPresentOnOperationTab
   Scenario Outline: verify labels on operational tab
@@ -337,9 +337,9 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  | relationships   |     tab         |     URL    |
-      |   admin      |    relation     |  operationTab   | VBStaging |
-      |   admin      |    leasesData   |  operationTab1  | VBStaging |
-      |   admin      |    leasesData   |  operationTab2  | VBStaging |
+      |   admin      |    relation     |  operationTab   | UrlLink |
+      |   admin      |    leasesData   |  operationTab1  | UrlLink |
+      |   admin      |    leasesData   |  operationTab2  | UrlLink |
 
 
   @verifyDataUnderOperationalDataAttribute
@@ -359,15 +359,15 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |      tab       |     URL    |
-      |   admin      |    leasesData   |  operationTab  | VBStaging |
-      |   admin      |    leasesData   |  operationTab1 | VBStaging |
-      |   admin      |    leasesData   |  operationTab2 | VBStaging |
-      |   admin      |    leasesData   |  operationTab3 | VBStaging |
-      |   admin      |    leasesData   |  operationTab4 | VBStaging |
-      |   admin      |    leasesData   |  operationTab5 | VBStaging |
-      |   admin      |    leasesData   |  operationTab6 | VBStaging |
-      |   admin      |    leasesData   |  operationTab7 | VBStaging |
-      |   admin      |    leasesData   |  operationTab8 | VBStaging |
+      |   admin      |    leasesData   |  operationTab  | UrlLink |
+      |   admin      |    leasesData   |  operationTab1 | UrlLink |
+      |   admin      |    leasesData   |  operationTab2 | UrlLink |
+      |   admin      |    leasesData   |  operationTab3 | UrlLink |
+      |   admin      |    leasesData   |  operationTab4 | UrlLink |
+      |   admin      |    leasesData   |  operationTab5 | UrlLink |
+      |   admin      |    leasesData   |  operationTab6 | UrlLink |
+      |   admin      |    leasesData   |  operationTab7 | UrlLink |
+      |   admin      |    leasesData   |  operationTab8 | UrlLink |
 
 
   @verifyDataUnderSiteComments
@@ -387,7 +387,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |      tab      |     URL    |
-      |   admin      |    leasesData   |  operationTab | VBStaging |
+      |   admin      |    leasesData   |  operationTab | UrlLink |
 
 
     #FCC Tab
@@ -408,7 +408,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |  tab |     URL    |
-      |   admin      |    leasesData   |  FCC | VBStaging |
+      |   admin      |    leasesData   |  FCC | UrlLink |
 
   @verifyLabelsDataUnderFCCTab
   Scenario Outline: verify labels data under FCC tab
@@ -427,10 +427,10 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |  tab  |     URL    |
-      |   admin      |    leasesData   |  FCC  | VBStaging |
-      |   admin      |    leasesData   |  FCC1 | VBStaging |
-      |   admin      |    leasesData   |  FCC2 | VBStaging |
-      |   admin      |    leasesData   |  FCC3 | VBStaging |
+      |   admin      |    leasesData   |  FCC  | UrlLink |
+      |   admin      |    leasesData   |  FCC1 | UrlLink |
+      |   admin      |    leasesData   |  FCC2 | UrlLink |
+      |   admin      |    leasesData   |  FCC3 | UrlLink |
 
   @verifyHyperLinkAndDisplayMessage
   Scenario Outline: verify link and display message under FCC tab
@@ -450,7 +450,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |  tab   |     URL    |
-      |   admin      |    leasesData   |  FCC   | VBStaging |
+      |   admin      |    leasesData   |  FCC   | UrlLink |
 
   @verifyDisplayMessage
   Scenario Outline: verify display message under FCC tab
@@ -469,7 +469,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |  tab    |     URL    |
-      |   admin      |    leasesData   |  FCC1   | VBStaging |
+      |   admin      |    leasesData   |  FCC1   | UrlLink |
 
 
     #Rad Centers Tab
@@ -490,7 +490,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |     tab      |     URL    |
-      |   admin      |    leasesData   |  radCenter   | VBStaging |
+      |   admin      |    leasesData   |  radCenter   | UrlLink |
 
   @verifyLabelDataUnderRadCenter
   Scenario Outline: verify label data under rad center tab
@@ -509,9 +509,9 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |     tab       |     URL    |
-      |   admin      |    leasesData   |  radCenter    | VBStaging |
-      |   admin      |    leasesData   |  radCenter1   | VBStaging |
-      |   admin      |    leasesData   |  radCenter2   | VBStaging |
+      |   admin      |    leasesData   |  radCenter    | UrlLink |
+      |   admin      |    leasesData   |  radCenter1   | UrlLink |
+      |   admin      |    leasesData   |  radCenter2   | UrlLink |
 
   @verifyIndicatorUnderRadCenter
   Scenario Outline: verify indicator under rad center tab
@@ -530,7 +530,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |     tab       |     URL    |
-      |   admin      |    leasesData   |  radCenter    | VBStaging |
+      |   admin      |    leasesData   |  radCenter    | UrlLink |
 
   @verifyTableHeaderUnderRadCenter
   Scenario Outline: verify table header under rad center tab
@@ -549,7 +549,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |     tab       |     URL    |
-      |   admin      |    leasesData   |   radCenter   | VBStaging |
+      |   admin      |    leasesData   |   radCenter   | UrlLink |
 
 
     #Leasing Activity Tab
@@ -570,7 +570,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |         tab         |     URL    |
-      |   admin      |    leasesData   |   leasingActivity   | VBStaging |
+      |   admin      |    leasesData   |   leasingActivity   | UrlLink |
 
   @verifyLabelNotPresentUnderLeasingActivity
   Scenario Outline: verify label not present under leasing activity tab
@@ -589,7 +589,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |         tab         |     URL    |
-      |   admin      |    leasesData   |   leasingActivity   | VBStaging |
+      |   admin      |    leasesData   |   leasingActivity   | UrlLink |
 
   @verifyButtonNotPresent
   Scenario Outline: verify buttons are not present on the portal
@@ -607,8 +607,8 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |         tab          |     URL    |
-      |   admin      |    leasesData   |   leasingActivity1   | VBStaging |
-      |   admin      |    leasesData   |   leasingActivity2   | VBStaging |
+      |   admin      |    leasesData   |   leasingActivity1   | UrlLink |
+      |   admin      |    leasesData   |   leasingActivity2   | UrlLink |
 
 
     #Document Tab
@@ -629,7 +629,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |       tab       |     URL    |
-      |   admin      |    leasesData   |   documentTab   | VBStaging |
+      |   admin      |    leasesData   |   documentTab   | UrlLink |
 
   @searchFilesUnderDocumentTab
   Scenario Outline: verify files are present under document tab
@@ -648,7 +648,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |       tab       |     URL    |
-      |   admin      |    leasesData   |   documentTab   | VBStaging |
+      |   admin      |    leasesData   |   documentTab   | UrlLink |
 
   @clickFolderAndSubFolderUnderDocumentTab
   Scenario Outline: click folder and sub folder under document tab
@@ -667,7 +667,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |       tab       |     URL    |
-      |   admin      |    leasesData   |   documentTab   | VBStaging |
+      |   admin      |    leasesData   |   documentTab   | UrlLink |
 
     #108-119 && 121/122
     @verifyOptionsNotPresentUnderDocumentTab
@@ -687,7 +687,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |       tab       |     URL    |
-      |   admin      |    leasesData   |   documentTab   | VBStaging |
+      |   admin      |    leasesData   |   documentTab   | UrlLink |
 
   @verifyTabsUnderHomePage
   Scenario Outline: verify tabs under home page
@@ -703,7 +703,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |     tab      |     URL    |
-      |   admin      |    leasesData   |   homePage   | VBStaging |
+      |   admin      |    leasesData   |   homePage   | UrlLink |
 
   @verifyContentUnderAboutTab
   Scenario Outline: verify content under about tab
@@ -719,7 +719,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |     tab      |     URL    |
-      |   admin      |    leasesData   |   homePage   | VBStaging |
+      |   admin      |    leasesData   |   homePage   | UrlLink |
 
   @verifySubTabsUnderServicesTab
   Scenario Outline: verify sub tabs under services tab
@@ -736,7 +736,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |        tab      |     URL    |
-      |   admin      |    leasesData   |   servicesTab   | VBStaging |
+      |   admin      |    leasesData   |   servicesTab   | UrlLink |
 
   @verifyContentUnderServicesTab
   Scenario Outline: verify content under services tab
@@ -753,7 +753,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |       tab       |     URL    |
-      |   admin      |    leasesData   |   servicesTab   | VBStaging |
+      |   admin      |    leasesData   |   servicesTab   | UrlLink |
 
   @verifyContentUnderServicesSubTab
   Scenario Outline: verify content under services sub tab
@@ -771,8 +771,8 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |       tab       |      subTab    |     URL    |
-      |   admin      |    leasesData   |   servicesTab   |   servicesTab1 | VBStaging |
-      |   admin      |    leasesData   |   servicesTab   |   servicesTab2 | VBStaging |
+      |   admin      |    leasesData   |   servicesTab   |   servicesTab1 | UrlLink |
+      |   admin      |    leasesData   |   servicesTab   |   servicesTab2 | UrlLink |
 
   @verifyContentUnderContactTab
   Scenario Outline: verify content under contact tab
@@ -789,7 +789,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |           tab          |     URL    |
-      |   admin      |    leasesData   |   contactHomePageTab   | VBStaging |
+      |   admin      |    leasesData   |   contactHomePageTab   | UrlLink |
 
   @verifyContentDataUnderContactTab
   Scenario Outline: verify content under contact tab
@@ -806,7 +806,7 @@ Feature: verify test cases of different tabs
 
     Examples:
       | credentials  |  relationships  |           tab           |     URL    |
-      |   admin      |    leasesData   |   contactHomePageTab    | VBStaging |
+      |   admin      |    leasesData   |   contactHomePageTab    | UrlLink |
 
 
 

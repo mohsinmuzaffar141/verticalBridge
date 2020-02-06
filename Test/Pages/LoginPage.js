@@ -93,8 +93,9 @@ var LoginPage = /** @class */ (function (_super) {
         _this.checkbox = protractor_1.element(protractor_1.by.id("KmsiCheckboxField"));
         _this.yesbtn = protractor_1.element(protractor_1.by.xpath("//input[@id='idSIButton9']"));
         _this.logout_btn = protractor_1.element(protractor_1.by.xpath('//span[text()="Log Out"]'));
-        _this.logoutFloyd = protractor_1.element(protractor_1.by.xpath('//*[name()="svg" and @data-icon="user-circle" and @data-prefix="fas"]'));
-        _this.signOut = protractor_1.element(protractor_1.by.xpath('//span[text()="Sign out"]'));
+        // logoutFloyd=element(by.xpath('//*[name()="svg" and @data-icon="user-circle" and @data-prefix="fas"]'));
+        _this.signOut = protractor_1.element(protractor_1.by.xpath('//span[text()="Sign Out"]'));
+        _this.logOutFloyd = protractor_1.element(protractor_1.by.xpath("//img[@class='loggedInIcon']"));
         return _this;
     }
     LoginPage.prototype.OpenBrowser = function () {
@@ -313,11 +314,13 @@ var LoginPage = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.logoutFloyd), 50000, 'logout floyd Element taking too long to appear in the DOM')];
+                    case 0: return [4 /*yield*/, protractor_1.browser.wait(until.presenceOf(this.logOutFloyd), 50000, 'logout floyd Element taking too long to appear in the DOM')];
                     case 1:
                         _a.sent();
-                        return [4 /*yield*/, this.logoutFloyd.click()];
+                        // await this.logoutFloyd.click();
+                        return [4 /*yield*/, protractor_1.browser.actions().mouseMove(this.logOutFloyd).perform()];
                     case 2:
+                        // await this.logoutFloyd.click();
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(2000)];
                     case 3:
@@ -329,6 +332,9 @@ var LoginPage = /** @class */ (function (_super) {
                         _a.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(5000)];
                     case 5:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.manage().deleteAllCookies()];
+                    case 6:
                         _a.sent();
                         return [2 /*return*/];
                 }

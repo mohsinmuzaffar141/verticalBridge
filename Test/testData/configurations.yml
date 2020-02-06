@@ -1,5 +1,8 @@
-VBStaging: https://stagepartnerportal.verticalbridge.com
+UrlLink: https://stagepartnerportal.verticalbridge.com
 floydURL: https://login.microsoftonline.com
+
+
+VBStage: https://stagepartnerportal.verticalbridge.com
 QAVB: https://qapartnerportal.verticalbridge.com
   
 systemvalues:

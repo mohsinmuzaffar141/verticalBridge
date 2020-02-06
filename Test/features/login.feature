@@ -9,7 +9,7 @@ Feature: Login to vertical bridge
     When  I log out
 
     Examples:
-        | credentials  |     URL    |
-        | admin        | VBStaging |
+        | credentials  |     URL  |
+        | admin        | UrlLink |
 
 

@@ -21,7 +21,7 @@ totalSites:
 
 totalRevenue:
   tab: My Dashboard
-  count: $292.53K,Total Annualized Revenue
+  count: $293.15K,Total Annualized Revenue
 
 rentRollReport:
   tab: My Dashboard
@@ -62,16 +62,16 @@ filterReport:
 forecastReport:
   tab: My Dashboard
   link: Forecast Report
-  startDate: 09/01/2019
-  endDate: 09/15/2019
+  startDate: 01/01/2020
+  endDate: 31/15/2020
   button: Generate Report
-  recordCount: '7'
-  monthStart: January,2019
-  monthEnd: December,2019
+  recordCount: '8'
+  monthStart: January,2020
+  monthEnd: December,2020
   startDateCalender: 29
   endDateCalender: 15
   attributeData: Forecast Report
-  thReportHeader: Management Agreement Name,Site Number,Site Name,Site Start Date,Site Address,Relationship Name,Tenant Legal Name,Lease Number,Agreement Type,Renewal Type,Renewal Term,Number Of Renewals,Current Renewal Term,Auto Renewal Comment,Current Term End Date,Final Term Expiration Date,Lease Commecement Date,Lease Effective Date,Escalation Amount,Vertical Bridge Fee Percentage,Billing Frequency,Charge Type,1/1/2019,2/1/2019,3/1/2019,4/1/2019,5/1/2019,6/1/2019,7/1/2019,8/1/2019,9/1/2019,10/1/2019,11/1/2019,12/1/2019,Total Tenant Rent
+  thReportHeader: Management Agreement Name,Site Number,Site Name,Site Start Date,Site Address,Relationship Name,Tenant Legal Name,Lease Number,Agreement Type,Renewal Type,Renewal Term,Number Of Renewals,Current Renewal Term,Auto Renewal Comment,Current Term End Date,Final Term Expiration Date,Lease Commecement Date,Lease Effective Date,Escalation Amount,Vertical Bridge Fee Percentage,Billing Frequency,Charge Type,1/1/2020,2/1/2020,3/1/2020,4/1/2020,5/1/2020,6/1/2020,7/1/2020,8/1/2020,9/1/2020,10/1/2020,11/1/2020,12/1/2020,Total Tenant Rent
   colName: managementAgreementName
   count: 1
   siteNumber: US-GA-1058,US-SC-1021,US-MD-1049,US-MD-1049,US-MA-1033,US-TX-1209,US-FL-1111
@@ -99,7 +99,7 @@ tableForecast:
   count: 1
   name: Site Address
   colName: siteAddress
-  sitesCount: '7'
+  sitesCount: '8'
   button:  Export to PDF
   fileName: \\Forecast Report-Export.pdf
 
@@ -137,8 +137,8 @@ leasingActivityReport:
   tab: My Dashboard
   link: Leasing Activity Report
   colName: tenantLegalName
-  recordCount: '56'
-  siteNumber: C-100994
+  recordCount: '38'
+  siteNumber: C-100392
   count: 1
   attributeData: Leasing Activity
   thReportHeader: Management Agreement Name,Site Number,Site Name,Deal Number,Tenant Name,Tenant Relationship Name,Projected Rent,Deal Status,Inquiry Date,Application Received Date,Estimated Closure Date

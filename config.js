@@ -10,29 +10,32 @@ exports.config = {
     //SELENIUM_PROMISE_MANAGER: false,
     baseUrl: "https://www.google.com/",
     suites: {
-        "login": "../features/login.feature",
-        "managementAgreement": "./Test/features/managemenetAgreement.feature",
+        "login": "./Test/features/login.feature",
+        "managementAgreement": "./Test/features/managementAgreement.feature",
         "site": "./Test/features/mySites.feature",
         "tabs": "./Test/features/tabs.feature",
         "siteGeneral": "./Test/features/siteGeneral.feature",
-        //"floydSite": "./Test/features/floydSite.feature",
+        // "floydSite": "./Test/features/floydSite.feature",
         "reports": "./Test/features/reports.feature",
-        // "role": "./Test/features/rolesPermission.feature",
+        "role": "./Test/features/rolesPermission.feature",
         "api": "./Test/features/api.feature",
-        portal: [
+        sites: [
             "./Test/features/login.feature",
-            "./Test/features/managemenetAgreement.feature",
-            "./Test/features/mySites.feature",
-            "./Test/features/tabs.feature",
+            "./Test/features/managementAgreement.feature",
             "./Test/features/siteGeneral.feature",
         ],
-        general: [
-        //"./Test/features/floydSite.feature",
+        siteDetail: [
+            "./Test/features/mySites.feature",
+            "./Test/features/tabs.feature",
         ],
         report: [
-            // "./Test/features/api.feature",
             "./Test/features/reports.feature",
+        ],
+        rolesPermission: [
             "./Test/features/rolesPermission.feature",
+        ],
+        portalApi: [
+            "./Test/features/api.feature"
         ],
     },
     capabilities: {
@@ -52,7 +55,7 @@ exports.config = {
     // frameworkPath: require.resolve("protractor-cucumber-framework"),
     specs: [
         "./Test/features/login.feature",
-        "./Test/features/managemenetAgreement.feature",
+        "./Test/features/managementAgreement.feature",
         "./Test/features/mySites.feature",
         "./Test/features/tabs.feature",
         "./Test/features/siteGeneral.feature",

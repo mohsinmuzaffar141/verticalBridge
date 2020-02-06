@@ -17,7 +17,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |           report          |      URL        |
-      |   admin      |     relation   |    filterReportForecast   |    VBStaging    |
+      |   admin      |     relation   |    filterReportForecast   |    UrlLink    |
 
     @verifyActiveTenantUnderRentRollReport
   Scenario Outline: verify active tenant should be present under report
@@ -36,11 +36,11 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |             report         |    URL     |
-      |   admin      |     relation   |        rentRollReport      | VBStaging  |
-      |   admin      |     relation   |       rentRollReport1      | VBStaging  |
-      |   admin      |     relation   |       newLeasesReport      | VBStaging  |
-      |   admin      |     relation   |       reportForecast       | VBStaging  |
-      |   admin      |     relation   |    leasingActivityReport   | VBStaging  |
+      |   admin      |     relation   |        rentRollReport      | UrlLink  |
+      |   admin      |     relation   |       rentRollReport1      | UrlLink  |
+      |   admin      |     relation   |       newLeasesReport      | UrlLink  |
+      |   admin      |     relation   |       reportForecast       | UrlLink  |
+      |   admin      |     relation   |    leasingActivityReport   | UrlLink  |
 
 
   @verifyReports
@@ -59,7 +59,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |     report   |    URL     |
-      |   admin      |     relation   |    reports   | VBStaging |
+      |   admin      |     relation   |    reports   | UrlLink |
 
   @clickManagementAgreementReport
   Scenario Outline: click management agreement report on my dashboard
@@ -78,7 +78,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |      report    |    URL     |
-      |   admin      |     relation   |    totalSites  | VBStaging |
+      |   admin      |     relation   |    totalSites  | UrlLink |
 
 
   @verifyDashboard
@@ -96,7 +96,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |   report  |    URL     |
-      |   admin      |     relation   |  reports  | VBStaging |
+      |   admin      |     relation   |  reports  | UrlLink |
 
   @verifyExecutedDate
   Scenario Outline: verify executed date on my dashboard
@@ -114,7 +114,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |   report  |   URL     |
-      |   admin      |     relation   | reports   | VBStaging |
+      |   admin      |     relation   | reports   | UrlLink |
 
   @verifyTotalManagementAgreement
   Scenario Outline: verify management agreement
@@ -129,12 +129,11 @@ Feature: verify test cases of reports
     Then  verify management agreement count "<report>"
     When  I log out
 
-
     Examples:
       | credentials  |  relationships |     report   |    URL    |
-      |   admin      |     relation   |    reports   | VBStaging |
-      |   admin      |     relation   |   totalSites | VBStaging |
-      |   admin      |     relation   | totalRevenue | VBStaging |
+      |   admin      |     relation   |    reports   | UrlLink |
+      |   admin      |     relation   |   totalSites | UrlLink |
+      |   admin      |     relation   | totalRevenue | UrlLink |
 
 
 
@@ -155,7 +154,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |     report   |    URL     |
-      |   admin      |     relation   |    reports   | VBStaging |
+      |   admin      |     relation   |    reports   | UrlLink |
 
 
 
@@ -179,7 +178,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    rentRollReport   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   | UrlLink |
 
   @verifyAscendingDescendingAgainstRentRollReport
   Scenario Outline: verify ascending & descending against rent roll report
@@ -198,7 +197,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |   order   |    URL     |
-      |   admin      |     relation   |    rentRollReport   |   table   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   |   table   | UrlLink |
 
   @verifyRentRollReportPaginated
   Scenario Outline: verify rent roll report should be paginated
@@ -217,7 +216,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |   order   |    URL     |
-      |   admin      |     relation   |    rentRollReport   |   table   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   |   table   | UrlLink |
 
   @downloadRentRollReport
   Scenario Outline: verify rent roll report should be downloaded
@@ -236,7 +235,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |   order   |    URL     |
-      |   admin      |     relation   |    rentRollReport   |   table   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   |   table   | UrlLink |
 
 
   @verifyFilterAgainstRentRollReport
@@ -257,7 +256,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |   searchFilter   |    URL     |
-      |   admin      |     relation   |    rentRollReport   |   filterReport  | VBStaging |
+      |   admin      |     relation   |    rentRollReport   |   filterReport  | UrlLink |
 
   @clickSiteNumberOnRentRollReport
   Scenario Outline: click site number on rent roll report
@@ -278,7 +277,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |   site   |    URL     |
-      |   admin      |     relation   |    rentRollReport   |  report  | VBStaging |
+      |   admin      |     relation   |    rentRollReport   |  report  | UrlLink |
 
   @verifyLeasesTabLinkOnRentRollReport
   Scenario Outline: verify leases number on rent roll report
@@ -299,7 +298,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |          site        |    URL     |
-      |   admin      |     relation   |    rentRollReport   |  leasesNumberReport  | VBStaging |
+      |   admin      |     relation   |    rentRollReport   |  leasesNumberReport  | UrlLink |
 
   @verifyAttributesAgainstRentRollReport
   Scenario Outline: verify attributes on rent roll report
@@ -320,7 +319,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    rentRollReport   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   | UrlLink |
 
 
   @verifyColumnAgainstRentRollReport
@@ -340,7 +339,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    rentRollReport   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   | UrlLink |
 
   @verifyHeaderAgainstRentRollReport
   Scenario Outline: verify header against rent roll report
@@ -359,7 +358,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    rentRollReport1  | VBStaging |
+      |   admin      |     relation   |    rentRollReport1  | UrlLink |
 
 
   @verifyFooterOnRentRollReport
@@ -379,7 +378,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    rentRollReport   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   | UrlLink |
 
 
     #17&18
@@ -399,7 +398,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    rentRollReport   | VBStaging |
+      |   admin      |     relation   |    rentRollReport   | UrlLink |
 
   @verifyDataOfRentReportAgainstFloydSite
   Scenario Outline: verify data of rent roll report against floyd site
@@ -416,18 +415,16 @@ Feature: verify test cases of reports
     Then  verify data of rent roll report against partner portal "<partnerPortal>"
     When  I log out
     Given I am on floyd Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  search the values in floyd site "<site>"
     Then  verify data of rent roll report against floyd site "<floydSite>"
     Then  I click on floyd stage "<floydSite>"
-    When  Click on additional features link "<site>"
-    When  Click on add a portfolio "<site>"
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
       | credentials  |  relationships |     report       |   partnerPortal     |  site      |  floydSite     |    URL     |
-      |   admin      |     relation   | rentRollReport  | partnerPortalValue  |  floydSite  | floydSiteValue | VBStaging |
+      |   admin      |     relation   | rentRollReport  | partnerPortalValue  |  floydSite  | floydSiteValue | UrlLink |
 
   @verifyActiveSitesAgainstRentRollReport
   Scenario Outline: verify active sites against rent roll report
@@ -452,13 +449,13 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |              report         |           site         |    URL     |
-      |   admin      |     relation   |         rentRollReport     |    rentRollReportSites  | VBStaging |
-      |   admin      |     relation   |        forecastReport      |    rentRollReportSites  | VBStaging |
-      |   admin      |     relation   |       newLeasesReport      |    rentRollReportSites  | VBStaging |
-      |   admin      |     relation   |    leasingActivityReport   |    rentRollReportSites | VBStaging |
+      |   admin      |     relation   |         rentRollReport     |    rentRollReportSites  | UrlLink |
+      |   admin      |     relation   |        forecastReport      |    rentRollReportSites  | UrlLink |
+      |   admin      |     relation   |       newLeasesReport      |    rentRollReportSites  | UrlLink |
+      |   admin      |     relation   |    leasingActivityReport   |    rentRollReportSites | UrlLink |
 
-    #ForeCast Report
-  #32&38&39
+#    ForeCast Report
+#  32&38&39
   @generateForecastReport
   Scenario Outline: generate forecast report
 
@@ -478,7 +475,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
   @downloadForecastReport
   Scenario Outline: verify forecast report should be downloaded
@@ -497,7 +494,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |        order      |    URL     |
-      |   admin      |     relation   |    forecastReport   |   tableForecast   | VBStaging |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   | UrlLink |
 
 
   @defaultStartDateOnForecastReport
@@ -516,7 +513,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
   @defaultEndDateOnForecastReport
   Scenario Outline:  verify default end date on forecast report
@@ -534,7 +531,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
   @enterStartDateToRetrieveForecastReport
   Scenario Outline: enter start date to retrieve forecast report
@@ -554,7 +551,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
   @enterEndDateToRetrieveForecastReport
   Scenario Outline: enter end date to retrieve forecast report
@@ -574,7 +571,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
   @enterStartAndEndDateFromCalendarOnForecastReport
   Scenario Outline: verify footer on rent roll report
@@ -595,7 +592,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
   @verifyFilterAgainstForecastReport
   Scenario Outline: verify filter against forecast report
@@ -615,7 +612,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |        searchFilter      |    URL     |
-      |   admin      |     relation   |    forecastReport   |   filterReportForecast  | VBStaging |
+      |   admin      |     relation   |    forecastReport   |   filterReportForecast  | UrlLink |
 
   @verifyAscendingDescendingAgainstForecastReport
   Scenario Outline: verify ascending & descending against forecast report
@@ -634,7 +631,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |        order       |    URL    |
-      |   admin      |     relation   |    forecastReport   |   tableForecast   | VBStaging |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   | UrlLink |
 
   @verifyForecastReportPaginated
   Scenario Outline: verify forecast report should be paginated
@@ -653,7 +650,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |        order       |    URL    |
-      |   admin      |     relation   |    forecastReport   |   tableForecast   | VBStaging |
+      |   admin      |     relation   |    forecastReport   |   tableForecast   | UrlLink |
 
 
 
@@ -676,7 +673,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |       site        |    URL    |
-      |   admin      |     relation   |    forecastReport   |  reportForecast  | VBStaging |
+      |   admin      |     relation   |    forecastReport   |  reportForecast  | UrlLink |
 
   @verifyLeasesTabLinkOnForecastReport
   Scenario Outline: verify leases number on forecast report
@@ -697,7 +694,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |             site              |    URL     |
-      |   admin      |     relation   |    forecastReport   |  leasesNumberForecastReport  | VBStaging |
+      |   admin      |     relation   |    forecastReport   |  leasesNumberForecastReport  | UrlLink |
 
   @verifyAttributesAgainstForecastReport
   Scenario Outline: verify attributes on forecast report
@@ -718,7 +715,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
 
   @verifyColumnAgainstForecastReport
@@ -738,7 +735,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
 
 
@@ -759,7 +756,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
   @verifyHideAndUnHideColumnOnForecastReport
   Scenario Outline: verify hide and un hide column on forecast report
@@ -781,9 +778,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |           report          |    URL     |
-      |   admin      |     relation   |    filterReportForecast   | VBStaging |
-
-
+      |   admin      |     relation   |    filterReportForecast   | UrlLink |
 
 
     @verifyGroupHierarchyOnForecastReport
@@ -803,7 +798,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    forecastReport   | VBStaging |
+      |   admin      |     relation   |    forecastReport   | UrlLink |
 
 
   @verifyDataOfForecastReportAgainstFloydSite
@@ -821,18 +816,16 @@ Feature: verify test cases of reports
     Then  verify data of rent roll report against partner portal "<partnerPortal>"
     When  I log out
     Given I am on floyd Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  search the values in floyd site "<site>"
     Then  verify data of rent roll report against floyd site "<floydSite>"
     Then  I click on floyd stage "<floydSite>"
-    When  Click on additional features link "<site>"
-    When  Click on add a portfolio "<site>"
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
       | credentials | relationships |     report      |      partnerPortal        |        site       |       floydSite       |    URL     |
-      |   admin     |   relation   | forecastReport  | partnerPortalValueForecast | floydSiteForecast | floydSiteValueForecast| VBStaging |
+      |   admin     |   relation   | forecastReport  | partnerPortalValueForecast | floydSiteForecast | floydSiteValueForecast| UrlLink |
 
 
     #New Leases Report
@@ -853,7 +846,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report        |    URL     |
-      |   admin      |     relation   |    newLeasesReport   | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   | UrlLink |
 
   @verifyFilterAgainstNewLeasesReport
   Scenario Outline: verify filter against new leases report
@@ -873,7 +866,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report        |         searchFilter     |    URL     |
-      |   admin      |     relation   |    newLeasesReport   |   filterReportNewLeases  | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   |   filterReportNewLeases  | UrlLink |
 
   @verifyAscendingDescendingAgainstNewLeasesReport
   Scenario Outline: verify ascending & descending against new leases report
@@ -892,7 +885,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report        |        order        |    URL     |
-      |   admin      |     relation   |    newLeasesReport   |    tableNewLeases   | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   |    tableNewLeases   | UrlLink |
 
   @downloadNewLeasesReport
   Scenario Outline: verify new leases report should be downloaded
@@ -911,7 +904,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report        |         order      |    URL     |
-      |   admin      |     relation   |    newLeasesReport   |   tableNewLeases   | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   |   tableNewLeases   | UrlLink |
 
   @clickSiteNumberOnNewLeasesReport
   Scenario Outline: click site number on New leases report
@@ -932,7 +925,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report        |       site        |    URL     |
-      |   admin      |     relation   |    newLeasesReport   |  reportNewLeases  | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   |  reportNewLeases  | UrlLink |
 
   @verifyLeasesTabLinkOnNewLeasesReport
   Scenario Outline: verify leases number on new leases report
@@ -953,7 +946,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report        |             site              |    URL     |
-      |   admin      |     relation   |    newLeasesReport   |  leasesNumberNewLeasesReport  | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   |  leasesNumberNewLeasesReport  | UrlLink |
 
   @verifyAttributesAgainstNewLeasesReport
   Scenario Outline: verify attributes on new leases report
@@ -974,7 +967,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |         report       |    URL     |
-      |   admin      |     relation   |    newLeasesReport   | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   | UrlLink |
 
 
   @verifyColumnAgainstNewLeasesReport
@@ -994,7 +987,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report       |    URL     |
-      |   admin      |     relation   |    newLeasesReport  | VBStaging |
+      |   admin      |     relation   |    newLeasesReport  | UrlLink |
 
   @verifyFooterOnNewLeasesReport
   Scenario Outline: verify footer on new leases report
@@ -1013,7 +1006,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report        |     URL   |
-      |   admin      |     relation   |    newLeasesReport   | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   | UrlLink |
 
   @verifySearchAgainstNewLeasesReport
   Scenario Outline: verify search against new leases report
@@ -1033,7 +1026,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |        report         |    URL     |
-      |   admin      |     relation   |    newLeasesReport   | VBStaging |
+      |   admin      |     relation   |    newLeasesReport   | UrlLink |
 
   @verifyDataOfNewLeasingReportAgainstFloydSite
   Scenario Outline: verify data of new leasing report against floyd site
@@ -1050,18 +1043,16 @@ Feature: verify test cases of reports
     Then  verify data of rent roll report against partner portal "<partnerPortal>"
     When  I log out
     Given I am on floyd Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  search the values in floyd site "<site>"
     Then  verify data of rent roll report against floyd site "<floydSite>"
     Then  I click on floyd stage "<floydSite>"
-    When  Click on additional features link "<site>"
-    When  Click on add a portfolio "<site>"
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
       | credentials  | relationships |     report      |     partnerPortal        |      site        |     floydSite       |    URL   |
-      |   admin      |   relation   | newLeasesReport | partnerPortalValueLeasing | floydSiteLeasing |floydSiteValueLeasing| VBStaging|
+      |   admin      |   relation   | newLeasesReport | partnerPortalValueLeasing | floydSiteLeasing |floydSiteValueLeasing| UrlLink|
 
 
     @verifyGroupHierarchyOnNewLeasesReport
@@ -1080,8 +1071,8 @@ Feature: verify test cases of reports
     When  I log out
 
     Examples:
-      | credentials  |  relationships |         report       |    URL    |
-      |   admin      |     relation   |    tableNewLeases   | VBStaging |
+      | credentials  |  relationships |         report       |   URL  |
+      |   admin      |     relation   |    tableNewLeases   | UrlLink |
 
      #LeasingActivityReport
   #72&73&78
@@ -1101,7 +1092,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |            report           |    URL    |
-      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   | UrlLink |
 
   @verifyFilterAgainstLeasingActivityReport
   Scenario Outline: verify filter against leasing activity report
@@ -1121,7 +1112,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |            report          |           searchFilter         |    URL    |
-      |   admin      |     relation   |    leasingActivityReport   |   filterReportLeasingActivity  | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   |   filterReportLeasingActivity  | UrlLink |
 
   @verifyAscendingDescendingAgainstLeasingActivityReport
   Scenario Outline: verify ascending & descending against leasing activity report
@@ -1140,7 +1131,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |            report          |             order         |    URL     |
-      |   admin      |     relation   |    leasingActivityReport   |    tableLeasingActivity   | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   |    tableLeasingActivity   | UrlLink |
 
   @downloadLeasingActivityReport
   Scenario Outline: verify leasing activity report should be downloaded
@@ -1159,7 +1150,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |             report         |           order          |    URL     |
-      |   admin      |     relation   |    leasingActivityReport   |   tableLeasingActivity   | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   |   tableLeasingActivity   | UrlLink |
 
   @clickSiteNumberOnLeasingActivityReport
   Scenario Outline: click site number on leasing activity report
@@ -1180,7 +1171,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |           report           |            site         |    URL     |
-      |   admin      |     relation   |    leasingActivityReport   |  reportLeasingActivity  | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   |  reportLeasingActivity  | UrlLink |
 
   @verifyAttributesAgainstLeasingActivityReport
   Scenario Outline: verify attributes on leasing activity report
@@ -1201,7 +1192,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |             report         |    URL     |
-      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   | UrlLink |
 
 
   @verifyColumnAgainstLeasingActivityReport
@@ -1221,7 +1212,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |            report          |    URL     |
-      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   | UrlLink |
 
   @verifyFooterOnLeasingActivityReport
   Scenario Outline: verify footer on leasing activity report
@@ -1240,7 +1231,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |           report           |    URL     |
-      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   | UrlLink |
 
 
   @verifySearchAgainstLeasingActivityReport
@@ -1261,7 +1252,7 @@ Feature: verify test cases of reports
 
     Examples:
       | credentials  |  relationships |             report         |    URL     |
-      |   admin      |     relation   |    leasingActivityReport   | VBStaging |
+      |   admin      |     relation   |    leasingActivityReport   | UrlLink |
 
 
 
@@ -1281,18 +1272,16 @@ Feature: verify test cases of reports
     Then  verify data on partner portal site "<partnerPortalSite>"
     When  I log out
     Given I am on floyd Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  search the values in floyd site "<partnerPortalSite>"
     Then  verify data on floyd site "<partnerPortalSite>"
     Then  I click on floyd stage "<site>"
-    When  Click on additional features link "<site>"
-    When  Click on add a portfolio "<site>"
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
       | credentials  |  relationships |     partnerPortalSite     |        site        |    URL     |
-      |   admin      |     relation   |  partnerPortalSiteData   |   floydSiteLeasing | VBStaging |
+      |   admin      |     relation   |  partnerPortalSiteData   |   floydSiteLeasing | UrlLink |
 
 
 #  @verifyLabelsOnPartnerPortalSiteAndFloydSite
@@ -1325,7 +1314,7 @@ Feature: verify test cases of reports
 #
 #    Examples:
 #      | credentials  |  relationships  |     partnerPortalSite      |        site        |   tab   |   tab1  |     partnerPortalSite1    |    URL    |
-#      |   admin      |     relation   |  partnerPortalSiteLabels   |   floydSiteLeasing |    FCC  | radCenter|  partnerPortalSiteLabels1| VBStaging |
+#      |   admin      |     relation   |  partnerPortalSiteLabels   |   floydSiteLeasing |    FCC  | radCenter|  partnerPortalSiteLabels1| UrlLink |
 
 
 
@@ -1358,7 +1347,7 @@ Feature: verify test cases of reports
 #
 #    Examples:
 #      | credentials  |  relationships   |     partnerPortalSite       |        site        |     tab     |    URL     |
-#      |   admin      | dataValidation  |  partnerPortalSiteDocument   |   floydSiteLeasing |  documentTab| VBStaging |
+#      |   admin      | dataValidation  |  partnerPortalSiteDocument   |   floydSiteLeasing |  documentTab| UrlLink |
 
   @verifyTabsDataOnPartnerPortalSiteAndFloydSite
   Scenario Outline: verify tabs data on partner portal and floyd site should be same
@@ -1376,17 +1365,15 @@ Feature: verify test cases of reports
     Then  verify tabs data on partner portal site "<partnerPortalSite1>"
     When  I log out
     Given I am on floyd Page
+    When  Login to vertical bridge with "<credentials>"
+    When  Click checkbox button
     Then  search the values in floyd site "<partnerPortalSite>"
     Then  verify tabs data on floyd site "<partnerPortalSite>"
     Then  click "<partnerPortalSite>" on floyd site
     Then  verify tabs data div on partner portal site "<partnerPortalSite1>"
     Then  I click on floyd stage "<site>"
-    When  Click on additional features link "<site>"
-    When  Click on add a portfolio "<site>"
-    When  Login to vertical bridge with "<credentials>"
-    When  Click checkbox button
     When  I log out from floyd site
 
     Examples:
       | credentials  |  relationships   |     partnerPortalSite    |        site        |     tab     |   partnerPortalSite1   |    URL     |
-      |   admin      | dataValidation  |  partnerPortalTabsData   |   floydSiteLeasing |  propertyTab |  partnerPortalTabsData1| VBStaging |
+      |   admin      | dataValidation  |  partnerPortalTabsData   |   floydSiteLeasing |  propertyTab |  partnerPortalTabsData1| UrlLink |

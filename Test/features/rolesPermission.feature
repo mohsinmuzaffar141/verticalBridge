@@ -38,9 +38,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |      tab     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |     URL    |
-      |    realEstateAdmin   |   homePage   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | VBStaging |
-#      | utilityPartnerAdmin  |   homePage   | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | VBStaging |
-#      |    jvPartnerAdmin   |   homePage   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | VBStaging |
+      |    realEstateAdmin   |   homePage   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | UrlLink |
+#      | utilityPartnerAdmin  |   homePage   | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | UrlLink |
+#      |    jvPartnerAdmin   |   homePage   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | UrlLink |
 
   @verifyLinksOnHomePageToExternalUsers
   Scenario Outline: verify links on home page for internal/external users
@@ -80,9 +80,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |     link     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |     URL    |
-      |    realEstateAdmin   | homePageLink |  rolesPermission |    realEstateUser     |       admin        | portfolioType | VBStaging |
-#      | utilityPartnerAdmin  | homePageLink | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | VBStaging |
-#      |    jvPartnerAdmin   |  homePageLink | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | VBStaging |
+      |    realEstateAdmin   | homePageLink |  rolesPermission |    realEstateUser     |       admin        | portfolioType | UrlLink |
+#      | utilityPartnerAdmin  | homePageLink | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | UrlLink |
+#      |    jvPartnerAdmin   |  homePageLink | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | UrlLink |
 
 
 
@@ -103,9 +103,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials       |  credentialsInternal   |     URL    |
-      |    realEstateAdmin     |     realEstateUser     | VBStaging |
-#      |  utilityPartnerAdmin  |     utilityPartnerUser   | VBStaging |
-#      |     jvPartnerAdmin    |       jvPartnerUser     | VBStaging |
+      |    realEstateAdmin     |     realEstateUser     | UrlLink |
+#      |  utilityPartnerAdmin  |     utilityPartnerUser   | UrlLink |
+#      |     jvPartnerAdmin    |       jvPartnerUser     | UrlLink |
 
   @verifyMySiteAccessOnMainPageToExternal/InternalUsers
   Scenario Outline: verify my site access on main page for internal/external users
@@ -148,9 +148,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |     URL    |
-      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | VBStaging |
-#      | utilityPartnerAdmin  | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | VBStaging |
-#      |    jvPartnerAdmin   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | VBStaging |
+      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | UrlLink |
+#      | utilityPartnerAdmin  | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | UrlLink |
+#      |    jvPartnerAdmin   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | UrlLink |
 
   @viewManagementAgreementListToExternalUsers
   Scenario Outline: view management agreement list for external users
@@ -169,9 +169,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials       |  credentialsInternal   |     URL    |
-      |    realEstateAdmin     |     realEstateUser     | VBStaging |
-#      |  utilityPartnerAdmin  |     utilityPartnerUser  | VBStaging |
-#      |     jvPartnerAdmin    |       jvPartnerUser     | VBStaging |
+      |    realEstateAdmin     |     realEstateUser     | UrlLink |
+#      |  utilityPartnerAdmin  |     utilityPartnerUser  | UrlLink |
+#      |     jvPartnerAdmin    |       jvPartnerUser     | UrlLink |
 
 
 
@@ -216,9 +216,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |     URL    |
-      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | VBStaging |
-#      | utilityPartnerAdmin  | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | VBStaging |
-#      |    jvPartnerAdmin   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | VBStaging |
+      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | UrlLink |
+#      | utilityPartnerAdmin  | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | UrlLink |
+#      |    jvPartnerAdmin   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | UrlLink |
 
   @viewSitesToExternalUsers
   Scenario Outline: view sites for internal/external users
@@ -261,9 +261,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |     URL    |
-      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | VBStaging |
-#      | utilityPartnerAdmin  |  rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | VBStaging |
-#      |    jvPartnerAdmin   |   rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | VBStaging |
+      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | UrlLink |
+#      | utilityPartnerAdmin  |  rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | UrlLink |
+#      |    jvPartnerAdmin   |   rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | UrlLink |
 
 
   @viewMyDashboardPageToExternalUsers
@@ -283,9 +283,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials       |  credentialsInternal   |  report |     URL    |
-      |    realEstateAdmin     |     realEstateUser     | reports | VBStaging |
-#      |  utilityPartnerAdmin  |     utilityPartnerUser   | reports | VBStaging |
-#      |     jvPartnerAdmin    |       jvPartnerUser     |  reports | VBStaging |
+      |    realEstateAdmin     |     realEstateUser     | reports | UrlLink |
+#      |  utilityPartnerAdmin  |     utilityPartnerUser   | reports | UrlLink |
+#      |     jvPartnerAdmin    |       jvPartnerUser     |  reports | UrlLink |
 
 
   @viewAboutPageOnMainPageForExternalUsers
@@ -326,9 +326,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |    tab   |     URL    |
-      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | homePage | VBStaging |
-#      | utilityPartnerAdmin  |  rolesPermission1 |  utilityPartnerUser  |       admin        | portfolioType | homePage | VBStaging |
-#      |    jvPartnerAdmin   |   rolesPermission2 |     jvPartnerUser    |        admin       | portfolioType | homePage | VBStaging |
+      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | homePage | UrlLink |
+#      | utilityPartnerAdmin  |  rolesPermission1 |  utilityPartnerUser  |       admin        | portfolioType | homePage | UrlLink |
+#      |    jvPartnerAdmin   |   rolesPermission2 |     jvPartnerUser    |        admin       | portfolioType | homePage | UrlLink |
 
   @viewServicesPageOnMainPageForExternalUsers
   Scenario Outline: view services page on main page for internal/external users
@@ -371,9 +371,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |      tab    |     URL    |
-      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | servicesTab | VBStaging |
-#      | utilityPartnerAdmin  |  rolesPermission1 |  utilityPartnerUser  |       admin        | portfolioType | servicesTab | VBStaging |
-#      |    jvPartnerAdmin   |   rolesPermission2 |     jvPartnerUser    |        admin       | portfolioType | servicesTab | VBStaging |
+      |    realEstateAdmin   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | servicesTab | UrlLink |
+#      | utilityPartnerAdmin  |  rolesPermission1 |  utilityPartnerUser  |       admin        | portfolioType | servicesTab | UrlLink |
+#      |    jvPartnerAdmin   |   rolesPermission2 |     jvPartnerUser    |        admin       | portfolioType | servicesTab | UrlLink |
 
   @viewContactPageOnMainPageForExternalUsers
   Scenario Outline: view contact page on main page for internal/external users
@@ -416,9 +416,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials    |      roles      | credentialsInternal  | credentialsAdmin  |    portfolio  |          tab       |     URL    |
-      |    realEstateAdmin  | rolesPermission |  realEstateUser     |      admin        | portfolioType  | contactHomePageTab | VBStaging |
-#      | utilityPartnerAdmin | rolesPermission1 | utilityPartnerUser  |     admin        | portfolioType | contactHomePageTab | VBStaging |
-#      |    jvPartnerAdmin  |  rolesPermission2 |   jvPartnerUser    |       admin       | portfolioType | contactHomePageTab | VBStaging |
+      |    realEstateAdmin  | rolesPermission |  realEstateUser     |      admin        | portfolioType  | contactHomePageTab | UrlLink |
+#      | utilityPartnerAdmin | rolesPermission1 | utilityPartnerUser  |     admin        | portfolioType | contactHomePageTab | UrlLink |
+#      |    jvPartnerAdmin  |  rolesPermission2 |   jvPartnerUser    |       admin       | portfolioType | contactHomePageTab | UrlLink |
 
   @verifyTabsOnHomePageForExternalAndInternalUsers
   Scenario Outline: verify tabs on home page for internal/external users
@@ -458,9 +458,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials     |      tab     |       roles      |  credentialsInternal  |  credentialsAdmin  |    portfolio  |     URL    |
-      |    realEstateAdmin   |   homePage   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | VBStaging |
-#      | utilityPartnerAdmin  |   homePage   | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | VBStaging |
-#      |    jvPartnerAdmin   |   homePage   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | VBStaging |
+      |    realEstateAdmin   |   homePage   |  rolesPermission |    realEstateUser     |       admin        | portfolioType | UrlLink |
+#      | utilityPartnerAdmin  |   homePage   | rolesPermission1 |  utilityPartnerUser   |       admin        | portfolioType | UrlLink |
+#      |    jvPartnerAdmin   |   homePage   | rolesPermission2 |     jvPartnerUser     |        admin        | portfolioType | UrlLink |
 
     #17&18&19
   @verifyRelationshipNotViewableToExternalUsers
@@ -478,9 +478,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials       |  credentialsInternal   |     external    |     URL    |
-      |    realEstateAdmin     |     realEstateUser     |   externalUser  | VBStaging |
-#      |  utilityPartnerAdmin  |     utilityPartnerUser  |   externalUser  | VBStaging |
-#      |     jvPartnerAdmin    |       jvPartnerUser     |   externalUser  | VBStaging |
+      |    realEstateAdmin     |     realEstateUser     |   externalUser  | UrlLink |
+#      |  utilityPartnerAdmin  |     utilityPartnerUser  |   externalUser  | UrlLink |
+#      |     jvPartnerAdmin    |       jvPartnerUser     |   externalUser  | UrlLink |
 
 
   @viewSiteDetailPageForExternalAndInternalUsers
@@ -527,9 +527,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |   siteLink     |      roles     |  credentialsInternal  | credentialsAdmin |    portfolio  |  site  |     URL    |
-      |  realEstateAdmin   |  detailPage   | rolesPermission |    realEstateUser     |     admin        | portfolioType |siteList| VBStaging |
-#      |utilityPartnerAdmin |  detailPage   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |siteList| VBStaging |
-#      |  jvPartnerAdmin   |   detailPage  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |siteList | VBStaging |
+      |  realEstateAdmin   |  detailPage   | rolesPermission |    realEstateUser     |     admin        | portfolioType |siteList| UrlLink |
+#      |utilityPartnerAdmin |  detailPage   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |siteList| UrlLink |
+#      |  jvPartnerAdmin   |   detailPage  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |siteList | UrlLink |
 
   @viewSiteHeaderOnDetailPageForExternalAndInternalUsers
   Scenario Outline: view site header on detail page for internal/external users
@@ -575,9 +575,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |   siteLink     |      roles     |  credentialsInternal  | credentialsAdmin |    portfolio  |     URL    |
-      |  realEstateAdmin   |  detailPage   | rolesPermission |    realEstateUser     |     admin        | portfolioType | VBStaging |
-#      |utilityPartnerAdmin |  detailPage   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | VBStaging |
-#      |  jvPartnerAdmin   |   detailPage  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | VBStaging |
+      |  realEstateAdmin   |  detailPage   | rolesPermission |    realEstateUser     |     admin        | portfolioType | UrlLink |
+#      |utilityPartnerAdmin |  detailPage   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | UrlLink |
+#      |  jvPartnerAdmin   |   detailPage  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | UrlLink |
 
   @viewTabsOnSiteDetailPageForExternalAndInternalUsers
   Scenario Outline: view tabs on detail page for internal/external users
@@ -623,9 +623,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |   siteLink     |      roles     |  credentialsInternal  | credentialsAdmin |    portfolio  |  site  |     URL    |
-      |  realEstateAdmin   |  detailPage   | rolesPermission |    realEstateUser     |     admin        | portfolioType |siteTabs| VBStaging |
-#      |utilityPartnerAdmin |  detailPage   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |siteTabs| VBStaging |
-#      |  jvPartnerAdmin   |   detailPage  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | siteTabs| VBStaging |
+      |  realEstateAdmin   |  detailPage   | rolesPermission |    realEstateUser     |     admin        | portfolioType |siteTabs| UrlLink |
+#      |utilityPartnerAdmin |  detailPage   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |siteTabs| UrlLink |
+#      |  jvPartnerAdmin   |   detailPage  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | siteTabs| UrlLink |
 
   @viewFCCLinkOnFCCTabForExternalAndInternalUsers
   Scenario Outline: view fcc link on fcc tab for internal/external users
@@ -674,9 +674,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |   tab   |      roles     |  credentialsInternal  | credentialsAdmin |    portfolio  |  siteLink  |     URL    |
-      |  realEstateAdmin   |  FCC   | rolesPermission |    realEstateUser     |     admin        | portfolioType | detailPage | VBStaging |
-#      |utilityPartnerAdmin |  FCC   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | detailPage| VBStaging |
-#      |  jvPartnerAdmin   |   FCC  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | detailPage | VBStaging |
+      |  realEstateAdmin   |  FCC   | rolesPermission |    realEstateUser     |     admin        | portfolioType | detailPage | UrlLink |
+#      |utilityPartnerAdmin |  FCC   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | detailPage| UrlLink |
+#      |  jvPartnerAdmin   |   FCC  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | detailPage | UrlLink |
 
 
   @verifyDevelopmentTabNotViewableToExternalUsers
@@ -694,9 +694,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |      credentials       |  credentialsInternal   |          tab        |     URL    |
-      |    realEstateAdmin     |     realEstateUser     |   leasingActivity3  | VBStaging |
-#      |  utilityPartnerAdmin  |     utilityPartnerUser  |   leasingActivity3  | VBStaging |
-#      |     jvPartnerAdmin    |       jvPartnerUser     |   leasingActivity3  | VBStaging |
+      |    realEstateAdmin     |     realEstateUser     |   leasingActivity3  | UrlLink |
+#      |  utilityPartnerAdmin  |     utilityPartnerUser  |   leasingActivity3  | UrlLink |
+#      |     jvPartnerAdmin    |       jvPartnerUser     |   leasingActivity3  | UrlLink |
 
   @verifyOptionsNotPresentUnderDocumentTabForExternalAndInternalUsers
   Scenario Outline: verify options not present under document tab for internal/external users
@@ -745,9 +745,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |       tab      |      roles     |  credentialsInternal  | credentialsAdmin |    portfolio  |  siteLink  |     URL    |
-      |  realEstateAdmin   |  documentTab   | rolesPermission |    realEstateUser     |     admin        | portfolioType | detailPage | VBStaging |
-#      |utilityPartnerAdmin |  documentTab   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | detailPage| VBStaging |
-#      |  jvPartnerAdmin   |   documentTab  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | detailPage | VBStaging |
+      |  realEstateAdmin   |  documentTab   | rolesPermission |    realEstateUser     |     admin        | portfolioType | detailPage | UrlLink |
+#      |utilityPartnerAdmin |  documentTab   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | detailPage| UrlLink |
+#      |  jvPartnerAdmin   |   documentTab  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | detailPage | UrlLink |
 
   @verifySearchDocumentUnderDocumentTabForExternalAndInternalUsers
   Scenario Outline: verify search document under document tab for internal/external users
@@ -796,9 +796,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |       tab       |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |   siteLink  |     URL    |
-      |  realEstateAdmin   |  documentTab1   | rolesPermission |    realEstateUser     |     admin        | portfolioType | detailPage1 | VBStaging |
-#      |utilityPartnerAdmin |  documentTab1   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | detailPage1| VBStaging |
-#      |  jvPartnerAdmin   |   documentTab1  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | detailPage1 | VBStaging |
+      |  realEstateAdmin   |  documentTab1   | rolesPermission |    realEstateUser     |     admin        | portfolioType | detailPage1 | UrlLink |
+#      |utilityPartnerAdmin |  documentTab1   |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | detailPage1| UrlLink |
+#      |  jvPartnerAdmin   |   documentTab1  |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | detailPage1 | UrlLink |
 
     #20&22
   @verifySearchForExternalAndInternalUsers
@@ -839,9 +839,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType | VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType | UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType | UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType | UrlLink |
 
   @verifySimpleSearchForExternalAndInternalUsers
   Scenario Outline: verify simple search for internal/external users
@@ -884,9 +884,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  | suggestion |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |headerLabel1| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |headerLabel1| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |headerLabel1| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |headerLabel1| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |headerLabel1| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |headerLabel1| UrlLink |
 
 
   @verifyDashboardPageForExternalAndInternalUsers
@@ -930,9 +930,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  | report |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |reports| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |reports| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |reports| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |reports| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |reports| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |reports| UrlLink |
 
   @verifyManagementAgreementKPIForExternalAndInternalUsers
   Scenario Outline: verify management agreement KPI for internal/external users
@@ -975,9 +975,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |  report  |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |reportsKPI| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |reportsKPI| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |reportsKPI| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |reportsKPI| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |reportsKPI| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |reportsKPI| UrlLink |
 
 
   @verifyTotalSitesKPIForExternalAndInternalUsers
@@ -1021,9 +1021,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |    report   |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |totalSitesKPI| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |totalSitesKPI| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |totalSitesKPI| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |totalSitesKPI| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |totalSitesKPI| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |totalSitesKPI| UrlLink |
 
 
   @verifyTotalAnnualizedRevenueKPIForExternalAndInternalUsers
@@ -1075,10 +1075,10 @@ Feature: verify test cases of roles and permission
     When  I log out
 
     Examples:
-      |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |    report     |     URL   |    apiLink        |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |totalRevenueKPI| VBStaging | annualizedRevenue |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |totalRevenueKPI| VBStaging | annualizedRevenue |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |totalRevenueKPI| VBStaging |  annualizedRevenue |
+      |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |    report     |   URL   |    apiLink        |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |totalRevenueKPI| UrlLink | annualizedRevenue |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |totalRevenueKPI| UrlLink | annualizedRevenue |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |totalRevenueKPI| UrlLink |  annualizedRevenue |
 
   @verifyManagementAgreementListReportForExternalAndInternalUsers
   Scenario Outline: verify management agreement list report for internal/external users
@@ -1124,9 +1124,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |   report |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |reportsKPI| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |reportsKPI| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |reportsKPI| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |reportsKPI| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |reportsKPI| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |reportsKPI| UrlLink |
 
 
   @verifySitesByManagementAgreementListReportForExternalAndInternalUsers
@@ -1173,9 +1173,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin |    portfolio  |    report    |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |totalSitesKPI| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |totalSitesKPI| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |totalSitesKPI| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser     |     admin        | portfolioType |totalSitesKPI| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser   |     admin        | portfolioType |totalSitesKPI| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser     |     admin        | portfolioType |totalSitesKPI| UrlLink |
 
 
   @verifyAccessToRollRentReportForExternalAndInternalUsers
@@ -1225,9 +1225,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  |    report   |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |rentRollReport| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |rentRollReport| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |rentRollReport| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |rentRollReport| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |rentRollReport| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |rentRollReport| UrlLink |
 
 
   @verifyAccessToForecastReportForExternalAndInternalUsers
@@ -1277,9 +1277,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  |    report   |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |forecastReport| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |forecastReport| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |forecastReport| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |forecastReport| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |forecastReport| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |forecastReport| UrlLink |
 
   @verifyAccessToNewLeasingReportForExternalAndInternalUsers
   Scenario Outline: verify access to new leasing report for internal/external users
@@ -1328,9 +1328,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  |    report   |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |newLeasesReport| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |newLeasesReport| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |newLeasesReport| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |newLeasesReport| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |newLeasesReport| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |newLeasesReport| UrlLink |
 
   @verifyAccessToLeasingActivityReportForExternalAndInternalUsers
   Scenario Outline: verify access to leasing activity report for internal/external users
@@ -1379,9 +1379,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  |       report      |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |leasingActivityReport| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |leasingActivityReport| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |leasingActivityReport| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |leasingActivityReport| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |leasingActivityReport| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |leasingActivityReport| UrlLink |
 
   @viewPortfolioDataForRelationshipForExternalAndInternalUsers
   Scenario Outline: view portfolio data for relationship for internal/external users
@@ -1427,8 +1427,8 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  | report  |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |reportsKPI| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |reportsKPI| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |reportsKPI| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |reportsKPI| UrlLink |
 
 
   @viewPortfolioDataForOwnerForExternalAndInternalUsers
@@ -1475,8 +1475,8 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  | report|     URL   |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |reports| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |reports| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |reports| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |reports| UrlLink |
 
 
   @viewDataForPortfolioForExternalAndInternalUsers
@@ -1523,8 +1523,8 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  |   report   |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |totalSitesKPI| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |totalSitesKPI| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |totalSitesKPI| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |totalSitesKPI| UrlLink |
 
 
   @viewRelationship/Owner/PortfolioForInternalUsers
@@ -1571,9 +1571,9 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  | report  |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |reportsKPI| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |reportsKPI| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |reportsKPI| VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |reportsKPI| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |reportsKPI| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |reportsKPI| UrlLink |
 
   @viewRelationship/Owner/PortfolioForVBAdmin
   Scenario Outline: view relationship/owner/portfolio for Vb admin
@@ -1637,6 +1637,6 @@ Feature: verify test cases of roles and permission
 
     Examples:
       |    credentials     |      roles      |  credentialsInternal  | credentialsAdmin|    portfolio  |    report    | document   |     URL    |
-      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |newLeasesReport|viewDocument| VBStaging |
-#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |newLeasesReport|viewDocument| VBStaging |
-#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |newLeasesReport|viewDocument | VBStaging |
+      |  realEstateAdmin   | rolesPermission |    realEstateUser    |     admin       | portfolioType |newLeasesReport|viewDocument| UrlLink |
+#      |utilityPartnerAdmin |rolesPermission1 |  utilityPartnerUser |     admin       | portfolioType |newLeasesReport|viewDocument| UrlLink |
+#      |  jvPartnerAdmin   |rolesPermission2 |     jvPartnerUser   |     admin       | portfolioType |newLeasesReport|viewDocument | UrlLink |

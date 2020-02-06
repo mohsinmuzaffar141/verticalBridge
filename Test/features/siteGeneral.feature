@@ -15,9 +15,9 @@ Feature: verify links are not present on site header
     When  I log out
 
     Examples:
-      | credentials  |  relationships |     site       |        tab      |     URL    |
-      |   admin      |     relation   |   siteMapData  |  siteDetailPage | VBStaging |
-      |   admin      |     relation   |   siteMapData  |    mapTabPage   | VBStaging |
+      | credentials  |  relationships |     site       |        tab      |     URL  |
+      |   admin      |     relation   |   siteMapData  |  siteDetailPage | UrlLink |
+      |   admin      |     relation   |   siteMapData  |    mapTabPage   | UrlLink |
 
   @linksNotPresentUnderPropertyTab
   Scenario Outline: verify links are not present on property Tab
@@ -36,7 +36,7 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials  |  relationships |     site       |       tab      |       link       |     URL    |
-      |   admin      |     relation   |   siteMapData  |   propertyTab  |    propertyTab1  | VBStaging |
+      |   admin      |     relation   |   siteMapData  |   propertyTab  |    propertyTab1  | UrlLink |
 
   @verifyLinksOnHomePage
   Scenario Outline: verify links to linkedIn page and newsroom page
@@ -52,7 +52,7 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials  |  relationships  |      link       |     URL    |
-      |   admin      |    leasesData   |   homePageLink  | VBStaging |
+      |   admin      |    leasesData   |   homePageLink  | UrlLink |
 
 #  @verifyClickToCallFunction
 #  Scenario Outline: verify click to call function under contact tab
@@ -69,7 +69,7 @@ Feature: verify links are not present on site header
 #
 #    Examples:
 #      | credentials  |  relationships  |           tab          |     URL    |
-#      |   admin      |    leasesData   |   contactHomePageTab   | VBStaging |
+#      |   admin      |    leasesData   |   contactHomePageTab   | UrlLink |
 
 
   @verifyFooterOnHomePage
@@ -83,7 +83,7 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials    |      link       |     URL    |
-      |   admin        |   homePageLink  | VBStaging |
+      |   admin        |   homePageLink  | UrlLink |
 
   @verifyHelpTabOnHomePage
   Scenario Outline: verify help tab on home page
@@ -96,7 +96,7 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials    |     URL    |
-      |   admin        | VBStaging |
+      |   admin        | UrlLink |
 
   #164&165
   @verifyMainMenuSearch
@@ -110,7 +110,7 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials    |     URL    |
-      |   admin        | VBStaging |
+      |   admin        | UrlLink |
 
     #166&167&168&169
   @verifySearchBoxSuggestions
@@ -128,7 +128,7 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials    | suggestion     |  relationships |     URL    |
-      |   admin        |  headerLabel   |   contactData  | VBStaging |
+      |   admin        |  headerLabel   |   contactData  | UrlLink |
 
     #taking too long to appear
 #  @verifyTableHeaderOfAdvanceSearch
@@ -146,7 +146,7 @@ Feature: verify links are not present on site header
 #
 #    Examples:
 #      | credentials    |     site    | relationships|     URL    |
-#      |   admin        | headerLabel |  relation    | VBStaging |
+#      |   admin        | headerLabel |  relation    | UrlLink |
 
 #Same Above
 #  @verifyLabelOfAdvanceSearch
@@ -164,7 +164,7 @@ Feature: verify links are not present on site header
 #
 #    Examples:
 #      | credentials    |     site    | relationships|     URL    |
-#      |   admin        | headerLabel |  relation    | VBStaging |
+#      |   admin        | headerLabel |  relation    | UrlLink |
 
 
   #170&171
@@ -183,7 +183,7 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials    |      site      | relationships|     URL    |
-      |   admin        | headerLabelNew |  relation    | VBStaging |
+      |   admin        | headerLabelNew |  relation    | UrlLink |
 
   @verifyRelationshipName
   Scenario Outline: verify relationship should be present on the top
@@ -199,4 +199,4 @@ Feature: verify links are not present on site header
 
     Examples:
       | credentials     | relationships|     URL    |
-      |   admin         |  relation    | VBStaging |
+      |   admin         |  relation    | UrlLink |
